@@ -1,0 +1,34 @@
+Generate ontology elements with provenance annotations for database table
+’{data[’table_name’]}’ based on:
+[CONTEXT]
+- Database Schema of the database ’{data[’schema_context’]}’
+- Take semantics from the Relevant Documents ’{data[’documents’]}’
+- Take semantics from the Existing Ontology Knowledge ’{data[’existing_ontology’]}’
+[INSTRUCTIONS]
+1. Include these elements:
+– Classes (subclass of Thing)
+– Data properties with domain/range
+– Object properties with domain/range
+2. Use only one rdfs:domain and one rdfs:range per property. If multiple options exist, select
+the most general or create a shared superclass.
+3. Do not create a property named "is". Use rdf:type for instance membership, rdfs:subClassOf
+for class hierarchies, and owl:sameAs for instance equality.
+4. Use this format example:
+Class: ’{data[’table_name’]}’
+Annotations:
+prov:wasDerivedFrom
+<http://example.org/provenance/’{data[’table_name’]}’>
+DataProperty:
+has_column_name
+domain ’{data[’table_name’]}’
+range string
+Annotations:
+prov:wasDerivedFrom
+<http://example.org/provenance/’{data[’table_name’]}’/column_name>
+ObjectProperty:
+relates_to_table domain ’{data[’table_name’]}’
+range RelatedTable
+Annotations:
+prov:wasDerivedFrom
+<http://example.org/provenance/’{data[’table_name’]}’/fk_column>
+Only output Manchester Syntax and nothing else. [OUTPUT]

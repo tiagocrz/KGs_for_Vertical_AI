@@ -1,0 +1,1738 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <https://w3id.org/dingo#>
+
+
+Annotations: 
+    <http://purl.org/dc/elements/1.1/contributor> _:0,
+    <http://purl.org/dc/elements/1.1/contributor> _:2,
+    <http://purl.org/dc/elements/1.1/contributor> _:3,
+    <http://purl.org/dc/elements/1.1/contributor> _:4,
+    <http://purl.org/dc/elements/1.1/contributor> _:5,
+    <http://purl.org/dc/elements/1.1/issued> "2018-10-26T00:00:00Z",
+    <http://purl.org/dc/elements/1.1/title> "DINGO Ontology",
+    <http://purl.org/dc/terms/creator> _:1,
+    <http://purl.org/dc/terms/modified> "2020-01-10T10:20:10Z",
+    rdfs:comment "The DINGO ontology (Data Integration for Grant Ontology) defines the terms of the DINGO vocabulary and provides a machine readable extensible framework to model data relative to projects, funding, project and funding actors, and, notably, funding policies. It is designed to yield high modeling power and elasticity to cope with the huge variety in funding and project practices, which makes it applicable to many areas where funding is an important aspect: first of all research, but also the arts, cultural conservation, and many others.",
+    owl:versionInfo "2020-01-10T10:20:10Z"
+
+AnnotationProperty: <http://purl.org/dc/elements/1.1/contributor>
+
+    
+AnnotationProperty: <http://purl.org/dc/elements/1.1/issued>
+
+    
+AnnotationProperty: <http://purl.org/dc/elements/1.1/title>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/creator>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/modified>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#braoder>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#broadMatch>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#broader>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#closeMatch>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#equivalentProperty>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#exactMatch>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#narrowMatch>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#narrower>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#realted>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#related>
+
+    
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#relatedMatch>
+
+    
+AnnotationProperty: <http://xmlns.com/foaf/0.1/name>
+
+    
+AnnotationProperty: owl:versionInfo
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
+
+    
+Datatype: xsd:positiveInteger
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <https://w3id.org/dingo#academic_degree>
+
+    Annotations: 
+        rdfs:comment "Qualification awarded to the person taking the role by a higher education organisation, normally at a college or university.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "academic_degree",
+        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/prop/P512>
+    
+    Domain: 
+        <https://w3id.org/dingo#Person>
+    
+    Range: 
+        <https://w3id.org/dingo#AcademicDegree>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#affiliation>
+
+    Annotations: 
+        rdfs:comment "An organization that this person is affiliated with. For example, a school/university, a club, or a team.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "affiliation"
+    
+    Domain: 
+        <https://w3id.org/dingo#Person>
+    
+    Range: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#agency_identifier>
+
+    Annotations: 
+        rdfs:comment "Identifier (for example of Project, Grant, GrantPayment, PersonRole instance, OrganizationRole instance, FundingScheme, Person, Organisation) in the database/archive of the funding agency/funding body/funder.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "agency_identifier",
+        <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/dc/terms/identifier>,
+        <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.org/cerif/frapo/hasGrantNumber>,
+        <http://www.w3.org/2004/02/skos/core#narrower> <http://purl.org/cerif/frapo/hasPersonalIdentifier>
+    
+    Domain: 
+        <https://w3id.org/dingo#FundingScheme> or <https://w3id.org/dingo#Grant> or <https://w3id.org/dingo#GrantPayment> or <https://w3id.org/dingo#Organisation> or <https://w3id.org/dingo#Person> or <https://w3id.org/dingo#Project> or <https://w3id.org/dingo#Role>
+    
+    Range: 
+        <https://w3id.org/dingo#Identifier>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#baseline_academic_degree>
+
+    Annotations: 
+        rdfs:comment "Academic degree used as minimal/reference point for establishing a set of age limits or other classification.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "baseline_academic_degree"
+    
+    Domain: 
+        <https://w3id.org/dingo#CareerStageCriterion>
+    
+    Range: 
+        <https://w3id.org/dingo#AcademicDegree>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#beneficiary>
+
+    Annotations: 
+        rdfs:comment "The relation between the Grant (subject) and a (one of the) person(s) or organisation(s) receiving benefits from it identified by his/her/its role.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "beneficiary",
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://schema.org/recipient>
+    
+    Domain: 
+        <https://w3id.org/dingo#Grant>
+    
+    Range: 
+        <https://w3id.org/dingo#Role>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#beneficiary_of>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#beneficiary_of>
+
+    Annotations: 
+        rdfs:comment "The relation between a (one of the) person(s) or organisation(s) receiving benefits from a Grant identified by his/her/its role (subject), and the Grant.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "beneficiary_of"
+    
+    Domain: 
+        <https://w3id.org/dingo#Role>
+    
+    Range: 
+        <https://w3id.org/dingo#Grant>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#beneficiary>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#budget>
+
+    Annotations: 
+        rdfs:comment "Amount of money necessary or planned for a determined project/activity.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "budget",
+        <http://www.w3.org/2004/02/skos/core#related> <http://www.wikidata.org/prop/P2769>
+    
+    Domain: 
+        <https://w3id.org/dingo#Project>
+    
+    Range: 
+        <http://schema.org/MonetaryAmount>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#country>
+
+    Annotations: 
+        rdfs:comment "Country where the organisation is located ufficially.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "country",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P17>
+    
+    Domain: 
+        <https://w3id.org/dingo#Organisation>
+    
+    Range: 
+        <http://schema.org/Country>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#criterion>
+
+    Annotations: 
+        rdfs:comment "Property by which a distinction or classification is made. When applied to, for instance, FundingScheme items it indicates criterion item establishing the eligibility conditions, target and other relevant points of the FundingScheme to fund an application.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "criterion",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P1013>
+    
+    Domain: 
+        <https://w3id.org/dingo#FundingScheme>
+    
+    Range: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#disbursed_by>
+
+    Annotations: 
+        rdfs:comment "The relation between the disbursed grant (subject) and the funding agency (object).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "disbursed_by"
+    
+    Domain: 
+        <https://w3id.org/dingo#Grant>
+    
+    Range: 
+        <https://w3id.org/dingo#FundingAgency>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#disburses>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#disburses>
+
+    Annotations: 
+        rdfs:comment "The relation between the funding agency (subject) and the disbursed grant (object).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "disburses"
+    
+    Domain: 
+        <https://w3id.org/dingo#FundingAgency>
+    
+    Range: 
+        <https://w3id.org/dingo#Grant>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#disbursed_by>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#economic_value>
+
+    Annotations: 
+        rdfs:comment "Amount or value expressed in a specific currency (relationship between the item and a value expressed in a currency unit).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "economic_value",
+        <http://www.w3.org/2004/02/skos/core#broader> <http://schema.org/amount>
+    
+    Range: 
+        <http://schema.org/MonetaryAmount>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#employer>
+
+    Annotations: 
+        rdfs:comment "A person or company that provides a job (possibly paying wages or a salary) to the person taking the role.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "employer"
+    
+    Domain: 
+        <https://w3id.org/dingo#PersonRole>
+    
+    Range: 
+        <https://w3id.org/dingo#Organisation> or <https://w3id.org/dingo#Person>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#end_time>
+
+    Annotations: 
+        rdfs:comment "The time an item ceases to exist or a statement stops being valid.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "end_time",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/cerif/frapo/hasEndDate>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/endTime>
+    
+    Range: 
+        xsd:date or xsd:dateTime
+    
+    
+ObjectProperty: <https://w3id.org/dingo#entity_taking_role>
+
+    Annotations: 
+        rdfs:comment "The person or organisation or entity (object) assuming or to whom is assigned the role (subject).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "entity_taking_role"
+    
+    Domain: 
+        <https://w3id.org/dingo#Role>
+    
+    Range: 
+        <https://w3id.org/dingo#Organisation> or <https://w3id.org/dingo#Person>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#takes_role>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#excluded_academic_degree>
+
+    Annotations: 
+        rdfs:comment "Academic degree possessing which the subject of the statement cannot apply to the funding program.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "excluded_academic_degree"
+    
+    Domain: 
+        <https://w3id.org/dingo#CareerStageCriterion>
+    
+    Range: 
+        <https://w3id.org/dingo#AcademicDegree>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#field_of_work>
+
+    Annotations: 
+        rdfs:comment "Specialisation of a person, project or organisation.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "title",
+        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/prop/P101>
+    
+    Domain: 
+        <https://w3id.org/dingo#Organisation> or <https://w3id.org/dingo#Person> or <https://w3id.org/dingo#Project>
+    
+    Range: 
+        rdfs:Resource
+    
+    
+ObjectProperty: <https://w3id.org/dingo#finances>
+
+    Annotations: 
+        rdfs:comment "The relation between the Grant (subject) and the Project (object).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "finances",
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.org/cerif/frapo/funds>,
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.org/cerif/frapo/supports>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P2770>
+    
+    Domain: 
+        <https://w3id.org/dingo#Grant>
+    
+    Range: 
+        <https://w3id.org/dingo#Project>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#funded_by>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#funded_by>
+
+    Annotations: 
+        rdfs:comment "The relation between the Project (subject) and the Grant (object).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "funded_by",
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.org/cerif/frapo/isFundedBy>,
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.org/cerif/frapo/isSupportedBy>
+    
+    Domain: 
+        <https://w3id.org/dingo#Project>
+    
+    Range: 
+        <https://w3id.org/dingo#Grant>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#finances>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#funder>
+
+    Annotations: 
+        rdfs:comment "The ultimate funder who decided and is ultimately responsible for the funding scheme.
+(Example: FundingScheme Horizon2020 dg:funder European Commission).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "funder",
+        <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/cerif/frapo/isFundedBy>,
+        <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/cerif/frapo/isSupportedBy>
+    
+    Domain: 
+        <https://w3id.org/dingo#FundingScheme>
+    
+    Range: 
+        rdfs:Resource
+    
+    
+ObjectProperty: <https://w3id.org/dingo#grid_id>
+
+    Annotations: 
+        rdfs:comment "Institutional identifier from the GRID.ac global research identifier database.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "grid_id"
+    
+    Domain: 
+        <https://w3id.org/dingo#Organisation>
+    
+    Range: 
+        xsd:string
+    
+    
+ObjectProperty: <https://w3id.org/dingo#hasPart>
+
+    Annotations: 
+        rdfs:comment "The relation between a superset and its direct subset(s). Indicates an item that is a part (also in generalised sense) of the subject item.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "hasPart",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P527>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#isPartOf>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#has_implementation>
+
+    Annotations: 
+        rdfs:comment "The relationship between the decision, plan, program (subject) and the grant (object) that the grant is the concrete realisation of.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "has_implementation"
+    
+    Domain: 
+        <https://w3id.org/dingo#FundingScheme>
+    
+    Range: 
+        <https://w3id.org/dingo#Grant>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#implementation_of>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#headquarters_location>
+
+    Annotations: 
+        rdfs:comment "Address of the headquarters of the organisation.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "headquarters_location",
+        <http://www.w3.org/2004/02/skos/core#braoder> <http://purl.org/cerif/frapo/hasLocation>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P159>
+    
+    Domain: 
+        <https://w3id.org/dingo#Organisation>
+    
+    Range: 
+        <http://schema.org/PostalAddress>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#id_context_agent>
+
+    Annotations: 
+        rdfs:comment "Organization, Person, Agency related to the identifiers (for instance, creator, attributor, curator, maintainer, or similar). The specific semantic should be indicated with dedicated ontologies, such as PROV-O.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "id_context_agent"
+    
+    Domain: 
+        <https://w3id.org/dingo#Identifier>
+    
+    Range: 
+        <https://w3id.org/dingo#FundingAgency> or <https://w3id.org/dingo#Organisation> or <https://w3id.org/dingo#Person>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#implementation_country>
+
+    Annotations: 
+        rdfs:comment "Country where the project must be implemented.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "implementation_country"
+    
+    Domain: 
+        <https://w3id.org/dingo#GeographicCriterion>
+    
+    Range: 
+        <http://schema.org/Country>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#implementation_of>
+
+    Annotations: 
+        rdfs:comment "The relationship between the grant (subject) and the decision, plan, program (object) that the grant is the concrete realisation of.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "implementation_of"
+    
+    Domain: 
+        <https://w3id.org/dingo#Grant>
+    
+    Range: 
+        <https://w3id.org/dingo#FundingScheme>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#has_implementation>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#implemented_by>
+
+    Annotations: 
+        rdfs:comment "The relationship between the decision, plan, program (subject) and the funding agency (object) that the funding agency implements and administers.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "implemented_by"
+    
+    Domain: 
+        <https://w3id.org/dingo#FundingScheme>
+    
+    Range: 
+        <https://w3id.org/dingo#FundingAgency>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#implements>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#implements>
+
+    Annotations: 
+        rdfs:comment "The relationship between the funding agency (subject) and the decision, plan, program (object) that the funding agency implements and administers.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "implements"
+    
+    Domain: 
+        <https://w3id.org/dingo#FundingAgency>
+    
+    Range: 
+        <https://w3id.org/dingo#FundingScheme>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#implemented_by>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#inception>
+
+    Annotations: 
+        rdfs:comment "Date or point in time when the subject was founded/created.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "inception"
+    
+    Range: 
+        xsd:date or xsd:dateTime
+    
+    
+ObjectProperty: <https://w3id.org/dingo#isPartOf>
+
+    Annotations: 
+        rdfs:comment "The relation between a subset and its direct superset(s). Indicates an item that is a part (also in generalised sense) of the object item.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "isPartOf",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/361>
+    
+    Range: 
+        rdfs:Resource
+    
+    InverseOf: 
+        <https://w3id.org/dingo#hasPart>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#legalName>
+
+    Annotations: 
+        rdfs:comment "The official name of the organization, for example the registered company name.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "legalName"
+    
+    Domain: 
+        <https://w3id.org/dingo#Organisation>
+    
+    Range: 
+        xsd:string
+    
+    
+ObjectProperty: <https://w3id.org/dingo#objective>
+
+    Annotations: 
+        rdfs:comment "Desired result or outcome.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "objective",
+        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/prop/P3712>
+    
+    Domain: 
+        <https://w3id.org/dingo#Project>
+    
+    Range: 
+        rdfs:Resource
+    
+    
+ObjectProperty: <https://w3id.org/dingo#official_website>
+
+    Annotations: 
+        rdfs:comment "URL of the official website of an item.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "official_website",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P856>
+    
+    Domain: 
+        <https://w3id.org/dingo#FundingAgency> or <https://w3id.org/dingo#FundingScheme> or <https://w3id.org/dingo#Organisation> or <https://w3id.org/dingo#Person> or <https://w3id.org/dingo#Project>
+    
+    Range: 
+        <http://schema.org/url> or xsd:anyURI or xsd:string
+    
+    
+ObjectProperty: <https://w3id.org/dingo#organisation_location>
+
+    Annotations: 
+        rdfs:comment "Country or geographical administrative entity where an organisation must be established to apply for funding.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "organisation_location"
+    
+    Domain: 
+        <https://w3id.org/dingo#GeographicCriterion>
+    
+    Range: 
+        <http://schema.org/Country>,
+        <http://schema.org/SupranationalOrganisation>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#participant>
+
+    Annotations: 
+        rdfs:comment "The relation between the Project (subject) and a (one of the) person(s) or organisation(s) contributing to or taking part in it identified by his/her/its role.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "participant",
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://schema.org/participant>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P710>
+    
+    Domain: 
+        <https://w3id.org/dingo#Project>
+    
+    Range: 
+        <https://w3id.org/dingo#Role>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#participant_of>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#participant_of>
+
+    Annotations: 
+        rdfs:comment "The relation between a (one of the) person(s) or organisation(s) participant of a Project identified by his/her/its role (subject), and the Project.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "participant_of"
+    
+    Domain: 
+        <https://w3id.org/dingo#Role>
+    
+    Range: 
+        <https://w3id.org/dingo#Project>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#participant>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#person_location>
+
+    Annotations: 
+        rdfs:comment "Country or geographical administrative entity where the person must reside or be citizen or have undertaken research up to the moment of applying for funding.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "person_location",
+        <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/cerif/frapo/hasLocation>
+    
+    Domain: 
+        <https://w3id.org/dingo#GeographicCriterion>
+    
+    Range: 
+        <http://schema.org/Country>,
+        <http://schema.org/SupranationalOrganisation>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#point_in_time>
+
+    Annotations: 
+        rdfs:comment "The moment in time when an event occurs.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "point_in_time"
+    
+    Range: 
+        xsd:date or xsd:dateTime
+    
+    
+ObjectProperty: <https://w3id.org/dingo#product_or_material_produced>
+
+    Annotations: 
+        rdfs:comment "Material, product or output produced by a Project.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "product_or_material_produced",
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://schema.org/produces>,
+        <http://www.w3.org/2004/02/skos/core#broader> <http://www.wikidata.org/prop/P1056>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/cerif/frapo/hasOutput>
+    
+    Domain: 
+        <https://w3id.org/dingo#Project>
+    
+    Range: 
+        rdfs:Resource
+    
+    
+ObjectProperty: <https://w3id.org/dingo#recipient>
+
+    Annotations: 
+        rdfs:comment "The receiver of a GrantPayment or receiver/beneficiary of a GrantShare.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "recipient",
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://schema.org/recipient>
+    
+    Domain: 
+        <https://w3id.org/dingo#GrantPayment> or <https://w3id.org/dingo#GrantShare>
+    
+    Range: 
+        <https://w3id.org/dingo#Organisation> or <https://w3id.org/dingo#Person>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#role_type>
+
+    Annotations: 
+        rdfs:comment "Item representing the specific class of a Role.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "role_type"
+    
+    Domain: 
+        <https://w3id.org/dingo#Role>
+    
+    Range: 
+        rdfs:Resource
+    
+    
+ObjectProperty: <https://w3id.org/dingo#start_time>
+
+    Annotations: 
+        rdfs:comment "The time an item starts to exist/operate or a statement starts being valid.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "start_time",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/cerif/frapo/hasStartDate>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/startTime>
+    
+    Range: 
+        xsd:date or xsd:dateTime
+    
+    
+ObjectProperty: <https://w3id.org/dingo#takes_role>
+
+    Annotations: 
+        rdfs:comment "The role (object) assumed or assigned to a person or organisation or entity (subject).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "takes_role"
+    
+    Domain: 
+        <https://w3id.org/dingo#Organisation> or <https://w3id.org/dingo#Person>
+    
+    Range: 
+        <https://w3id.org/dingo#Role>
+    
+    InverseOf: 
+        <https://w3id.org/dingo#entity_taking_role>
+    
+    
+ObjectProperty: <https://w3id.org/dingo#thematic_area>
+
+    Annotations: 
+        rdfs:comment "Topics and/or area of interest.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "thematic_area"
+    
+    Domain: 
+        <https://w3id.org/dingo#ThematicCriterion>
+    
+    Range: 
+        rdfs:Resource
+    
+    
+ObjectProperty: <https://w3id.org/dingo#used_in>
+
+    Annotations: 
+        rdfs:comment "Database or information system where the identifier is/was used.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "used_in"
+    
+    Domain: 
+        <https://w3id.org/dingo#Identifier>
+    
+    Range: 
+        <https://w3id.org/dingo#InformationBase>
+    
+    
+DataProperty: <https://w3id.org/dingo#abstract_or_summary_description>
+
+    Annotations: 
+        rdfs:comment "Short summary description of a project.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "abstract_or_summary_description"
+    
+    Domain: 
+        <https://w3id.org/dingo#Project>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#additionalName>
+
+    Annotations: 
+        rdfs:comment "Additional part of a person's beyond given name and surname, can be used for a middle name.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "additionalName"
+    
+    Domain: 
+        <https://w3id.org/dingo#Person>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#criterion_description>
+
+    Annotations: 
+        rdfs:comment "Description of the eligibility, targets and other relevant points of the FundingScheme.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "criterion_description"
+    
+    Domain: 
+        <https://w3id.org/dingo#Criterion>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#crossref_grantid>
+
+    Annotations: 
+        rdfs:comment "Identifier for funding in the Crossref registry.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "crossref_grantid"
+    
+    Domain: 
+        <https://w3id.org/dingo#Grant>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#crossref_id>
+
+    Annotations: 
+        rdfs:comment "Identifier for an organisation that funds research, in the Crossref registry.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "crossref_id"
+    
+    Domain: 
+        <https://w3id.org/dingo#FundingAgency>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#degree_title>
+
+    Annotations: 
+        rdfs:comment "Title denoting the academic degree.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "degree_title",
+        <http://www.w3.org/2004/02/skos/core#realted> <http://purl.org/cerif/frapo/hasDegreeSuffix>
+    
+    Domain: 
+        <https://w3id.org/dingo#AcademicDegree>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#early_termination>
+
+    Annotations: 
+        rdfs:comment "Indicates if the role was ended ahead of time with respect to the grant contract of project ending.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "early_termination"
+    
+    Domain: 
+        <https://w3id.org/dingo#Role>
+    
+    Range: 
+        xsd:boolean
+    
+    
+DataProperty: <https://w3id.org/dingo#givenName>
+
+    Annotations: 
+        rdfs:comment "Part of a person's name that individuates the person within the (typically closest) group that shares the same surname.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "givenName",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/givenName>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P735>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://xmlns.com/foaf/0.1/firstName>
+    
+    Domain: 
+        <https://w3id.org/dingo#Person>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#id_value>
+
+    Annotations: 
+        rdfs:comment "String representing the identifier.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "id_value"
+    
+    Domain: 
+        <https://w3id.org/dingo#Identifier>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#max_age>
+
+    Annotations: 
+        rdfs:comment "Maximum age allowed.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "max_age",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P4135>
+    
+    Domain: 
+        <https://w3id.org/dingo#AgeCriterion>
+    
+    Range: 
+        xsd:positiveInteger
+    
+    
+DataProperty: <https://w3id.org/dingo#max_years_from_baseline_degree>
+
+    Annotations: 
+        rdfs:comment "Maximum number of years counting from the year of when the dg:baseline_academic_degree was obtained.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "max_years_from_baseline_degree"
+    
+    Domain: 
+        <https://w3id.org/dingo#CareerStageCriterion>
+    
+    Range: 
+        xsd:positiveInteger
+    
+    
+DataProperty: <https://w3id.org/dingo#min_age>
+
+    Annotations: 
+        rdfs:comment "Minimum age required.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "min_age",
+        <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.wikidata.org/prop/P2899>
+    
+    Domain: 
+        <https://w3id.org/dingo#AgeCriterion>
+    
+    Range: 
+        xsd:positiveInteger
+    
+    
+DataProperty: <https://w3id.org/dingo#min_research_years>
+
+    Annotations: 
+        rdfs:comment "Minimum number of research years required.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "min_research_years"
+    
+    Domain: 
+        <https://w3id.org/dingo#CareerStageCriterion>
+    
+    Range: 
+        xsd:positiveInteger
+    
+    
+DataProperty: <https://w3id.org/dingo#min_years_from_baseline_degree>
+
+    Annotations: 
+        rdfs:comment "Minimum number of years counting from the year of when the dg:baseline_academic_degree was obtained.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "min_years_from_baseline_degree"
+    
+    Domain: 
+        <https://w3id.org/dingo#CareerStageCriterion>
+    
+    Range: 
+        xsd:positiveInteger
+    
+    
+DataProperty: <https://w3id.org/dingo#orcid_id>
+
+    Annotations: 
+        rdfs:comment "Nonproprietary alphanumeric code to uniquely identify scientific and other academic authors.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "orcid_id",
+        <http://www.w3.org/2004/02/skos/core#equivalentProperty> <http://purl.org/cerif/frapo/hasORCID>
+    
+    Domain: 
+        <https://w3id.org/dingo#Person>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#percentage_employment>
+
+    Annotations: 
+        rdfs:comment "Minimum percentage of employment required (for example to be eligible for funding).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "percentage_employment"
+    
+    Domain: 
+        <https://w3id.org/dingo#EmploymentCriterion>
+    
+    Range: 
+        xsd:positiveInteger
+    
+    
+DataProperty: <https://w3id.org/dingo#percentage_working_time>
+
+    Annotations: 
+        rdfs:comment "Amount of working time in percentage.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "percentage_working_time"
+    
+    Domain: 
+        <https://w3id.org/dingo#WorkingTimeCriterion>
+    
+    Range: 
+        xsd:positiveInteger
+    
+    
+DataProperty: <https://w3id.org/dingo#role_label>
+
+    Annotations: 
+        rdfs:comment "Label (name) of a Role.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "role_label",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/roleName>
+    
+    Domain: 
+        <https://w3id.org/dingo#Role>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#short_name>
+
+    Annotations: 
+        rdfs:comment "Acronym or short name of an organisation or project or funding scheme.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "short_name",
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.org/cerif/frapo/hasAcronym>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P1813>
+    
+    Domain: 
+        <https://w3id.org/dingo#FundingScheme> or <https://w3id.org/dingo#Organisation> or <https://w3id.org/dingo#Project>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#surname>
+
+    Annotations: 
+        rdfs:comment "Part of a person's name shared with a group (typically family or tribe or clan depending on the culture), and/or used in formal contexts or with people that do not know the person well.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "surname",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/familyName>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/prop/P734>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://xmlns.com/foaf/0.1/family_name>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://xmlns.com/foaf/0.1/surname>
+    
+    Domain: 
+        <https://w3id.org/dingo#Person>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#title>
+
+    Annotations: 
+        rdfs:comment "The title of a project (original or translated).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "title"
+    
+    Domain: 
+        <https://w3id.org/dingo#Project>
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: <https://w3id.org/dingo#wikidata_item_id>
+
+    Annotations: 
+        rdfs:comment "Identifier for a class or item existing in Wikidata.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "wikidata_item_id"
+    
+    Domain: 
+        <https://w3id.org/dingo#Grant>
+    
+    Range: 
+        xsd:string
+    
+    
+Class: <http://schema.org/Country>
+
+    
+Class: <http://schema.org/EducationalOrganization>
+
+    EquivalentTo: 
+        <https://w3id.org/dingo#EducationOrganisation>
+    
+    
+Class: <http://schema.org/GovernmentOrganization>
+
+    EquivalentTo: 
+        <https://w3id.org/dingo#GovernmentalOrganisation>
+    
+    
+Class: <http://schema.org/MedicalOrganization>
+
+    EquivalentTo: 
+        <https://w3id.org/dingo#HealthcareOrganisation>
+    
+    
+Class: <http://schema.org/MonetaryAmount>
+
+    
+Class: <http://schema.org/Organization>
+
+    EquivalentTo: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <http://schema.org/PerformingGroup>
+
+    EquivalentTo: 
+        <https://w3id.org/dingo#PerformingGroup>
+    
+    
+Class: <http://schema.org/Person>
+
+    EquivalentTo: 
+        <https://w3id.org/dingo#Person>
+    
+    
+Class: <http://schema.org/PostalAddress>
+
+    
+Class: <http://schema.org/SportsOrganisation>
+
+    EquivalentTo: 
+        <https://w3id.org/dingo#SportsOrganisation>
+    
+    
+Class: <http://schema.org/SupranationalOrganisation>
+
+    
+Class: <http://schema.org/url>
+
+    
+Class: <http://www.wikidata.org/entity/Q189533>
+
+    EquivalentTo: 
+        <https://w3id.org/dingo#AcademicDegree>
+    
+    
+Class: <http://www.wikidata.org/entity/Q43229>
+
+    EquivalentTo: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <http://xmlns.com/foaf/0.1/Person>
+
+    EquivalentTo: 
+        <https://w3id.org/dingo#Person>
+    
+    Individuals: 
+        _:0,
+        _:1,
+        _:2,
+        _:3,
+        _:4,
+        _:5
+    
+    
+Class: <https://w3id.org/dingo#AcademicDegree>
+
+    Annotations: 
+        rdfs:comment "The class for academic degrees: college or university diploma.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "AcademicDegree"
+    
+    EquivalentTo: 
+        <http://www.wikidata.org/entity/Q189533>
+    
+    
+Class: <https://w3id.org/dingo#AgeCriterion>
+
+    Annotations: 
+        rdfs:comment "Specifies that grants are awarded to projects on the basis of age limits.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "AgeCriterion"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+Class: <https://w3id.org/dingo#ArchiveOrganisation>
+
+    Annotations: 
+        rdfs:comment "Institution that holds artifacts and other objects of scientific, artistic, cultural, historical, or other importance.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "ArchiveOrganisation"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#BottomUpCriterion>
+
+    Annotations: 
+        rdfs:comment "Specifies that grants are awarded to projects on the basis of the research proposal itself without restriction on theme/subject or research area. The funding body does not specifies beforehand missions, targets nor topics of the research projects that can apply.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "BottomUpCriterion"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+Class: <https://w3id.org/dingo#CareerPurposeCriterion>
+
+    Annotations: 
+        rdfs:comment "Specifies that grants are awarded on the basis of career-related goals and applicants must be at a defined career stage (defined academic degree) to be achieved.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "CareerPurposeCriterion"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+Class: <https://w3id.org/dingo#CareerStageCriterion>
+
+    Annotations: 
+        rdfs:comment "Specifies that grants are awarded to projects on the basis of career stage limits.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "CareerStageCriterion"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+Class: <https://w3id.org/dingo#Company>
+
+    Annotations: 
+        rdfs:comment "A commercial business.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "Company",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/cerif/frapo/Company>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/Corporation>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q783794>
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#Criterion>
+
+    Annotations: 
+        rdfs:comment "Specification of Grant coverage, Grant eligibility, Grant reimbursement rates, Grant specific criteria for funding, Grant population targets, and similar features.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "Criterion"
+    
+    
+Class: <https://w3id.org/dingo#CulturalOrganisation>
+
+    Annotations: 
+        rdfs:comment "Cultural institution or cultural organization is an organization within a culture/subculture that works for the preservation or promotion of culture.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "CulturalOrganisation"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#EducationOrganisation>
+
+    Annotations: 
+        rdfs:comment "Institution that provides education.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "EducationOrganisation"
+    
+    EquivalentTo: 
+        <http://schema.org/EducationalOrganization>
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#EmploymentCriterion>
+
+    Annotations: 
+        rdfs:comment "Specifies that grants are awarded on the basis of employment conditions by an organisation eligible for funding at the time of applying or receiving the funds.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "EmploymentCriterion"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+Class: <https://w3id.org/dingo#FacilityOrganisation>
+
+    Annotations: 
+        rdfs:comment "A place providing for a particular purpose.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "FacilityOrganisation"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#ForProfitOrganisation>
+
+    Annotations: 
+        rdfs:comment "For profit entity.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "ForProfictOrganisation"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#FundingAgency>
+
+    Annotations: 
+        rdfs:comment "The class for funding agencies: organisations that materially disburse and administer the Grant process.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "FundingAgency",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/cerif/frapo/FundingAgency>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/FundingAgency>
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#FundingScheme>
+
+    Annotations: 
+        rdfs:comment "The class for funding schemes: plans, designs, and/or programs that determines and organizes the funding.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "FundingScheme",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/cerif/frapo/FundingProgramme>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/FundingScheme>
+    
+    
+Class: <https://w3id.org/dingo#GeographicCriterion>
+
+    Annotations: 
+        rdfs:comment "Specifies that grants are awarded to projects on the basis of geographic areas, either where the project has to be implemented, or where the researcher must have been operating before applying for funding, or where the participants must be resident or citizens.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "GeographicCriterion"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+Class: <https://w3id.org/dingo#GovernmentalOrganisation>
+
+    Annotations: 
+        rdfs:comment "Organisation or agency depending on a government, State or other supranational organisation and mainly operated by the government.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "GovernmentalOrganisation",
+        <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.org/cerif/frapo/GovernmentOrganization>
+    
+    EquivalentTo: 
+        <http://schema.org/GovernmentOrganization>
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#Grant>
+
+    Annotations: 
+        rdfs:comment "The class for grant: a disbursed fund payed to a recipient or beneficiary and the process for it.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "Grant",
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.wikidata.org/entity/Q230788>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/cerif/frapo/Funding>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/MonetaryGrant>,
+        <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.org/cerif/frapo/Grant>
+    
+    
+Class: <https://w3id.org/dingo#GrantPayment>
+
+    Annotations: 
+        rdfs:comment "The class for grant payments: a single payment to a recipient or beneficiary within a Grant.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "GrantPayment",
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.org/cerif/frapo/Payment>,
+        <http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.wikidata.org/entity/Q1148747>
+    
+    
+Class: <https://w3id.org/dingo#GrantShare>
+
+    Annotations: 
+        rdfs:comment "The class for grant shares: the full or proper portion or part allotted or belonging to or contributed to an individual entity within a Grant.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "GrantShare"
+    
+    
+Class: <https://w3id.org/dingo#HealthcareOrganisation>
+
+    Annotations: 
+        rdfs:comment "Organization that provides health care and related services.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "HealthcareOrganisation"
+    
+    EquivalentTo: 
+        <http://schema.org/MedicalOrganization>
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#HigherEducationOrganisation>
+
+    Annotations: 
+        rdfs:comment "Place of postsecondary education (e.g., universities, vocational universities, community colleges, liberal arts colleges, institutes of technology, and others).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "HigherEducationOrganisation"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#Identifier>
+
+    Annotations: 
+        rdfs:comment "The class for identifiers.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "Identifier",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q6545185>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q853614>
+    
+    
+Class: <https://w3id.org/dingo#InformationBase>
+
+    Annotations: 
+        rdfs:comment "An organized collection of data and/or information. It can use any available technology. The temr can also indicate in general the information system built integrating such information bases.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "InformationBase"
+    
+    
+Class: <https://w3id.org/dingo#InfrastructurePurposeCriterion>
+
+    Annotations: 
+        rdfs:comment "Specifies that grants are awarded to cover for the expenses of infrastructure.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "InfrastructurePurposeCriterion"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+Class: <https://w3id.org/dingo#IntergovernmentalOrganisation>
+
+    Annotations: 
+        rdfs:comment "Organization composed primarily of sovereign states. Example: United Nations.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "IntergovernmentalOrganisation"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#NonprofitOrganisation>
+
+    Annotations: 
+        rdfs:comment "Business entity that pays no income tax, as it furthers a religious, scientific or social cause, providing a public benefit.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "NonprofitOrganisation",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/cerif/frapo/NotForProfitOrganization>
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#Organisation>
+
+    Annotations: 
+        rdfs:comment "The class for organisations: social entities with a collective goal.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "Organisation",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q43229>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://xmlns.com/foaf/0.1/Oranization>
+    
+    EquivalentTo: 
+        <http://schema.org/Organization>,
+        <http://www.wikidata.org/entity/Q43229>
+    
+    
+Class: <https://w3id.org/dingo#OrganisationRole>
+
+    Annotations: 
+        rdfs:comment "The class for organisation roles: function assumed by or ascribed to an organisation that takes part in something.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "OrganisationRole"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Role>
+    
+    
+Class: <https://w3id.org/dingo#OrganisationalCriterion>
+
+    Annotations: 
+        rdfs:comment "Specifies that grants are awarded on the basis of specified organisational form of the project, for instance demanding for participation of different research groups (synergy).",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "OrganisationalCriterion"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+Class: <https://w3id.org/dingo#PerformingGroup>
+
+    Annotations: 
+        rdfs:comment "A performance group, such as a band, an orchestra, or a circus.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "PerformingGroup"
+    
+    EquivalentTo: 
+        <http://schema.org/PerformingGroup>
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#Person>
+
+    Annotations: 
+        rdfs:comment "The class for persons: alive, dead, undead, or fictional.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "Person",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q215627>,
+        <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q215627>,
+        <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.wikidata.org/entity/Q5>
+    
+    EquivalentTo: 
+        <http://schema.org/Person>,
+        <http://xmlns.com/foaf/0.1/Person>
+    
+    
+Class: <https://w3id.org/dingo#PersonRole>
+
+    Annotations: 
+        rdfs:comment "The class for person roles: function assumed by or ascribed to a person that takes part in something.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "PersonRole"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Role>
+    
+    
+Class: <https://w3id.org/dingo#Project>
+
+    Annotations: 
+        rdfs:comment "The class for projects: an organised endeavour (collective or individual) planned to reach a particular aim or achieve a result.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "Project",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/Project>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q170584>,
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://xmlns.com/foaf/0.1/Project>,
+        <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.org/cerif/frapo/Investigation>,
+        <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.org/cerif/frapo/Project>
+    
+    
+Class: <https://w3id.org/dingo#ResearchPerformingOrganisation>
+
+    Annotations: 
+        rdfs:comment "Organisations devoted to research activities.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "ResearchPerformingOrganisation",
+        <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.org/cerif/frapo/ResearchInstitute>
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#Role>
+
+    Annotations: 
+        rdfs:comment "The class for roles: the function assumed by or ascribed to an entity (typically person, group of persons or organisation) in a particular situation.
+It can be used to precise or represent additional information about a relationship or property such as participation or membership. The class should be only used to derive subclasses.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "Role",
+        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://schema.org/Role>
+    
+    
+Class: <https://w3id.org/dingo#SportsOrganisation>
+
+    Annotations: 
+        rdfs:comment "Represents the class of all sports organizations, including sports teams, governing bodies, and sports associations.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "SportsOrganisation"
+    
+    EquivalentTo: 
+        <http://schema.org/SportsOrganisation>
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#SupranationalOrganisation>
+
+    Annotations: 
+        rdfs:comment "International organisation with power and influence in the jurisdictions of its member states. Example: European Union.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "SupranationalOrganisation"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Organisation>
+    
+    
+Class: <https://w3id.org/dingo#ThematicCriterion>
+
+    Annotations: 
+        rdfs:comment "Specifies that grants are awarded to projects on the basis of specified thematic/subject areas or well-defined areas of investigation indicated by the funding body.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "ThematicCriterion"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+Class: <https://w3id.org/dingo#WorkingTimeCriterion>
+
+    Annotations: 
+        rdfs:comment "Specifies that grants are awarded to projects on the basis of percentage of work time specifically devoted to the funded research.",
+        rdfs:isDefinedBy <https://w3id.org/dingo#>,
+        rdfs:label "WorkingTimeCriterion"
+    
+    SubClassOf: 
+        <https://w3id.org/dingo#Criterion>
+    
+    
+Class: rdfs:Resource
+
+    
+Class: xsd:anyURI
+
+    
+Class: xsd:date
+
+    
+Class: xsd:dateTime
+
+    
+Class: xsd:string
+
+    
+Individual: _:0
+
+    Annotations: 
+        <http://xmlns.com/foaf/0.1/name> "Thomas Baker"
+    
+    Types: 
+        <http://xmlns.com/foaf/0.1/Person>
+    
+    
+Individual: _:1
+
+    Annotations: 
+        <http://xmlns.com/foaf/0.1/name> "Diego Chialva"
+    
+    Types: 
+        <http://xmlns.com/foaf/0.1/Person>
+    
+    
+Individual: _:2
+
+    Annotations: 
+        <http://xmlns.com/foaf/0.1/name> "Dan Brickley"
+    
+    Types: 
+        <http://xmlns.com/foaf/0.1/Person>
+    
+    
+Individual: _:3
+
+    Annotations: 
+        <http://xmlns.com/foaf/0.1/name> "Alexis-Michel Mugabushaka"
+    
+    Types: 
+        <http://xmlns.com/foaf/0.1/Person>
+    
+    
+Individual: _:4
+
+    Annotations: 
+        <http://xmlns.com/foaf/0.1/name> "Andra Waagmeester"
+    
+    Types: 
+        <http://xmlns.com/foaf/0.1/Person>
+    
+    
+Individual: _:5
+
+    Annotations: 
+        <http://xmlns.com/foaf/0.1/name> "Eric Prud'hommeaux"
+    
+    Types: 
+        <http://xmlns.com/foaf/0.1/Person>
+    
+    

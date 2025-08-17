@@ -1,0 +1,68 @@
+Question: What are the specific goals of Granter?
+Answer: The specific goals of Granter.ai include increasing the efficiency and precision of analyzing and evaluating proposal submissions, reducing decision-making time, minimizing human errors, and ensuring greater transparency and consistency in the evaluation process of fund management organizations. Additionally, the project aims to simplify and democratize access to public and private funding through innovative technological solutions. The long-term goal is also to optimize resources, promote transparency, and improve the capacity of evaluators.
+
+
+--------------------------------------------------------------------------------
+
+Question: what does the pilot 3 project consist of?
+Answer: I don't know. The context only provides information about Piloto 1 and Piloto 2, but not any details about a third pilot project (Piloto 3).
+
+
+--------------------------------------------------------------------------------
+
+Question: What is the maximum public support rate available for start-ups, spin-offs, or co-promotion projects introducing innovative products, processes, or equipment?
+Answer: I don't know. The context does not provide information on the maximum public support rate available for start-ups, spin-offs, or co-promotion projects. It mentions the "Prioridade do Programa 2 - Fomentar atividades de aquicultura sustentáveis e a transformação e comercialização de produtos da pesca e da aquicultura", but does not specify a maximum public support rate.
+
+
+--------------------------------------------------------------------------------
+
+Question: What are the types of eligible expenses covered under this notice for projects in the transformation of fishery and aquaculture products?
+Answer: The types of eligible expenses mentioned in the context include:
+
+* Fabricação de refeições e pratos pré-cozinhados (FOOD2.2-01) related to transformation of fishery and aquaculture products
+* Investimentos produtivos na transformação (FOOD2.2-01)
+
+
+--------------------------------------------------------------------------------
+
+Question: According to this document, what is the deadline for submitting projects to the “Atlantic Deep-Sea Mining Innovation Grant?
+Answer: I don't know. The context doesn't mention a specific grant called "Atlantic Deep-Sea Mining Innovation Grant". It does discuss various grants and funding programs, but none of them are mentioned by name.
+
+
+--------------------------------------------------------------------------------
+
+
+
+ANSWERS WITH SOURCE
+Question: What are the specific goals of Granter?
+Answer(with source): The specific goals of Granter.ai include automatizing the generation of candidate proposals, ensuring they are highly competitive and aligned with the expectations of funding entities, while also reducing the time of decision-making, minimizing human errors, and increasing transparency and consistency in the evaluation process. This is supported by [Source 2: companyfileexample.txt]. According to Granter.ai's objectives (not explicitly listed in context), this goal aligns with their strategy of simplifying and democratizing access to public and private funding through innovative technology.
+
+
+--------------------------------------------------------------------------------
+
+Question: what does the pilot 3 project consist of?
+Answer(with source): I don't know. The context provided only includes information about Pilots 1 and 2, but not a third pilot.
+
+
+--------------------------------------------------------------------------------
+
+Question: What is the maximum public support rate available for start-ups, spin-offs, or co-promotion projects introducing innovative products, processes, or equipment?
+Answer(with source): I don't know. The provided context doesn't mention a specific public support rate for start-ups, spin-offs, or co-promotion projects.
+
+
+--------------------------------------------------------------------------------
+
+Question: What are the types of eligible expenses covered under this notice for projects in the transformation of fishery and aquaculture products?
+Answer(with source): The types of eligible expenses covered under this notice for projects in the transformation of fishery and aquaculture products include investments in production (FSA2.2-01-Investimentos produtivos na transformação) and investment in equipment, machinery, or technology related to the transformation process (not explicitly listed in the provided context). [Source 1: opportunityfileexample.txt]
+
+Additionally, the Programa MAR 2030 mentions that the program focuses on promoting the commercialization, quality, and added value of fishery and aquaculture products, as well as their transformation.
+
+
+--------------------------------------------------------------------------------
+
+Question: According to this document, what is the deadline for submitting projects to the “Atlantic Deep-Sea Mining Innovation Grant?
+Answer(with source): I don't know. The provided context does not mention a specific grant or project with the name "Atlantic Deep-Sea Mining Innovation Grant". However, it does mention a project that started in September 2022 and is expected to end in March 2024 (Source 1: companyfileexample.txt)
+
+
+--------------------------------------------------------------------------------
+

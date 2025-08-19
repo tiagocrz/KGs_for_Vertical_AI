@@ -1,41 +1,3 @@
--- CHECK 
--- Table structure for table `granter_activity`
---
-
-DROP TABLE IF EXISTS `granter_activity`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `granter_activity` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `created_at` datetime(6) NOT NULL,
-  `updated_at` datetime(6) NOT NULL,
-  `type` varchar(100) NOT NULL,
-  `title` varchar(100) DEFAULT NULL,
-  `description` longtext,
-  `application_id` bigint DEFAULT NULL,
-  `company_id` bigint NOT NULL,
-  `file_id` bigint DEFAULT NULL,
-  `profile_id` bigint NOT NULL,
-  `created_by_expert` tinyint(1) NOT NULL,
-  `activity_date` datetime(6) DEFAULT NULL,
-  `data` longtext,
-  `data_id` varchar(100) DEFAULT NULL,
-  `opportunity_id` bigint DEFAULT NULL,
-  `data_type` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `granter_activity_application_id_4284cf67_fk_granter_a` (`application_id`),
-  KEY `granter_activity_company_id_b2808af0_fk_granter_company_id` (`company_id`),
-  KEY `granter_activity_file_id_6f2e8b31_fk_granter_companyfile_id` (`file_id`),
-  KEY `granter_activity_profile_id_6f7995a1_fk_granter_profile_id` (`profile_id`),
-  KEY `granter_activity_opportunity_id_8907ad01_fk_granter_o` (`opportunity_id`),
-  CONSTRAINT `granter_activity_application_id_4284cf67_fk_granter_a` FOREIGN KEY (`application_id`) REFERENCES `granter_application` (`id`),
-  CONSTRAINT `granter_activity_company_id_b2808af0_fk_granter_company_id` FOREIGN KEY (`company_id`) REFERENCES `granter_company` (`id`),
-  CONSTRAINT `granter_activity_file_id_6f2e8b31_fk_granter_companyfile_id` FOREIGN KEY (`file_id`) REFERENCES `granter_companyfile` (`id`),
-  CONSTRAINT `granter_activity_opportunity_id_8907ad01_fk_granter_o` FOREIGN KEY (`opportunity_id`) REFERENCES `granter_opportunity` (`id`),
-  CONSTRAINT `granter_activity_profile_id_6f7995a1_fk_granter_profile_id` FOREIGN KEY (`profile_id`) REFERENCES `granter_profile` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
 --
 -- Table structure for table `granter_application`
 --
@@ -312,6 +274,24 @@ CREATE TABLE `granter_consortiumpartnertype_consortium` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Table structure for table `granter_eligibilitycriteria`
+--
+
+DROP TABLE IF EXISTS `granter_eligibilitycriteria`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `granter_eligibilitycriteria` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `opportunity_id` bigint NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `granter_opportunityc_opportunity_id_0bac18a9_fk_granter_o` (`opportunity_id`),
+  CONSTRAINT `granter_opportunityc_opportunity_id_0bac18a9_fk_granter_o` FOREIGN KEY (`opportunity_id`) REFERENCES `granter_opportunity` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=278 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
 --  
 -- Table structure for table `granter_generalopportunityfile`
 --
@@ -346,6 +326,29 @@ CREATE TABLE `granter_generalopportunityfile_opportunities` (
   KEY `granter_generaloppor_opportunity_id_ff1803f9_fk_granter_o` (`opportunity_id`),
   CONSTRAINT `granter_generaloppor_generalopportunityfi_d25fa7a3_fk_granter_g` FOREIGN KEY (`generalopportunityfile_id`) REFERENCES `granter_generalopportunityfile` (`id`),
   CONSTRAINT `granter_generaloppor_opportunity_id_ff1803f9_fk_granter_o` FOREIGN KEY (`opportunity_id`) REFERENCES `granter_opportunity` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `granter_matchgroup`
+--
+
+DROP TABLE IF EXISTS `granter_matchgroup`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `granter_matchgroup` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `status` varchar(30) NOT NULL,
+  `fundamentation` longtext,
+  `company_id` bigint NOT NULL,
+  `opportunity_id` bigint NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `granter_matchgroup_company_id_df07c150_fk_granter_company_id` (`company_id`),
+  KEY `granter_matchgroup_opportunity_id_89333ad9_fk_granter_o` (`opportunity_id`),
+  CONSTRAINT `granter_matchgroup_company_id_df07c150_fk_granter_company_id` FOREIGN KEY (`company_id`) REFERENCES `granter_company` (`id`),
+  CONSTRAINT `granter_matchgroup_opportunity_id_89333ad9_fk_granter_o` FOREIGN KEY (`opportunity_id`) REFERENCES `granter_opportunity` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

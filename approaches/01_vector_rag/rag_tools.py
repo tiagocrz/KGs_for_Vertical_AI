@@ -19,9 +19,9 @@ def chunk_text(text: str, source_file: str, chunk_size=1200, chunk_overlap=100):
     chunks = text_splitter.split_text(text)
     
     documents = []
-    for i, chunk_text in enumerate(chunks):
+    for i, chunk in enumerate(chunks):
         doc = Document(
-            page_content=chunk_text,
+            page_content=chunk,
             metadata={"source": source_file, "chunk_id": i}
         )
         documents.append(doc)

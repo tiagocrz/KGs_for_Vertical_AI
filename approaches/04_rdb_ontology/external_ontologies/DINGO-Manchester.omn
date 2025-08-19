@@ -11,13 +11,13 @@ Ontology: <https://w3id.org/dingo#>
 
 Annotations: 
     <http://purl.org/dc/elements/1.1/contributor> _:0,
+    <http://purl.org/dc/elements/1.1/contributor> _:1,
     <http://purl.org/dc/elements/1.1/contributor> _:2,
-    <http://purl.org/dc/elements/1.1/contributor> _:3,
     <http://purl.org/dc/elements/1.1/contributor> _:4,
     <http://purl.org/dc/elements/1.1/contributor> _:5,
     <http://purl.org/dc/elements/1.1/issued> "2018-10-26T00:00:00Z",
     <http://purl.org/dc/elements/1.1/title> "DINGO Ontology",
-    <http://purl.org/dc/terms/creator> _:1,
+    <http://purl.org/dc/terms/creator> _:3,
     <http://purl.org/dc/terms/modified> "2020-01-10T10:20:10Z",
     rdfs:comment "The DINGO ontology (Data Integration for Grant Ontology) defines the terms of the DINGO vocabulary and provides a machine readable extensible framework to model data relative to projects, funding, project and funding actors, and, notably, funding policies. It is designed to yield high modeling power and elasticity to cope with the huge variety in funding and project practices, which makes it applicable to many areas where funding is an important aspect: first of all research, but also the arts, cultural conservation, and many others.",
     owl:versionInfo "2020-01-10T10:20:10Z"
@@ -1685,7 +1685,7 @@ Class: xsd:string
 Individual: _:0
 
     Annotations: 
-        <http://xmlns.com/foaf/0.1/name> "Thomas Baker"
+        <http://xmlns.com/foaf/0.1/name> "Alexis-Michel Mugabushaka"
     
     Types: 
         <http://xmlns.com/foaf/0.1/Person>
@@ -1694,7 +1694,7 @@ Individual: _:0
 Individual: _:1
 
     Annotations: 
-        <http://xmlns.com/foaf/0.1/name> "Diego Chialva"
+        <http://xmlns.com/foaf/0.1/name> "Dan Brickley"
     
     Types: 
         <http://xmlns.com/foaf/0.1/Person>
@@ -1703,7 +1703,7 @@ Individual: _:1
 Individual: _:2
 
     Annotations: 
-        <http://xmlns.com/foaf/0.1/name> "Dan Brickley"
+        <http://xmlns.com/foaf/0.1/name> "Eric Prud'hommeaux"
     
     Types: 
         <http://xmlns.com/foaf/0.1/Person>
@@ -1712,7 +1712,7 @@ Individual: _:2
 Individual: _:3
 
     Annotations: 
-        <http://xmlns.com/foaf/0.1/name> "Alexis-Michel Mugabushaka"
+        <http://xmlns.com/foaf/0.1/name> "Diego Chialva"
     
     Types: 
         <http://xmlns.com/foaf/0.1/Person>
@@ -1730,7 +1730,7 @@ Individual: _:4
 Individual: _:5
 
     Annotations: 
-        <http://xmlns.com/foaf/0.1/name> "Eric Prud'hommeaux"
+        <http://xmlns.com/foaf/0.1/name> "Thomas Baker"
     
     Types: 
         <http://xmlns.com/foaf/0.1/Person>

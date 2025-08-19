@@ -3,7 +3,7 @@ Applications
     granter_applicationfile
    
 Companies
-    CHECK granter_activity
+    CHECK granter_activity 
     CHECK granter_companymemory
     granter_timeline
     
@@ -24,10 +24,16 @@ Opportunities
     CHECK granter_generalopportunityfile_opportunities (bridge table)
     CHECK granter_generalopportunityfile 
 
+
+ 
+  PARA ADICIONAR
+    matchgroup
+    elegibilitycriteria
     
- 
-  
- 
+ MAYBE REMOVER
+    granter_activity
+
+
     
 Notas 
     granter_profile + granter_company_profiles  - cenas do django nao interessa

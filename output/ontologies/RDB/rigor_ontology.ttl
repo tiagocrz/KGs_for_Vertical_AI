@@ -1,0 +1,1371 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/my-ontology#CareerPurposeCriterion> a owl:Class ;
+    rdfs:subClassOf <http://example.org/my-ontology#Criterion> ;
+    prov:wasDerivedFrom <http://example.org/provenance/CareerPurposeCriterion> .
+
+<http://example.org/my-ontology#CareerStageCriterion> a owl:Class ;
+    rdfs:subClassOf <http://example.org/my-ontology#Criterion> ;
+    prov:wasDerivedFrom <http://example.org/provenance/CareerStageCriterion> .
+
+<http://example.org/my-ontology#EmploymentCriterion> a owl:Class ;
+    rdfs:subClassOf <http://example.org/my-ontology#Criterion> ;
+    prov:wasDerivedFrom <http://example.org/provenance/EmploymentCriterion> .
+
+<http://example.org/my-ontology#belongsToCompany> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/my-ontology#granter_matchcheck> ;
+    rdfs:range <http://example.org/my-ontology#granter_company> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_matchcheck/belongsToCompany> .
+
+<http://example.org/my-ontology#belongsToOpportunity> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/my-ontology#granter_eligibilitycriteria> ;
+    rdfs:range <http://example.org/my-ontology#granter_opportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_eligibilitycriteria/belongsToOpportunity> .
+
+<http://example.org/my-ontology#hasMatchCheck> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/my-ontology#granter_eligibilitycriteria> ;
+    rdfs:range <http://example.org/my-ontology#granter_matchcheck> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_eligibilitycriteria/hasMatchCheck> .
+
+<http://example.org/my-ontology#hasMatchGroup> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/my-ontology#granter_matchcheck> ;
+    rdfs:range <http://example.org/my-ontology#granter_matchgroup> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_matchcheck/hasMatchGroup> .
+
+<http://example.org/my-ontology#has_column_name> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/my-ontology#granter_eligibilitycriteria> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_eligibilitycriteria/column_name> .
+
+<http://example.org/my-ontology#has_description> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/my-ontology#granter_eligibilitycriteria> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_eligibilitycriteria/description> .
+
+<http://example.org/my-ontology#has_opportunity_id> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/my-ontology#granter_eligibilitycriteria> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_eligibilitycriteria/opportunity_id> .
+
+<http://example.org/my-ontology#matchesCriteria> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/my-ontology#granter_matchcheck> ;
+    rdfs:range <http://example.org/my-ontology#granter_eligibilitycriteria> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_matchcheck/matchesCriteria> .
+
+<http://example.org/my-ontology#partOfMatchGroup> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/my-ontology#granter_matchgroup> ;
+    rdfs:range <http://example.org/my-ontology#granter_matchcheck> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_matchgroup/partOfMatchGroup> .
+
+<http://example.org/ontology#FundingEntity> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/ontology/FundingEntity> .
+
+<http://example.org/ontology#Organization> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/ontology/Organization> .
+
+<http://example.org/ontology#PersonLocation> a owl:Class ;
+    rdfs:subClassOf <http://example.org/ontology#GeographicCriterion> ;
+    prov:wasDerivedFrom <http://example.org/ontology/PersonLocation> .
+
+<http://example.org/ontology#appliesThrough> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_consortium> ;
+    rdfs:range <http://example.org/ontology#granter_application> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortium/application> .
+
+<http://example.org/ontology#associated_with_eligibility_criteria> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range <http://example.org/ontology#granter_eligibility_criteria> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/associated_with_eligibility_criteria> .
+
+<http://example.org/ontology#associated_with_timeline> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range <http://example.org/ontology#granter_timeline> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/associated_with_timeline> .
+
+<http://example.org/ontology#belongsToApplication> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#granterApplication>,
+        <http://example.org/ontology#granterApplicationFile> ;
+    rdfs:range <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#granterApplication> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/belongsToApplication>,
+        <http://example.org/provenance/granter_applicationfile/belongsToApplication> .
+
+<http://example.org/ontology#belongsToCompany> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterCompanyFile>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granterCompanyFile> ;
+    rdfs:range <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/belongsToCompany>,
+        <http://example.org/provenance/granter_company/belongs_to_company>,
+        <http://example.org/provenance/granter_companyfile/belongsToCompany>,
+        <http://example.org/provenance/granter_companyfile/belongs_to_company>,
+        <http://provenance/source/granter_application/company_id> .
+
+<http://example.org/ontology#belongsToCompanyMemory> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterCompanyMemory> ;
+    prov:wasDerivedFrom <http://provenance/relationship/belongs_to_company_memory> .
+
+<http://example.org/ontology#belongsToGranterOpportunity> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_generalopportunityfile/belongsToGranterOpportunity> .
+
+<http://example.org/ontology#belongsToOpportunity> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#granter_timeline> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunity>,
+        <http://example.org/ontology#granter_opportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/belongsToOpportunity>,
+        <http://provenance/source/granter_application/opportunity_id> .
+
+<http://example.org/ontology#belongs_to_application> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#granter_application> ;
+    rdfs:range <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#granter_application> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/belongsToApplication> .
+
+<http://example.org/ontology#belongs_to_company> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range <http://example.org/ontology#GranterCompany> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/belongsToCompany> .
+
+<http://example.org/ontology#belongs_to_company_memory> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterCompanyMemory> ;
+    prov:wasDerivedFrom <http://provenance/relationship/belongs_to_company_memory> .
+
+<http://example.org/ontology#belongs_to_granter_opportunity> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_generalopportunityfile/belongsToGranterOpportunity> .
+
+<http://example.org/ontology#belongs_to_group> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_matchgroup> ;
+    rdfs:range <http://example.org/ontology#granter_matchgroup> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_matchcheck/group> .
+
+<http://example.org/ontology#belongs_to_opportunity> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunity>,
+        <http://example.org/ontology#granter_opportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/belongs_to_opportunity>,
+        <http://provenance/source/granter_application/opportunity_id> .
+
+<http://example.org/ontology#codename> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/column_codename> .
+
+<http://example.org/ontology#createdAt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/created_at>,
+        <http://provenance/source/granter_application/created_at> .
+
+<http://example.org/ontology#createdByProfile> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granterCompany> ;
+    rdfs:range <http://example.org/ontology#granterProfile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/created_by_profile> .
+
+<http://example.org/ontology#created_by_profile> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range <http://example.org/ontology#GranterProfile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/created_by_profile> .
+
+<http://example.org/ontology#funded_by> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity>,
+        <http://example.org/ontology#granter_opportunity> ;
+    rdfs:range <http://example.org/ontology#Grant>,
+        <http://example.org/ontology#grant> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunity/funded_by> .
+
+<http://example.org/ontology#granterOpportunity> a owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    prov:wasDerivedFrom <http://example.org/ontology/granter_opportunity> .
+
+<http://example.org/ontology#granterTimeline> a owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    prov:wasDerivedFrom <http://example.org/ontology/granter_timeline> .
+
+<http://example.org/ontology#granter_companymemory> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companymemory> .
+
+<http://example.org/ontology#granter_consortiumpartnertype> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype> .
+
+<http://example.org/ontology#granter_generalopportunityfile> a owl:Class ;
+    rdfs:subClassOf <http://example.org/ontology#granter_opportunityfile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/general> .
+
+<http://example.org/ontology#hasAgentLanguage> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_agent_language> .
+
+<http://example.org/ontology#hasAiReviewState> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/ai_review_state> .
+
+<http://example.org/ontology#hasApplication> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#granterApplication> ;
+    prov:wasDerivedFrom <http://example.org/provenance/relationship/has_application>,
+        <http://provenance/relationship/has_application> .
+
+<http://example.org/ontology#hasApplicationFile> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range <http://example.org/ontology#GranterApplicationFile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/has_files>,
+        <http://provenance/source/granter_application/application_files> .
+
+<http://example.org/ontology#hasApprovedGrantAmount> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/approved_grant_amount>,
+        <http://provenance/source/granter_application/approved_grant_amount> .
+
+<http://example.org/ontology#hasCae> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_cae> .
+
+<http://example.org/ontology#hasCodeName> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterCompanyFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/codename>,
+        <http://example.org/provenance/granter_companyfile/column_codename> .
+
+<http://example.org/ontology#hasCodename> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/codename> .
+
+<http://example.org/ontology#hasColumnActivityDate> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:date ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_activity_date> .
+
+<http://example.org/ontology#hasColumnAddress> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_address> .
+
+<http://example.org/ontology#hasColumnAnnualRevenue> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_annual_revenue> .
+
+<http://example.org/ontology#hasColumnCity> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_city> .
+
+<http://example.org/ontology#hasColumnCodeName> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_generalopportunityfile/column_codename> .
+
+<http://example.org/ontology#hasColumnCompanyId> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_company_id> .
+
+<http://example.org/ontology#hasColumnCountry> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_country> .
+
+<http://example.org/ontology#hasColumnCoverImage> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:anyURI ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_cover_image> .
+
+<http://example.org/ontology#hasColumnCreatedAt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#GranterConsortiumPartnerType>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granter_company>,
+        <http://example.org/ontology#granter_consortium> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/column_created_at>,
+        <http://example.org/provenance/granter_company/column_created_at>,
+        <http://example.org/provenance/granter_consortium/created_at>,
+        <http://example.org/provenance/granter_consortiumpartnertype/column_created_at>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_created_at> .
+
+<http://example.org/ontology#hasColumnDescription> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_description>,
+        <http://example.org/provenance/granter_consortiumpartnertype/column_description> .
+
+<http://example.org/ontology#hasColumnDescriptionEn> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description_en> .
+
+<http://example.org/ontology#hasColumnDescriptionEs> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description_es> .
+
+<http://example.org/ontology#hasColumnDescriptionIt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description_it> .
+
+<http://example.org/ontology#hasColumnDescriptionPl> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description_pl> .
+
+<http://example.org/ontology#hasColumnDescriptionPt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description_pt> .
+
+<http://example.org/ontology#hasColumnEmployeesN> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_employees_n> .
+
+<http://example.org/ontology#hasColumnId> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company>,
+        <http://example.org/ontology#granter_consortium> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/column_id>,
+        <http://example.org/provenance/granter_company/column_id>,
+        <http://example.org/provenance/granter_consortium/id>,
+        <http://example.org/provenance/granter_consortiumpartnertype/column_id>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_id> .
+
+<http://example.org/ontology#hasColumnIdPartnerType> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_id> .
+
+<http://example.org/ontology#hasColumnIsSme> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_is_sme> .
+
+<http://example.org/ontology#hasColumnLegalForm> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_legal_form> .
+
+<http://example.org/ontology#hasColumnLegalName> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_legal_name> .
+
+<http://example.org/ontology#hasColumnName> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/column_name>,
+        <http://example.org/provenance/granter_company/column_name>,
+        <http://example.org/provenance/granter_consortiumpartnertype/column_name>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_name> .
+
+<http://example.org/ontology#hasColumnPostCode> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_post_code> .
+
+<http://example.org/ontology#hasColumnSocialSecurityId> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_social_security_id> .
+
+<http://example.org/ontology#hasColumnTaxId> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_tax_id> .
+
+<http://example.org/ontology#hasColumnTitle> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title> .
+
+<http://example.org/ontology#hasColumnTitleEn> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title_en>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title_en> .
+
+<http://example.org/ontology#hasColumnTitleEs> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title_es>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title_es> .
+
+<http://example.org/ontology#hasColumnTitleIt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title_it>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title_it> .
+
+<http://example.org/ontology#hasColumnTitlePl> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title_pl>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title_pl> .
+
+<http://example.org/ontology#hasColumnTitlePt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title_pt>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title_pt> .
+
+<http://example.org/ontology#hasColumnType> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/column_type>,
+        <http://example.org/provenance/granter_consortiumpartnertype/column_type>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_type> .
+
+<http://example.org/ontology#hasColumnUpdatedAt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company>,
+        <http://example.org/ontology#granter_consortium> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/column_updated_at>,
+        <http://example.org/provenance/granter_company/column_updated_at>,
+        <http://example.org/provenance/granter_consortium/updated_at>,
+        <http://example.org/provenance/granter_consortiumpartnertype/column_updated_at>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_updated_at> .
+
+<http://example.org/ontology#hasColumnUploadedFile> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/column_uploaded_file>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_uploaded_file> .
+
+<http://example.org/ontology#hasColumnUrl> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:anyURI ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_url> .
+
+<http://example.org/ontology#hasColumnWebsiteData> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_website_data> .
+
+<http://example.org/ontology#hasCompany> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyFile> ;
+    rdfs:range <http://example.org/ontology#GranterCompany> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companyfile/belongs_to_company> .
+
+<http://example.org/ontology#hasCompanyId> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/company_id> .
+
+<http://example.org/ontology#hasConsortium> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterConsortium> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/consortium_id>,
+        <http://provenance/relationship/has_consortium>,
+        <http://provenance/source/granter_application/consortium_id> .
+
+<http://example.org/ontology#hasConsortiumPartner> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#granter_consortium> ;
+    rdfs:range <http://example.org/ontology#GranterConsortiumPartner>,
+        <http://example.org/ontology#granter_consortiumpartner> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortium/partners> .
+
+<http://example.org/ontology#hasContent> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyMemory>,
+        <http://example.org/ontology#granterCompanyMemory> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companymemory/content> .
+
+<http://example.org/ontology#hasCreatedAt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_created_at>,
+        <http://example.org/provenance/granter_company/created_at> .
+
+<http://example.org/ontology#hasCreatedById> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/created_by_id> .
+
+<http://example.org/ontology#hasDigitalComponent> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_digital_component> .
+
+<http://example.org/ontology#hasDocumentType> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyFile> ;
+    rdfs:range <http://example.org/ontology#GranterDoctype> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companyfile/foreign_key_document_type_id> .
+
+<http://example.org/ontology#hasFile> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunityFile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/relationship/has_file>,
+        <http://provenance/relationship/has_file> .
+
+<http://example.org/ontology#hasFutureGoalsHr> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_future_goals_hr> .
+
+<http://example.org/ontology#hasFutureGoalsInfrastructure> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_future_goals_infrastructure> .
+
+<http://example.org/ontology#hasFutureGoalsInternationalization> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_future_goals_internationalization> .
+
+<http://example.org/ontology#hasFutureGoalsMachineryAndEquipments> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_future_goals_machinery_and_equipments> .
+
+<http://example.org/ontology#hasFutureGoalsMarketing> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_future_goals_marketing> .
+
+<http://example.org/ontology#hasFutureGoalsRd> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_future_goals_rd> .
+
+<http://example.org/ontology#hasGrantShare> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#Grant>,
+        <http://example.org/ontology#grant> ;
+    rdfs:range <http://example.org/ontology#GrantShare> ;
+    prov:wasDerivedFrom <http://example.org/provenance/grant/share> .
+
+<http://example.org/ontology#hasGreenComponent> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_green_component> .
+
+<http://example.org/ontology#hasId> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_id>,
+        <http://example.org/provenance/granter_company/id>,
+        <http://provenance/source/granter_application/id> .
+
+<http://example.org/ontology#hasInitialSummary> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/initial_summary> .
+
+<http://example.org/ontology#hasMatchesGenerating> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_matches_generating> .
+
+<http://example.org/ontology#hasMatchingOrder> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_matching_order> .
+
+<http://example.org/ontology#hasMemorySnippet> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyMemory>,
+        <http://example.org/ontology#granterCompanyMemory> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companymemory/hasMemorySnippet> .
+
+<http://example.org/ontology#hasName> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_name> .
+
+<http://example.org/ontology#hasOnboardingState> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_onboarding_state> .
+
+<http://example.org/ontology#hasOpportunityId> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#granter_consortium> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortium/opportunity_id> .
+
+<http://example.org/ontology#hasOtherData> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_other_data>,
+        <http://provenance/source/granter_application/other_data> .
+
+<http://example.org/ontology#hasOwnerId> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range <http://example.org/ontology#GranterProfile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_owner_id> .
+
+<http://example.org/ontology#hasPricingOption> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/pricing_option> .
+
+<http://example.org/ontology#hasProfileCreator> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range <http://example.org/ontology#GranterProfile> ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/profile_creator_id> .
+
+<http://example.org/ontology#hasProjectDescription> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#granter_consortium> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortium/project_description> .
+
+<http://example.org/ontology#hasProvenance> a owl:AnnotationProperty,
+        owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company>,
+        <http://example.org/ontology#granter_timeline> ;
+    rdfs:range <http://example.org/ontology#Provenance>,
+        xsd:string,
+        prov:Entity ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/provenance>,
+        <http://example.org/provenance/granter_generalopportunityfile/hasProvenance>,
+        <http://example.org/provenance/granter_timeline> .
+
+<http://example.org/ontology#hasRelatedOperations> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_related_operations> .
+
+<http://example.org/ontology#hasSaleConfirmed> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/sale_confirmed> .
+
+<http://example.org/ontology#hasShareholders> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_shareholders> .
+
+<http://example.org/ontology#hasSource> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_source> .
+
+<http://example.org/ontology#hasState> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#granter_consortium> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortium/state>,
+        <http://provenance/source/granter_application/state> .
+
+<http://example.org/ontology#hasSubscriptionId> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range <http://example.org/ontology#GranterSubscription> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_subscription_id> .
+
+<http://example.org/ontology#hasSuccessFee> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/success_fee> .
+
+<http://example.org/ontology#hasSuccessPaymentAmount> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/success_payment_amount> .
+
+<http://example.org/ontology#hasTeamDescription> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_team_description> .
+
+<http://example.org/ontology#hasTimeline> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterTimeline> ;
+    prov:wasDerivedFrom <http://provenance/relationship/has_timeline> .
+
+<http://example.org/ontology#hasTitle> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/title> .
+
+<http://example.org/ontology#hasType> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterCompanyFile>,
+        <http://example.org/ontology#granterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_type>,
+        <http://example.org/provenance/granter_company/type>,
+        <http://example.org/provenance/granter_companyfile/column_type> .
+
+<http://example.org/ontology#hasUpdatedAt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_updated_at>,
+        <http://example.org/provenance/granter_company/updated_at> .
+
+<http://example.org/ontology#hasUpfrontPaymentAmount> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/upfront_payment_amount> .
+
+<http://example.org/ontology#hasUploadedBy> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyFile> ;
+    rdfs:range <http://example.org/ontology#GranterProfile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companyfile/foreign_key_uploaded_by_id> .
+
+<http://example.org/ontology#hasUploadedFile> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_uploaded_file> .
+
+<http://example.org/ontology#hasUserless> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_userless> .
+
+<http://example.org/ontology#hasVectorIndexed> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyFile> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companyfile/column_vector_indexed> .
+
+<http://example.org/ontology#hasWhitelabelId> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range <http://example.org/ontology#GranterWhitelabel> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_whitelabel_id> .
+
+<http://example.org/ontology#hasWriterMode> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/writer_mode> .
+
+<http://example.org/ontology#has_column_codename> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_codename> .
+
+<http://example.org/ontology#has_column_conseriumpartnertype_id> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_consortiumpartnertype_consortium> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_conseriumpartnertype_id> .
+
+<http://example.org/ontology#has_column_consortium_id> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_consortiumpartnertype_consortium> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_consortium_id> .
+
+<http://example.org/ontology#has_column_created_at> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner/created_at>,
+        <http://example.org/provenance/granter_consortiumpartnertype/column_created_at>,
+        <http://example.org/provenance/granter_timeline/column_created_at> .
+
+<http://example.org/ontology#has_column_date> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:date ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/column_date> .
+
+<http://example.org/ontology#has_column_description> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description>,
+        <http://example.org/provenance/granter_timeline/column_description> .
+
+<http://example.org/ontology#has_column_description_en> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description_en> .
+
+<http://example.org/ontology#has_column_description_es> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description_es> .
+
+<http://example.org/ontology#has_column_description_it> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description_it> .
+
+<http://example.org/ontology#has_column_description_pl> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description_pl> .
+
+<http://example.org/ontology#has_column_description_pt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_description_pt> .
+
+<http://example.org/ontology#has_column_id> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortiumPartner>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_consortiumpartnertype_consortium>,
+        <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/column_id>,
+        <http://example.org/provenance/granter_consortiumpartner/id>,
+        <http://example.org/provenance/granter_consortiumpartnertype/column_id>,
+        <http://example.org/provenance/granter_timeline/column_id> .
+
+<http://example.org/ontology#has_column_is_prediction> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/column_is_prediction> .
+
+<http://example.org/ontology#has_column_opportunity_id> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/column_opportunity_id> .
+
+<http://example.org/ontology#has_column_time> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:time ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/column_time> .
+
+<http://example.org/ontology#has_column_time_diff> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/column_time_diff> .
+
+<http://example.org/ontology#has_column_title> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title>,
+        <http://example.org/provenance/granter_timeline/column_title> .
+
+<http://example.org/ontology#has_column_title_en> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title_en>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title_en> .
+
+<http://example.org/ontology#has_column_title_es> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title_es>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title_es> .
+
+<http://example.org/ontology#has_column_title_it> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title_it>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title_it> .
+
+<http://example.org/ontology#has_column_title_pl> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title_pl>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title_pl> .
+
+<http://example.org/ontology#has_column_title_pt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/column_title_pt>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_title_pt> .
+
+<http://example.org/ontology#has_column_type> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/column_type>,
+        <http://example.org/provenance/granter_consortiumpartnertype/column_type>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_type>,
+        <http://example.org/provenance/granter_timeline/column_type> .
+
+<http://example.org/ontology#has_column_updated_at> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#GranterConsortiumPartner>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_timeline> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/column_updated_at>,
+        <http://example.org/provenance/granter_company/column_updated_at>,
+        <http://example.org/provenance/granter_consortium/updated_at>,
+        <http://example.org/provenance/granter_consortiumpartner/updated_at>,
+        <http://example.org/provenance/granter_consortiumpartnertype/column_updated_at>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_updated_at>,
+        <http://example.org/provenance/granter_timeline/column_updated_at> .
+
+<http://example.org/ontology#has_column_uploaded_file> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/column_uploaded_file>,
+        <http://example.org/provenance/granter_generalopportunityfile/column_uploaded_file> .
+
+<http://example.org/ontology#has_company> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_matchcheck> ;
+    rdfs:range <http://example.org/ontology#granter_company> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_matchcheck/company> .
+
+<http://example.org/ontology#has_company_id> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner/company_id> .
+
+<http://example.org/ontology#has_companymemory_content> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyMemory> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companymemory/content> .
+
+<http://example.org/ontology#has_companymemory_vector> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyMemory> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companymemory/vector> .
+
+<http://example.org/ontology#has_consortium_id> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner/consortium_id> .
+
+<http://example.org/ontology#has_created_at> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_matchgroup>,
+        <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_matchgroup/created_at>,
+        <http://example.org/provenance/granter_opportunityfile/column_created_at> .
+
+<http://example.org/ontology#has_foreign_key_conseriumpartnertype> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_consortiumpartnertype_consortium> ;
+    rdfs:range <http://example.org/ontology#granter_conseriumpartnertype> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/foreign_key_conseriumpartnertype> .
+
+<http://example.org/ontology#has_foreign_key_consortium> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_consortiumpartnertype_consortium> ;
+    rdfs:range <http://example.org/ontology#granter_consortium> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/foreign_key_consortium> .
+
+<http://example.org/ontology#has_id> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_matchgroup>,
+        <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_matchgroup/id>,
+        <http://example.org/provenance/granter_opportunityfile/column_id> .
+
+<http://example.org/ontology#has_name> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/column_name> .
+
+<http://example.org/ontology#has_opportunity_description> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunity/description> .
+
+<http://example.org/ontology#has_opportunity_id> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunity/id> .
+
+<http://example.org/ontology#has_opportunity_title> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunity/title> .
+
+<http://example.org/ontology#has_partner_description> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner/partner_description> .
+
+<http://example.org/ontology#has_partner_type_id> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner/partner_type_id> .
+
+<http://example.org/ontology#has_status> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_matchgroup> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_matchgroup/status> .
+
+<http://example.org/ontology#has_updated_at> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_matchgroup>,
+        <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_matchgroup/updated_at>,
+        <http://example.org/provenance/granter_opportunityfile/column_updated_at> .
+
+<http://example.org/ontology#has_uploaded_file> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/column_uploaded_file> .
+
+<http://example.org/ontology#linkedToOpportunity> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#granter_consortium> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunity>,
+        <http://example.org/ontology#granter_opportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortium/linked_opportunity> .
+
+<http://example.org/ontology#opportunity_id> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range <http://example.org/ontology#granter_opportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/foreign_key_opportunity_id> .
+
+<http://example.org/ontology#provenanceSource> a owl:AnnotationProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterCompanyFile>,
+        <http://example.org/ontology#granterCompanyFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companyfile/source> .
+
+<http://example.org/ontology#relatedTable> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortiumPartnerType>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granterCompany> ;
+    rdfs:range <http://example.org/ontology#RelatedTable> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/fk_column> .
+
+<http://example.org/ontology#relatedToApplication> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range <http://example.org/ontology#GranterApplicationFile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/has_files> .
+
+<http://example.org/ontology#relatedToFile> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile> ;
+    rdfs:range <http://example.org/ontology#GranterApplication> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/related_to_application> .
+
+<http://example.org/ontology#relatedToOpportunity> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunity> ;
+    rdfs:range <http://example.org/ontology#granter_timeline> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunity/hasTimeline> .
+
+<http://example.org/ontology#relatedToOpportunityFile> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunity> ;
+    rdfs:range <http://example.org/ontology#granter_opportunityfile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunity/hasOpportunityFile> .
+
+<http://example.org/ontology#related_to_consortium> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range <http://example.org/ontology#granter_consortium> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/related_to_consortium> .
+
+<http://example.org/ontology#relatesToApplication> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range <http://example.org/ontology#GranterApplication> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/related_to_application> .
+
+<http://example.org/ontology#relatesToFile> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplicationFile> ;
+    rdfs:range <http://example.org/ontology#GranterApplication> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/related_to_application> .
+
+<http://example.org/ontology#relatesToTable> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    rdfs:range <http://example.org/ontology#RelatedTable> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/fk_table>,
+        <http://example.org/provenance/granter_consortiumpartnertype/fk_column> .
+
+<http://example.org/ontology#relates_to_company> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner>,
+        <http://example.org/ontology#granter_matchgroup> ;
+    rdfs:range <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#granter_company> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner/relates_to_company>,
+        <http://example.org/provenance/granter_matchgroup/company_relationship> .
+
+<http://example.org/ontology#relates_to_consortium> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range <http://example.org/ontology#GranterConsortium> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner/relates_to_consortium> .
+
+<http://example.org/ontology#relates_to_granter_application> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterApplication> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunity/relates_to_application> .
+
+<http://example.org/ontology#relates_to_opportunity> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range <http://example.org/ontology#granter_opportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/relates_to_opportunity> .
+
+<http://example.org/ontology#relates_to_partnertype> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range <http://example.org/ontology#GranterConsortiumPartnerType> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner/relates_to_partnertype> .
+
+<http://example.org/ontology#relates_to_table> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GrantersConsortiumPartnerType>,
+        <http://example.org/ontology#granter_consortiumpartnertype_consortium> ;
+    rdfs:range <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#RelatedTable> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/fk_column>,
+        <http://example.org/provenance/granter_consortiumpartnertype/fk_table> .
+
+<http://example.org/ontology#updatedAt> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application/updated_at> .
+
+<http://example.org/ontology#vectorIndexed> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyMemory>,
+        <http://example.org/ontology#granterCompanyMemory> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companymemory/vector_indexed> .
+
+<http://example.org/ontology#vector_indexed> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#granter_opportunityfile> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile/column_vector_indexed> .
+
+<http://example.org/my-ontology#granter_company> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company> .
+
+<http://example.org/my-ontology#granter_opportunity> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunity> .
+
+<http://example.org/ontology#DatabaseTable> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/database_table> .
+
+<http://example.org/ontology#GeographicCriterion> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/geographic_criterion> .
+
+<http://example.org/ontology#GrantPayment> a owl:Class ;
+    prov:wasDerivedFrom <http://external-ontology.org/GrantPayment> .
+
+<http://example.org/ontology#OrganisationalCriterion> a owl:Class ;
+    rdfs:subClassOf <http://example.org/ontology#ExternalOntologyConcept> ;
+    prov:wasDerivedFrom <http://example.org/provenance/organisational_criterion>,
+        <http://external-ontology.org/OrganisationalCriterion> .
+
+<http://example.org/ontology#Provenance> a owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    prov:wasDerivedFrom <http://example.org/provenance/Provenance>,
+        <http://example.org/provenance/provenance> .
+
+<http://example.org/ontology#granterApplicationFile> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile> .
+
+<http://example.org/ontology#granter_conseriumpartnertype> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_conseriumpartnertype> .
+
+<http://example.org/ontology#granter_consortiumpartner> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner> .
+
+<http://example.org/ontology#recipient> a owl:Class,
+        owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#GrantPayment>,
+        <http://example.org/ontology#GrantShare> ;
+    rdfs:range <http://example.org/ontology#recipient> ;
+    prov:wasDerivedFrom <http://example.org/provenance/grant/recipient>,
+        <http://example.org/provenance/recipient>,
+        <http://external-ontology.org/recipient> .
+
+<http://example.org/ontology#Grant> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/grant> .
+
+<http://example.org/ontology#GrantShare> a owl:Class ;
+    rdfs:subClassOf <http://example.org/ontology#ExternalOntologyConcept>,
+        <http://example.org/ontology#OrganisationalCriterion> ;
+    prov:wasDerivedFrom <http://example.org/provenance/grant_share>,
+        <http://external-ontology.org/GrantShare> .
+
+<http://example.org/ontology#granterCompanyFile> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companyfile> .
+
+<http://example.org/my-ontology#Criterion> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/Criterion> .
+
+<http://example.org/ontology#GranterConsortiumPartnerType> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype> .
+
+<http://example.org/ontology#RelatedTable> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/related_table> .
+
+<http://example.org/ontology#granterApplication> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application> .
+
+<http://example.org/ontology#granterCompanyMemory> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companymemory> .
+
+<http://example.org/ontology#granter_application> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application> .
+
+<http://example.org/ontology#GranterProfile> a owl:Class ;
+    prov:wasDerivedFrom <http://provenance/source/granter_profile> .
+
+<http://example.org/my-ontology#granter_eligibilitycriteria> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_eligibilitycriteria> .
+
+<http://example.org/ontology#granter_consortiumpartnertype_consortium> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype> .
+
+<http://example.org/ontology#GranterCompanyMemory> a owl:Class ;
+    prov:wasDerivedFrom <http://provenance/source/granter_companymemory> .
+
+<http://example.org/ontology#granter_opportunity> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunity> .
+
+<http://example.org/ontology#GranterConsortiumPartner> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner> .
+
+<http://example.org/ontology#granter_consortium> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortium> .
+
+<http://example.org/ontology#GranterConsortium> a owl:Class ;
+    prov:wasDerivedFrom <http://provenance/source/granter_consortium> .
+
+<http://example.org/ontology#GranterApplicationFile> a owl:Class ;
+    prov:wasDerivedFrom <http://provenance/source/granter_applicationfile> .
+
+<http://example.org/ontology#granter_opportunityfile> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunityfile> .
+
+<http://example.org/ontology#granter_timeline> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline> .
+
+<http://example.org/ontology#GranterOpportunity> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/ontology/granter_opportunity>,
+        <http://provenance/source/granter_opportunity> .
+
+<http://example.org/ontology#GranterGeneralOpportunityFile> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_generalopportunityfile>,
+        <http://provenance/source/granter_generalopportunityfile> .
+
+<http://example.org/ontology#granterCompany> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company> .
+
+<http://example.org/ontology#GranterApplication> a owl:Class ;
+    prov:wasDerivedFrom <http://provenance/source/granter_application> .
+
+<http://example.org/ontology#GrantersConsortiumPartnerType> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype>,
+        <http://provenance/source/granter_consortiumpartnertype> .
+
+<http://example.org/ontology#granter_company> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company> .
+
+<http://example.org/ontology#GranterCompany> a owl:Class ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company>,
+        <http://provenance/source/granter_company> .
+

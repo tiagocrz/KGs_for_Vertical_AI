@@ -10,11 +10,24 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 llama32 = OllamaLLM(model="llama3.2:3b")
 embedding = OllamaEmbeddings(model="nomic-embed-text:v1.5")
 
+
+
+from dotenv import load_dotenv
+load_dotenv()
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
+from langchain_groq import ChatGroq
+
+groqllm = ChatGroq(
+    model="llama-3.1-8b-instant",
+    api_key=GROQ_API_KEY,
+    temperature=0
+)
+
+
 INDEX_PATH_CORE = "../../storage/faiss_RIGOR/core"
 INDEX_PATH_EXTERNAL_ONT = "../../storage/faiss_RIGOR/external_ontologies"
 INDEX_PATH_TEXTUAL_DESC = "../../storage/faiss_RIGOR/textual_descriptions"
-
-
 
 
 
@@ -130,6 +143,7 @@ def extract_ontology_lexical_view(ontology_path: str) -> list:
 
 
 
+
 def chunk_text(text: str, chunk_size=1200, chunk_overlap=100):
     """
     Chunk text and return plain strings (no metadata)
@@ -186,11 +200,45 @@ def docTable(relation: str):
     return retrieve(f"relation: {relation}", INDEX_PATH_TEXTUAL_DESC, 2)
 
 
-def docAttr(relation: str, attribute: str):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def extract_ontology_block(text: str) -> str:
     """
-    returns the textual description of an attribute a in relation r
+    Extracts the ontology code block (Manchester Syntax) from a mixed LLM output.
+    Looks for content between triple backticks (```).
+
+    Parameters:
+        text (str): The full output from the LLM.
+
+    Returns:
+        str: The extracted ontology block as a string, or an empty string if not found.
     """
-    return retrieve(f"relation: {relation}, attribute: {attribute}", INDEX_PATH_TEXTUAL_DESC, 1)
+    inside_block = False
+    lines = []
+    
+    for line in text.splitlines():
+        if line.strip().startswith("```"):
+            if inside_block:
+                break  # end of block
+            else:
+                inside_block = True
+                continue  # skip the line with ```
+        if inside_block:
+            lines.append(line)
+    
+    return "\n".join(lines).strip()
 
 
 
@@ -198,20 +246,142 @@ def docAttr(relation: str, attribute: str):
 
 
 
+def build_table_ontology(table_name: str, table_schema: dict, core_ontology: str):
+    prompt = f"""
+    Generate ontology elements with provenance annotations for database table {table_name} based on:
+
+    [CONTEXT]
+    - Database Schema of the table \n{json.dumps(table_schema)}\n
+    - Take semantics from the External Ontology Knowledge \n{"\n".join(retrieve(table_name, INDEX_PATH_EXTERNAL_ONT))}\n
+    - Take semantics from the Relevant Documents \n{"\n".join(docTable(table_name))}
+
+    [INSTRUCTIONS]
+    1. Include these elements:
+        Classes (subclass of Thing)
+        Data properties with domain/range
+        Object properties with domain/range
+        Use only one Domain: and one Range: per property. If multiple options exist, select the most general or create a shared superclass.
+    3. Do not create a property named "is". Use rdf:type for instance membership, rdfs:subClassOf for class hierarchies, and owl:sameAs for instance equality.
+    4. Use this format example:
+
+    Prefix: prov: <http://www.w3.org/ns/prov#>
+    Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+    Ontology: <http://example.org/my-ontology>
+
+    Class: {table_name}
+    Annotations:
+        prov:wasDerivedFrom <http://example.org/provenance/{table_name}>
+
+    DataProperty: has_column_name
+    Domain: {table_name}
+    Range: xsd:string
+    Annotations:
+        prov:wasDerivedFrom <http://example.org/provenance/{table_name}/column_name>
+
+    ObjectProperty: relates_to_table
+    Domain: {table_name}
+    Range: RelatedTable
+    Annotations:
+        prov:wasDerivedFrom <http://example.org/provenance/{table_name}/fk_column>
 
 
+    Only output Manchester Syntax and nothing else. [OUTPUT]
+    """
+
+    delta_ontology = groqllm.invoke(prompt).content
 
 
+    evaluator_prompt = f"""
+    You are an expert in OWL 2 DL ontology modeling and validation.
+
+    Your task is to review the following delta ontology fragment generated from a relational database table, along with its schema and relevant context.
+
+    [DELTA-ONTOLOGY]
+    {delta_ontology}
+
+    [DATABASE SCHEMA]
+    {table}
+
+    [CORE ONTOLOGY CONTEXT]
+    (empty as of now)
+
+    [VALIDATION CRITERIA]
+    1. **Coherence with Core Ontology**  
+    - Do NOT redefine an existing class, property, or concept already present in the core ontology with the same meaning.
+    - Reuse existing ontology elements where possible instead of creating duplicates.
+
+    2. **Alignment with Input Table Schema**  
+    - Every significant column and foreign key in the table must be represented as an appropriate ontology element (class, data property, or object property).
+    - Naming should reflect the database semantics clearly and consistently.
+
+    3. **Syntactic Validity**  
+    - The ontology must conform to the OWL 2 DL profile and valid Manchester Syntax.
+
+        [OWL 2 Manchester Syntax Validation Rules]
+
+        Use **only** Manchester Syntax keywords: Class:, ObjectProperty:, DataProperty:, SubClassOf:, Annotations:, Domain:, Range:, Prefix:, Ontology:.
+
+        DO NOT use:
+        - RDF-style triples like `rdfs:subClassOf`, `a`, or `owl:Class`
+        - Semicolons (;) or commas (,) inside blocks
+        - Periods (.) at the end of annotation lines
 
 
+        DO:
+        - Use `SubClassOf:` **inside the Class: block** (not as `rdfs:subClassOf`)
+        - Place `Annotations:` after `SubClassOf:` inside the same block
+        - Use **line breaks only** to separate multiple annotations — no commas or semicolons
+        - Enclose all IRIs (including annotation values and external links) in angle brackets: `<...>`
+        - Declare every used prefix with `Prefix: ...` and include an `Ontology:` declaration
+        - For each Property, define **exactly one** Domain: and one Range:
+        - Ensure that all referenced classes or properties are explicitly declared in the ontology
+        - Avoid duplicate declarations unless you're adding `SubClassOf:` or `Annotations:` to an existing element
 
+        [Example Structure]
 
+        Class: MyClass
+            SubClassOf: ParentClass
+            Annotations:
+                prov:wasDerivedFrom <http://example.org/provenance/MyClass>
 
+        DataProperty: has_value
+            Domain: MyClass
+            Range: xsd:string
+            Annotations:
+                prov:wasDerivedFrom <http://example.org/provenance/MyClass/has_value>
 
+    4. **Logical Consistency**  
+    - No contradictory class axioms or property constraints.
+    - No circular subclass relationships.
+    - Correct choice between object properties and data properties.
 
+    5. **Clarity and Naming Quality**  
+    - Use self-explanatory, domain-relevant names.
+    - Avoid generic or meaningless labels (e.g., "Entity1", "PropertyA").
+    - All properties should follow consistent naming patterns (e.g., `has_`, `is_...Of`).
 
+    [YOUR TASK]
+    - Check the delta ontology fragment against all criteria above.
+    - If issues are found, provide a corrected version of the ontology in valid Manchester Syntax.
+    - Make minimal necessary changes to preserve the author's intent while ensuring correctness and OWL 2 DL compliance.
+    - Ensure all elements keep their provenance annotations.
+    
+    [OUTPUT FORMAT]
+    Respond ONLY with:
+    1. "Status: PASS" if the ontology fragment meets all criteria, or "Status: FAIL" if it does not.
+    2. If FAIL, provide:
+    a. A short bullet list of the issues found.
+    b. A corrected Manchester Syntax version of the ontology fragment, and enclose it between triple backticks (```), on their own lines.
 
+    Do NOT include any other commentary outside this format.
+    Always enclose the corrected ontology with triple backticks for programmatic extraction.
+    """
 
+    revision = groqllm.invoke(evaluator_prompt).content
 
-
-schema = parse_mysql_ddl_file('../../database/schema/usable_schema.sql')
+    
+    if "Status: PASS" in revision:
+        return delta_ontology
+    else:
+    # Extract corrected ontology from revision
+       return extract_ontology_block(revision)

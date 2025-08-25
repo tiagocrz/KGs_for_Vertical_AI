@@ -1,0 +1,49 @@
+object,relation,subject
+Mar2030 -2023 -22,HASAPPLICATION,Concurso
+14/11/2023,CREATED_BY,25/07/2023
+Despesas_Veiculos,RELATEDTOTABLE,Despesas
+Limite_Despesas_Veiculos,RELATEDTOTABLE,Despesas_Veiculos
+Despesas_Auditoria_Consultoria,RELATEDTOTABLE,Despesas
+Limite_Despesas_Auditoria_Consultoria,RELATEDTOTABLE,Despesas_Auditoria_Consultoria
+Despesas_Co_Promoção,RELATEDTOTABLE,Despesas
+Limite_Despesas_Co_Promoção,RELATEDTOTABLE,Despesas_Co_Promoção
+Formas_Pagamento_Adiantamentos,RELATEDTOTABLE,Formas_Pagamento
+Formas_Pagamento_Reembolso,RELATEDTOTABLE,Formas_Pagamento
+Formas_Pagamento_Contra_Fatura,RELATEDTOTABLE,Formas_Pagamento
+Pagamentos_Projeto,RELATEDTOTABLE,Pagamentos
+Pagamento_Final,RELATEDTOTABLE,Pagamentos
+Prazo_Pagamento_Final,RELATEDTOTABLE,Pagamento_Final
+Consumo De Energia Por Tonelada Produzida Antes E Depois Da Realização Do Investimento,RELATES_TO_TABLE,Método De Cálculo
+Candidatura,HASAPPLICATION,Consumo Em Kwh Por Tonelada Produzida
+Candidatura,HASAPPLICATION,Eficiência Energética
+Candidatura,HASAPPLICATION,Economia Circular
+Decisão De Aprovação Do Apoio Público,RELATEDTOTABLE,Metas
+Metas,RELATEDTOTABLE,Indicadores De Resultados Do Projeto
+Percentagem De Cumprimento,RELATEDTOTABLE,Limiar De 70%
+Percentagem De Cumprimento,RELATEDTOTABLE,Redução No Apoio Público
+Redução No Apoio Público,RELATEDTOTABLE,"Penalização De 0,5 P.P Na Taxa De Apoio Público"
+"Penalização De 0,5 P.P Na Taxa De Apoio Público",RELATEDTOTABLE,Ponto Percentual Abaixo Do Limiar
+Limite De 5 P.P Na Redução Da Taxa De Apoio Público,RELATEDTOTABLE,Fundos Europeus Mais Próximos
+Objetivos Essenciais Do Financiamento,RELATEDTOTABLE,Revogação
+Mecanismos De Bonificação,RELATEDTOTABLE,Não Aplicável
+"Obrigações De Notoriedade, Transparência E Comunicação",RELATEDTOTABLE,Apoio Do Feampa
+Apoio Do Feampa,RELATEDTOTABLE,Sítios Na Internet E Redes Sociais
+Sítios Na Internet E Redes Sociais,RELATEDTOTABLE,Emblemas Financiadores
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Analise_Estrategica_Da_Empresa
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Contrato_Da_Sociedade
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Estatutos_E_Certidao_Permanente_Atualizados
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Codigo_Para_Consulta
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Memoria_Descritiva_E_Justificativa_Da_Operacao
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Documento_Que_Habilite_A_Realizacao_De_Intervencoes_No_Espaco
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Relatorio_De_Comercializacao_Independente
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Orçamentos_E_Catalogos
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Plano_Empresarial
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Fontes_De_Financiamento_Asseguradas
+Documentos_Necessarios_Para_Apresentar_Uma_Candidatura,HASAPPLICATION,Informacao_Economica_Simplificada
+Portaria N.º 559/2023,RELATEDTOTABLE,Situação Económico-Financeira
+Fundos Europeus,RELATEDTOTABLE,Regulamento Feampa
+Fundos Europeus,RELATEDTOTABLE,Regulamento (Ue) 2021/1139
+Fundos Europeus,RELATEDTOTABLE,Regulamento Das Disposições Comuns (Rdc)
+Fundos Europeus,RELATEDTOTABLE,Regulamento (Ue) 2021/1060
+Fundos Europeus,RELATEDTOTABLE,Decreto-Lei N.º 20-A/2023
+Fundos Europeus,RELATEDTOTABLE,Portaria N.º 559/2023

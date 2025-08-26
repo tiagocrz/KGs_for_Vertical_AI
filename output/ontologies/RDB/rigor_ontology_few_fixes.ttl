@@ -1,0 +1,1572 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology#ActivityDate> a owl:DatatypeProperty ;
+    rdfs:label "Activity Date" ;
+    rdfs:comment "Date when the company commenced operations or activity." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:date ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/activity_date> .
+
+<http://example.org/ontology#Address> a owl:DatatypeProperty ;
+    rdfs:label "Address" ;
+    rdfs:comment "Physical address of the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/address> .
+
+<http://example.org/ontology#AgentLanguage> a owl:DatatypeProperty ;
+    rdfs:label "Agent Language" ;
+    rdfs:comment "Preferred language of the agent or representative." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/agent_language> .
+
+<http://example.org/ontology#AiReviewState> a owl:DatatypeProperty ;
+    rdfs:label "AI Review State" ;
+    rdfs:comment "State of AI-based review process for the application." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/ai_review_state> .
+
+<http://example.org/ontology#AnnualRevenue> a owl:DatatypeProperty ;
+    rdfs:label "Annual Revenue" ;
+    rdfs:comment "Total annual revenue of the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/annual_revenue> .
+
+<http://example.org/ontology#ApplicationId> a owl:DatatypeProperty ;
+    rdfs:label "Application Identifier" ;
+    rdfs:comment "Unique identifier for the granter application." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/id> .
+
+<http://example.org/ontology#ApplicationState> a owl:DatatypeProperty ;
+    rdfs:label "Application State" ;
+    rdfs:comment "Current state of the application (e.g., submitted, under review, approved)." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/state> .
+
+<http://example.org/ontology#ApprovedGrantAmount> a owl:DatatypeProperty ;
+    rdfs:label "Approved Grant Amount" ;
+    rdfs:comment "The amount of grant approved for the application." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/approved_grant_amount> .
+
+<http://example.org/ontology#Cae> a owl:DatatypeProperty ;
+    rdfs:label "CAE" ;
+    rdfs:comment "Custom attribute or code related to the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/cae> .
+
+<http://example.org/ontology#City> a owl:DatatypeProperty ;
+    rdfs:label "City" ;
+    rdfs:comment "City where the company is located." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/city> .
+
+<http://example.org/ontology#CodeName> a owl:DatatypeProperty ;
+    rdfs:label "Code Name" ;
+    rdfs:comment "Internal code name for the application." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/codename> .
+
+<http://example.org/ontology#CompanyId> a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Company",
+        "Company ID" ;
+    rdfs:comment "Identifier linking to internal or external company references.",
+        "Identifier linking to the company involved.",
+        "The company that submitted the application." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterCompany> ;
+    rdfs:range <http://example.org/ontology#GranterCompany>,
+        xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/company_id>,
+        <http://example.org/provenance/granter_company/company_id> .
+
+<http://example.org/ontology#ConsortiumId> a owl:ObjectProperty ;
+    rdfs:label "Consortium" ;
+    rdfs:comment "Associated consortium for the application, if any." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range <http://example.org/ontology#GranterConsortium> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/consortium_id> .
+
+<http://example.org/ontology#Country> a owl:DatatypeProperty ;
+    rdfs:label "Country" ;
+    rdfs:comment "Country where the company is registered or located." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/country> .
+
+<http://example.org/ontology#CoverImage> a owl:DatatypeProperty ;
+    rdfs:label "Cover Image" ;
+    rdfs:comment "URL to an image representing the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:anyURI ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/cover_image> .
+
+<http://example.org/ontology#CreatedAt> a owl:DatatypeProperty ;
+    rdfs:label "Creation Timestamp" ;
+    rdfs:comment "Timestamp when the application was created." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/created_at> .
+
+<http://example.org/ontology#Description> a owl:DatatypeProperty ;
+    rdfs:label "Description" ;
+    rdfs:comment "Brief description of the company's activities or profile." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/description> .
+
+<http://example.org/ontology#DigitalComponent> a owl:DatatypeProperty ;
+    rdfs:label "Digital Component" ;
+    rdfs:comment "Information about the company's digital infrastructure or components." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/digital_component> .
+
+<http://example.org/ontology#EmployeesNumber> a owl:DatatypeProperty ;
+    rdfs:label "Number of Employees" ;
+    rdfs:comment "Total number of employees in the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/employees_n> .
+
+<http://example.org/ontology#ExtraInformation> a owl:DatatypeProperty ;
+    rdfs:label "Extra Information" ;
+    rdfs:comment "Additional information about the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/extra_information> .
+
+<http://example.org/ontology#FutureGoalsHr> a owl:DatatypeProperty ;
+    rdfs:label "Future Goals HR" ;
+    rdfs:comment "Future plans related to human resources." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/future_goals_hr> .
+
+<http://example.org/ontology#FutureGoalsInfrastructure> a owl:DatatypeProperty ;
+    rdfs:label "Future Goals Infrastructure" ;
+    rdfs:comment "Company's future plans related to infrastructure development." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/future_goals_infrastructure> .
+
+<http://example.org/ontology#FutureGoalsInternationalization> a owl:DatatypeProperty ;
+    rdfs:label "Future Goals Internationalization" ;
+    rdfs:comment "Company's future plans for international expansion." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/future_goals_internationalization> .
+
+<http://example.org/ontology#FutureGoalsMachineryAndEquipments> a owl:DatatypeProperty ;
+    rdfs:label "Future Goals Machinery and Equipments" ;
+    rdfs:comment "Plans related to machinery and equipment upgrades or acquisitions." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/future_goals_machinery_and_equipments> .
+
+<http://example.org/ontology#FutureGoalsMarketing> a owl:DatatypeProperty ;
+    rdfs:label "Future Goals Marketing" ;
+    rdfs:comment "Company's future marketing strategies or goals." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/future_goals_marketing> .
+
+<http://example.org/ontology#FutureGoalsRd> a owl:DatatypeProperty ;
+    rdfs:label "Future Goals R&D" ;
+    rdfs:comment "Research and Development future plans." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/future_goals_rd> .
+
+<http://example.org/ontology#GeographicCriterion> a owl:Class ;
+    rdfs:label "Geographic Criterion" ;
+    rdfs:comment "A class representing geographic constraints or locations relevant to data.",
+        "Specifies geographic areas relevant for grant eligibility or project implementation." .
+
+<http://example.org/ontology#GrantPayment> a owl:Class ;
+    rdfs:label "Grant Payment" ;
+    rdfs:comment "A class representing a payment made as part of a grant.",
+        "A class representing a single payment to a recipient or beneficiary within a Grant.",
+        "Represents a single payment made within a Grant to a recipient or beneficiary." .
+
+<http://example.org/ontology#GreenComponent> a owl:DatatypeProperty ;
+    rdfs:label "Green Component" ;
+    rdfs:comment "Environmental or sustainability initiatives." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/green_component> .
+
+<http://example.org/ontology#InitialSummary> a owl:DatatypeProperty ;
+    rdfs:label "Initial Summary" ;
+    rdfs:comment "Summary provided at the initial stage of application." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/initial_summary> .
+
+<http://example.org/ontology#IsSme> a owl:DatatypeProperty ;
+    rdfs:label "Is SME" ;
+    rdfs:comment "Indicates whether the company qualifies as a Small and Medium Enterprise." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/is_sme> .
+
+<http://example.org/ontology#LegalForm> a owl:DatatypeProperty ;
+    rdfs:label "Legal Form" ;
+    rdfs:comment "Legal structure or form of the company (e.g., LLC, Corporation)." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/legal_form> .
+
+<http://example.org/ontology#LegalName> a owl:DatatypeProperty ;
+    rdfs:label "Legal Name" ;
+    rdfs:comment "Legal registered name of the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/legal_name> .
+
+<http://example.org/ontology#MatchesGenerating> a owl:DatatypeProperty ;
+    rdfs:label "Matches Generating" ;
+    rdfs:comment "Indicates if the company is generating matches." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/matches_generating> .
+
+<http://example.org/ontology#MatchingOrder> a owl:DatatypeProperty ;
+    rdfs:label "Matching Order" ;
+    rdfs:comment "Order or priority for matching processes." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:integer ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/matching_order> .
+
+<http://example.org/ontology#Name> a owl:DatatypeProperty ;
+    rdfs:label "Name" ;
+    rdfs:comment "Official name of the granter company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/name> .
+
+<http://example.org/ontology#OnboardingState> a owl:DatatypeProperty ;
+    rdfs:label "Onboarding State" ;
+    rdfs:comment "Current onboarding or registration status." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/onboarding_state> .
+
+<http://example.org/ontology#OpportunityId> a owl:ObjectProperty ;
+    rdfs:label "Opportunity" ;
+    rdfs:comment "The funding opportunity for which the application was submitted." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/opportunity_id> .
+
+<http://example.org/ontology#OtherData> a owl:DatatypeProperty ;
+    rdfs:label "Additional Data",
+        "Other Data" ;
+    rdfs:comment "Additional miscellaneous data.",
+        "Miscellaneous additional data related to the application.",
+        "Other Data" ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/other_data>,
+        <http://example.org/provenance/granter_company/other_data> .
+
+<http://example.org/ontology#OwnerId> a owl:ObjectProperty ;
+    rdfs:label "Owner" ;
+    rdfs:comment "Reference to the owner profile of the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range <http://example.org/ontology#GranterProfile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/owner_id> .
+
+<http://example.org/ontology#PersonLocation> a owl:Class ;
+    rdfs:label "Person Location" ;
+    rdfs:comment "A class representing geographic location information for persons.",
+        "Indicates the country or geographical administrative entity related to a person." .
+
+<http://example.org/ontology#PostCode> a owl:DatatypeProperty ;
+    rdfs:label "Post Code" ;
+    rdfs:comment "Postal code of the company's address." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/post_code> .
+
+<http://example.org/ontology#PricingOption> a owl:DatatypeProperty ;
+    rdfs:label "Pricing Option" ;
+    rdfs:comment "Selected pricing option for the application." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/pricing_option> .
+
+<http://example.org/ontology#ProfileCreatorId> a owl:ObjectProperty ;
+    rdfs:label "Profile Creator" ;
+    rdfs:comment "The profile of the person who created the application." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range <http://example.org/ontology#GranterProfile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/profile_creator_id> .
+
+<http://example.org/ontology#RelatedOperations> a owl:DatatypeProperty ;
+    rdfs:label "Related Operations" ;
+    rdfs:comment "Information about operations related to the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/related_operations> .
+
+<http://example.org/ontology#SaleConfirmed> a owl:DatatypeProperty ;
+    rdfs:label "Sale Confirmed" ;
+    rdfs:comment "Indicates whether the sale has been confirmed." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/sale_confirmed> .
+
+<http://example.org/ontology#Shareholders> a owl:DatatypeProperty ;
+    rdfs:label "Shareholders" ;
+    rdfs:comment "Information about the company's shareholders." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/shareholders> .
+
+<http://example.org/ontology#SocialSecurityId> a owl:DatatypeProperty ;
+    rdfs:label "Social Security ID" ;
+    rdfs:comment "Social security identifier associated with the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/social_security_id> .
+
+<http://example.org/ontology#Source> a owl:DatatypeProperty ;
+    rdfs:label "Source" ;
+    rdfs:comment "Origin or source of the data." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/source> .
+
+<http://example.org/ontology#StripeCustomerId> a owl:DatatypeProperty ;
+    rdfs:label "Stripe Customer ID" ;
+    rdfs:comment "Stripe payment platform customer identifier." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/stripe_customer_id> .
+
+<http://example.org/ontology#SubscriptionId> a owl:DatatypeProperty ;
+    rdfs:label "Subscription ID" ;
+    rdfs:comment "Identifier for the company's subscription." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/subscription_id> .
+
+<http://example.org/ontology#SuccessFee> a owl:DatatypeProperty ;
+    rdfs:label "Success Fee" ;
+    rdfs:comment "Fee earned upon successful grant disbursement." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/success_fee> .
+
+<http://example.org/ontology#SuccessPaymentAmount> a owl:DatatypeProperty ;
+    rdfs:label "Success Payment Amount" ;
+    rdfs:comment "Amount paid upon successful grant." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/success_payment_amount> .
+
+<http://example.org/ontology#TaxId> a owl:DatatypeProperty ;
+    rdfs:label "Tax ID" ;
+    rdfs:comment "Tax identification number of the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/tax_id> .
+
+<http://example.org/ontology#TeamDescription> a owl:DatatypeProperty ;
+    rdfs:label "Team Description" ;
+    rdfs:comment "Description of the company's team or organizational structure." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/team_description> .
+
+<http://example.org/ontology#Title> a owl:DatatypeProperty ;
+    rdfs:label "Title" ;
+    rdfs:comment "Title of the application.",
+        "Title or name of the partner type in default language." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterConsortiumPartnerType>,
+        <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/title>,
+        <http://example.org/provenance/granter_consortiumpartnertype/title>,
+        <http://example.org/provenance/granter_timeline/title> .
+
+<http://example.org/ontology#UpdatedAt> a owl:DatatypeProperty ;
+    rdfs:label "Last Updated Timestamp" ;
+    rdfs:comment "Timestamp when the application was last updated." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/updated_at> .
+
+<http://example.org/ontology#UpfrontPaymentAmount> a owl:DatatypeProperty ;
+    rdfs:label "Upfront Payment Amount" ;
+    rdfs:comment "Initial payment amount for the application." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:decimal ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/upfront_payment_amount> .
+
+<http://example.org/ontology#Url> a owl:DatatypeProperty ;
+    rdfs:label "Website URL" ;
+    rdfs:comment "Official website URL of the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:anyURI ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/url> .
+
+<http://example.org/ontology#Userless> a owl:DatatypeProperty ;
+    rdfs:label "Userless" ;
+    rdfs:comment "Indicates if the company record is userless." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/userless> .
+
+<http://example.org/ontology#WebsiteData> a owl:DatatypeProperty ;
+    rdfs:label "Website Data" ;
+    rdfs:comment "Additional data or metadata from the company's website." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/website_data> .
+
+<http://example.org/ontology#WhitelabelId> a owl:DatatypeProperty ;
+    rdfs:label "White Label ID" ;
+    rdfs:comment "Identifier for white-label configurations." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/whitelabel_id> .
+
+<http://example.org/ontology#WriterMode> a owl:DatatypeProperty ;
+    rdfs:label "Writer Mode" ;
+    rdfs:comment "Mode of writing or submission for the application." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application/writer_mode> .
+
+<http://example.org/ontology#admissibleProjects> a owl:DatatypeProperty ;
+    rdfs:label "Admissible Projects" ;
+    rdfs:comment "Types of projects eligible." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#agencyIdentifier> a owl:DatatypeProperty ;
+    rdfs:label "Agency Identifier" ;
+    rdfs:comment "Identifier of the funding agency or body in the database." ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_generalopportunityfile/agencyIdentifier> .
+
+<http://example.org/ontology#assistantId> a owl:DatatypeProperty ;
+    rdfs:label "Assistant ID" ;
+    rdfs:comment "Identifier for the assistant managing the record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#belongsToApplication> a owl:ObjectProperty ;
+    rdfs:label "belongs to application" ;
+    rdfs:comment "Associates the file with a specific granter application." ;
+    rdfs:domain <http://example.org/ontology#GrantersApplicationFile> ;
+    rdfs:range <http://example.org/ontology#GrantersApplication> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/belongsToApplication> .
+
+<http://example.org/ontology#belongsToCompany> a owl:ObjectProperty ;
+    rdfs:label "belongs To Company",
+        "belongs to company" ;
+    rdfs:comment "Associates a matchcheck with a specific granter company.",
+        "Relation indicating the memory snippet belongs to a specific company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyMemory>,
+        <http://example.org/ontology#GranterMatchcheck> ;
+    rdfs:range <http://example.org/ontology#GranterCompany> ;
+    prov:wasDerivedFrom <http://provenance.example.org/granter_companymemory/belongsToCompany> .
+
+<http://example.org/ontology#belongsToCompanyMemory> a owl:ObjectProperty ;
+    rdfs:label "belongs To Company Memory" ;
+    rdfs:comment "Associates an opportunity with a granter company's memory snippets." ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterCompanyMemory> .
+
+<http://example.org/ontology#belongsToEligibilityCriteria> a owl:ObjectProperty ;
+    rdfs:label "belongs to eligibility criteria" ;
+    rdfs:comment "Associates a matchcheck with a specific eligibility criteria." ;
+    rdfs:domain <http://example.org/ontology#GranterMatchcheck> ;
+    rdfs:range <http://example.org/ontology#GranterEligibilityCriteria> .
+
+<http://example.org/ontology#belongsToOpportunity> a owl:ObjectProperty ;
+    rdfs:label "Belongs To Opportunity",
+        "belongs To Opportunity",
+        "belongs to opportunity",
+        "belongsToOpportunity" ;
+    rdfs:comment "Associates a consortium with a specific opportunity.",
+        "Associates a file with a specific funding opportunity.",
+        "Associates the file with a specific granter opportunity.",
+        "Associates the timeline with a specific granter opportunity.",
+        "Links a consortium to the funding opportunity it applies for.",
+        "Links an opportunity to its parent opportunity entity.",
+        "Links the file to a specific granter opportunity." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GranterOpportunity>,
+        <http://example.org/ontology#GranterOpportunityFile>,
+        <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunity>,
+        <http://example.org/ontology#Opportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_generalopportunityfile/belongsToOpportunity>,
+        <http://example.org/provenance/granter_timeline/belongs_to_opportunity>,
+        <http://provenance/schema#belongsToOpportunity> .
+
+<http://example.org/ontology#belongsToProfile> a owl:ObjectProperty ;
+    rdfs:label "belongs to Profile" ;
+    rdfs:comment "Relationship linking the company to its owner profile." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range <http://example.org/ontology#GranterProfile> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/owner_id> .
+
+<http://example.org/ontology#belongsToSubscription> a owl:ObjectProperty ;
+    rdfs:label "belongs to Subscription" ;
+    rdfs:comment "Relationship linking the company to its subscription." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range <http://example.org/ontology#GranterSubscription> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/subscription_id> .
+
+<http://example.org/ontology#belongsToWhitelabel> a owl:ObjectProperty ;
+    rdfs:label "belongs to Whitelabel" ;
+    rdfs:comment "Relationship linking the company to its whitelabel configuration." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range <http://example.org/ontology#GranterWhitelabel> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/whitelabel_id> .
+
+<http://example.org/ontology#codename> a owl:DatatypeProperty ;
+    rdfs:label "Code Name",
+        "code name" ;
+    rdfs:comment "A short code or abbreviation representing the file.",
+        "Short code or abbreviation representing the partner type.",
+        "Short code or identifier for the record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterConsortiumPartnerType>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/codename>,
+        <http://example.org/provenance/granter_generalopportunityfile/codename> .
+
+<http://example.org/ontology#companyId> a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Company ID",
+        "company ID" ;
+    rdfs:comment "Foreign key linking to the granter company.",
+        "Identifier linking to the associated company." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range <http://example.org/ontology#GranterCompany>,
+        xsd:integer .
+
+<http://example.org/ontology#content> a owl:DatatypeProperty ;
+    rdfs:label "Content" ;
+    rdfs:comment "Small text snippet stored as a vector for semantic context." ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyMemory> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#coverImage> a owl:DatatypeProperty ;
+    rdfs:label "Cover Image" ;
+    rdfs:comment "URL to the cover image associated with the record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:anyURI .
+
+<http://example.org/ontology#crawlerDataId> a owl:DatatypeProperty ;
+    rdfs:label "Crawler Data ID" ;
+    rdfs:comment "Identifier for crawler data associated with the record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#createdAt> a owl:DatatypeProperty ;
+    rdfs:label "Created At",
+        "Creation Timestamp",
+        "creation timestamp" ;
+    rdfs:comment "Timestamp indicating when the file was created.",
+        "Timestamp when the granter company record was created.",
+        "Timestamp when the record was created.",
+        "Timestamp when the timeline entry was created." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortiumPartnerType>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/created_at>,
+        <http://example.org/provenance/granter_consortiumpartnertype/created_at>,
+        <http://example.org/provenance/granter_generalopportunityfile/createdAt>,
+        <http://example.org/provenance/granter_timeline/created_at> .
+
+<http://example.org/ontology#createdById> a owl:DatatypeProperty ;
+    rdfs:label "Created By ID" ;
+    rdfs:comment "Identifier of the user or profile that created the record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/ontology#currency> a owl:DatatypeProperty ;
+    rdfs:label "Currency" ;
+    rdfs:comment "Currency used for financial figures." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#date> a owl:DatatypeProperty ;
+    rdfs:label "Event Date" ;
+    rdfs:comment "The date on which the timeline event occurs." ;
+    rdfs:domain <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:date ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/date> .
+
+<http://example.org/ontology#description> a owl:DatatypeProperty ;
+    rdfs:label "Description" ;
+    rdfs:comment "Description of the partner type in default language.",
+        "Detailed description of the record.",
+        "Detailed description of the timeline event." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterConsortiumPartnerType>,
+        <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/description>,
+        <http://example.org/provenance/granter_timeline/description> .
+
+<http://example.org/ontology#descriptionEn> a owl:DatatypeProperty ;
+    rdfs:label "English Description" ;
+    rdfs:comment "Description of the partner type in English." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/description_en> .
+
+<http://example.org/ontology#descriptionPt> a owl:DatatypeProperty ;
+    rdfs:label "Portuguese Description" ;
+    rdfs:comment "Description of the partner type in Portuguese." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/description_pt> .
+
+<http://example.org/ontology#difficultyLevel> a owl:DatatypeProperty ;
+    rdfs:label "Difficulty Level" ;
+    rdfs:comment "Difficulty level of the opportunity." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#difficultyLevelFundamentation> a owl:DatatypeProperty ;
+    rdfs:label "Difficulty Level Fundamentation" ;
+    rdfs:comment "Explanation of the difficulty level." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#eligibilityCriteria> a owl:DatatypeProperty ;
+    rdfs:label "Eligibility Criteria" ;
+    rdfs:comment "Criteria to determine eligibility." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#eligibleExpenses> a owl:DatatypeProperty ;
+    rdfs:label "Eligible Expenses" ;
+    rdfs:comment "Expenses eligible for funding." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#expectedSuccessRate> a owl:DatatypeProperty ;
+    rdfs:label "Expected Success Rate" ;
+    rdfs:comment "Projected success rate percentage." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:decimal .
+
+<http://example.org/ontology#feValue> a owl:DatatypeProperty ;
+    rdfs:label "FE Value" ;
+    rdfs:comment "Financial or feature value associated with the record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#financialInformation> a owl:DatatypeProperty ;
+    rdfs:label "Financial Information" ;
+    rdfs:comment "Financial details related to the opportunity." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#financingRate> a owl:DatatypeProperty ;
+    rdfs:label "Financing Rate" ;
+    rdfs:comment "Interest or financing rate applicable." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:decimal .
+
+<http://example.org/ontology#forceClosingSoon> a owl:DatatypeProperty ;
+    rdfs:label "Force Closing Soon" ;
+    rdfs:comment "Indicates if the opportunity is closing soon." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:boolean .
+
+<http://example.org/ontology#formQuestions> a owl:DatatypeProperty ;
+    rdfs:label "Form Questions" ;
+    rdfs:comment "Questions included in application forms." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#freeApplications> a owl:DatatypeProperty ;
+    rdfs:label "Free Applications" ;
+    rdfs:comment "Number of free applications allowed." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/ontology#fundamentation> a owl:DatatypeProperty ;
+    rdfs:label "fundamentation" ;
+    rdfs:comment "Indicates the fundamentation or basis for the record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#fundedBy> a owl:ObjectProperty ;
+    rdfs:label "fundedBy" ;
+    rdfs:comment "Relation indicating that a project is funded by a specific grant." ;
+    rdfs:domain <http://example.org/ontology#Project> ;
+    rdfs:range <http://example.org/ontology#Grant> .
+
+<http://example.org/ontology#granterCompanyMemory> a owl:Class ;
+    prov:wasDerivedFrom <http://provenance.example.org/granter_companymemory> .
+
+<http://example.org/ontology#granterOpportunityProvenance> a <http://example.org/ontology#ProvenanceInfo> ;
+    rdfs:label "Provenance for Granter Opportunity" ;
+    rdfs:comment "Metadata describing the origin and history of the granter opportunity data." .
+
+<http://example.org/ontology#granter_matchgroup> a owl:ObjectProperty ;
+    rdfs:label "belongs to match group" ;
+    rdfs:comment "Associates a granter matchcheck with its parent granter matchgroup." ;
+    rdfs:domain <http://example.org/ontology#GranterMatchcheck> ;
+    rdfs:range <http://example.org/ontology#GranterMatchgroup> .
+
+<http://example.org/ontology#gridId> a owl:DatatypeProperty ;
+    rdfs:label "GRID ID" ;
+    rdfs:comment "Institutional identifier from the GRID.ac database." ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_generalopportunityfile/gridId> .
+
+<http://example.org/ontology#hasActivityDate> a owl:DatatypeProperty ;
+    rdfs:label "activity date" ;
+    rdfs:comment "Date of activity related to the opportunity." ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range xsd:dateTime .
+
+<http://example.org/ontology#hasApplication> a owl:ObjectProperty ;
+    rdfs:label "has Application",
+        "hasApplication" ;
+    rdfs:comment "Links a company or consortium to its application.",
+        "Links a consortium to its application for an opportunity.",
+        "Relation indicating a company has submitted an application." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortium> ;
+    rdfs:range <http://example.org/ontology#GranterApplication> .
+
+<http://example.org/ontology#hasAssociatedFile> a owl:ObjectProperty ;
+    rdfs:label "has Associated File",
+        "has associated file",
+        "hasAssociatedFile" ;
+    rdfs:comment "Links an application or opportunity to its related files.",
+        "Links an application to its related files.",
+        "Links an opportunity to its related files.",
+        "Links an opportunity to related files." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterApplicationFile>,
+        <http://example.org/ontology#GranterOpportunityFile> .
+
+<http://example.org/ontology#hasColumn> a owl:DatatypeProperty ;
+    rdfs:label "Column",
+        "has column" ;
+    rdfs:comment "Name of a column in the database table." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/schema#column> .
+
+<http://example.org/ontology#hasColumnName> a owl:DatatypeProperty ;
+    rdfs:label "Column Name",
+        "has column name",
+        "hasColumnName" ;
+    rdfs:comment "Name of a column in the database table.",
+        "The name of a column in the database table." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/column_name>,
+        <http://provenance/schema#columnName> .
+
+<http://example.org/ontology#hasCompanyId> a owl:ObjectProperty ;
+    rdfs:label "Company ID" ;
+    rdfs:comment "Foreign key linking to the company involved." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range <http://example.org/ontology#GranterCompany> ;
+    prov:wasDerivedFrom <http://example.org/provenance/columns/company_id> .
+
+<http://example.org/ontology#hasConsortiumId> a owl:ObjectProperty ;
+    rdfs:label "Consortium ID" ;
+    rdfs:comment "Foreign key linking to the associated consortium." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range <http://example.org/ontology#GranterConsortium> ;
+    prov:wasDerivedFrom <http://example.org/provenance/columns/consortium_id> .
+
+<http://example.org/ontology#hasContent> a owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyMemory> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance.example.org/granter_companymemory/content> .
+
+<http://example.org/ontology#hasCreatedAt> a owl:DatatypeProperty ;
+    rdfs:label "Created At",
+        "has creation timestamp",
+        "hasCreatedAt" ;
+    rdfs:comment "Timestamp when the record or file was created.",
+        "Timestamp when the record was created." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/columns/created_at>,
+        <http://example.org/provenance/granter_applicationfile/created_at> .
+
+<http://example.org/ontology#hasDescription> a owl:DatatypeProperty ;
+    rdfs:label "Description",
+        "has description",
+        "hasDescription" ;
+    rdfs:comment "Description of the database table or entity.",
+        "Description of the granter company.",
+        "Description of the opportunity.",
+        "Description providing details about the general opportunity file." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/schema#description> .
+
+<http://example.org/ontology#hasFileName> a owl:DatatypeProperty ;
+    rdfs:label "File Name" ;
+    rdfs:comment "Name or identifier of the general opportunity file." ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/schema#fileName> .
+
+<http://example.org/ontology#hasForeignKey> a owl:ObjectProperty ;
+    rdfs:label "has foreign key" ;
+    rdfs:comment "Foreign key relation associated with the table." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range <http://example.org/ontology#ForeignKeyRelation> .
+
+<http://example.org/ontology#hasForeignKeyRelation> a owl:ObjectProperty ;
+    rdfs:label "Foreign Key Relation",
+        "has Foreign Key Relation",
+        "has foreign key relation" ;
+    rdfs:comment "Relation describing foreign key constraints for the table.",
+        "Relation representing foreign key constraints of the table.",
+        "Represents a foreign key relationship involving this table.",
+        "Represents foreign key relationships linking to other tables." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range <http://example.org/ontology#ForeignKeyRelation> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/hasForeignKeyRelation>,
+        <http://provenance/schema#foreignKeyRelation> .
+
+<http://example.org/ontology#hasGeneralOpportunityFileId> a owl:ObjectProperty ;
+    rdfs:label "General Opportunity File ID" ;
+    rdfs:comment "References the associated Granter General Opportunity File." ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFileOpportunities> ;
+    rdfs:range <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    prov:wasDerivedFrom <http://provenance/schema#generalOpportunityFileId> .
+
+<http://example.org/ontology#hasGrant> a owl:ObjectProperty ;
+    rdfs:label "has grant",
+        "hasGrant" ;
+    rdfs:comment "Associates an opportunity with a specific grant.",
+        "Links an opportunity to the specific grant it offers." ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#Grant> .
+
+<http://example.org/ontology#hasGrantShare> a owl:ObjectProperty ;
+    rdfs:label "has grant share",
+        "hasGrantShare" ;
+    rdfs:comment "Associates a project with its grant shares.",
+        "Links a grant to its associated grant share." ;
+    rdfs:domain <http://example.org/ontology#Grant>,
+        <http://example.org/ontology#Project> ;
+    rdfs:range <http://example.org/ontology#GrantShare> .
+
+<http://example.org/ontology#hasId> a owl:DatatypeProperty ;
+    rdfs:label "ID",
+        "Identifier",
+        "has ID",
+        "has identifier",
+        "hasId" ;
+    rdfs:comment "Unique identifier for the Granter General Opportunity File Opportunities record.",
+        "Unique identifier for the consortium partner type.",
+        "Unique identifier for the database record.",
+        "Unique identifier for the file within the system.",
+        "Unique identifier for the granter company.",
+        "Unique identifier for the granter timeline entry.",
+        "Unique identifier for the record.",
+        "Unique identifier for the table record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortiumPartnerType>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GranterGeneralOpportunityFileOpportunities>,
+        <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:integer,
+        xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/columns/id>,
+        <http://example.org/provenance/granter_company/id>,
+        <http://example.org/provenance/granter_consortiumpartnertype/id>,
+        <http://example.org/provenance/granter_generalopportunityfile/hasId>,
+        <http://example.org/provenance/granter_timeline/id>,
+        <http://provenance/schema#id> .
+
+<http://example.org/ontology#hasLegalForm> a owl:DatatypeProperty ;
+    rdfs:label "has legal form",
+        "hasLegalForm" ;
+    rdfs:comment "Legal form of the company, e.g., LLC, Corporation.",
+        "Legal structure or form of the company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasLegalName> a owl:DatatypeProperty ;
+    rdfs:label "has legal name" ;
+    rdfs:comment "Legal name of the granter company." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasMemorySnippet> a owl:ObjectProperty ;
+    rdfs:label "has Memory Snippet",
+        "has memory snippet",
+        "hasMemorySnippet" ;
+    rdfs:comment "Associates a granter company with its semantic memory snippets.",
+        "Relation linking memory snippets within the company memory.",
+        "Stores a small text snippet as a vector for semantic context." ;
+    rdfs:domain <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterCompanyMemory> ;
+    rdfs:range <http://example.org/ontology#GranterCompanyMemory>,
+        xsd:string .
+
+<http://example.org/ontology#hasName> a owl:DatatypeProperty ;
+    rdfs:label "has name",
+        "hasName" ;
+    rdfs:comment "Name of the database table or entity.",
+        "Name of the granter company.",
+        "The name identifier for the file or record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterCompany> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/name> .
+
+<http://example.org/ontology#hasOpportunityFile> a owl:ObjectProperty ;
+    rdfs:label "has opportunity file",
+        "hasOpportunityFile" ;
+    rdfs:comment "Links an opportunity to its associated files.",
+        "Links an opportunity to its related files." ;
+    rdfs:domain <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunityFile> .
+
+<http://example.org/ontology#hasOpportunityId> a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Opportunity ID",
+        "hasOpportunityId" ;
+    rdfs:comment "Foreign key referencing the associated opportunity.",
+        "Foreign key referencing the opportunity ID.",
+        "References the specific Granter Opportunity linked to this record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterGeneralOpportunityFileOpportunities> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunity>,
+        xsd:integer ;
+    prov:wasDerivedFrom <http://provenance/schema#opportunityId> .
+
+<http://example.org/ontology#hasPartner> a owl:ObjectProperty ;
+    rdfs:label "has Partner",
+        "hasPartner" ;
+    rdfs:comment "Associates a consortium with its individual partners.",
+        "Links a consortium to its partner persons." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortium> ;
+    rdfs:range <http://example.org/ontology#GranterConsortiumPartner>,
+        <http://example.org/ontology#Person> .
+
+<http://example.org/ontology#hasPartnerDescription> a owl:DatatypeProperty ;
+    rdfs:label "Partner Description" ;
+    rdfs:comment "Description of the partner's role or attributes within the consortium." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/columns/partner_description> .
+
+<http://example.org/ontology#hasPartnerTypeId> a owl:ObjectProperty ;
+    rdfs:label "Partner Type ID" ;
+    rdfs:comment "Foreign key indicating the type of partner role." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range <http://example.org/ontology#GranterConsortiumPartnerType> ;
+    prov:wasDerivedFrom <http://example.org/provenance/columns/partner_type_id> .
+
+<http://example.org/ontology#hasPrimaryKey> a owl:DatatypeProperty ;
+    rdfs:label "has primary key" ;
+    rdfs:comment "Primary key column(s) of the table." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasProjectDescription> a owl:DatatypeProperty ;
+    rdfs:label "hasProjectDescription" ;
+    rdfs:comment "Description of the project associated with the consortium." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasProjectDurationMonths> a owl:DatatypeProperty ;
+    rdfs:label "hasProjectDurationMonths" ;
+    rdfs:comment "Duration of the project in months." ;
+    rdfs:domain <http://example.org/ontology#Project> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/ontology#hasProjectMaxValue> a owl:DatatypeProperty ;
+    rdfs:label "hasProjectMaxValue" ;
+    rdfs:comment "Maximum project funding value." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:decimal .
+
+<http://example.org/ontology#hasProjectMinValue> a owl:DatatypeProperty ;
+    rdfs:label "hasProjectMinValue" ;
+    rdfs:comment "Minimum project funding value." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:decimal .
+
+<http://example.org/ontology#hasProvenance> a owl:ObjectProperty ;
+    rdfs:label "has Provenance",
+        "has provenance",
+        "hasProvenance" ;
+    rdfs:comment "Associates a database table with its provenance information.",
+        "Associates provenance information with the table or record.",
+        "Links a record to its provenance metadata.",
+        "Links an opportunity to its provenance metadata.",
+        "Links data elements to their provenance metadata.",
+        "Links the file to its provenance information.",
+        "Links the file to its provenance metadata." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GranterOpportunity>,
+        <http://example.org/ontology#GrantersApplicationFile> ;
+    rdfs:range <http://example.org/ontology#ProvenanceInfo> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/hasProvenance>,
+        <http://example.org/provenance/granter_generalopportunityfile/hasProvenance>,
+        <http://example.org/provenance/relations/hasProvenance> .
+
+<http://example.org/ontology#hasProvenanceDetails> a owl:DatatypeProperty ;
+    rdfs:label "Provenance Details" ;
+    rdfs:comment "Details describing the provenance of the data." ;
+    rdfs:domain <http://example.org/ontology#ProvenanceInfo> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/columns/provenanceDetails> .
+
+<http://example.org/ontology#hasProvenanceInfo> a owl:ObjectProperty ;
+    rdfs:label "Has Provenance Info",
+        "has Provenance Info",
+        "has provenance info" ;
+    rdfs:comment "Associates provenance information with the general opportunity file for traceability.",
+        "Links a database table to its provenance metadata.",
+        "Links provenance information to other provenance data or records.",
+        "Links to provenance information detailing the origin and history of the timeline data." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GranterTimeline>,
+        <http://example.org/ontology#ProvenanceInfo> ;
+    rdfs:range <http://example.org/ontology#ProvenanceInfo> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/has_provenance_info>,
+        <http://provenance/schema#hasProvenanceInfo> .
+
+<http://example.org/ontology#hasRecipient> a owl:ObjectProperty ;
+    rdfs:label "has recipient" ;
+    rdfs:comment "Associates a grant share with its recipient." ;
+    rdfs:domain <http://example.org/ontology#GrantShare> ;
+    rdfs:range <http://example.org/ontology#Recipient> .
+
+<http://example.org/ontology#hasRefColumn> a owl:DatatypeProperty ;
+    rdfs:label "Reference Column",
+        "has reference column" ;
+    rdfs:comment "Name of the referenced column in the foreign key relationship.",
+        "The column in the referenced table used in the foreign key." ;
+    rdfs:domain <http://example.org/ontology#ForeignKeyRelation> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/hasRefColumn>,
+        <http://provenance/schema#refColumn> .
+
+<http://example.org/ontology#hasRefTable> a owl:DatatypeProperty ;
+    rdfs:label "Reference Table" ;
+    rdfs:comment "Name of the referenced table in a foreign key relationship." ;
+    rdfs:domain <http://example.org/ontology#ForeignKeyRelation> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/schema#refTable> .
+
+<http://example.org/ontology#hasState> a owl:DatatypeProperty ;
+    rdfs:label "hasState" ;
+    rdfs:comment "Current state or status of the record.",
+        "Current status of the record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#hasTable> a owl:DatatypeProperty ;
+    rdfs:label "Table" ;
+    rdfs:comment "Name of the database table." ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://provenance/schema#table> .
+
+<http://example.org/ontology#hasTimeline> a owl:ObjectProperty ;
+    rdfs:label "has Timeline",
+        "hasTimeline" ;
+    rdfs:comment "Associates a consortium with its timeline information.",
+        "Associates a timeline with an opportunity." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortium>,
+        <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterTimeline> .
+
+<http://example.org/ontology#hasType> a owl:DatatypeProperty ;
+    rdfs:label "has type" ;
+    rdfs:comment "The type or category of the file." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/type> .
+
+<http://example.org/ontology#hasUpdatedAt> a owl:DatatypeProperty ;
+    rdfs:label "Updated At",
+        "has update timestamp",
+        "hasUpdatedAt" ;
+    rdfs:comment "Timestamp when the record or file was last updated.",
+        "Timestamp when the record was last updated." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/columns/updated_at>,
+        <http://example.org/provenance/granter_applicationfile/updated_at> .
+
+<http://example.org/ontology#hasUploadedFile> a owl:DatatypeProperty ;
+    rdfs:label "has uploaded file" ;
+    rdfs:comment "The file content or reference to the uploaded file." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/uploaded_file> .
+
+<http://example.org/ontology#hasVectorIndexed> a owl:DatatypeProperty ;
+    rdfs:label "has vector indexed" ;
+    rdfs:comment "Indicates whether the file has been processed for vector indexing." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/vector_indexed> .
+
+<http://example.org/ontology#includesPartner> a owl:ObjectProperty ;
+    rdfs:label "includes Partner",
+        "includesPartner" ;
+    rdfs:comment "Associates a consortium with its partner companies.",
+        "Relation indicating a consortium includes a partner." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortium> ;
+    rdfs:range <http://example.org/ontology#GranterConsortiumPartner> .
+
+<http://example.org/ontology#internalSubmission> a owl:DatatypeProperty ;
+    rdfs:label "Internal Submission" ;
+    rdfs:comment "Indicates if internal submission is permitted." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:boolean .
+
+<http://example.org/ontology#isPrediction> a owl:DatatypeProperty ;
+    rdfs:label "Is Prediction" ;
+    rdfs:comment "Indicates whether the timeline event is a forecast or prediction." ;
+    rdfs:domain <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:boolean ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/is_prediction> .
+
+<http://example.org/ontology#lastEmailPush> a owl:DatatypeProperty ;
+    rdfs:label "Last Email Push" ;
+    rdfs:comment "Timestamp of the last email push." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:dateTime .
+
+<http://example.org/ontology#lastEmailReminder> a owl:DatatypeProperty ;
+    rdfs:label "Last Email Reminder" ;
+    rdfs:comment "Timestamp of the last email reminder sent." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:dateTime .
+
+<http://example.org/ontology#location> a owl:DatatypeProperty ;
+    rdfs:label "Location" ;
+    rdfs:comment "Geographical location related to the opportunity." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#name> a owl:DatatypeProperty ;
+    rdfs:label "Name",
+        "name" ;
+    rdfs:comment "Human-readable name of the file.",
+        "Name of the record or entity." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_generalopportunityfile/name> .
+
+<http://example.org/ontology#opportunityId> a owl:ObjectProperty ;
+    rdfs:label "Opportunity",
+        "opportunity ID" ;
+    rdfs:comment "Foreign key linking to the granter opportunity.",
+        "Links the timeline to its associated granter opportunity." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunity> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/opportunity_id> .
+
+<http://example.org/ontology#prepTime> a owl:DatatypeProperty ;
+    rdfs:label "Preparation Time" ;
+    rdfs:comment "Estimated preparation time in days." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/ontology#projectDurationMonths> a owl:DatatypeProperty ;
+    rdfs:label "Project Duration (Months)" ;
+    rdfs:comment "Duration of the project in months." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:integer .
+
+<http://example.org/ontology#projectMaxValue> a owl:DatatypeProperty ;
+    rdfs:label "Project Max Value" ;
+    rdfs:comment "Maximum project funding value." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:decimal .
+
+<http://example.org/ontology#projectMinValue> a owl:DatatypeProperty ;
+    rdfs:label "Project Min Value" ;
+    rdfs:comment "Minimum project funding value." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:decimal .
+
+<http://example.org/ontology#provenanceInfo> a owl:Class ;
+    rdfs:label "Provenance Information" ;
+    rdfs:comment "Represents provenance annotations for tracking the origin and history of data elements." .
+
+<http://example.org/ontology#recipient> a owl:ObjectProperty ;
+    rdfs:label "recipient" ;
+    rdfs:comment "The company or entity that receives a grant share." ;
+    rdfs:domain <http://example.org/ontology#GrantShare> ;
+    rdfs:range <http://example.org/ontology#GranterCompany> .
+
+<http://example.org/ontology#relatesTo> a owl:ObjectProperty ;
+    rdfs:label "relates To" ;
+    rdfs:comment "Generic relation between database tables or entities." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range <http://example.org/ontology#DatabaseTable> .
+
+<http://example.org/ontology#relatesToCompany> a owl:ObjectProperty ;
+    rdfs:label "relates to Company",
+        "relates to company" ;
+    rdfs:comment "Indicates a relation between an opportunity and a company.",
+        "Links a partner to its company entity." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner>,
+        <http://example.org/ontology#Opportunity> ;
+    rdfs:range <http://example.org/ontology#GranterCompany> ;
+    prov:wasDerivedFrom <http://example.org/provenance/relations/relatesToCompany> .
+
+<http://example.org/ontology#relatesToConsortium> a owl:ObjectProperty ;
+    rdfs:label "relates to Consortium" ;
+    rdfs:comment "Links a partner to its consortium." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartner> ;
+    rdfs:range <http://example.org/ontology#GranterConsortium> ;
+    prov:wasDerivedFrom <http://example.org/provenance/relations/relatesToConsortium> .
+
+<http://example.org/ontology#relatesToOpportunity> a owl:ObjectProperty ;
+    rdfs:label "relates To Opportunity",
+        "relates to opportunity",
+        "relatesToOpportunity" ;
+    rdfs:comment "Indicates relationships between different funding opportunities.",
+        "Links a company memory snippet to a specific opportunity.",
+        "Links a granter matchgroup to a specific opportunity.",
+        "Links an application to its associated funding opportunity." ;
+    rdfs:domain <http://example.org/ontology#GranterApplication>,
+        <http://example.org/ontology#GranterCompanyMemory>,
+        <http://example.org/ontology#GranterMatchgroup>,
+        <http://example.org/ontology#GranterOpportunity> ;
+    rdfs:range <http://example.org/ontology#GranterOpportunity>,
+        <http://example.org/ontology#Opportunity> .
+
+<http://example.org/ontology#relatesToTable> a owl:ObjectProperty ;
+    rdfs:label "relates to table" ;
+    rdfs:comment "Indicates the table that is referenced by the foreign key." ;
+    rdfs:domain <http://example.org/ontology#ForeignKeyRelation> ;
+    rdfs:range <http://example.org/ontology#DatabaseTable> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_applicationfile/hasRefTable> .
+
+<http://example.org/ontology#smallCoverImage> a owl:DatatypeProperty ;
+    rdfs:label "Small Cover Image" ;
+    rdfs:comment "URL to a smaller version of the cover image." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:anyURI .
+
+<http://example.org/ontology#state> a owl:DatatypeProperty ;
+    rdfs:label "State" ;
+    rdfs:comment "Current state or status of the record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#status> a owl:DatatypeProperty ;
+    rdfs:label "status" ;
+    rdfs:comment "Status of the record, e.g., active, inactive." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#successFee> a owl:DatatypeProperty ;
+    rdfs:label "Success Fee" ;
+    rdfs:comment "Fee payable upon successful grant acquisition." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:decimal .
+
+<http://example.org/ontology#tagsFundamentation> a owl:DatatypeProperty ;
+    rdfs:label "Tags Fundamentation" ;
+    rdfs:comment "Explanation of associated tags." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:string .
+
+<http://example.org/ontology#time> a owl:DatatypeProperty ;
+    rdfs:label "Event Time" ;
+    rdfs:comment "The specific time of the timeline event, if applicable." ;
+    rdfs:domain <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:time ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/time> .
+
+<http://example.org/ontology#timeDiff> a owl:DatatypeProperty ;
+    rdfs:label "Time Difference" ;
+    rdfs:comment "Duration or difference relative to a reference point, e.g., days until deadline." ;
+    rdfs:domain <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:duration ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline/time_diff> .
+
+<http://example.org/ontology#title> a owl:DatatypeProperty ;
+    rdfs:label "Title" ;
+    rdfs:comment "Title or name of the partner type in default language.",
+        "Title or name of the timeline event." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartnerType>,
+        <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/title>,
+        <http://example.org/provenance/granter_timeline/title> .
+
+<http://example.org/ontology#titleEn> a owl:DatatypeProperty ;
+    rdfs:label "English Title" ;
+    rdfs:comment "Title of the partner type in English." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/title_en> .
+
+<http://example.org/ontology#titlePt> a owl:DatatypeProperty ;
+    rdfs:label "Portuguese Title" ;
+    rdfs:comment "Title of the partner type in Portuguese." ;
+    rdfs:domain <http://example.org/ontology#GranterConsortiumPartnerType> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/title_pt> .
+
+<http://example.org/ontology#type> a owl:DatatypeProperty ;
+    rdfs:label "Type" ;
+    rdfs:comment "Semantic type or category of the partner type.",
+        "Type of the timeline event, e.g., opening, deadline, evaluation.",
+        "Type or category of the database record.",
+        "Type or category of the partner type or timeline event.",
+        "Type or category of the record." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterConsortiumPartnerType>,
+        <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:string ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype/type>,
+        <http://example.org/provenance/granter_timeline/type> .
+
+<http://example.org/ontology#updatedAt> a owl:DatatypeProperty ;
+    rdfs:label "Last Updated Timestamp",
+        "Updated At",
+        "last update timestamp" ;
+    rdfs:comment "Timestamp indicating the last time the file was updated.",
+        "Timestamp when the granter company record was last updated.",
+        "Timestamp when the record or file was last updated.",
+        "Timestamp when the record was last updated.",
+        "Timestamp when the timeline entry was last updated." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable>,
+        <http://example.org/ontology#GranterCompany>,
+        <http://example.org/ontology#GranterConsortiumPartnerType>,
+        <http://example.org/ontology#GranterGeneralOpportunityFile>,
+        <http://example.org/ontology#GranterTimeline> ;
+    rdfs:range xsd:dateTime ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company/updated_at>,
+        <http://example.org/provenance/granter_consortiumpartnertype/updated_at>,
+        <http://example.org/provenance/granter_generalopportunityfile/updatedAt>,
+        <http://example.org/provenance/granter_timeline/updated_at> .
+
+<http://example.org/ontology#upfrontFee> a owl:DatatypeProperty ;
+    rdfs:label "Upfront Fee" ;
+    rdfs:comment "Fee payable upfront for the opportunity." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:decimal .
+
+<http://example.org/ontology#uploadedFile> a owl:DatatypeProperty ;
+    rdfs:label "uploaded file" ;
+    rdfs:comment "The actual file content or reference to the uploaded file." ;
+    rdfs:domain <http://example.org/ontology#GranterGeneralOpportunityFile> ;
+    rdfs:range xsd:base64Binary ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_generalopportunityfile/uploaded_file> .
+
+<http://example.org/ontology#url> a owl:DatatypeProperty ;
+    rdfs:label "URL" ;
+    rdfs:comment "Link to related web resource." ;
+    rdfs:domain <http://example.org/ontology#DatabaseTable> ;
+    rdfs:range xsd:anyURI .
+
+<http://example.org/ontology#vectorIndexed> a owl:DatatypeProperty ;
+    rdfs:label "Vector Indexed" ;
+    rdfs:comment "Indicates whether the memory snippet is indexed as a vector." ;
+    rdfs:domain <http://example.org/ontology#GranterCompanyMemory> ;
+    rdfs:range xsd:boolean .
+
+<http://example.org/ontology#wasDerivedFrom> a owl:ObjectProperty ;
+    rdfs:label "was Derived From",
+        "was derived from" ;
+    rdfs:comment "Indicates the source from which the data element was derived.",
+        "Indicates the source or origin of provenance information." ;
+    rdfs:domain <http://example.org/ontology#ProvenanceInfo> ;
+    rdfs:range owl:Thing .
+
+<http://example.org/ontology#Recipient> a owl:Class ;
+    rdfs:label "Recipient" ;
+    rdfs:comment "The receiver of a GrantPayment or receiver/beneficiary of a GrantShare." .
+
+<http://example.org/ontology#GranterMatchgroup> a owl:Class ;
+    rdfs:label "Granter Match Group" ;
+    rdfs:comment "The overall eligibility evaluation of a company for an opportunity, grouping multiple granter matchchecks." .
+
+<http://example.org/ontology#GrantersApplicationFile> a owl:Class ;
+    rdfs:label "Granter Application File" ;
+    rdfs:comment "Files associated with a specific granter application, providing contextual documentation." ;
+    rdfs:subClassOf <http://example.org/ontology#DatabaseTable> .
+
+<http://example.org/ontology#Grant> a owl:Class ;
+    rdfs:label "Grant" ;
+    rdfs:comment "A class representing a grant, funding, or financial support opportunity.",
+        "Represents a disbursed fund or financial support provided to a recipient or beneficiary." .
+
+<http://example.org/ontology#GrantShare> a owl:Class ;
+    rdfs:label "Grant Share" ;
+    rdfs:comment "A class representing a portion or share of a grant allocated to an entity.",
+        "Represents a portion or part of a Grant allocated to an individual entity.",
+        "Represents the full or proper portion or part allotted or belonging to or contributed to an individual entity within a Grant." .
+
+<http://example.org/ontology#GranterGeneralOpportunityFileOpportunities> a owl:Class ;
+    rdfs:label "Granter General Opportunity File Opportunities" ;
+    rdfs:comment "A class representing the association between opportunity files and specific opportunities.",
+        "Associates general opportunity files with specific opportunities, providing context across multiple opportunities." ;
+    prov:wasDerivedFrom <http://provenance/documentation#granter_generalopportunityfile_opportunities> .
+
+<http://example.org/ontology#GranterMatchcheck> a owl:Class ;
+    rdfs:label "Granter Matchcheck" ;
+    rdfs:comment "Represents the eligibility result of a single company against a single eligibility criteria, belonging to a granter company and criteria, grouped into a granter matchgroup." .
+
+<http://example.org/ontology#GranterOpportunityFile> a owl:Class ;
+    rdfs:label "Granter Opportunity File" ;
+    rdfs:comment "Files associated with granter opportunities, providing contextual information." .
+
+<http://example.org/ontology#Opportunity> a owl:Class ;
+    rdfs:label "Opportunity" ;
+    rdfs:comment "A class representing a funding, tax incentive, investment, or loan opportunity." .
+
+<http://example.org/ontology#ForeignKeyRelation> a owl:Class ;
+    rdfs:label "Foreign Key Relation" ;
+    rdfs:comment "A class representing a foreign key relationship between database tables.",
+        "Details of foreign key constraints linking database tables." ;
+    prov:wasDerivedFrom <http://provenance/documentation#ForeignKeyRelation> .
+
+<http://example.org/ontology#ProvenanceInfo> a owl:Class ;
+    rdfs:label "Provenance Info",
+        "Provenance Information" ;
+    rdfs:comment "A class capturing provenance metadata for data elements.",
+        "A class representing provenance metadata about data origin and derivation.",
+        "Captures provenance metadata about data elements.",
+        "Class representing provenance metadata for data elements.",
+        "Contains metadata about the origin and history of data.",
+        "Contains provenance metadata about data origin and derivation.",
+        "Contains provenance metadata such as creation date, source, and derivation details." ;
+    prov:wasDerivedFrom <http://example.org/provenance/ProvenanceInfo>,
+        <http://provenance/documentation#ProvenanceInfo> .
+
+<http://example.org/ontology#GranterCompanyMemory> a owl:Class ;
+    rdfs:label "Granter Company Memory" ;
+    rdfs:comment "A class representing small text snippets stored as vectors for semantic context related to a company.",
+        "Small text snippets stored as vectors for RAG purposes, providing semantic context for a granter company.",
+        "Stores semantic snippets for RAG purposes related to granter companies.",
+        "Stores small text snippets as vectors for semantic context in RAG." ;
+    rdfs:subClassOf <http://example.org/ontology#DatabaseTable> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_companymemory> .
+
+<http://example.org/ontology#GranterConsortium> a owl:Class ;
+    rdfs:label "Granter Consortium" ;
+    rdfs:comment "A class representing a consortium of companies or entities involved in grants.",
+        "Represents a consortium formed by multiple companies for a funding opportunity.",
+        "Represents a consortium formed by multiple companies for joint applications." ;
+    rdfs:subClassOf <http://example.org/ontology#DatabaseTable> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortium> .
+
+<http://example.org/ontology#GranterConsortiumPartner> a owl:Class ;
+    rdfs:label "Granter Consortium Partner" ;
+    rdfs:comment "A class representing a partner within a grant consortium.",
+        "Represents a company role within a GranterConsortium.",
+        "Represents a company role within a consortium, such as lead or partner." ;
+    rdfs:subClassOf <http://example.org/ontology#DatabaseTable> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartner> .
+
+<http://example.org/ontology#GranterConsortiumPartnerType> a owl:Class ;
+    rdfs:label "Granter Consortium Partner Type" ;
+    rdfs:comment "A class representing the type or role of a partner within a consortium.",
+        "Class representing different types of partners within a consortium, such as lead applicant, research partner, or SME partner.",
+        "Class representing different types of partners within a consortium." ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_consortiumpartnertype> .
+
+<http://example.org/ontology#GranterOpportunity> a owl:Class ;
+    rdfs:label "Granter Opportunity" ;
+    rdfs:comment "Represents a funding opportunity such as a grant, tax incentive, investment, or loan.",
+        "Represents a funding opportunity such as grants or incentives.",
+        "Represents a funding opportunity such as grants, tax incentives, investments, or loans.",
+        "Represents a grant opportunity offered by a granter." ;
+    rdfs:subClassOf <http://example.org/ontology#DatabaseTable> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_opportunity> .
+
+<http://example.org/ontology#GranterTimeline> a owl:Class ;
+    rdfs:label "Granter Timeline" ;
+    rdfs:comment "Represents important dates and deadlines for an opportunity.",
+        "Represents important dates for an opportunity, such as opening, submission deadlines, and evaluations." ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_timeline> .
+
+<http://example.org/ontology#GranterGeneralOpportunityFile> a owl:Class ;
+    rdfs:label "Granter General Opportunity File" ;
+    rdfs:comment "A class representing files associated with funding opportunities.",
+        "Files not tied to a specific opportunity, providing general context.",
+        "Represents files that provide contextual information across multiple grant opportunities, not tied to a single opportunity.",
+        "Represents files that provide contextual information across multiple opportunities, not tied to a single opportunity." ;
+    prov:wasDerivedFrom <http://provenance/documentation#granter_generalopportunityfile> .
+
+<http://example.org/ontology#GranterApplication> a owl:Class ;
+    rdfs:label "Granter Application" ;
+    rdfs:comment "A class representing an application submitted for a funding opportunity.",
+        "Represents an application submitted by a company for a specific funding opportunity.",
+        "Represents an application submitted for a funding opportunity." ;
+    rdfs:subClassOf <http://example.org/ontology#DatabaseTable> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_application> .
+
+<http://example.org/ontology#GranterCompany> a owl:Class ;
+    rdfs:label "Granter Company" ;
+    rdfs:comment "A commercial business entity that grants funding, grants, or other resources.",
+        "Represents a company entity involved in grant processes." ;
+    rdfs:subClassOf <http://example.org/ontology#DatabaseTable> ;
+    prov:wasDerivedFrom <http://example.org/provenance/granter_company> .
+
+<http://example.org/ontology#DatabaseTable> a owl:Class ;
+    rdfs:label "Database Table" ;
+    rdfs:comment "A class representing a database table in the schema.",
+        "A class representing a database table, encapsulating its schema and metadata.",
+        "A class representing a database table, serving as a container for related data and metadata.",
+        "Represents a database table entity." ;
+    prov:wasDerivedFrom <http://example.org/provenance/databaseSchema> .
+

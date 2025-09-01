@@ -342,10 +342,10 @@ Your task is to review the following delta ontology fragment generated from a re
 {delta_ontology}
 
 [DATABASE SCHEMA]
-{table_schema}
+{json.dumps(table_schema)}
 
 [CORE ONTOLOGY CONTEXT]
-{core_ontology if core_ontology else "(empty as of now)"}
+{core_context if core_ontology else "(empty as of now)"}
 
 {additional_syntax_hint}
 

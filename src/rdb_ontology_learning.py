@@ -500,9 +500,8 @@ def save_and_validate_ttl(ontology_string: str, filename: str = None):
         return None
 
 
-
-
 # ---------------------------------- RUNNING ----------------------------------
+
 
 if __name__ == "__main__":
     # Data structures

@@ -4,7 +4,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 from langchain_experimental.graph_transformers import LLMGraphTransformer
 from pyvis.network import Network
-import pandas as pd
 
 import asyncio
 
@@ -149,7 +148,7 @@ def merge_graph_documents(graph_documents):
 
 
 
-def visualize_graph(graph_documents):
+def visualize_graph(graph_documents, output_file = "knowledge_graph.html"):
     """
     Code from https://github.com/thu-vu92/knowledge-graph-llms/tree/main
     """
@@ -210,7 +209,6 @@ def visualize_graph(graph_documents):
             }
             """)
         
-    output_file = "knowledge_graph.html"
     net.save_graph(output_file)
     print(f"Graph saved to {os.path.abspath(output_file)}")
 
@@ -279,9 +277,98 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
     print(f"Graph saved to: {os.path.abspath(output_file)}")
     print(f"Total nodes: {len(nodes)}")
     print(f"Total edges: {len(relationships)}")
-    print(f"Node ID mapping: {node_id_mapping}")
+
+
+
+
+async def abuild_kg(
+    input_path: str,
+    ontology_path: str = None,
+    chunk_size: int = 3000,
+    chunk_overlap: int = 50,
+    visualize: bool = True,
+    html_output: str = "knowledge_graph.html"
+):
+    """
+    Build a knowledge graph from input text file(s).
     
-    return node_id_mapping
+    Args:
+        input_path (str): Path to input text file or folder containing text files
+        ontology_path (str, optional): Path to ontology TTL file for constraints
+        chunk_size (int): Size of text chunks for processing (default: 3000)
+        chunk_overlap (int): Overlap between chunks (default: 50)
+        visualize (bool): Whether to create HTML visualization (default: True)
+        html_output (str): Path for HTML visualization file (default: "knowledge_graph.html")
+    
+    Returns:
+        tuple: (graph_documents, node_id_mapping)
+    """
+    # Initialize empty classes and relations
+    classes = None
+    relations = None
+
+    # Extract ontology constraints if provided    
+    if ontology_path and os.path.exists(ontology_path):
+        try:
+            classes, relations, attributes = extract_local_names(ontology_path)
+            print(f"Using ontology constraints: {len(classes)} classes, {len(relations)} relations")
+        except Exception as e:
+            print(f"Warning: Could not load ontology from {ontology_path}: {e}")
+            print("Proceeding without ontology constraints...")
+
+    # Read input
+    content = ""
+    if os.path.isfile(input_path): # Single file
+        try:
+            with open(input_path, 'r', encoding='utf-8') as file:
+                content = file.read()
+            print(f"Loaded content from {input_path}")
+        except Exception as e:
+            raise Exception(f"Error reading file {input_path}: {e}")
+            
+    elif os.path.isdir(input_path): # Directory - process all .txt files
+        txt_files = [f for f in os.listdir(input_path) if f.endswith('.txt')]
+        if not txt_files:
+            raise Exception(f"No .txt files found in {input_path}")
+            
+        for filename in txt_files:
+            file_path = os.path.join(input_path, filename)
+            try:
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    content += file.read() + "\n\n"
+                print(f"Loaded content from {filename}")
+            except Exception as e:
+                print(f"Warning: Error reading {filename}: {e}")
+
+    # Process content
+    document = Document(page_content=content)
+    chunks = chunk_document(document, chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+    print(f"Split into {len(chunks)} chunks")
+
+    # Create graph transformer
+    transformer_kwargs = {"llm": gpt41_nano}
+    if classes:
+        transformer_kwargs["allowed_nodes"] = classes
+    if relations:
+        transformer_kwargs["allowed_relationships"] = relations
+        
+    graph_transformer = LLMGraphTransformer(**transformer_kwargs)
+
+    # Convert to graph
+    print("Converting text to graph documents...")
+    graph_documents = await graph_transformer.aconvert_to_graph_documents(chunks)
+    
+    # Merge documents
+    graph_documents = merge_graph_documents(graph_documents)
+
+    if visualize:
+        visualize_graph(graph_documents, output_file=html_output)
+
+    print(f"Knowledge graph built successfully!")
+    if visualize:
+        print(f"HTML visualization: {os.path.abspath(html_output)}")
+    
+    return graph_documents
 
 
 # ---------------------------------- RUNNING ----------------------------------
@@ -315,11 +402,11 @@ async def main():
 
     graph_documents = merge_graph_documents(graph_documents)
 
-    visualize_graph(graph_documents)
+    visualize_graph(graph_documents, 'src/knowledge_graph')
 
     save_graph_to_csv(graph_documents, output_file="output/KGs/rdb_ontology_aligned_KG.csv")
 
 
 
-if __name__ == "__main__":
-    asyncio.run(main())
+#if __name__ == "__main__":
+#    asyncio.run(main())

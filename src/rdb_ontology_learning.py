@@ -334,7 +334,7 @@ Only output Turtle syntax and nothing else. [OUTPUT]
 
 
     evaluator_prompt = f"""
-You are an expert in OWL 2 DL ontology modeling and validation.
+You are an expert in turtle ontology modeling and validation.
 
 Your task is to review the following delta ontology fragment generated from a relational database table, along with its schema and relevant context.
 
@@ -376,7 +376,7 @@ Your task is to review the following delta ontology fragment generated from a re
 [YOUR TASK]
 - Check the delta ontology fragment against all criteria above.
 - If issues are found, provide a corrected version of the ontology in valid Turtle syntax.
-- Make minimal necessary changes to preserve the author's intent while ensuring correctness and OWL 2 DL compliance.
+- Make minimal necessary changes to preserve the author's intent while ensuring correctness and turtle compliance.
 - Ensure all elements keep their provenance annotations.
 
 [OUTPUT FORMAT]
@@ -521,7 +521,7 @@ if __name__ == "__main__":
             embed_and_index(content, index_list[i])
             print(f"Indexed {len(content)} text chunks in {index_list[i]}.")
 
-    # Processing order CHANGE
+    # Processing order
     table_names = list(schema.keys())
     no_fk_tables = [name for name in table_names if not schema[name]['foreign_keys']]
     fk_tables = [name for name in table_names if schema[name]['foreign_keys']]
@@ -541,10 +541,10 @@ if __name__ == "__main__":
         try:
             delta = build_table_ontology(table, schema[table], core_ontology)
             core_ontology = merge_ontologies_ttl(core_ontology, delta)
-            print("✅")
+            print("Success")
             successful.append(table)
         except Exception as e:
-            print(f"❌ {e}")
+            print(f"FAILED {e}")
             failed.append(table)
 
     print(f"\nSuccess: {len(successful)}, Failed: {len(failed)}")
@@ -569,10 +569,10 @@ if __name__ == "__main__":
             try:
                 delta = build_table_ontology(table, schema[table], core_ontology)
                 core_ontology = merge_ontologies_ttl(core_ontology, delta)
-                print("✅")
+                print("Success")
                 retry_successful.append(table)
             except Exception as e:
-                print(f"❌ {e}")
+                print(f"FAILED {e}")
                 retry_failed.append(table)
         
         successful.extend(retry_successful)

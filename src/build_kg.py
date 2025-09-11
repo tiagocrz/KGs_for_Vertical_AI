@@ -1,5 +1,5 @@
 import re
-from rdflib import Graph, RDF, OWL
+from rdflib import Graph, RDF, OWL, RDFS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 from langchain_experimental.graph_transformers import LLMGraphTransformer
@@ -22,7 +22,8 @@ gpt41_nano = AzureChatOpenAI(
     azure_deployment=AZURE_DEPLOYMENT_GPT41_NANO,
     api_version=AZURE_OPENAI_API_VERSION,
     azure_endpoint=AZURE_OPENAI_ENDPOINT,
-    api_key=AZURE_OPENAI_API_KEY
+    api_key=AZURE_OPENAI_API_KEY,
+    temperature=0
 )
 
 
@@ -77,11 +78,21 @@ def extract_local_names(ttl_file_path):
         return uri_str.split('/')[-1]
     
     # Classes
-    class_uris = [s for s, _, _ in g.triples((None, RDF.type, OWL.Class))]
+    #class_uris = [s for s, _, _ in g.triples((None, RDF.type, OWL.Class))]
+    class_uris = set(
+    [s for s, _, _ in g.triples((None, RDF.type, OWL.Class))] +
+    [s for s, _, _ in g.triples((None, RDF.type, RDFS.Class))]
+)
+
     class_names = [get_local_name(uri) for uri in class_uris]
     
     # Object properties
     object_prop_uris = [s for s, _, _ in g.triples((None, RDF.type, OWL.ObjectProperty))]
+    object_prop_uris = set(
+    [s for s, _, _ in g.triples((None, RDF.type, OWL.ObjectProperty))] +
+    [s for s, _, _ in g.triples((None, RDF.type, RDF.Property))]
+)
+
     object_property_names = [get_local_name(uri) for uri in object_prop_uris]
     
     # Datatype properties
@@ -306,10 +317,12 @@ async def abuild_kg(
     # Initialize empty classes and relations
     classes = None
     relations = None
+    print(f"Input path: {input_path}") # remove
 
     # Extract ontology constraints if provided    
     if ontology_path and os.path.exists(ontology_path):
         try:
+            print("Path exists") # remove
             classes, relations, attributes = extract_local_names(ontology_path)
             print(f"Using ontology constraints: {len(classes)} classes, {len(relations)} relations")
         except Exception as e:
@@ -347,16 +360,26 @@ async def abuild_kg(
 
     # Create graph transformer
     transformer_kwargs = {"llm": gpt41_nano}
+    print("Classes:", classes) # remove
+    print("Relations:", relations) # remove
     if classes:
         transformer_kwargs["allowed_nodes"] = classes
     if relations:
         transformer_kwargs["allowed_relationships"] = relations
+    transformer_kwargs["ignore_tool_usage"] = True # try without
+    # transformer_kwargs["node_properties"] = True
+    # transformer_kwargs["relationship_properties"] = True
+
+    print("Graph transformer settings:", transformer_kwargs) # remove
         
     graph_transformer = LLMGraphTransformer(**transformer_kwargs)
 
     # Convert to graph
     print("Converting text to graph documents...")
     graph_documents = await graph_transformer.aconvert_to_graph_documents(chunks)
+
+    for graph in graph_documents: # remove
+        print(f"Graph document: {(graph.nodes)} nodes, {(graph.relationships)} relationships. Document: {graph.source.page_content[:25]}...") # remove
     
     # Merge documents
     graph_documents = merge_graph_documents(graph_documents)

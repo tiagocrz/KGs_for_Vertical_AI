@@ -1,0 +1,253 @@
+node_id,node_attr
+1,"Organization: Granter.Ai"
+2,"Concept: Setores De Alta Intensidade Tecnológica"
+3,"Concept: Soluções Baseadas Em Inteligência Artificial (Ia)"
+4,"Concept: Candidaturas A Fundos Públicos"
+5,"Concept: Agente De Ia"
+6,"Organization: Empresas"
+7,"Concept: Programas De Financiamento"
+8,"Concept: Metodologias Avançadas De Ia"
+9,"Concept: Redes Generativas Adversariais (Gans)"
+10,"Concept: Adversarial In-Context Learning (Adv-Icl)"
+11,"Concept: Software Proprietário"
+12,"Concept: Inovação E Eficiência"
+13,"Concept: Tecnologia De Ponta"
+14,"Concept: Transformação Digital"
+15,"Concept: Automação De Processos Complexos"
+16,"Concept: Agente De Ai"
+17,"Concept: Redes Generativas Adversariais"
+18,"Concept: Adv-Icl"
+19,"Concept: Políticas Públicas"
+20,"Concept: Fundos Públicos"
+21,"Concept: Mercado"
+22,"Concept: Espanha"
+23,"Concept: Itália"
+24,"Concept: Eua"
+25,"Concept: Spansh Market"
+26,"Concept: Italian Market"
+27,"Concept: Us Market"
+28,"Concept: Sustentabilidade"
+29,"Concept: Economia Verde"
+30,"Person: Empresa"
+31,"Organisation: Ani"
+32,"Technology: Gans"
+33,"Group: Equipa"
+34,"Market: Mercado Nacional"
+35,"Market: Mercados Internacionais"
+36,"Sector: Setor De Candidaturas A Fundos Públicos"
+37,"Concept: Modelo De Licenciamento Escalável"
+38,"Concept: Idiomas"
+39,"Concept: Enquadramento Jurídico E Operacional"
+40,"Concept: Apoio Ao Arranque Ou Ao Crescimento"
+41,"Concept: Modelo De Negócio"
+42,"Concept: Produto Digital Inovação"
+43,"Concept: Potencial De Escalabilidade"
+44,"Organization: Prr"
+45,"Initiative: Empresas 4.0"
+46,"Technology: Saas"
+47,"Technology: Ai (Inteligência Artificial)"
+48,"Concept: Automatização"
+49,"Concept: Usabilidade"
+50,"Concept: Financiamento Sustentável"
+51,"Concept: Eco-Inovação"
+52,"Organization: Startups Tecnológicas"
+53,"Organization: Empresa De Consultoria"
+54,"Concept: Cousas Com Maior Valor Agregado"
+55,"Concept: Gestao_Qualificada"
+56,"Concept: Competencias_Tecnicas"
+57,"Concept: Competencias_Gestao"
+58,"Concept: Projeto_Proposto"
+59,"Concept: Fundos_Publicos"
+60,"Concept: Inteligencia Artificial"
+61,"Concept: Engenharia De Software"
+62,"Concept: Lideranca_Strategica"
+63,"Concept: Gestao_De_Produto"
+64,"Concept: Expansao_Comercial"
+65,"Organization: Equipa_Fundadora"
+66,"Person: Bernardo Seixas"
+67,"Person: Bernardo Tavares"
+68,"Person: Bernardo Moutinho"
+69,"Person: Francisco Belo"
+70,"Person: Francisco Meirelles"
+71,"Concept: Licenciamento"
+72,"Person: Sua"
+73,"Concept: Experiência"
+74,"Concept: Comunicação"
+75,"Concept: Propostas_De_Valor_Tecnológicas"
+76,"Concept: Fundo Comunitário"
+77,"Concept: Ferramenta Digital Inteligente"
+78,"Concept: Mercado De Soluções Tecnológicas Para Consultoria"
+79,"Person: Front-End Developer Com Especialização Em Inteligência Artificial"
+80,"Concept: Colaboração Eficaz"
+81,"Concept: Capacidade De Adaptação Dinâmica"
+82,"Concept: Interface Intuitiva E Funcional"
+83,"Concept: Fator De Diferenciação"
+84,"Person: Clientes"
+85,"Person: Usuários Finais"
+86,"Concept: Solução Que Simplifica Processos Complexos"
+87,"Concept: Qualidade Estratégica Das Candidaturas"
+88,"Concept: Propostas Dos Utilizadores"
+89,"Organization: Ue (União Europeia)"
+90,"Organization: Grandar.Ai"
+91,"Concept: Ferramenta De Apoio Estratégico"
+92,"Concept: Inteligência Artificial"
+93,"Concept: Modelo De Monetização"
+94,"Concept: Suscrição Anual"
+95,"Concept: Níveis De Acesso"
+96,"Concept: Mercados E Públicos-Alvo"
+97,"Location: Portugal"
+98,"Location: Eua (Estados Unidos Da América)"
+99,"Organization: Rede De Empresas"
+100,"Concept: Ferramenta Digital Escalável"
+101,"Concept: Posicionamento De Mercado"
+102,"Person: Clientes Potenciais"
+103,"Organization: Marca"
+104,"Concept: Investimento Estratégico"
+105,"Concept: Inovação Tecnológica"
+106,"Concept: Propriedade Intelectual"
+107,"Concept: Metodologias Próprias"
+108,"Concept: Algoritmos Próprios"
+109,"Concept: Ecossistema De Inovação"
+110,"Concept: Ativos Criados"
+111,"Concept: Vantagem Competitiva"
+112,"Concept: Setor"
+113,"Concept: Produto De Elevado Valor"
+114,"Person: Ia"
+115,"Concept: Business Model"
+116,"Concept: Digital Support For Funding Acquisition"
+117,"Concept: New Markets"
+118,"Product: Artificial Intelligence Agent"
+119,"Fund: Fundos Europeus"
+120,"Concept: Economia Digital"
+121,"Concept: Inovação"
+122,"Technology: Rede Generativa Adversarial (Gans)"
+123,"Business_model: Modelo De Subscrição Anual"
+124,"Person: Advanced Ai Courses"
+125,"Person: Specialized Grant Application Procedure Courses"
+126,"Person: Legal Advice"
+127,"Person: Security Audits"
+128,"Person: Personal Computers"
+129,"Person: Software Subscriptions"
+130,"Person: Patent-Related Expenses"
+131,"Person: Legal Fees"
+132,"Person: Advice For Intellectual Property"
+
+src,edge_attr,dst
+1,"ENQUADRA-SE",2
+1,"DEDICADA",3
+3,"APLICADAS",4
+5,"UTILIZADA_POR",6
+5,"PARA",7
+8,"INCLUI",9
+8,"INCLUI",10
+11,"PROMO",12
+12,"RELACIONA",13
+12,"RELACIONA",14
+12,"MELHORIA",15
+1,"CREATES",16
+16,"USES",17
+16,"USES",18
+16,"FOCUSES_ON",19
+16,"FOCUSES_ON",20
+1,"TARGETS",21
+1,"PLANS_EXPAND",22
+1,"PLANS_EXPAND",23
+1,"PLANS_EXPAND",24
+1,"CONTRIBUTES_TO",28
+1,"CONTRIBUTES_TO",29
+1,"SEEKING_RECOGNITION",31
+1,"DEVELOPING",5
+5,"ASSIST_IN",20
+5,"TARGET_MARKET",22
+5,"TARGET_MARKET",23
+5,"TARGET_MARKET",24
+5,"USES_TECHNOLOGY",32
+5,"USES_TECHNOLOGY",18
+1,"ENHANCES",33
+5,"DEVELOPS",11
+11,"TRANSFORMS",36
+5,"TARGET_MARKET",34
+5,"EXPANDS",35
+5,"INCREASES_REVENUE",37
+5,"MULTI_LANGUAL",38
+5,"ADAPTS",39
+1,"PROPOSES",5
+5,"INCLUDES",41
+5,"FEATURES",42
+5,"HASFULFILL",43
+1,"EXPAND_INTO",22
+1,"EXPAND_INTO",23
+1,"EXPAND_INTO",24
+1,"UTILIZES",46
+1,"UTILIZES",47
+1,"INCORPORATES",48
+1,"PROMOTES",49
+1,"FACILITATES",50
+1,"PROMOTES",51
+1,"CONTRIBUTES_TO",14
+1,"SUPPORTS",52
+1,"REDEFINES_STANDARDS",53
+1,"AIMS_TO_CREATE",54
+1,"HAS",65
+65,"INCLUDES",55
+55,"REQUIRES",56
+55,"REQUIRES",57
+58,"INVOLVES",5
+58,"CONTEXT",59
+5,"NEEDS",60
+5,"NEEDS",61
+58,"REQUIRED_FOR",62
+58,"REQUIRED_FOR",63
+58,"REQUIRED_FOR",64
+72,"PROFESSOR",73
+73,"INVOLVES",74
+74,"DEAL_WITH",75
+71,"RELATES_TO",75
+1,"PROFESSIONAL",5
+1,"TARGET",76
+1,"CREATE",77
+77,"UTILIZE",32
+77,"UTILIZE",18
+30,"COMPETITOR",1
+33,"TEAM",1
+79,"HIRE",1
+33,"FOSTERS",80
+81,"PRODUCES",83
+82,"CONTRIBUTIONS",83
+84,"INCREASES",83
+85,"USE",91
+91,"BASED_ON",92
+93,"USES",94
+94,"PROVIDES",95
+100,"ENHANCES",101
+90,"USES",99
+90,"DEVELOP",100
+96,"IN",97
+96,"IN",22
+96,"IN",23
+96,"IN",98
+100,"IMPROVES",101
+101,"ATTRACTS",102
+103,"RECEIVES",104
+90,"INCORPORATES",105
+105,"USES",107
+105,"USES",108
+106,"PROTECTS",107
+106,"PROTECTS",108
+106,"REINFORCES",110
+110,"INTEGRATES",109
+111,"CONQUER",112
+113,"CONTRIBUTE",112
+114,"CONTRIBUTED_TO",115
+115,"ENABLES",117
+1,"PRODUCES",118
+1,"ENGAGES_WITH",119
+118,"USES",122
+118,"USES",10
+118,"OPERATES_IN",35
+35,"IN_COUNTRY",22
+35,"IN_COUNTRY",23
+35,"IN_COUNTRY",24
+1,"USES",123
+123,"TARGETS",84
+118,"HAS_POTENTIAL",43

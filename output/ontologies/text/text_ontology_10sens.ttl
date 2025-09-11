@@ -1,0 +1,248 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org#AdversarialInContextLearning> a rdfs:Class .
+
+<http://example.org#AgenteDeIA> a rdfs:Class .
+
+<http://example.org#ApoioAoArranqueOuAoCrescimento> a rdfs:Class .
+
+<http://example.org#AtividadeEconómicaPrincipalBeneficiário> a rdfs:Class .
+
+<http://example.org#Certificacoes> a rdfs:Class .
+
+<http://example.org#Equipamentos> a rdfs:Class .
+
+<http://example.org#EquipeDeGestao> a rdfs:Class .
+
+<http://example.org#Escalabilidade> a rdfs:Class .
+
+<http://example.org#ExpansaoComercial> a rdfs:Class .
+
+<http://example.org#FerramentaInteligente> a rdfs:Class .
+
+<http://example.org#GestaoDeProduto> a rdfs:Class .
+
+<http://example.org#ImpactoNaCompetitividade> a rdfs:Class .
+
+<http://example.org#Investimentos> a rdfs:Class .
+
+<http://example.org#LiderancaDoProjeto> a rdfs:Class .
+
+<http://example.org#MetodologiasIA> a rdfs:Class .
+
+<http://example.org#ModeloDeNegócio> a rdfs:Class .
+
+<http://example.org#Projeto> a rdfs:Class .
+
+<http://example.org#PropostaDeValor> a rdfs:Class .
+
+<http://example.org#PropriedadeIntelectual> a rdfs:Class .
+
+<http://example.org#ProtecaoDePropriedadeIntelectual> a rdfs:Class .
+
+<http://example.org#RecursosHumanos> a rdfs:Class .
+
+<http://example.org#RedesGenerativasAdversariais> a rdfs:Class .
+
+<http://example.org#ServicosExternos> a rdfs:Class .
+
+<http://example.org#SoftwareProprietário> a rdfs:Class .
+
+<http://example.org#Tecnologia> a rdfs:Class .
+
+<http://example.org#Tipologia> a rdfs:Class .
+
+<http://example.org#VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAi> a rdfs:Class .
+
+<http://example.org#EquipeDeGestao1> a <http://example.org#EquipeDeGestao> .
+
+<http://example.org#GranterAi> a <http://example.org#VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAi>,
+        owl:NamedIndividual .
+
+<http://example.org#IAModel1> a <http://example.org#ModeloDeNegócio> .
+
+<http://example.org#SoftwareProprietario1> a <http://example.org#SoftwareProprietário> .
+
+<http://example.org#TecnologiaX> a <http://example.org#Tecnologia> .
+
+<http://example.org#agenteIA1> a <http://example.org#AgenteDeIA> .
+
+<http://example.org#aplicaAdversarialInContextLearning> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#AdversarialInContextLearning> .
+
+<http://example.org#aplicadoA> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#AlgumaClasse> .
+
+<http://example.org#apoia> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#AgenteDeIA> ;
+    rdfs:range <http://example.org#Projeto> .
+
+<http://example.org#baseadoEm> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#AlgumaClasse> .
+
+<http://example.org#classificaTipologia> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#Tipologia> .
+
+<http://example.org#contaComEquipe> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#EquipeDeGestao> .
+
+<http://example.org#contrataServicosExternos> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#ServicosExternos> .
+
+<http://example.org#dedicaAoDesenvolvimento> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#AgenteDeIA> ;
+    rdfs:range <http://example.org#Projeto> .
+
+<http://example.org#desenvolveSoftwareProprietário> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#SoftwareProprietário> .
+
+<http://example.org#destina> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#PropostaDeValor> .
+
+<http://example.org#disponibilizaRecursosHumanos> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#RecursosHumanos> .
+
+<http://example.org#elaboracaoDeCandidaturas> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#AtividadeEconómicaPrincipalBeneficiário> .
+
+<http://example.org#empregaRedesGenerativasAdversariais> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#RedesGenerativasAdversariais> .
+
+<http://example.org#enquadraNos> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Setor> ;
+    rdfs:range <http://example.org#Setor> .
+
+<http://example.org#envolve> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#AdversarialInContextLearning>,
+        <http://example.org#RedesGenerativasAdversariais> .
+
+<http://example.org#envolveProjeto> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#Projeto> .
+
+<http://example.org#expandeComercialmente> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#ExpansaoComercial> .
+
+<http://example.org#garanteEscalabilidade> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#Escalabilidade> .
+
+<http://example.org#geraImpactoNaCompetitividade> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#ImpactoNaCompetitividade> .
+
+<http://example.org#gerenciaProduto> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#GestaoDeProduto> .
+
+<http://example.org#implementaModeloDeNegócio> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#ModeloDeNegócio> .
+
+<http://example.org#incorporaMetodologias> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#MetodologiasIA> .
+
+<http://example.org#integra> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#AtividadeEconómicaPrincipalBeneficiário> .
+
+<http://example.org#investeEm> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#Investimentos> .
+
+<http://example.org#lideraProjeto> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#LiderancaDoProjeto> .
+
+<http://example.org#obtemCertificacoes> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#Certificacoes> .
+
+<http://example.org#ofereceApoioAoArranqueOuAoCrescimento> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#ApoioAoArranqueOuAoCrescimento> .
+
+<http://example.org#permiteGerarConteudos> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#FerramentaInteligente> .
+
+<http://example.org#possuiEquipeDeGestao> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#EquipeDeGestao> .
+
+<http://example.org#projeto1> a <http://example.org#Projeto> ;
+    rdfs:label "O projeto proposto" .
+
+<http://example.org#propõeValor> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#PropostaDeValor> .
+
+<http://example.org#protegePropriedadeIntelectual> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#PropriedadeIntelectual> .
+
+<http://example.org#realizaExpansao> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#ExpansaoComercial> .
+
+<http://example.org#recebeCertificacoes> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#Certificacoes> .
+
+<http://example.org#recebeInvestimentos> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#Investimentos> .
+
+<http://example.org#temAtividadePrincipal> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#AtividadeEconómicaPrincipalBeneficiário> .
+
+<http://example.org#temBeneficiário> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#AtividadeEconómicaPrincipalBeneficiário> .
+
+<http://example.org#temLideranca> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#LiderancaDoProjeto> .
+
+<http://example.org#usaAgenteDeIA> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#AgenteDeIA> .
+
+<http://example.org#usaFerramentaInteligente> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#FerramentaInteligente> .
+
+<http://example.org#usaRecursos> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#Equipamentos>,
+        <http://example.org#PropriedadeIntelectual>,
+        <http://example.org#RecursosHumanos> .
+
+<http://example.org#usaTecnologia> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#Tecnologia> .
+
+<http://example.org#usaTecnologias> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#Tecnologia> .
+
+<http://example.org#utilizaMetodologiasIA> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org#Projeto> ;
+    rdfs:range <http://example.org#MetodologiasIA> .
+

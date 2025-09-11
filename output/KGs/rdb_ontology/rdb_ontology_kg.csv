@@ -1,0 +1,32 @@
+node_id,node_attr
+1,"Opportunity: Vouchers para Startups – Novos produtos digitais/tecnológicos"
+2,"GranterCompany: Granter.ai"
+3,"GranterApplication: ANI"
+4,"GranterCompany: Ganter.ai"
+5,"Grant: Apoio ao arranque ou ao crescimento"
+6,"Opportunity: parcerias"
+7,"GranterApplication: Projeto de inovação tecnológica"
+8,"GeographicCriterion: Portugal"
+9,"Opportunity: Agente de IA"
+10,"GranterCompany: empresa"
+11,"Opportunity: propostas de valor tecnológicas"
+12,"Grant: licenciamento"
+13,"GranterApplication: GranterApplication"
+14,"ProvenanceInfo: IA"
+15,"ProvenanceInfo: acrescentado com base em IA"
+16,"GranterApplication: Projeto de Desenvolvimento de Agente de IA"
+17,"Grant: Grant"
+18,"GrantPayment: 5,000€"
+
+src,edge_attr,dst
+2,"hasApplication",1
+4,"fundedBy",3
+6,"relatesTo",5
+2,"hasApplication",7
+2,"relatesTo",8
+2,"hasApplication",9
+12,"relatesTo",11
+2,"hasApplication",13
+14,"relatesTo",15
+2,"hasApplication",16
+17,"hasGrant",18

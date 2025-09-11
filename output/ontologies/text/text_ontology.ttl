@@ -1,0 +1,169 @@
+@prefix : <http://example.org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:AdversarialInContextLearning a rdfs:Class .
+
+:AgenteDeIA a rdfs:Class .
+
+:ApoioAoArranqueOuAoCrescimento a rdfs:Class .
+
+:AtividadeEconómicaPrincipalBeneficiário a rdfs:Class .
+
+:CategoriaDeDespesa a rdfs:Class .
+
+:Certificações a rdfs:Class .
+
+:Equipamentos a rdfs:Class .
+
+:FerramentaInteligente a rdfs:Class .
+
+:Investimentos a rdfs:Class .
+
+:MetodologiasIA a rdfs:Class .
+
+:ModeloDeNegócio a rdfs:Class .
+
+:ProdutoDigital a rdfs:Class .
+
+:Projeto a rdfs:Class .
+
+:PropriedadeIntelectual a rdfs:Class .
+
+:RecursosHumanos a rdfs:Class .
+
+:RedesGenerativasAdversariais a rdfs:Class .
+
+:ServiçosExternos a rdfs:Class .
+
+:SetorX a rdfs:Class .
+
+:SoftwareProprietário a rdfs:Class .
+
+:Tipologia a rdfs:Class .
+
+:VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAi a rdfs:Class .
+
+:CertificacaoTecnica1 a :Certificações .
+
+:EquipamentoTecnologico1 a :Equipamentos .
+
+:GranterAi a :AgenteDeIA,
+        owl:NamedIndividual .
+
+:ProdutoDigital1 a :ProdutoDigital .
+
+:adquire a owl:ObjectProperty ;
+    rdfs:domain :Equipamentos ;
+    rdfs:range :SoftwareProprietário .
+
+:agenteIA1 a :AgenteDeIA ;
+    rdfs:label "Agente de IA" .
+
+:aplicadasAFundosPublicos a owl:ObjectProperty ;
+    rdfs:domain :SolucoesBaseadasEmIA ;
+    rdfs:range :FundosPublicos .
+
+:apoia a owl:ObjectProperty ;
+    rdfs:domain :AgenteDeIA ;
+    rdfs:range :Projeto .
+
+:certifica a owl:ObjectProperty ;
+    rdfs:domain :Certificações ;
+    rdfs:range :PropriedadeIntelectual .
+
+:classificaComo a owl:ObjectProperty ;
+    rdfs:domain :ProdutoDigital ;
+    rdfs:range :Tipologia .
+
+:contrata a owl:ObjectProperty ;
+    rdfs:domain :ServiçosExternos ;
+    rdfs:range :AgenteDeIA .
+
+:dedicaAoDesenvolvimento a owl:ObjectProperty ;
+    rdfs:domain :VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAi ;
+    rdfs:range :SolucoesBaseadasEmIA .
+
+:desenvolve a owl:ObjectProperty ;
+    rdfs:domain :AgenteDeIA ;
+    rdfs:range :FerramentaInteligente .
+
+:destinaA a owl:ObjectProperty ;
+    rdfs:domain :CategoriaDeDespesa ;
+    rdfs:range :PropriedadeIntelectual .
+
+:elabora a owl:ObjectProperty ;
+    rdfs:domain :AgenteDeIA ;
+    rdfs:range :AtividadeEconómicaPrincipalBeneficiário .
+
+:enquadraNosSetores a owl:ObjectProperty ;
+    rdfs:domain :VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAi ;
+    rdfs:range :SetorX .
+
+:financia a owl:ObjectProperty ;
+    rdfs:domain :Investimentos ;
+    rdfs:range :VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAi .
+
+:incorpora a owl:ObjectProperty ;
+    rdfs:domain :Projeto ;
+    rdfs:range :MetodologiasIA .
+
+:integra a owl:ObjectProperty ;
+    rdfs:domain :Projeto ;
+    rdfs:range :Investimentos .
+
+:metodologiaAdvICL a :MetodologiasIA ;
+    rdfs:label "Adversarial In-Context Learning (Adv-ICL)" .
+
+:metodologiaGANs a :RedesGenerativasAdversariais ;
+    rdfs:label "Redes Generativas Adversariais (GANs)" .
+
+:permiteGerar a owl:ObjectProperty ;
+    rdfs:domain :AgenteDeIA ;
+    rdfs:range :ProdutoDigital .
+
+:projeto1 a :Projeto ;
+    rdfs:label "Projeto proposto" .
+
+:recruta a owl:ObjectProperty ;
+    rdfs:domain :RecursosHumanos ;
+    rdfs:range :AgenteDeIA .
+
+:reforça a owl:ObjectProperty ;
+    rdfs:domain :Individual1 ;
+    rdfs:range :AutomaçãoDeProcessosComplexos .
+
+:temEnquadramento a owl:ObjectProperty ;
+    rdfs:domain :Individual1 ;
+    rdfs:range :SetorDeAltaIntensidadeTecnológica .
+
+:temImpactoDireto a owl:ObjectProperty ;
+    rdfs:domain :ProdutoDigital ;
+    rdfs:range :SetorX .
+
+:transformaModelos a owl:ObjectProperty ;
+    rdfs:domain :IAModel1 ;
+    rdfs:range :ProdutoDigital .
+
+:usaMetodologia a owl:ObjectProperty ;
+    rdfs:domain :AgenteDeIA ;
+    rdfs:range :MetodologiasIA .
+
+:utilizaTecnologia a owl:ObjectProperty ;
+    rdfs:domain :AgenteDeIA ;
+    rdfs:range :RedesGenerativasAdversariais .
+
+:valorizaAplicacaoPratica a owl:ObjectProperty ;
+    rdfs:domain :softwareProprietario1 ;
+    rdfs:range :IAModel1 .
+
+:AutomaçãoDeProcessosComplexos a owl:Class .
+
+:SetorDeAltaIntensidadeTecnológica a owl:Class .
+
+:softwareProprietario1 a :SoftwareProprietário .
+
+:IAModel1 a :ModeloDeNegócio .
+
+:SolucoesBaseadasEmIA a :SoftwareProprietário .
+

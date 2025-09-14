@@ -218,7 +218,7 @@ def save_and_validate_ttl(ontology_string: str, filename: str = None):
         print(f"Invalid Turtle syntax: {error}")
         return None
     
-    output_dir = "output/ontologies/text"
+    output_dir = "results/ontologies/text"
     os.makedirs(output_dir, exist_ok=True)
     filepath = os.path.join(output_dir, filename)
     
@@ -309,9 +309,9 @@ if __name__ == "__main__":
         
     print(f"Successfully processed {len(text) - len(unsuccessful)} sentences.\n\nUnsuccessful sentences: {[text[i] for i, _ in unsuccessful]}")
 
-    ontology = gpt_results_to_ttl(relations, 'output/ontologies/text/text_ontology_val.txt')
+    ontology = gpt_results_to_ttl(relations, 'results/ontologies/text/text_ontology_val.txt')
 
-    #with open('output/ontologies/text/text_ontology_val.txt', 'r', encoding='utf-8') as f:
+    #with open('results/ontologies/text/text_ontology_val.txt', 'r', encoding='utf-8') as f:
     #    ontology = f.read()
 
     # Add prefixes since gpt_results_to_ttl doesn't include them

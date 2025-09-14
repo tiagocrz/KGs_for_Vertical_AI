@@ -482,7 +482,7 @@ def save_and_validate_ttl(ontology_string: str, filename: str = None):
         print(f"Invalid Turtle syntax: {error}")
         return None
     
-    output_dir = "output/ontologies/RDB"
+    output_dir = "results/ontologies/RDB"
     os.makedirs(output_dir, exist_ok=True)
     filepath = os.path.join(output_dir, filename)
     
@@ -511,7 +511,7 @@ if __name__ == "__main__":
         readme_database_content = f.read()
     readme_database_chunks = chunk_text(readme_database_content, 500)
 
-    lexE = extract_ontology_lexical_view('approaches/04_rdb_ontology/external_ontologies/DINGO-Manchester.omn')
+    lexE = extract_ontology_lexical_view('notebooks/04_rdb_ontology/external_ontologies/DINGO-Manchester.omn')
 
     index_list = [INDEX_PATH_EXTERNAL_ONT, INDEX_PATH_TEXTUAL_DESC]
     content_list = [lexE, readme_database_chunks]

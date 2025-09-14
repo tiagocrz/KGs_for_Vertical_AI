@@ -10,7 +10,6 @@ KGs_for_Vertical_AI is a toolkit for building, testing, and comparing Knowledge 
 - **notebooks/**: Jupyter notebooks for experiments, demos, and workflow documentation, organized by approach.
 - **data/**: Raw input data, with subfolders for PDFs, texts, and database.
 - **results/**: Generated artifacts, including indexes (e.g., FAISS), KGs, and ontologies.
-- **tests/**: Test scripts and notebooks.
 - **requirements.txt**, **README.md**: Root-level config and documentation.
 
 

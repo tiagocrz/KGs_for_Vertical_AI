@@ -398,7 +398,7 @@ async def abuild_kg(
 
 
 async def main():
-    classes, relations, attributes = extract_local_names('output/ontologies/RDB/rigor_ontology_few_fixes.ttl')
+    classes, relations, attributes = extract_local_names('results/ontologies/RDB/rigor_ontology_few_fixes.ttl')
 
     input_txt_folder = "data/texts"
     for filename in os.listdir(input_txt_folder):
@@ -427,7 +427,7 @@ async def main():
 
     visualize_graph(graph_documents, 'src/knowledge_graph')
 
-    save_graph_to_csv(graph_documents, output_file="output/KGs/rdb_ontology_aligned_KG.csv")
+    save_graph_to_csv(graph_documents, output_file="results/KGs/rdb_ontology_aligned_KG.csv")
 
 
 

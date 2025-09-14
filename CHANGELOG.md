@@ -9,7 +9,8 @@
   - Merged previous `approaches/` and `comparison/` into `notebooks/`.
   - Centralized raw input data in `data/` with subfolders for PDFs, texts, and database.
   - Consolidated generated artifacts (indexes, KGs, ontologies) in `results/`.
-  - Standardized test scripts and notebooks in `tests/`.
+  - Moved test notebooks to the `notebooks/` folder.
+  - Removed the `tests/` folder as part of simplifying the structure.
   - Renamed and clarified folder names for consistency (e.g., `utilities` to `utils` if applicable).
 - Updated `README.md` to reflect new structure and usage instructions.
 - Documented main components and their locations in the new structure.

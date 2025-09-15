@@ -233,59 +233,63 @@ def visualize_graph(graph_documents, output_file = "knowledge_graph.html"):
 
 
 
-def save_graph_to_csv(graph_documents, output_file="graph.csv"):
+def save_graph_to_csv(graph_documents, output_dir="."):
+    """
+    Save the graph as two CSV files: nodes and edges, in the specified directory.
+
+    Args:
+        graph_documents: List of graph documents (as produced by LLMGraphTransformer)
+        output_dir: Directory to save the nodes and edges CSV files
+    """
+    import os
+
     nodes = graph_documents[0].nodes
     relationships = graph_documents[0].relationships
-    
+
     # Create a mapping from node IDs to sequential integers
     node_id_mapping = {}
     sequential_id = 1
-    
+
     for node in nodes:
         if node.id not in node_id_mapping:
             node_id_mapping[node.id] = sequential_id
             sequential_id += 1
-    
-    # Prepare data for CSV
-    csv_data = []
-    
-    # Add header for nodes section
-    csv_data.append("node_id,node_attr")
-    
-    # Add nodes with their attributes
+
+    # Prepare nodes data
+    nodes_data = ["node_id,node_attr"]
     for node in nodes:
         node_id = node_id_mapping[node.id]
-        # Format: "Type: NodeName" or just "NodeName" if no type
         if hasattr(node, 'type') and node.type:
             node_attr = f"{node.type}: {node.id}"
         else:
             node_attr = node.id
-        
-        csv_data.append(f'{node_id},"{node_attr}"')
-    
-    # Add empty line separator
-    csv_data.append("")
-    
-    # Add header for edges section
-    csv_data.append("src,edge_attr,dst")
-    
-    # Add edges
+        nodes_data.append(f'{node_id},"{node_attr}"')
+
+    # Prepare edges data
+    edges_data = ["src,edge_attr,dst"]
     for rel in relationships:
         src_id = node_id_mapping.get(rel.source.id)
         dst_id = node_id_mapping.get(rel.target.id)
-        
-        # Skip if either node ID is not found
         if src_id is None or dst_id is None:
             continue
-            
         edge_attr = rel.type
-        csv_data.append(f'{src_id},"{edge_attr}",{dst_id}')
-    
-    # Write to file
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(csv_data))
-    
-    print(f"Graph saved to: {os.path.abspath(output_file)}")
+        edges_data.append(f'{src_id},"{edge_attr}",{dst_id}')
+
+    # Ensure output directory exists
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Write nodes file
+    nodes_file = os.path.join(output_dir, "nodes.csv")
+    with open(nodes_file, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(nodes_data))
+
+    # Write edges file
+    edges_file = os.path.join(output_dir, "edges.csv")
+    with open(edges_file, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(edges_data))
+
+    print(f"Nodes saved to: {os.path.abspath(nodes_file)}")
+    print(f"Edges saved to: {os.path.abspath(edges_file)}")
     print(f"Total nodes: {len(nodes)}")
     print(f"Total edges: {len(relationships)}")
 

@@ -13,21 +13,43 @@ gpt41_nano = AzureChatOpenAI(
     api_version = os.getenv("AZURE_OPENAI_API_VERSION"),
     azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT"),
     api_key = os.getenv("AZURE_OPENAI_API_KEY"),
-    temperature = 0.3
+    temperature = 0.0
 )
 
-prompt_c_step_1 = "Extract classes in ttl format from the following text, only return the created ttl code. Make sure to label all classes as of type rdfs:Class: \n\n"
+prompt_c_step_1 = """Extract classes in ttl format from the following text, only return the created ttl code. 
+Make sure to label all classes as of type rdfs:Class: 
+Always output ontology elements in English, regardless of the input language.
+Do NOT include any other commentary outside this format.
+STRICT NAMING RULES:
+- Use PascalCase for ALL class names (e.g., Person, DatabaseTable, ProvenanceInfo)
+- NEVER use lowercase for class names
+"""
+
 
 prompt_c_step_2 = """Extract individuals and relations in ttl format from the following sentence, based on the given classes.
-Only return the ttl code, include the classes, individuals, and relations in this sentence. 
+Only return the ttl code, include the individuals and relations in this sentence, and the classes already provided.
 Make sure to label all classes as of rdfs:Class, all individuals as owl:NamedIndividual, and all properties as owl:ObjectProperty, owl:DatatypeProperty, or owl:AnnotationProperty. 
-
-Follow correct Turtle syntax:
-- Use ';' to separate multiple predicates for the same subject.
-- Use ',' to separate multiple objects of the same predicate.
-- End each subject block with '.' before starting a new subject.
-- Do not switch subjects inside the same ';' chain.
+Always output ontology elements in English, regardless of the input language. 
+Do NOT include example assertions based on the sentence.
+Do NOT include any other commentary outside this format.
+STRICT NAMING RULES:
+- Use PascalCase for ALL class names (e.g., Person, DatabaseTable, ProvenanceInfo)
+- Use camelCase for ALL property names (e.g., hasName, relatesTo, adaptsToContextOf)
+- Do NOT include empty spaces in the names of ontology elements
 """
+
+
+#prompt_c_step_2 = """Extract individuals and relations in ttl format from the following sentence, based on the given classes.
+#Only return the ttl code, include the classes, individuals, and relations in this sentence. 
+#Make sure to label all classes as of rdfs:Class, all individuals as owl:NamedIndividual, and all properties as owl:ObjectProperty, owl:DatatypeProperty, or owl:AnnotationProperty. 
+#Always output ontology elements (classes, relations, individuals) in English, regardless of the input language. 
+#
+#Follow correct Turtle syntax:
+#- Use ';' to separate multiple predicates for the same subject.
+#- Use ',' to separate multiple objects of the same predicate.
+#- End each subject block with '.' before starting a new subject.
+#- Do not switch subjects inside the same ';' chain.\n\n
+#"""
 
 # ---------------------------------- TOOLS ----------------------------------
 
@@ -44,6 +66,15 @@ def read_text_file(file: str) -> list:
 
 
 
+def byte_to_str(text):
+    if isinstance(text, (bytes, bytearray)):
+        return text.decode("utf-8", errors="strict")
+    
+    return str(text)
+
+
+
+
 def get_azure_response(text, prompt, ontology_info=None):
     """Get response from Azure OpenAI"""
     if ontology_info is None:
@@ -52,11 +83,11 @@ def get_azure_response(text, prompt, ontology_info=None):
         # Convert ontology_info list to string if needed
         if isinstance(ontology_info, list):
             ontology_info = "\n".join(ontology_info)
+
         message_content = f"{prompt} {text}, {ontology_info}"
 
-    response = gpt41_nano.invoke([message_content])
-    
-    return response.content
+    response = gpt41_nano.invoke([message_content]).content
+    return response
 
 
 
@@ -118,6 +149,8 @@ def gpt_results_to_ttl(relations: List, output: str):
     return "\n".join(ttl_output)
 
 
+
+
 def clean_relations(relations, ttl_output):
     for relation in relations:
         for triple in relation:
@@ -136,6 +169,7 @@ def validate_turtle_string(turtle_str: str) -> tuple[bool, str]:
         - is_valid (bool): True if valid, False otherwise
         - error_msg (str): Error message if invalid, else empty
     """
+
     try:
         g = Graph()
         g.parse(data=turtle_str, format="turtle")
@@ -161,18 +195,23 @@ def build_validation_prompt(results, error_message) -> str:
 
     Please make the following minimal syntax corrections before further validation:
     - Use angle brackets <...> for all full IRI references.
-    - Each property must have exactly one rdfs:domain and one rdfs:range.
-    - Ensure rdfs:range only uses valid OWL classes or XSD types (e.g., xsd:string).
     - Remove annotation-style keywords like 'Annotations:' and instead use Turtle triples for metadata.
     - Avoid misplaced punctuation or unclosed blocks.
 
     Parsing error: {error_message}
 
+    [STRICT NAMING RULES]
+    - Use PascalCase for ALL class names (e.g., Person, DatabaseTable, ProvenanceInfo)
+    - Use camelCase for ALL property names (e.g., hasName, relatesTo, wasDerivedFrom)
+    - NEVER use lowercase for class names
+    - NEVER include empty spaces in the names of ontology elements
+
+
     [VALIDATION CRITERIA]
     **Syntactic Validity**  
     - The ontology must conform to valid Turtle/RDF syntax.
     - Use proper prefixes and IRI declarations.
-    - Exactly one rdfs:domain and one rdfs:range per property.
+    - Follow the correct naming rules
 
     [YOUR TASK]
     - Check the ontology against the criteria above.
@@ -183,7 +222,9 @@ def build_validation_prompt(results, error_message) -> str:
     [OUTPUT FORMAT]
     Respond ONLY with a corrected Turtle syntax version of the exact same ontology.
     Do NOT include any other commentary outside this format.
+    Do NOT include example assertions based on the sentence.
     Do NOT reduce the ontology content. Make only syntax adjustments.
+    Always output ontology elements (classes, relations, individuals) in English, regardless of the input language. 
     """
     return prompt_validator
 
@@ -265,6 +306,8 @@ if __name__ == "__main__":
     # Classes
     response_1 = get_azure_response(text, prompt_c_step_1)
     print(response_1)
+    if '```' in response_1:
+        response_1 = "\n".join(get_results_from_response(response_1))
 
     standard_prefixes = [
             "@prefix : <http://example.org#> .",
@@ -279,15 +322,20 @@ if __name__ == "__main__":
     unsuccessful = []
     relations = []
     for i, sentence in enumerate(text):
-        print(f"Processing sentence {i+1}/{len(text)}")
+        print(f"\nProcessing sentence {i+1}/{len(text)}")
         response_2 = get_azure_response(sentence, prompt_c_step_2, 
                                         get_results_from_response(response_1))
+        
         response_2_with_prefixes = ("\n".join(standard_prefixes) + 
                                     "\n" + 
                                     "\n".join(get_results_from_response(response_2)))
+        
+        response_2_with_prefixes = byte_to_str(response_2_with_prefixes)
 
         is_valid, error_message = validate_turtle_string(response_2_with_prefixes)
         print(is_valid)
+
+        print(f'Object type: {type(response_2_with_prefixes)} \n\nGENERATED ONTOLOGY: \n\n{response_2_with_prefixes}') if not is_valid else None
 
         retry_count = 0
         max_retries = 3
@@ -296,6 +344,10 @@ if __name__ == "__main__":
 
             fix = gpt41_nano.invoke(build_validation_prompt(response_2_with_prefixes,  
                                                         error_message)).content
+            fix = byte_to_str(fix)
+
+            print(f'Object type: {type(fix)} \n\nGENERATED FIX: \n\n{fix}')
+
             retry_count += 1
             is_valid, error_message = validate_turtle_string(fix)
 

@@ -1,102 +1,55 @@
 node_id,node_attr
-1,"ConhecimentoTécnicoCientífico: InteligênciaArtificial"
-2,"ProjetoProposto: Projeto Proposto"
-3,"RedesGenerativasAdversariaisGANs: Redes Generativas Adversariais (GANs)"
-4,"AgenteDeIA: AgenteDeIA"
-5,"StartupDedicaASoluçõesDeIA: Granter.ai"
-6,"SetorDeAltaIntensidadeTecnológica: SetorDeAltaIntensidadeTecnológica"
-7,"SoftwareProprietario: Software Proprietario"
-8,"ConhecimentoTécnicoCientífico: Inteligência Artificial"
-9,"AdversarialInContextLearningAdvICL: Adversarial In-Context Learning (Adv-ICL)"
-10,"TipologiaApoioAoArranqueOuAoCrescimento: TipologiaApoioAoArranqueOuAoCrescimento"
-11,"RedesGenerativasAdversariaisGANs: RedesGenerativasAdversariaisGANs"
-12,"AdversarialInContextLearningAdvICL: Adv-ICL"
-13,"ProdutoDigitalInovador: Agente de IA"
-14,"ProjetoProposto: projeto"
-15,"VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAIAActivityEconómicaPrincipalDoBeneficiário: VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAIAActivityEconómicaPrincipalDoBeneficiário"
-16,"EcoInovação: EcoInovação"
-17,"ConhecimentoTécnicoCientífico: automatização"
-18,"MetodologiasDeIA: digitalização"
-19,"ImpactoNaCompetitividade: ImpactoNaCompetitividade"
-20,"ProjetoProposto: ProjetoProposto"
-21,"ConhecimentoTécnicoCientífico: competências tecnológicas e de gestão"
-22,"MissãoDeDemocratizarOFundosPublicos: MissãoDeDemocratizarOFundosPublicos"
-23,"ProdutoComForteComponenteDigital: ProdutoComForteComponenteDigital"
-24,"PropostaDeValorDiferenciada: PropostaDeValorDiferenciada"
-25,"ConhecimentoTécnicoCientífico: inteligência artificial"
-26,"ProdutoDigitalInovador: soluções digitais inteligentes"
-27,"Empresas4_0: Empresas 4.0"
-28,"EquipeDeGestão: equipa de gestão"
-29,"TransiçãoDigitalPRR: TransiçãoDigitalPRR"
-30,"TransformaçãoEstratégica: TransformaçãoEstratégica"
-31,"CTOeCofundador: Bernardo Tavares"
-32,"MetodologiasDeIA: MetodologiasDeIA"
-33,"TechLead: Francisco Belo"
-34,"HeadOfOperations: Bernardo Moutinho"
-35,"CEOEBasicoDeExperiência: Bernardo Seixas"
-36,"HeadOfSales: Francisco Meirelles"
-37,"PropostaDeValorDiferenciada: licenciamento"
-38,"ProdutoDigitalInovador: ferramenta digital inteligente"
-39,"PropostaDeValorDiferenciada: estratégia de subscrição anual"
-40,"PropostaDeValorDiferenciada: modelo de monetização"
-41,"StartupDedicaASoluçõesDeIA: empresa"
-42,"AgenteDeIA: IA"
-43,"ProdutoDigitalInovador: acrescentado com base em IA"
-44,"ProdutoDigitalInovador: produto"
-45,"ModeloDeNegócioDeAssinatura: modelo de negócio"
-46,"ConhecimentoTécnicoCientífico: AI"
-47,"ConhecimentoTécnicoCientífico: Advanced AI"
+1,"Phase: fase inicial de crescimento acelerado"
+2,"Product: Agente de AI"
+3,"Technology: Redes Generativas Adversariais (GANs)"
+4,"Company: Granter.ai"
+5,"Company: Ganter.ai"
+6,"Entity: entidade competente"
+7,"Sector: setor de candidaturas a fundos públicos"
+8,"Concept: tipologia "Apoio ao arranque ou ao crescimento""
+9,"Concept: nature, objectives and ambition of the present project"
+10,"Product: Agente de IA"
+11,"Technology: Adversarial In-Context Learning"
+12,"Concept: Mudança de paradigma"
+13,"Country: Espanha"
+14,"Context: fundos públicos"
+15,"Project: desenvolvimento de um Agente de IA"
+16,"Person: Bernardo Seixas"
+17,"Person: Francisco Meirelles"
+18,"Role: CEO e fundador da empresa"
+19,"Experience: vendas e marketing estratégico"
+20,"Activity: comunicação de propostas de valor tecnológicas"
+21,"Concept: licenciamento"
+22,"Technology: Adv-ICL"
+23,"Product: ferramenta digital inteligente"
+24,"Concept: competitividad"
+25,"Country: Portugal"
+26,"Organization: competitors"
+27,"Goal: posicionar-se como uma referência no apoio digital à captação de financiamento"
+28,"Business Model: modelo de negócio escalável"
+29,"Concept: implementation of the project"
+30,"Cost: costs with technological accreditation of human resources"
+31,"Concept: revolution in the panorama of the consulting for European funds"
+32,"Currency: 5,000€"
 
 src,edge_attr,dst
-5,"enquadraNo",6
-5,"aplicaTecnologia",1
-2,"desenvolve",4
-4,"usaMetodologia",3
-4,"usaMetodologia",9
-7,"desenvolve",8
-5,"enquadraNo",10
-5,"temSetor",6
-13,"aplicaTecnologia",11
-13,"aplicaTecnologia",12
-5,"desenvolve",13
-5,"usaMetodologia",11
-5,"usaMetodologia",12
-10,"enquadraNo",14
-5,"aplicaTecnologia",25
-5,"aplicaTecnologia",17
-5,"aplicaTecnologia",26
-5,"enquadraNo",27
-5,"usaMetodologia",18
-5,"usaMetodologia",25
-5,"usaMetodologia",17
-5,"enquadraNo",29
-5,"enquadraNo",16
-5,"enquadraNo",19
-5,"enquadraNo",30
-5,"enquadraNo",22
-5,"enquadraNo",24
-5,"enquadraNo",23
-5,"enquadraNo",20
-5,"enquadraNo",15
-28,"temSetor",21
-35,"enquadraNo",22
-35,"enquadraNo",30
-31,"enquadraNo",32
-31,"aplicaTecnologia",11
-31,"aplicaTecnologia",12
-34,"enquadraNo",10
-33,"enquadraNo",32
-33,"aplicaTecnologia",11
-36,"enquadraNo",10
-37,"aplicaTecnologia",24
-5,"aplicaTecnologia",38
-40,"desenvolve",39
-41,"enquadraNo",6
-41,"temSetor",6
-5,"temSetor",30
-42,"aplicaTecnologia",43
-14,"temSetor",6
-44,"aplicaTecnologia",11
-44,"temSetor",6
-45,"enquadraNo",10
-47,"aplicaTecnologia",46
+2,"UTILIZES_TECHNOLOGIES",3
+4,"IS_IN_PHASE",1
+5,"WANTS_TO_BE_RECOGNIZED_AS",6
+5,"CONSOLIDATING_POSITION_IN",7
+8,"REFLECTS",9
+10,"DEVELOPED_BY",4
+10,"USES_TECHNOLOGY",11
+4,"TARGETED_MARKET",13
+4,"LIDERANÇA_EM",12
+15,"CONTEXT",14
+16,"HAS_ROLE",18
+17,"HAS_EXPERIENCE",19
+21,"INVOLVES",20
+4,"CONTRIBUTS_TO",24
+23,"UTILIZES",22
+4,"OPERATES_IN",25
+4,"COMPETES_WITH",26
+28,"ENABLED",27
+29,"WILL_TRANSLATE_INTO",31
+30,"AMOUNT",32

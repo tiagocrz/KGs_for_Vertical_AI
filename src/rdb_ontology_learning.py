@@ -11,13 +11,19 @@ embedding = OllamaEmbeddings(model="nomic-embed-text:v1.5")
 
 from langchain_openai import AzureChatOpenAI
 import os
-from dotenv import load_dotenv
-load_dotenv()
+# Import settings from the central configuration file
+from app_settings import (
+    AZURE_OPENAI_API_KEY,
+    AZURE_OPENAI_ENDPOINT,
+    AZURE_OPENAI_API_VERSION,
+    AZURE_DEPLOYMENT_GPT41_NANO
+)
+
 gpt41_nano = AzureChatOpenAI(
-    azure_deployment=os.getenv("AZURE_DEPLOYMENT_GPT41_NANO"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+    azure_deployment=AZURE_DEPLOYMENT_GPT41_NANO,
+    api_version=AZURE_OPENAI_API_VERSION,
+    azure_endpoint=AZURE_OPENAI_ENDPOINT,
+    api_key=AZURE_OPENAI_API_KEY,
     temperature=0.0
 )
 
@@ -482,7 +488,7 @@ def save_and_validate_ttl(ontology_string: str, filename: str = None):
         print(f"Invalid Turtle syntax: {error}")
         return None
     
-    output_dir = "results/ontologies/RDB"
+    output_dir = "results/ontologies/rdb"
     os.makedirs(output_dir, exist_ok=True)
     filepath = os.path.join(output_dir, filename)
     

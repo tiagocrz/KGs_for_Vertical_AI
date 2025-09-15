@@ -5,18 +5,14 @@ from langchain_core.documents import Document
 from langchain_experimental.graph_transformers import LLMGraphTransformer
 from pyvis.network import Network
 
-import asyncio
-
 from langchain_openai import AzureChatOpenAI
 import os
-from dotenv import load_dotenv
-load_dotenv()
-AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
-AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
-AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION")
-
-AZURE_DEPLOYMENT_GPT41 = os.getenv("AZURE_DEPLOYMENT_GPT41")
-AZURE_DEPLOYMENT_GPT41_NANO = os.getenv("AZURE_DEPLOYMENT_GPT41_NANO")
+from app_settings import (
+    AZURE_OPENAI_API_KEY,
+    AZURE_OPENAI_ENDPOINT,
+    AZURE_OPENAI_API_VERSION,
+    AZURE_DEPLOYMENT_GPT41_NANO
+)
 
 gpt41_nano = AzureChatOpenAI(
     azure_deployment=AZURE_DEPLOYMENT_GPT41_NANO,
@@ -68,8 +64,15 @@ def extract_local_names(ttl_file_path):
         - object_property_names: ontology object properties (relationships)
         - datatype_property_names: ontology datatype properties (attributes)
     """
+    # Ensure relative paths are resolved from PROJECT_ROOT
+    import os
+    from app_settings import PROJECT_ROOT
+    if not os.path.isabs(ttl_file_path):
+        ttl_file_path = os.path.join(PROJECT_ROOT, ttl_file_path)
+    # Convert to file URI for rdflib
+    file_uri = 'file:///' + os.path.abspath(ttl_file_path).replace('\\', '/')
     g = Graph()
-    g.parse(ttl_file_path, format="turtle")
+    g.parse(file_uri, format="turtle")
     
     def get_local_name(uri):
         uri_str = str(uri)
@@ -146,13 +149,17 @@ def merge_graph_documents(graph_documents):
             seen_rels.add(rel_key)
             unique_relationships.append(rel)
     
+    # Handle empty input
+    if not graph_documents:
+        print("merge_graph_documents: input list is empty, returning []")
+        return []
+    
     # Create merged document
-    merged_doc = type(graph_documents[0])(
+    merged_doc = type(graph_documents[0])( 
         nodes=unique_nodes,
         relationships=unique_relationships,
         source=graph_documents[0].source
     )
-    
     print(f"Merged: {len(unique_nodes)} nodes, {len(unique_relationships)} relationships")
     return [merged_doc]
 
@@ -163,6 +170,9 @@ def visualize_graph(graph_documents, output_file = "knowledge_graph.html"):
     """
     Code from https://github.com/thu-vu92/knowledge-graph-llms/tree/main
     """
+    if not graph_documents:
+        print("No graph documents to visualize. Skipping visualization.")
+        return
 
     # Create network
     net = Network(height="1200px", width="100%", directed=True,
@@ -314,15 +324,34 @@ async def abuild_kg(
     Returns:
         tuple: (graph_documents, node_id_mapping)
     """
-    # Initialize empty classes and relations
+    # --- Improved error handling and diagnostics ---
+
+    # --- Early validations ---
+    print(f"Input path: {input_path}")
+    if not input_path or not isinstance(input_path, str):
+        raise ValueError("Input path must be a non-empty string.")
+    if not os.path.exists(input_path):
+        raise FileNotFoundError(f"Input path does not exist: {input_path}")
+    if not (os.path.isfile(input_path) or os.path.isdir(input_path)):
+        raise ValueError(f"Input path must be a file or directory: {input_path}")
+
+    if ontology_path:
+        if not os.path.exists(ontology_path):
+            print(f"Warning: Ontology path does not exist: {ontology_path}")
+        # No need to raise, just warn
+
+    # Validate output directory for html_output (if visualize)
+    if visualize:
+        output_dir = os.path.dirname(html_output)
+        if output_dir and not os.path.exists(output_dir):
+            raise FileNotFoundError(f"Output directory does not exist for html_output: {output_dir}")
+
+    # Extract ontology constraints if provided
     classes = None
     relations = None
-    print(f"Input path: {input_path}") # remove
-
-    # Extract ontology constraints if provided    
     if ontology_path and os.path.exists(ontology_path):
         try:
-            print("Path exists") # remove
+            print("Ontology path exists")
             classes, relations, attributes = extract_local_names(ontology_path)
             print(f"Using ontology constraints: {len(classes)} classes, {len(relations)} relations")
         except Exception as e:
@@ -331,27 +360,33 @@ async def abuild_kg(
 
     # Read input
     content = ""
-    if os.path.isfile(input_path): # Single file
+    if os.path.isfile(input_path):
         try:
             with open(input_path, 'r', encoding='utf-8') as file:
                 content = file.read()
             print(f"Loaded content from {input_path}")
+            if not content.strip():
+                raise ValueError(f"Input file is empty: {input_path}")
         except Exception as e:
-            raise Exception(f"Error reading file {input_path}: {e}")
-            
-    elif os.path.isdir(input_path): # Directory - process all .txt files
+            print(f"Error reading file {input_path}: {e}")
+            raise
+    elif os.path.isdir(input_path):
         txt_files = [f for f in os.listdir(input_path) if f.endswith('.txt')]
         if not txt_files:
-            raise Exception(f"No .txt files found in {input_path}")
-            
+            raise FileNotFoundError(f"No .txt files found in directory: {input_path}")
         for filename in txt_files:
             file_path = os.path.join(input_path, filename)
             try:
                 with open(file_path, 'r', encoding='utf-8') as file:
-                    content += file.read() + "\n\n"
+                    file_content = file.read()
+                    if not file_content.strip():
+                        print(f"Warning: {filename} is empty.")
+                    content += file_content + "\n\n"
                 print(f"Loaded content from {filename}")
             except Exception as e:
                 print(f"Warning: Error reading {filename}: {e}")
+        if not content.strip():
+            raise ValueError(f"All .txt files in directory are empty: {input_path}")
 
     # Process content
     document = Document(page_content=content)
@@ -383,6 +418,9 @@ async def abuild_kg(
     
     # Merge documents
     graph_documents = merge_graph_documents(graph_documents)
+    if not graph_documents:
+        print("No graph documents generated. Exiting.")
+        return []
 
     if visualize:
         visualize_graph(graph_documents, output_file=html_output)
@@ -398,7 +436,7 @@ async def abuild_kg(
 
 
 async def main():
-    classes, relations, attributes = extract_local_names('results/ontologies/RDB/rigor_ontology_few_fixes.ttl')
+    classes, relations, attributes = extract_local_names('results/ontologies/rdb/rigor_ontology_few_fixes.ttl')
 
     input_txt_folder = "data/texts"
     for filename in os.listdir(input_txt_folder):

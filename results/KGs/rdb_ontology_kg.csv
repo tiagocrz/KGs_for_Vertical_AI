@@ -1,0 +1,30 @@
+node_id,node_attr
+1,"GranterCompany: Granter.ai"
+2,"Opportunity: Opportunity"
+3,"GranterCompany: ANI"
+4,"GranterCompany: Ganter.ai"
+5,"Grant: Apoio ao arranque ou ao crescimento"
+6,"Opportunity: parcerias"
+7,"GranterApplication: Projeto de apoio a candidaturas a financiamento público"
+8,"Opportunity: Agente de IA"
+9,"GranterApplication: Projeto"
+10,"Opportunity: propostas de valor tecnológicas"
+11,"Grant: licenciamento"
+12,"GranterApplication: GranterApplication"
+13,"ProvenanceInfo: IA"
+14,"ProvenanceInfo: acrescentado com base em IA"
+15,"GranterApplication: Projeto de Desenvolvimento de Agente de IA"
+16,"Opportunity: expenses with intellectual property protection"
+
+src,edge_attr,dst
+1,"relatesToOpportunity",2
+4,"relatesTo",3
+6,"relatesTo",5
+1,"hasApplication",7
+1,"hasApplication",8
+11,"relatesTo",10
+1,"relatesTo",8
+1,"hasApplication",12
+13,"relatesTo",14
+1,"hasApplication",15
+2,"relatesTo",16

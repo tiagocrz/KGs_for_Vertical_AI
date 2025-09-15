@@ -10,7 +10,7 @@ env_path = PROJECT_ROOT / '.env'
 print("Project root path:", PROJECT_ROOT)
 load_dotenv(env_path, override=True)
 
-#check if the loading was successful
+# Check if the loading was successful
 if not os.getenv("AZURE_OPENAI_API_KEY"):
     raise ValueError("Failed to load environment variables from .env file")
 else:

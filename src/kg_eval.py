@@ -166,19 +166,6 @@ def _safe_avg_shortest_path_length(G: nx.Graph) -> Optional[float]:
     """
     return _safe_graph_metric(G, nx.average_shortest_path_length)
 
-def _safe_diameter(G: nx.Graph) -> Optional[float]:
-    """Safely compute the diameter of a graph.
-    
-    Handles edge cases like empty graphs or disconnected graphs
-    by using only the largest connected component.
-    
-    Args:
-        G: Input graph
-        
-    Returns:
-        Diameter of the graph or None if calculation fails
-    """
-    return _safe_graph_metric(G, nx.diameter)
 
 def compute_quick_metrics(G: nx.Graph,
                           heavy: bool = True,

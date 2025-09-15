@@ -111,7 +111,7 @@ def extract_local_names(ttl_file_path):
 
 
 
-def chunk_document(document, chunk_size=3000, chunk_overlap=50):
+def chunk_document(document, chunk_size=1500, chunk_overlap=50):
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=chunk_size,
         chunk_overlap=chunk_overlap
@@ -394,18 +394,40 @@ async def abuild_kg(
     print(f"Split into {len(chunks)} chunks")
 
     # Create graph transformer
-    transformer_kwargs = {"llm": gpt41_nano}
-    print("Classes:", classes) # remove
-    print("Relations:", relations) # remove
-    if classes:
-        transformer_kwargs["allowed_nodes"] = classes
-    if relations:
-        transformer_kwargs["allowed_relationships"] = relations
-    transformer_kwargs["ignore_tool_usage"] = True # try without
-    # transformer_kwargs["node_properties"] = True
-    # transformer_kwargs["relationship_properties"] = True
+    if not classes or not relations:
+        print("No ontology constraints provided or loaded!!!")
 
-    print("Graph transformer settings:", transformer_kwargs) # remove
+    # allowed_relationships = [
+    #     (source_class, relation, target_class) 
+    #     for source_class in classes 
+    #     for target_class in classes 
+    #     for relation in relations
+    # ]
+    additional_instructions = (
+    "Extract all possible relationships from the text:\n"
+    "1. Direct (explicit) relationships\n"
+    "2. Implicit relationships that can be reasonably inferred\n"
+    "3. Secondary and subtle relationships between entities\n\n"
+    "Requirements:\n"
+    "- Use ENGLISH for all nodes, relationships, and properties.\n"
+    "- Group very similar concepts together.\n"
+    "- Use allowed_nodes as first-level entities; create second-level entities as needed, linking each to a first-level entity.\n"
+    "- For each entity, extract at least 2 connections.\n"
+    "- Ensure every node connects to at least one other node."
+    )
+    
+    transformer_kwargs = {
+        "llm": gpt41_nano,
+        "allowed_nodes": classes,
+        "allowed_relationships": relations,
+        "ignore_tool_usage": False, # bypass the use of structured output (False by default)
+        # If ignore_tool_usage is True, then node_properties and relationship_properties must be False
+        "node_properties": False, # LLM can extract any node properties from text (False by default)
+        "relationship_properties": False, # LLM can extract any relationship properties from text (False by default)
+        "strict_mode": False, # Only use allowed nodes/relationships (True by default)
+        "additional_instructions": additional_instructions
+    }
+    print("Graph transformer settings:", transformer_kwargs)
         
     graph_transformer = LLMGraphTransformer(**transformer_kwargs)
 
@@ -413,8 +435,8 @@ async def abuild_kg(
     print("Converting text to graph documents...")
     graph_documents = await graph_transformer.aconvert_to_graph_documents(chunks)
 
-    for graph in graph_documents: # remove
-        print(f"Graph document: {(graph.nodes)} nodes, {(graph.relationships)} relationships. Document: {graph.source.page_content[:25]}...") # remove
+    for graph in graph_documents:
+        print(f"Graph document: {(graph.nodes)} nodes, {(graph.relationships)} relationships. Document: {graph.source.page_content[:25]}...")
     
     # Merge documents
     graph_documents = merge_graph_documents(graph_documents)
@@ -465,7 +487,7 @@ async def main():
 
     visualize_graph(graph_documents, 'src/knowledge_graph')
 
-    save_graph_to_csv(graph_documents, output_file="results/KGs/rdb_ontology_aligned_KG.csv")
+    save_graph_to_csv(graph_documents, output_file="results/kgs/rdb_ontology_aligned_KG.csv")
 
 
 

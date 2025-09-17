@@ -1,63 +1,640 @@
 node_id,node_attr
-1,"Opportunity: Project"
-2,"Opportunity: Digital Product"
-3,"Opportunity: Technological Component"
-4,"Opportunity: Scalability Potential"
-5,"Opportunity: Ai Agent"
-6,"Opportunity: Funding Opportunity"
-7,"Opportunity: Public Funding Application"
-8,"Opportunity: Software"
-9,"Opportunity: Ai Functionalities"
-10,"Opportunity: Gans"
-11,"Opportunity: Adv-Icl"
-12,"Opportunity: Content Generation"
-13,"Opportunity: Innovation"
-14,"Opportunity: Development Methodology"
-15,"Opportunity: R&D"
-16,"Opportunity: Candidacy Process"
-17,"Opportunity: Opportunity Identification"
-18,"Opportunity: Eligibility Analysis"
-19,"Opportunity: Application Writing"
-20,"Opportunity: Application Evaluation"
-21,"Opportunity: Automatic Submission"
-22,"Opportunity: Project Management"
-23,"Opportunity: Public Funding Mechanisms"
-24,"Opportunity: Project Objectives"
-25,"Opportunity: Proposal Quality"
-26,"Grantercompany: Granter.Ai"
-27,"Opportunity: Ai Agent Project"
-28,"Grant: Funds"
-29,"Grant: Public Funds"
-30,"Geographiccriterion: Artificial Intelligence"
-31,"Geographiccriterion: Software Engineering"
-32,"Geographiccriterion: Strategic Leadership"
-33,"Geographiccriterion: Product Management"
-34,"Geographiccriterion: Commercial Expansion"
-35,"Opportunity: Digital Solutions"
-36,"Opportunity: Digital Product Creation"
-37,"Opportunity: Digital Transformation"
-38,"Opportunity: Market Competitiveness"
-39,"Opportunity: Funds Application Tool"
-40,"Opportunity: Methodologies Gans And Adv-Icl"
-41,"Geographiccriterion: Market"
-42,"Geographiccriterion: Market Segment"
-43,"Opportunity: Company'S Competitive Advantage"
-44,"Opportunity: Market Solution"
-45,"Opportunity: Technology"
-46,"Opportunity: Strategy"
-47,"Opportunity: Product"
-48,"Opportunity: Protection Of Intellectual Property"
-49,"Opportunity: Competitive Advantage"
-50,"Opportunity: Market Expansion"
-51,"Opportunity: Business Model"
-52,"Opportunity: User Experience"
-53,"Opportunity: Funding"
-54,"Opportunity: Regulatory Environment"
-55,"Opportunity: Language Adaptability"
-56,"Opportunity: Sustainability"
-57,"Opportunity: Scalability"
-58,"Opportunity: Brand Recognition"
-59,"Opportunity: Investment"
+1,"TextChunk: Chunk_0"
+2,"Person: Granter.Ai"
+3,"Person: Startup"
+4,"Person: Funding Programs"
+5,"Person: Artificial Intelligence Solutions"
+6,"Person: Ai Agent"
+7,"Person: Research And Technological Development Activities"
+8,"Person: Gans"
+9,"Person: Adv-Icl"
+10,"Person: Software"
+11,"Person: Knowledge Models"
+12,"Person: Sector Of High Technological Intensity"
+13,"Person: Market Adaptation"
+14,"Person: Automation Processes"
+15,"Person: Public Funding"
+16,"Person: Company"
+17,"TextChunk: Chunk_1"
+18,"Person: Specialists"
+19,"Person: Companies"
+20,"Grant: Public Funds"
+21,"Grant: Public Policies"
+22,"Grant: Funding Opportunities"
+23,"Person: Linguistic Models"
+24,"Person: Public Policies Domain"
+25,"Person: Public Funds Domain"
+26,"Person: Digital Infrastructure"
+27,"Person: Market"
+28,"Person: Spain"
+29,"Person: Italy"
+30,"Person: Usa"
+31,"Person: Climate Transition"
+32,"Person: Sustainability Programs"
+33,"Person: Green Economy"
+34,"Person: Business Initiatives"
+35,"Person: Economic Ecosystem"
+36,"Person: Start-Up Support"
+37,"Person: Growth Support"
+38,"Person: December 2024"
+39,"Person: Companies Registered"
+40,"Person: Funding Applications"
+41,"Person: Funding Projects"
+42,"Person: Investment Rounds"
+43,"Person: Quarterly Growth"
+44,"TextChunk: Chunk_2"
+45,"Person: Ani"
+46,"Person: Digital Product"
+47,"Person: Ia Agent"
+48,"Person: Funds"
+49,"Person: Markets"
+50,"Person: Team"
+51,"Person: Knowledge"
+52,"Person: Methodologies"
+53,"Person: Solution"
+54,"Person: Sector"
+55,"Person: Services"
+56,"Person: Revenue"
+57,"Person: Languages"
+58,"Person: Legal Frameworks"
+59,"Person: Internationalization"
+60,"Person: Support For Growth"
+61,"Person: Company Growth"
+62,"Person: Mission"
+63,"Person: Partnerships"
+64,"TextChunk: Chunk_3"
+65,"Grant: Support For Startup Or Growth"
+66,"Opportunity: Project"
+67,"Concept: Nature"
+68,"Concept: Objectives"
+69,"Concept: Ambition"
+70,"TextChunk: Chunk_4"
+71,"Opportunity: Technological Component"
+72,"Opportunity: Scalability Potential"
+73,"Opportunity: Funding Opportunity"
+74,"Opportunity: Innovation"
+75,"Opportunity: Digital Transformation"
+76,"Opportunity: Internal Resources"
+77,"Opportunity: Ai Functionalities"
+78,"Opportunity: Content Generation"
+79,"Opportunity: Methodology"
+80,"Opportunity: R&D"
+81,"Opportunity: Knowledge Transfer"
+82,"Opportunity: Application Process"
+83,"Opportunity: Opportunity Identification"
+84,"Opportunity: Eligibility Analysis"
+85,"Opportunity: Application Writing"
+86,"Opportunity: Application Evaluation"
+87,"Opportunity: Automatic Submission"
+88,"Opportunity: Project Management"
+89,"Opportunity: Efficiency"
+90,"Opportunity: Effectiveness"
+91,"Opportunity: Public Funding Mechanisms"
+92,"Person: European Union"
+93,"TextChunk: Chunk_5"
+94,"Geographiccriterion: Espanha"
+95,"Geographiccriterion: Itália"
+96,"Geographiccriterion: Eua"
+97,"Grant: Prr"
+98,"Geographiccriterion: Empresas 4.0"
+99,"Geographiccriterion: Saas"
+100,"Geographiccriterion: Digital Transition"
+101,"Grant: Funding Access"
+102,"Geographiccriterion: Portugal"
+103,"TextChunk: Chunk_6"
+104,"Person: Management Skills"
+105,"Person: Technical Skills"
+106,"Opportunity: Ai Agent Development"
+107,"Geographiccriterion: Artificial Intelligence"
+108,"Geographiccriterion: Software Engineering"
+109,"Geographiccriterion: Strategic Leadership"
+110,"Geographiccriterion: Product Management"
+111,"Geographiccriterion: Commercial Expansion"
+112,"TextChunk: Chunk_7"
+113,"Person: Bernardo Seixas"
+114,"Person: Ceo"
+115,"Person: Founder"
+116,"Organization: Uber Eats Portugal"
+117,"Person: Bernardo Tavares"
+118,"Person: Cofounder"
+119,"Person: Cto"
+120,"Organization: Granters.Ai"
+121,"Organization: Demium Portugal"
+122,"Organization: Goparity"
+123,"Person: Bernardo Moutinho"
+124,"Person: Head Of Operations"
+125,"Person: Francisco Belo"
+126,"Person: Tech Lead"
+127,"Organization: Siemens"
+128,"Person: Francisco Meirelles"
+129,"Person: Head Of Sales"
+130,"Organization: Otovo"
+131,"Organization: Too Good To Go"
+132,"TextChunk: Chunk_8"
+133,"Geographiccriterion: Licenciamento"
+134,"Person: Communication_Experience"
+135,"Concept: Value_Proposals"
+136,"Concept: Technology"
+137,"TextChunk: Chunk_9"
+138,"Databasetable: Digital Solutions"
+139,"Opportunity: Funds Application Agent"
+140,"Person: Artificial Intelligence Developer"
+141,"Geographiccriterion: Competitiveness"
+142,"Databasetable: Methodologies Gans And Adv-Icl"
+143,"Geographiccriterion: Market Competition"
+144,"TextChunk: Chunk_10"
+145,"Concept: Adaptability"
+146,"Concept: Intuitive_Interface"
+147,"Concept: Differentiation_Factor"
+148,"Concept: Customer_Retention_And_Satisfaction"
+149,"Concept: End_User_Experience"
+150,"Concept: Simplifies_Processes"
+151,"Concept: Enhances_Strategic_Quality"
+152,"Concept: Proposal_Structure"
+153,"Concept: Alignment_With_Eu_Goals"
+154,"Concept: Approval_And_Funding_Probabilities"
+155,"Concept: Strategic_Support_Capability"
+156,"Concept: Artificial_Intelligence"
+157,"Concept: Business_Model"
+158,"Concept: Annual_Subscription_Strategy"
+159,"Concept: Access_Levels"
+160,"Concept: Market_Sustainability"
+161,"Concept: Market_Scalability"
+162,"Concept: Digital_Product"
+163,"Concept: Market_Leadership"
+164,"Concept: Client_Profiles"
+165,"Concept: Brand_Awareness"
+166,"Concept: Investment_Attraction"
+167,"Concept: Sustainable_Growth"
+168,"Concept: Technological_Differentiation"
+169,"Concept: User_Centric_Approach"
+170,"Concept: International_Market_Strategy"
+171,"Concept: Intellectual_Property"
+172,"Concept: Software_Development"
+173,"Concept: Proprietary_Algorithms"
+174,"Concept: Innovation_Ecosystem"
+175,"Concept: Asset_Valuation"
+176,"Concept: Competitive_Advantage"
+177,"TextChunk: Chunk_11"
+178,"Person: Ia"
+179,"Geographiccriterion: New_Markets"
+180,"Databasetable: Digital_Support"
+181,"Databasetable: Funding_Capture"
+182,"TextChunk: Chunk_12"
+183,"Product: Artificial Intelligence Agent"
+184,"Concept: Digital Solution"
+185,"Concept: Scalability"
+186,"Geographiccriterion: International Markets"
+187,"Geographiccriterion: Regulatory Frameworks"
+188,"Concept: Market Expansion"
+189,"Concept: Business Model"
+190,"Concept: Subscription Strategy"
+191,"Recipient: Client Base"
+192,"Concept: Growth Potential"
+193,"Grant: Investment"
+194,"Grantpayment: Costs"
+195,"Person: Human Resources"
+196,"Person: Software Developers"
+197,"Grantshare: Certifications"
+198,"TextChunk: Chunk_13"
+199,"Grant: Ai_Certification"
+200,"Grant: Advanced_Ai_Courses"
+201,"Grant: Grant_Application_Courses"
+202,"Grant: External_Services"
+203,"Grant: Legal_Advice"
+204,"Grant: Security_Audits"
+205,"Grant: Software_Equipment"
+206,"Grant: Personal_Computers"
+207,"Grant: Software_Subscriptions"
+208,"Grant: Intellectual_Property_Protection"
+209,"Grant: Patent_Expenses"
+210,"Grant: Legal_Fees"
+211,"Grant: Software_Development_Tools"
 
 src,edge_attr,dst
-27,"FUNDEDBY",28
+1,"CONTAINS_ENTITY",2
+1,"CONTAINS_ENTITY",3
+1,"CONTAINS_ENTITY",4
+1,"CONTAINS_ENTITY",5
+1,"CONTAINS_ENTITY",6
+1,"CONTAINS_ENTITY",7
+1,"CONTAINS_ENTITY",8
+1,"CONTAINS_ENTITY",9
+1,"CONTAINS_ENTITY",10
+1,"CONTAINS_ENTITY",11
+1,"CONTAINS_ENTITY",12
+1,"CONTAINS_ENTITY",13
+1,"CONTAINS_ENTITY",14
+1,"CONTAINS_ENTITY",15
+1,"CONTAINS_ENTITY",16
+2,"PROFESSOR",3
+2,"PROFESSOR",16
+2,"PROFESSOR",4
+6,"PROFESSOR",10
+6,"PROFESSOR",15
+6,"PROFESSOR",7
+10,"PROFESSOR",11
+12,"PROFESSOR",13
+12,"PROFESSOR",14
+16,"PROFESSOR",15
+17,"CONTAINS_ENTITY",2
+17,"CONTAINS_ENTITY",6
+17,"CONTAINS_ENTITY",18
+17,"CONTAINS_ENTITY",19
+17,"CONTAINS_ENTITY",20
+17,"CONTAINS_ENTITY",21
+17,"CONTAINS_ENTITY",22
+17,"CONTAINS_ENTITY",8
+17,"CONTAINS_ENTITY",9
+17,"CONTAINS_ENTITY",23
+17,"CONTAINS_ENTITY",24
+17,"CONTAINS_ENTITY",25
+17,"CONTAINS_ENTITY",26
+17,"CONTAINS_ENTITY",27
+17,"CONTAINS_ENTITY",28
+17,"CONTAINS_ENTITY",29
+17,"CONTAINS_ENTITY",30
+17,"CONTAINS_ENTITY",31
+17,"CONTAINS_ENTITY",32
+17,"CONTAINS_ENTITY",33
+17,"CONTAINS_ENTITY",34
+17,"CONTAINS_ENTITY",35
+17,"CONTAINS_ENTITY",36
+17,"CONTAINS_ENTITY",37
+17,"CONTAINS_ENTITY",38
+17,"CONTAINS_ENTITY",39
+17,"CONTAINS_ENTITY",40
+17,"CONTAINS_ENTITY",41
+17,"CONTAINS_ENTITY",42
+17,"CONTAINS_ENTITY",43
+2,"PROFESSOR",6
+2,"ACCESS",20
+6,"SERVES",18
+6,"SERVES",19
+6,"APPLIES_TO",21
+6,"TARGETS",22
+8,"INTEGRATED_IN",6
+9,"INTEGRATED_IN",6
+23,"USED_IN",6
+24,"APPLIED_IN",23
+25,"APPLIED_IN",23
+26,"SUPPORTS",6
+27,"CONNECTED_TO",6
+28,"EXPAND_IN",27
+29,"EXPAND_IN",27
+30,"EXPAND_IN",27
+31,"FACILITATES",21
+32,"SUPPORTS",31
+33,"PROMOTES",31
+34,"DRIVES",33
+35,"INFLUENCES",34
+36,"RELATES",37
+38,"STARTS",39
+39,"SUBMIT",40
+40,"LEADS_TO",41
+44,"CONTAINS_ENTITY",2
+44,"CONTAINS_ENTITY",45
+44,"CONTAINS_ENTITY",16
+44,"CONTAINS_ENTITY",46
+44,"CONTAINS_ENTITY",47
+44,"CONTAINS_ENTITY",48
+44,"CONTAINS_ENTITY",49
+44,"CONTAINS_ENTITY",10
+44,"CONTAINS_ENTITY",50
+44,"CONTAINS_ENTITY",51
+44,"CONTAINS_ENTITY",52
+44,"CONTAINS_ENTITY",53
+44,"CONTAINS_ENTITY",54
+44,"CONTAINS_ENTITY",55
+44,"CONTAINS_ENTITY",56
+44,"CONTAINS_ENTITY",57
+44,"CONTAINS_ENTITY",58
+44,"CONTAINS_ENTITY",59
+44,"CONTAINS_ENTITY",60
+44,"CONTAINS_ENTITY",61
+44,"CONTAINS_ENTITY",62
+44,"CONTAINS_ENTITY",63
+2,"PROFESSOR",45
+2,"DEVELOP",16
+2,"CREATE",46
+46,"INCLUDE",47
+47,"IDENTIFY",48
+47,"APPLY",48
+16,"EXPAND",49
+16,"DIVERSIFY",55
+16,"INCREASE",56
+10,"LOCALIZE",57
+10,"ADAPT",58
+10,"ENABLE",59
+54,"TRANSFORM",61
+16,"FUND",60
+16,"FULFILL",62
+16,"FORM",63
+64,"CONTAINS_ENTITY",65
+64,"CONTAINS_ENTITY",66
+64,"CONTAINS_ENTITY",67
+64,"CONTAINS_ENTITY",68
+64,"CONTAINS_ENTITY",69
+65,"RELATESTO",66
+66,"RELATESTO",67
+66,"RELATESTO",68
+66,"RELATESTO",69
+70,"CONTAINS_ENTITY",2
+70,"CONTAINS_ENTITY",66
+70,"CONTAINS_ENTITY",46
+70,"CONTAINS_ENTITY",71
+70,"CONTAINS_ENTITY",72
+70,"CONTAINS_ENTITY",6
+70,"CONTAINS_ENTITY",16
+70,"CONTAINS_ENTITY",73
+70,"CONTAINS_ENTITY",74
+70,"CONTAINS_ENTITY",75
+70,"CONTAINS_ENTITY",27
+70,"CONTAINS_ENTITY",10
+70,"CONTAINS_ENTITY",76
+70,"CONTAINS_ENTITY",77
+70,"CONTAINS_ENTITY",8
+70,"CONTAINS_ENTITY",9
+70,"CONTAINS_ENTITY",78
+70,"CONTAINS_ENTITY",15
+70,"CONTAINS_ENTITY",79
+70,"CONTAINS_ENTITY",80
+70,"CONTAINS_ENTITY",81
+70,"CONTAINS_ENTITY",82
+70,"CONTAINS_ENTITY",83
+70,"CONTAINS_ENTITY",84
+70,"CONTAINS_ENTITY",85
+70,"CONTAINS_ENTITY",86
+70,"CONTAINS_ENTITY",87
+70,"CONTAINS_ENTITY",88
+70,"CONTAINS_ENTITY",89
+70,"CONTAINS_ENTITY",90
+70,"CONTAINS_ENTITY",91
+70,"CONTAINS_ENTITY",18
+70,"CONTAINS_ENTITY",19
+70,"CONTAINS_ENTITY",92
+2,"PROFESSOR",66
+2,"DEVELOPS",6
+66,"HASCOMPONENT",46
+66,"HASCOMPONENT",71
+66,"HASCOMPONENT",72
+6,"DEVELOPS",16
+6,"SUPPORTS",73
+16,"DEVELOPS",10
+10,"CREATEDWITH",76
+10,"INCLUDES",77
+77,"USES",8
+77,"USES",9
+78,"ENABLES",77
+15,"RELATESTO",82
+82,"INCLUDES",86
+82,"INCLUDES",85
+82,"INCLUDES",87
+82,"IMPROVES",89
+82,"IMPROVES",90
+91,"SERVES",18
+91,"SERVES",19
+91,"ALIGNSWITH",92
+93,"CONTAINS_ENTITY",2
+93,"CONTAINS_ENTITY",94
+93,"CONTAINS_ENTITY",95
+93,"CONTAINS_ENTITY",96
+93,"CONTAINS_ENTITY",97
+93,"CONTAINS_ENTITY",98
+93,"CONTAINS_ENTITY",99
+93,"CONTAINS_ENTITY",100
+93,"CONTAINS_ENTITY",32
+93,"CONTAINS_ENTITY",101
+93,"CONTAINS_ENTITY",6
+93,"CONTAINS_ENTITY",16
+93,"CONTAINS_ENTITY",27
+93,"CONTAINS_ENTITY",102
+93,"CONTAINS_ENTITY",92
+2,"RELATESTO",94
+2,"RELATESTO",95
+2,"RELATESTO",96
+2,"RELATESTO",102
+2,"RELATESTO",92
+2,"PROFESSOR",27
+2,"RELATESTO",99
+2,"RELATESTO",100
+2,"RELATESTO",32
+2,"RELATESTO",101
+6,"PROFESSOR",16
+16,"RELATESTO",27
+16,"RELATESTO",102
+27,"RELATESTO",92
+103,"CONTAINS_ENTITY",2
+103,"CONTAINS_ENTITY",50
+103,"CONTAINS_ENTITY",104
+103,"CONTAINS_ENTITY",105
+103,"CONTAINS_ENTITY",66
+103,"CONTAINS_ENTITY",106
+103,"CONTAINS_ENTITY",20
+103,"CONTAINS_ENTITY",107
+103,"CONTAINS_ENTITY",108
+103,"CONTAINS_ENTITY",109
+103,"CONTAINS_ENTITY",110
+103,"CONTAINS_ENTITY",111
+2,"HASTEAM",50
+50,"HASSKILL",104
+50,"HASSKILL",105
+50,"WORKSON",66
+66,"INCLUDES",106
+66,"FUNDEDBY",20
+106,"REQUIRES",107
+106,"REQUIRES",108
+106,"REQUIRES",109
+106,"REQUIRES",110
+106,"REQUIRES",111
+112,"CONTAINS_ENTITY",113
+112,"CONTAINS_ENTITY",114
+112,"CONTAINS_ENTITY",115
+112,"CONTAINS_ENTITY",116
+112,"CONTAINS_ENTITY",117
+112,"CONTAINS_ENTITY",118
+112,"CONTAINS_ENTITY",119
+112,"CONTAINS_ENTITY",120
+112,"CONTAINS_ENTITY",121
+112,"CONTAINS_ENTITY",122
+112,"CONTAINS_ENTITY",123
+112,"CONTAINS_ENTITY",124
+112,"CONTAINS_ENTITY",125
+112,"CONTAINS_ENTITY",126
+112,"CONTAINS_ENTITY",127
+112,"CONTAINS_ENTITY",128
+112,"CONTAINS_ENTITY",129
+112,"CONTAINS_ENTITY",130
+112,"CONTAINS_ENTITY",131
+113,"PROFESSOR",114
+113,"PROFESSOR",115
+113,"MEMBER_OF",116
+113,"COLLABORATES_WITH",117
+117,"FOUNDED_BY",120
+117,"WORKS_AT",121
+117,"WORKED_AT",122
+123,"PROFESSOR",124
+125,"PROFESSOR",126
+125,"WORKED_AT",127
+128,"PROFESSOR",129
+128,"WORKED_AT",130
+128,"WORKED_AT",131
+132,"CONTAINS_ENTITY",133
+132,"CONTAINS_ENTITY",134
+132,"CONTAINS_ENTITY",135
+132,"CONTAINS_ENTITY",136
+133,"RELATESTO",134
+134,"RELATESTO",135
+135,"RELATESTO",136
+133,"RELATESTO",135
+137,"CONTAINS_ENTITY",2
+137,"CONTAINS_ENTITY",66
+137,"CONTAINS_ENTITY",50
+137,"CONTAINS_ENTITY",138
+137,"CONTAINS_ENTITY",27
+137,"CONTAINS_ENTITY",75
+137,"CONTAINS_ENTITY",139
+137,"CONTAINS_ENTITY",140
+137,"CONTAINS_ENTITY",141
+137,"CONTAINS_ENTITY",61
+137,"CONTAINS_ENTITY",142
+137,"CONTAINS_ENTITY",143
+66,"USES",139
+140,"CONTRIBUTESTO",66
+66,"DEVELOPS",138
+27,"AFFECTS",61
+75,"DRIVES",27
+142,"APPLIEDIN",66
+141,"INFLUENCES",143
+61,"CONTRIBUTESTO",141
+144,"CONTAINS_ENTITY",145
+144,"CONTAINS_ENTITY",146
+144,"CONTAINS_ENTITY",147
+144,"CONTAINS_ENTITY",148
+144,"CONTAINS_ENTITY",149
+144,"CONTAINS_ENTITY",150
+144,"CONTAINS_ENTITY",151
+144,"CONTAINS_ENTITY",152
+144,"CONTAINS_ENTITY",153
+144,"CONTAINS_ENTITY",154
+144,"CONTAINS_ENTITY",155
+144,"CONTAINS_ENTITY",156
+144,"CONTAINS_ENTITY",2
+144,"CONTAINS_ENTITY",157
+144,"CONTAINS_ENTITY",158
+144,"CONTAINS_ENTITY",159
+144,"CONTAINS_ENTITY",160
+144,"CONTAINS_ENTITY",161
+144,"CONTAINS_ENTITY",102
+144,"CONTAINS_ENTITY",28
+144,"CONTAINS_ENTITY",29
+144,"CONTAINS_ENTITY",30
+144,"CONTAINS_ENTITY",162
+144,"CONTAINS_ENTITY",163
+144,"CONTAINS_ENTITY",164
+144,"CONTAINS_ENTITY",165
+144,"CONTAINS_ENTITY",166
+144,"CONTAINS_ENTITY",167
+144,"CONTAINS_ENTITY",168
+144,"CONTAINS_ENTITY",169
+144,"CONTAINS_ENTITY",170
+144,"CONTAINS_ENTITY",171
+144,"CONTAINS_ENTITY",172
+144,"CONTAINS_ENTITY",173
+144,"CONTAINS_ENTITY",174
+144,"CONTAINS_ENTITY",175
+144,"CONTAINS_ENTITY",176
+145,"RELATESTO",147
+146,"RELATESTO",147
+147,"RELATESTO",148
+149,"RELATESTO",150
+149,"RELATESTO",151
+152,"RELATESTO",153
+153,"RELATESTO",154
+155,"RELATESTO",156
+2,"PROFESSOR",157
+157,"RELATESTO",158
+160,"RELATESTO",161
+102,"RELATESTO",28
+102,"RELATESTO",29
+102,"RELATESTO",30
+162,"RELATESTO",163
+164,"RELATESTO",165
+165,"RELATESTO",166
+166,"RELATESTO",167
+168,"RELATESTO",169
+170,"RELATESTO",163
+171,"RELATESTO",172
+172,"RELATESTO",173
+173,"RELATESTO",174
+175,"RELATESTO",172
+177,"CONTAINS_ENTITY",178
+177,"CONTAINS_ENTITY",179
+177,"CONTAINS_ENTITY",157
+177,"CONTAINS_ENTITY",180
+177,"CONTAINS_ENTITY",181
+178,"RELATESTO",157
+157,"RELATESTO",179
+180,"RELATESTO",181
+180,"RELATESTO",179
+178,"RELATESTO",180
+157,"RELATESTO",180
+182,"CONTAINS_ENTITY",2
+182,"CONTAINS_ENTITY",66
+182,"CONTAINS_ENTITY",183
+182,"CONTAINS_ENTITY",48
+182,"CONTAINS_ENTITY",184
+182,"CONTAINS_ENTITY",136
+182,"CONTAINS_ENTITY",185
+182,"CONTAINS_ENTITY",186
+182,"CONTAINS_ENTITY",187
+182,"CONTAINS_ENTITY",188
+182,"CONTAINS_ENTITY",189
+182,"CONTAINS_ENTITY",190
+182,"CONTAINS_ENTITY",191
+182,"CONTAINS_ENTITY",192
+182,"CONTAINS_ENTITY",193
+182,"CONTAINS_ENTITY",194
+182,"CONTAINS_ENTITY",195
+182,"CONTAINS_ENTITY",196
+182,"CONTAINS_ENTITY",197
+66,"HASAPPLICATION",183
+183,"RELATESTO",48
+183,"RELATESTO",184
+183,"RELATESTO",136
+183,"RELATESTO",185
+183,"RELATESTO",186
+183,"RELATESTO",187
+183,"RELATESTO",188
+183,"RELATESTO",189
+189,"HASAPPLICATION",190
+183,"RELATESTO",191
+183,"RELATESTO",192
+193,"FUNDEDBY",194
+194,"HASPROVENANCE",195
+194,"HASPROVENANCE",196
+194,"HASPROVENANCE",197
+198,"CONTAINS_ENTITY",199
+198,"CONTAINS_ENTITY",50
+198,"CONTAINS_ENTITY",200
+198,"CONTAINS_ENTITY",201
+198,"CONTAINS_ENTITY",202
+198,"CONTAINS_ENTITY",203
+198,"CONTAINS_ENTITY",204
+198,"CONTAINS_ENTITY",205
+198,"CONTAINS_ENTITY",206
+198,"CONTAINS_ENTITY",207
+198,"CONTAINS_ENTITY",208
+198,"CONTAINS_ENTITY",209
+198,"CONTAINS_ENTITY",210
+198,"CONTAINS_ENTITY",211
+199,"PROFESSOR",50
+199,"PROFESSOR",200
+199,"PROFESSOR",201
+202,"PROFESSOR",203
+202,"PROFESSOR",204
+205,"PROFESSOR",206
+205,"PROFESSOR",207
+208,"PROFESSOR",209
+208,"PROFESSOR",210
+208,"PROFESSOR",211

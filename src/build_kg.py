@@ -164,6 +164,77 @@ def merge_graph_documents(graph_documents):
     return [merged_doc]
 
 
+def merge_graph_documents_with_chunks(graph_documents):
+    """Merge graph documents while preserving chunk information as nodes in the graph."""
+    from langchain_community.graphs.graph_document import Node, Relationship
+    
+    all_nodes = []
+    all_relationships = []
+    chunk_nodes = []
+    
+    # Add chunk nodes and track relationships between entities and chunks
+    for i, doc in enumerate(graph_documents):
+        # Create a node representing this chunk
+        chunk_id = f"Chunk_{i}"
+        chunk_node = Node(
+            id=chunk_id,
+            type="TextChunk",
+            properties={
+                "content": doc.source.page_content[:100] + "...",  # Preview of content
+                "chunk_index": i,
+                "metadata": str(doc.source.metadata) if hasattr(doc.source, "metadata") else "{}"
+            }
+        )
+        chunk_nodes.append(chunk_node)
+        all_nodes.append(chunk_node)
+        
+        # Add all nodes from this chunk
+        all_nodes.extend(doc.nodes)
+        
+        # Add relationships between chunk and its nodes
+        for node in doc.nodes:
+            all_relationships.append(
+                Relationship(
+                    source=chunk_node,
+                    target=node,
+                    type="CONTAINS_ENTITY"
+                )
+            )
+        
+        # Add all relationships from this chunk
+        all_relationships.extend(doc.relationships)
+    
+    # Remove duplicate nodes by ID (keeping the first occurrence)
+    seen_nodes = set()
+    unique_nodes = []
+    for node in all_nodes:
+        if node.id not in seen_nodes:
+            seen_nodes.add(node.id)
+            unique_nodes.append(node)
+    
+    # Remove duplicate relationships
+    seen_rels = set()
+    unique_relationships = []
+    for rel in all_relationships:
+        rel_key = (rel.source.id, rel.target.id, rel.type)
+        if rel_key not in seen_rels:
+            seen_rels.add(rel_key)
+            unique_relationships.append(rel)
+    
+    # Handle empty input
+    if not graph_documents:
+        print("merge_graph_documents_with_chunks: input list is empty, returning []")
+        return []
+    
+    # Create merged document
+    merged_doc = type(graph_documents[0])( 
+        nodes=unique_nodes,
+        relationships=unique_relationships,
+        source=graph_documents[0].source
+    )
+    
+    print(f"Merged: {len(unique_nodes)} nodes ({len(chunk_nodes)} chunk nodes), {len(unique_relationships)} relationships")
+    return [merged_doc]
 
 
 def visualize_graph(graph_documents, output_file = "knowledge_graph.html"):
@@ -241,6 +312,140 @@ def visualize_graph(graph_documents, output_file = "knowledge_graph.html"):
         print("Could not open browser automatically")
 
 
+def visualize_graph_with_chunks(graph_documents, output_file = "knowledge_graph.html"):
+    """
+    Visualize graph documents with special styling for chunk nodes.
+    """
+    if not graph_documents:
+        print("No graph documents to visualize. Skipping visualization.")
+        return
+
+    # Create network
+    net = Network(height="1200px", width="100%", directed=True,
+                  notebook=False, bgcolor="#222222", font_color="white")
+    
+    nodes = graph_documents[0].nodes
+    relationships = graph_documents[0].relationships
+
+    # Build lookup for valid nodes
+    node_dict = {node.id: node for node in nodes}
+    
+    # Filter out invalid edges and collect valid node IDs
+    valid_edges = []
+    valid_node_ids = set()
+    for rel in relationships:
+        if rel.source.id in node_dict and rel.target.id in node_dict:
+            valid_edges.append(rel)
+            valid_node_ids.update([rel.source.id, rel.target.id])
+
+    # Add valid nodes with special styling for chunks
+    for node_id in valid_node_ids:
+        node = node_dict[node_id]
+        try:
+            # Check if node is a chunk
+            is_chunk = hasattr(node, 'type') and node.type == "TextChunk"
+            
+            # Get content preview for chunks
+            content_preview = ""
+            if is_chunk and hasattr(node, 'properties') and node.properties:
+                content_preview = node.properties.get("content", "")
+            
+            # Create detailed tooltip
+            tooltip = f"Type: {node.type}<br>"
+            if content_preview:
+                tooltip += f"Content: {content_preview}<br>"
+            
+            # Add node with appropriate styling
+            if is_chunk:
+                # Chunks get special styling - larger, different shape, different color
+                net.add_node(
+                    node.id, 
+                    label=node.id, 
+                    title=tooltip,
+                    shape="diamond",  # Different shape for chunks
+                    color="#BB0000",  # Red color for chunks
+                    size=25,          # Larger size
+                    group="Chunk"     # Group all chunks together
+                )
+            else:
+                # Regular entity nodes
+                net.add_node(
+                    node.id, 
+                    label=node.id, 
+                    title=tooltip, 
+                    group=node.type
+                )
+        except Exception as e:
+            print(f"Error adding node {node.id}: {e}")
+            continue  # skip if error
+
+    # Add valid edges with special styling for chunk relationships
+    for rel in valid_edges:
+        try:
+            # Check if this is a chunk relationship
+            is_chunk_rel = (
+                rel.type == "CONTAINS_ENTITY" or 
+                (hasattr(rel.source, 'type') and rel.source.type == "TextChunk") or
+                (hasattr(rel.target, 'type') and rel.target.type == "TextChunk")
+            )
+            
+            if is_chunk_rel:
+                # Chunk relationships get dashed lines and different color
+                net.add_edge(
+                    rel.source.id, 
+                    rel.target.id, 
+                    label=rel.type.lower(),
+                    dashes=True,
+                    color="#BB0000"  # Red for chunk relationships
+                )
+            else:
+                # Regular relationships
+                net.add_edge(
+                    rel.source.id, 
+                    rel.target.id, 
+                    label=rel.type.lower()
+                )
+        except Exception as e:
+            print(f"Error adding edge {rel.source.id} -> {rel.target.id}: {e}")
+            continue  # skip if error
+
+    # Configure physics - cluster chunks and their entities
+    net.set_options("""
+        {
+            "physics": {
+                "forceAtlas2Based": {
+                    "gravitationalConstant": -100,
+                    "centralGravity": 0.01,
+                    "springLength": 200,
+                    "springConstant": 0.08
+                },
+                "minVelocity": 0.75,
+                "solver": "forceAtlas2Based"
+            },
+            "edges": {
+                "smooth": {
+                    "type": "continuous",
+                    "forceDirection": "none"
+                }
+            },
+            "interaction": {
+                "hover": true,
+                "navigationButtons": true,
+                "keyboard": true
+            }
+        }
+        """)
+    
+    net.save_graph(output_file)
+    print(f"Graph saved to {os.path.abspath(output_file)}")
+
+    # Try to open in browser
+    try:
+        import webbrowser
+        webbrowser.open(f"file://{os.path.abspath(output_file)}")
+    except:
+        print("Could not open browser automatically")
+
 
 
 def save_graph_to_csv(graph_documents, output_file="graph.csv"):
@@ -260,24 +465,44 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
     csv_data = []
     
     # Add header for nodes section
-    csv_data.append("node_id,node_attr")
+    csv_data.append("node_id,node_attr,node_type,properties")
     
     # Add nodes with their attributes
     for node in nodes:
         node_id = node_id_mapping[node.id]
-        # Format: "Type: NodeName" or just "NodeName" if no type
-        if hasattr(node, 'type') and node.type:
-            node_attr = f"{node.type}: {node.id}"
-        else:
-            node_attr = node.id
         
-        csv_data.append(f'{node_id},"{node_attr}"')
+        # Check if this is a chunk node
+        is_chunk = hasattr(node, 'type') and node.type == "TextChunk"
+        
+        # Get node type
+        node_type = node.type if hasattr(node, 'type') and node.type else "Unknown"
+        
+        # Format node attribute
+        node_attr = f"{node_type}: {node.id}"
+        
+        # Get properties as JSON string
+        properties = ""
+        if hasattr(node, 'properties') and node.properties:
+            try:
+                import json
+                # Limit content preview length for readability
+                if is_chunk and 'content' in node.properties:
+                    node_properties = node.properties.copy()
+                    if len(node_properties['content']) > 100:
+                        node_properties['content'] = node_properties['content'][:100] + "..."
+                    properties = json.dumps(node_properties)
+                else:
+                    properties = json.dumps(node.properties)
+            except:
+                properties = str(node.properties)
+        
+        csv_data.append(f'{node_id},"{node_attr}","{node_type}","{properties}"')
     
     # Add empty line separator
     csv_data.append("")
     
     # Add header for edges section
-    csv_data.append("src,edge_attr,dst")
+    csv_data.append("src,edge_attr,dst,is_chunk_relation")
     
     # Add edges
     for rel in relationships:
@@ -289,7 +514,15 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
             continue
             
         edge_attr = rel.type
-        csv_data.append(f'{src_id},"{edge_attr}",{dst_id}')
+        
+        # Check if this is a chunk relationship
+        is_chunk_rel = (
+            rel.type == "CONTAINS_ENTITY" or 
+            (hasattr(rel.source, 'type') and rel.source.type == "TextChunk") or
+            (hasattr(rel.target, 'type') and rel.target.type == "TextChunk")
+        )
+        
+        csv_data.append(f'{src_id},"{edge_attr}",{dst_id},{1 if is_chunk_rel else 0}')
     
     # Write to file
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -298,17 +531,28 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
     print(f"Graph saved to: {os.path.abspath(output_file)}")
     print(f"Total nodes: {len(nodes)}")
     print(f"Total edges: {len(relationships)}")
-
+    
+    # Count chunk nodes
+    chunk_nodes = [n for n in nodes if hasattr(n, 'type') and n.type == "TextChunk"]
+    print(f"Chunk nodes: {len(chunk_nodes)}")
+    
+    # Count chunk relationships
+    chunk_rels = [r for r in relationships if 
+                 r.type == "CONTAINS_ENTITY" or 
+                 (hasattr(r.source, 'type') and r.source.type == "TextChunk") or
+                 (hasattr(r.target, 'type') and r.target.type == "TextChunk")]
+    print(f"Chunk relationships: {len(chunk_rels)}")
 
 
 
 async def abuild_kg(
     input_path: str,
     ontology_path: str = None,
+    html_output: str = "knowledge_graph.html",
+    include_chunks: bool = False,
     chunk_size: int = 3000,
     chunk_overlap: int = 50,
     visualize: bool = True,
-    html_output: str = "knowledge_graph.html"
 ):
     """
     Build a knowledge graph from input text file(s).
@@ -439,13 +683,24 @@ async def abuild_kg(
         print(f"Graph document: {(graph.nodes)} nodes, {(graph.relationships)} relationships. Document: {graph.source.page_content[:25]}...")
     
     # Merge documents
-    graph_documents = merge_graph_documents(graph_documents)
+    if include_chunks:
+        print("Using merge_graph_documents_with_chunks to preserve chunk information...")
+        graph_documents = merge_graph_documents_with_chunks(graph_documents)
+    else:
+        print("Using regular merge_graph_documents...")
+        graph_documents = merge_graph_documents(graph_documents)
+        
     if not graph_documents:
         print("No graph documents generated. Exiting.")
         return []
 
     if visualize:
-        visualize_graph(graph_documents, output_file=html_output)
+        if include_chunks:
+            print("Using visualize_graph_with_chunks for better chunk visualization...")
+            visualize_graph_with_chunks(graph_documents, output_file=html_output)
+        else:
+            print("Using regular visualize_graph...")
+            visualize_graph(graph_documents, output_file=html_output)
 
     print(f"Knowledge graph built successfully!")
     if visualize:

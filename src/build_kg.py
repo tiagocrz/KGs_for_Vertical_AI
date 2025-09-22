@@ -180,7 +180,7 @@ def merge_graph_documents_with_chunks(graph_documents):
             id=chunk_id,
             type="TextChunk",
             properties={
-                "content": doc.source.page_content[:100] + "...",  # Preview of content
+                "content": doc.source.page_content,  
                 "chunk_index": i,
                 "metadata": str(doc.source.metadata) if hasattr(doc.source, "metadata") else "{}"
             }
@@ -488,9 +488,7 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
                 # Limit content preview length for readability
                 if is_chunk and 'content' in node.properties:
                     node_properties = node.properties.copy()
-                    if len(node_properties['content']) > 100:
-                        node_properties['content'] = node_properties['content'][:100] + "..."
-                    properties = json.dumps(node_properties)
+                    properties = json.dumps(node_properties['content'])
                 else:
                     properties = json.dumps(node.properties)
             except:
@@ -639,7 +637,7 @@ async def abuild_kg(
 
     # Create graph transformer
     if not classes or not relations:
-        print("No ontology constraints provided or loaded!!!")
+        print("No ontology constraints provided or loaded")
 
     # allowed_relationships = [
     #     (source_class, relation, target_class) 

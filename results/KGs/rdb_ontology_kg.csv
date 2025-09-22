@@ -1,640 +1,732 @@
-node_id,node_attr
-1,"TextChunk: Chunk_0"
-2,"Person: Granter.Ai"
-3,"Person: Startup"
-4,"Person: Funding Programs"
-5,"Person: Artificial Intelligence Solutions"
-6,"Person: Ai Agent"
-7,"Person: Research And Technological Development Activities"
-8,"Person: Gans"
-9,"Person: Adv-Icl"
-10,"Person: Software"
-11,"Person: Knowledge Models"
-12,"Person: Sector Of High Technological Intensity"
-13,"Person: Market Adaptation"
-14,"Person: Automation Processes"
-15,"Person: Public Funding"
-16,"Person: Company"
-17,"TextChunk: Chunk_1"
-18,"Person: Specialists"
-19,"Person: Companies"
-20,"Grant: Public Funds"
-21,"Grant: Public Policies"
-22,"Grant: Funding Opportunities"
-23,"Person: Linguistic Models"
-24,"Person: Public Policies Domain"
-25,"Person: Public Funds Domain"
-26,"Person: Digital Infrastructure"
-27,"Person: Market"
-28,"Person: Spain"
-29,"Person: Italy"
-30,"Person: Usa"
-31,"Person: Climate Transition"
-32,"Person: Sustainability Programs"
-33,"Person: Green Economy"
-34,"Person: Business Initiatives"
-35,"Person: Economic Ecosystem"
-36,"Person: Start-Up Support"
-37,"Person: Growth Support"
-38,"Person: December 2024"
-39,"Person: Companies Registered"
-40,"Person: Funding Applications"
-41,"Person: Funding Projects"
-42,"Person: Investment Rounds"
-43,"Person: Quarterly Growth"
-44,"TextChunk: Chunk_2"
-45,"Person: Ani"
-46,"Person: Digital Product"
-47,"Person: Ia Agent"
-48,"Person: Funds"
-49,"Person: Markets"
-50,"Person: Team"
-51,"Person: Knowledge"
-52,"Person: Methodologies"
-53,"Person: Solution"
-54,"Person: Sector"
-55,"Person: Services"
-56,"Person: Revenue"
-57,"Person: Languages"
-58,"Person: Legal Frameworks"
-59,"Person: Internationalization"
-60,"Person: Support For Growth"
-61,"Person: Company Growth"
-62,"Person: Mission"
-63,"Person: Partnerships"
-64,"TextChunk: Chunk_3"
-65,"Grant: Support For Startup Or Growth"
-66,"Opportunity: Project"
-67,"Concept: Nature"
-68,"Concept: Objectives"
-69,"Concept: Ambition"
-70,"TextChunk: Chunk_4"
-71,"Opportunity: Technological Component"
-72,"Opportunity: Scalability Potential"
-73,"Opportunity: Funding Opportunity"
-74,"Opportunity: Innovation"
-75,"Opportunity: Digital Transformation"
-76,"Opportunity: Internal Resources"
-77,"Opportunity: Ai Functionalities"
-78,"Opportunity: Content Generation"
-79,"Opportunity: Methodology"
-80,"Opportunity: R&D"
-81,"Opportunity: Knowledge Transfer"
-82,"Opportunity: Application Process"
-83,"Opportunity: Opportunity Identification"
-84,"Opportunity: Eligibility Analysis"
-85,"Opportunity: Application Writing"
-86,"Opportunity: Application Evaluation"
-87,"Opportunity: Automatic Submission"
-88,"Opportunity: Project Management"
-89,"Opportunity: Efficiency"
-90,"Opportunity: Effectiveness"
-91,"Opportunity: Public Funding Mechanisms"
-92,"Person: European Union"
-93,"TextChunk: Chunk_5"
-94,"Geographiccriterion: Espanha"
-95,"Geographiccriterion: Itália"
-96,"Geographiccriterion: Eua"
-97,"Grant: Prr"
-98,"Geographiccriterion: Empresas 4.0"
-99,"Geographiccriterion: Saas"
-100,"Geographiccriterion: Digital Transition"
-101,"Grant: Funding Access"
-102,"Geographiccriterion: Portugal"
-103,"TextChunk: Chunk_6"
-104,"Person: Management Skills"
-105,"Person: Technical Skills"
-106,"Opportunity: Ai Agent Development"
-107,"Geographiccriterion: Artificial Intelligence"
-108,"Geographiccriterion: Software Engineering"
-109,"Geographiccriterion: Strategic Leadership"
-110,"Geographiccriterion: Product Management"
-111,"Geographiccriterion: Commercial Expansion"
-112,"TextChunk: Chunk_7"
-113,"Person: Bernardo Seixas"
-114,"Person: Ceo"
-115,"Person: Founder"
-116,"Organization: Uber Eats Portugal"
-117,"Person: Bernardo Tavares"
-118,"Person: Cofounder"
-119,"Person: Cto"
-120,"Organization: Granters.Ai"
-121,"Organization: Demium Portugal"
-122,"Organization: Goparity"
-123,"Person: Bernardo Moutinho"
-124,"Person: Head Of Operations"
-125,"Person: Francisco Belo"
-126,"Person: Tech Lead"
-127,"Organization: Siemens"
-128,"Person: Francisco Meirelles"
-129,"Person: Head Of Sales"
-130,"Organization: Otovo"
-131,"Organization: Too Good To Go"
-132,"TextChunk: Chunk_8"
-133,"Geographiccriterion: Licenciamento"
-134,"Person: Communication_Experience"
-135,"Concept: Value_Proposals"
-136,"Concept: Technology"
-137,"TextChunk: Chunk_9"
-138,"Databasetable: Digital Solutions"
-139,"Opportunity: Funds Application Agent"
-140,"Person: Artificial Intelligence Developer"
-141,"Geographiccriterion: Competitiveness"
-142,"Databasetable: Methodologies Gans And Adv-Icl"
-143,"Geographiccriterion: Market Competition"
-144,"TextChunk: Chunk_10"
-145,"Concept: Adaptability"
-146,"Concept: Intuitive_Interface"
-147,"Concept: Differentiation_Factor"
-148,"Concept: Customer_Retention_And_Satisfaction"
-149,"Concept: End_User_Experience"
-150,"Concept: Simplifies_Processes"
-151,"Concept: Enhances_Strategic_Quality"
-152,"Concept: Proposal_Structure"
-153,"Concept: Alignment_With_Eu_Goals"
-154,"Concept: Approval_And_Funding_Probabilities"
-155,"Concept: Strategic_Support_Capability"
-156,"Concept: Artificial_Intelligence"
-157,"Concept: Business_Model"
-158,"Concept: Annual_Subscription_Strategy"
-159,"Concept: Access_Levels"
-160,"Concept: Market_Sustainability"
-161,"Concept: Market_Scalability"
-162,"Concept: Digital_Product"
-163,"Concept: Market_Leadership"
-164,"Concept: Client_Profiles"
-165,"Concept: Brand_Awareness"
-166,"Concept: Investment_Attraction"
-167,"Concept: Sustainable_Growth"
-168,"Concept: Technological_Differentiation"
-169,"Concept: User_Centric_Approach"
-170,"Concept: International_Market_Strategy"
-171,"Concept: Intellectual_Property"
-172,"Concept: Software_Development"
-173,"Concept: Proprietary_Algorithms"
-174,"Concept: Innovation_Ecosystem"
-175,"Concept: Asset_Valuation"
-176,"Concept: Competitive_Advantage"
-177,"TextChunk: Chunk_11"
-178,"Person: Ia"
-179,"Geographiccriterion: New_Markets"
-180,"Databasetable: Digital_Support"
-181,"Databasetable: Funding_Capture"
-182,"TextChunk: Chunk_12"
-183,"Product: Artificial Intelligence Agent"
-184,"Concept: Digital Solution"
-185,"Concept: Scalability"
-186,"Geographiccriterion: International Markets"
-187,"Geographiccriterion: Regulatory Frameworks"
-188,"Concept: Market Expansion"
-189,"Concept: Business Model"
-190,"Concept: Subscription Strategy"
-191,"Recipient: Client Base"
-192,"Concept: Growth Potential"
-193,"Grant: Investment"
-194,"Grantpayment: Costs"
-195,"Person: Human Resources"
-196,"Person: Software Developers"
-197,"Grantshare: Certifications"
-198,"TextChunk: Chunk_13"
-199,"Grant: Ai_Certification"
-200,"Grant: Advanced_Ai_Courses"
-201,"Grant: Grant_Application_Courses"
-202,"Grant: External_Services"
-203,"Grant: Legal_Advice"
-204,"Grant: Security_Audits"
-205,"Grant: Software_Equipment"
-206,"Grant: Personal_Computers"
-207,"Grant: Software_Subscriptions"
-208,"Grant: Intellectual_Property_Protection"
-209,"Grant: Patent_Expenses"
-210,"Grant: Legal_Fees"
-211,"Grant: Software_Development_Tools"
+node_id,node_attr,node_type,properties
+1,"Chunk_0","TextChunk",""Vouchers para Startups \u2013 Novos produtos\ndigitais/tecnol\u00f3gicos Granter.ai\nAtividade Econ\u00f3mica Principal do Benefici\u00e1rio (Fundamenta\u00e7\u00e3o)\u200b\n(limite XX)\n\nA atividade principal da Granter.ai enquadra-se plenamente nos setores intensivos em\ntecnologia, uma vez que a empresa se dedica ao desenvolvimento de solu\u00e7\u00f5es baseadas em\nintelig\u00eancia artificial (IA), aplicadas \u00e0 \u00e1rea das candidaturas a fundos p\u00fablicos. O projeto\nproposto, que passa pela cria\u00e7\u00e3o de um agente de IA que vai apoiar as empresas na\nelabora\u00e7\u00e3o de candidaturas a programas de financiamento, integra atividades de\ninvestiga\u00e7\u00e3o e desenvolvimento tecnol\u00f3gico, incorporando metodologias avan\u00e7adas como\nRedes Generativas Adversariais (GANs) e Adversarial In-Context Learning (Adv-ICL),\npermitindo gerar conte\u00fados especializados e adaptados ao contexto dos clientes. Trata-se\nde um software propriet\u00e1rio, desenvolvido internamente, que valoriza a aplica\u00e7\u00e3o pr\u00e1tica de\nconhecimento t\u00e9cnico e cient\u00edfico, ao transformar modelos te\u00f3ricos de IA em solu\u00e7\u00f5es com\nimpacto direto na efici\u00eancia e inova\u00e7\u00e3o do setor. A capacidade de adapta\u00e7\u00e3o a m\u00faltiplos\nmercados e a forte \u00eanfase na automa\u00e7\u00e3o de processos complexos refor\u00e7am o seu\nenquadramento num setor de alta intensidade tecnol\u00f3gica, com elevado potencial de\ncrescimento.\n\nResumo do projeto\u200b\n(limite 1000)\n\nA Granter.ai \u00e9 uma startup dedicada a solu\u00e7\u00f5es de IA aplicadas \u00e0 \u00e1rea do financiamento\np\u00fablico. A Granter pretende desenvolver um Agente de IA para utiliza\u00e7\u00e3o por parte das\nempresas na elabora\u00e7\u00e3o de candidaturas a programas de financiamento. Esta ferramenta\npretende transformar a forma como estas candidaturas s\u00e3o preparadas, auxiliando na\nidentifica\u00e7\u00e3o da oportunidade, submiss\u00e3o automatizada, gest\u00e3o da burocracia associada e\nacompanhamento dos projetos. A solu\u00e7\u00e3o vai integrar metodologias de IA, adaptadas \u00e0\nrealidade e contexto de fundos p\u00fablicos, como Redes Generativas Adversariais e Adversarial\nIn-Context Learning, garantindo conte\u00fados otimizados, alinhados com os requisitos dos\nprogramas de financiamento. O objetivo \u00e9 proporcionar uma ferramenta inteligente,\nacess\u00edvel e altamente eficiente, que otimize todo o processo de candidatura a financiamento.\nO desenvolvimento deste Agente de IA representa um salto tecnol\u00f3gico significativo, sendo\numa solu\u00e7\u00e3o escal\u00e1vel com forte potencial.\n\n\fFundamenta\u00e7\u00e3o dos Objectivos\u200b\n(limite 2000)""
+2,"Granter.Ai","Person",""
+3,"Artificialintelligencesolutions","Concept",""
+4,"Fundingapplicationagent","Concept",""
+5,"Fundingprograms","Concept",""
+6,"Researchanddevelopment","Concept",""
+7,"Generativeadversarialnetworks","Concept",""
+8,"Advicl","Concept",""
+9,"Proprietarysoftware","Concept",""
+10,"Technicalknowledge","Concept",""
+11,"Innovation","Concept",""
+12,"Hightechsector","Concept",""
+13,"Startup","Person",""
+14,"Fundingsector","Concept",""
+15,"Automationprocesses","Concept",""
+16,"Marketadaptation","Concept",""
+17,"Growthpotential","Concept",""
+18,"Chunk_1","TextChunk",""Fundamenta\u00e7\u00e3o dos Objectivos\u200b\n(limite 2000)\n\nA Granter.ai tem como miss\u00e3o democratizar e facilitar o acesso a fundos p\u00fablicos. O projeto\napresentado passa pela cria\u00e7\u00e3o de um Agente de AI para utiliza\u00e7\u00e3o por parte de\nespecialistas e empresas na elabora\u00e7\u00e3o de candidaturas a estas oportunidades de\nfinanciamento. O Agente de IA vai agregar metodologias de elevada sofistica\u00e7\u00e3o tecnol\u00f3gica,\nnomeadamente Redes Generativas Adversariais (GANs) e Adversarial In-Context Learning\n(Adv-ICL), aplicadas \u00e0 gera\u00e7\u00e3o de conte\u00fados especializados. O seu desenvolvimento envolve\num processo intensivo de investiga\u00e7\u00e3o aplicada, com forte componente de experimenta\u00e7\u00e3o,\nafina\u00e7\u00e3o e valida\u00e7\u00e3o de modelos lingu\u00edsticos adaptados ao dom\u00ednio espec\u00edfico das pol\u00edticas\np\u00fablicas e dos fundos p\u00fablicos, que visa a cria\u00e7\u00e3o de uma nova ferramenta com impacto\ndireto no mercado.\nA escalabilidade da solu\u00e7\u00e3o \u00e9 assegurada pela sua estrutura modular que vai permitir a\nr\u00e1pida adapta\u00e7\u00e3o a diferentes contextos nacionais. Espera-se que o produto final seja\nfacilmente adaptado a qualquer mercado, idioma ou contexto legal. A natureza digital do\nAgente de IA, e a sua infraestrutura, que se prev\u00ea altamente adapt\u00e1vel, vai permitir que a\nferramenta se molde facilmente a qualquer mercado, atrav\u00e9s da simples conex\u00e3o da mesma\na uma base de dados com toda a informa\u00e7\u00e3o relevante. Com o lan\u00e7amento desta ferramenta,\na Granter perspetiva, at\u00e9 ao final de 2025, a entrada em mercados como Espanha, It\u00e1lia e\nEUA, onde a procura por solu\u00e7\u00f5es para acesso a financiamento p\u00fablico \u00e9 elevada.\nAdicionalmente, a Granter.ai acredita que o Agente de IA vai ter um contributo relevante\npara a transi\u00e7\u00e3o clim\u00e1tica, ainda que de forma indireta: o facto de facilitar o acesso a\nprogramas de financiamento ligados \u00e0 sustentabilidade e \u00e0 economia verde, vai impulsionar\niniciativas empresariais com impacto ambiental positivo.\nEste projeto representa, assim, uma solu\u00e7\u00e3o tecnol\u00f3gica e altamente diferenciadora, capaz\nde gerar impacto no ecossistema econ\u00f3mico, tanto a n\u00edvel nacional como internacional.\n\nFundamenta\u00e7\u00e3o da Tipologia\u200b\n(limite 5000)\n\nTipologia a selecionar - Apoio ao arranque ou ao crescimento\nA Granter.ai encontra-se numa fase inicial de crescimento acelerado, o que justifica de forma\nclara o enquadramento do projeto na tipologia de \u201cApoio ao arranque ou ao crescimento\u201d.\nTendo iniciado a sua atividade em dezembro de 2024, a Granter.ai j\u00e1 demonstrou sinais\nconsistentes de tra\u00e7\u00e3o e potencial de escala, com uma base de mais de 2.500 empresas\nregistadas, mais de 150 candidaturas submetidas e um volume total de mais de 20 milh\u00f5es\nde euros em projetos de financiamento acompanhados. Para al\u00e9m disso, a empresa\nconseguiu angariar 400.000\u20ac em rondas de investimento e apresenta um crescimento\ntrimestral sustentado de 45%. Estes indicadores refletem um modelo de neg\u00f3cio com forte\naceita\u00e7\u00e3o no mercado e em clara fase de expans\u00e3o. Ainda como parte do seu processo de""
+19,"Ai Agent","Person",""
+20,"Specialists","Person",""
+21,"Companies","Person",""
+22,"Public Funds","Grant",""
+23,"Public Policies","Grant",""
+24,"Funding Opportunities","Grant",""
+25,"Gans","Person",""
+26,"Adv-Icl","Person",""
+27,"Linguistic Models","Person",""
+28,"Public Policies Domain","Person",""
+29,"Public Funds Domain","Person",""
+30,"Digital Infrastructure","Person",""
+31,"Markets Spain, Italy, Usa","Person",""
+32,"Sustainability Programs","Grant",""
+33,"Green Economy Initiatives","Grant",""
+34,"Business Initiatives With Positive Environmental Impact","Grant",""
+35,"Start-Up Support","Person",""
+36,"Growth Support","Person",""
+37,"Company","Person",""
+38,"Funding Projects","Grant",""
+39,"Investment Rounds","Person",""
+40,"Chunk_2","TextChunk",""crescimento a Granter.ai est\u00e1 atualmente a desenvolver o processo para obten\u00e7\u00e3o do\nreconhecimento de idoneidade por parte da ANI, o que demonstra a vontade da empresa em\nser reconhecida como uma entidade competente para a realiza\u00e7\u00e3o de atividades de I&D na\nsua \u00e1rea de atua\u00e7\u00e3o.\nO projeto proposto enquadra-se de forma inequ\u00edvoca no apoio ao crescimento da empresa,\ndado que visa o desenvolvimento e consolida\u00e7\u00e3o de um produto digital inovador com forte\nbase tecnol\u00f3gica: um Agente de IA para a utiliza\u00e7\u00e3o por parte das empresas na identifica\u00e7\u00e3o\ne elabora\u00e7\u00e3o de candidaturas a fundos p\u00fablicos. Este novo produto representa um salto\nqualitativo na proposta de valor da Granter.ai e \u00e9 determinante para o refor\u00e7o da sua posi\u00e7\u00e3o\ncompetitiva, quer no mercado nacional, quer em mercados internacionais priorit\u00e1rios como\nEspanha, It\u00e1lia e EUA.\nEste projeto ser\u00e1 integralmente desenvolvido com recursos internos da empresa, sendo que\npretende-se ainda refor\u00e7ar a equipa com um novo elemento altamente qualificado. Este\ndesenvolvimento da ferramenta de forma interna demonstra a vontade de manter um\ncompromisso com a produ\u00e7\u00e3o de software propriet\u00e1rio. A sua implementa\u00e7\u00e3o implica a\nmobiliza\u00e7\u00e3o de conhecimento t\u00e9cnico avan\u00e7ado, com uma forte componente de investiga\u00e7\u00e3o\naplicada e desenvolvimento experimental. A utiliza\u00e7\u00e3o de metodologias como as Redes\nGenerativas Adversariais (GANs) e o Adversarial In-Context Learning (Adv-ICL) confere ao\nprojeto um grau de complexidade tecnol\u00f3gica significativo. Este esfor\u00e7o tecnol\u00f3gico \u00e9\norientado para a cria\u00e7\u00e3o de uma solu\u00e7\u00e3o robusta, intuitiva e altamente eficaz, que responda\n\u00e0s necessidades espec\u00edficas dos utilizadores.\nA natureza do projeto - centrada no desenvolvimento de uma solu\u00e7\u00e3o digital com potencial\nde transforma\u00e7\u00e3o do setor - \u00e9 consistente com os objetivos de crescimento da empresa. A\ncria\u00e7\u00e3o do Agente de IA ir\u00e1 permitir \u00e0 Granter.ai consolidar o seu posicionamento no setor\ndas candidaturas a fundos p\u00fablicos, e tamb\u00e9m diversificar a sua oferta de servi\u00e7os,\naumentar a capacidade de resposta a novos mercados e gerar novas fontes de receita\natrav\u00e9s de um modelo de licenciamento escal\u00e1vel. Est\u00e1 prevista a sua disponibiliza\u00e7\u00e3o em\ndiferentes idiomas e a sua adapta\u00e7\u00e3o aos enquadramentos jur\u00eddicos e operacionais de\noutros pa\u00edses, o que refor\u00e7a o seu car\u00e1ter replic\u00e1vel e o potencial de internacionaliza\u00e7\u00e3o da\nsolu\u00e7\u00e3o.\nA escolha da tipologia de \u201cApoio ao arranque ou ao crescimento\u201d ganha ainda maior\nrelev\u00e2ncia considerando que este produto ser\u00e1 o motor estrat\u00e9gico do crescimento futuro da\nempresa. Trata-se de uma pe\u00e7a central na vis\u00e3o de m\u00e9dio e longo prazo da Granter.ai, e \u00e9\ntamb\u00e9m essencial para o cumprimento da miss\u00e3o da empresa, que passa por democratizar e\nfacilitar o acesso a oportunidades de financiamento p\u00fablico. Este projeto n\u00e3o \u00e9 apenas mais\numa ferramenta - \u00e9 o catalisador de uma nova fase de expans\u00e3o da empresa, permitindo\nalavancar as compet\u00eancias j\u00e1 desenvolvidas e abrir caminho para novas aplica\u00e7\u00f5es e\nparcerias.""
+41,"Ani","Person",""
+42,"Digital Product","Person",""
+43,"Ia Agent","Person",""
+44,"Funds","Person",""
+45,"Markets","Person",""
+46,"Software","Person",""
+47,"Team Member","Person",""
+48,"Technologies","Person",""
+49,"Methodologies","Person",""
+50,"Solution","Person",""
+51,"Sector","Person",""
+52,"Company Growth","Person",""
+53,"Internationalization","Person",""
+54,"Licensing Model","Person",""
+55,"Company Mission","Person",""
+56,"Partnerships","Person",""
+57,"Chunk_3","TextChunk",""parcerias.\nFace ao exposto, considera-se que a tipologia \u201cApoio ao arranque ou ao crescimento\u201d \u00e9 a que\nmelhor reflete a natureza, os objetivos e a ambi\u00e7\u00e3o do presente projeto, sendo esta a""
+58,"Support For Startup Or Growth","Grant",""
+59,"Project","Opportunity",""
+60,"Type A Support","Grant",""
+61,"Objectives And Ambition","Concept",""
+62,"Chunk_4","TextChunk",""alavanca necess\u00e1ria para consolidar o posicionamento competitivo da Granter.ai e acelerar o\nseu percurso de crescimento sustent\u00e1vel e inovador.\n\nRelev\u00e2ncia do projeto face aos objetivos da medida, atrav\u00e9s da\napresenta\u00e7\u00e3o de um modelo de neg\u00f3cio, produto ou servi\u00e7o inovador com\nforte componente digital ou tecnol\u00f3gica, bem como com potencial de\nescalabilidade\u200b\n(limite 5000)\n\nA Granter.ai apresenta um projeto que cumpre de forma exemplar os objetivos da medida,\nao desenvolver um produto digital com uma forte componente tecnol\u00f3gica e um elevado\npotencial de escalabilidade. Trata-se do primeiro Agente de IA especificamente concebido\npara apoiar empresas na identifica\u00e7\u00e3o, planeamento, acompanhamento e submiss\u00e3o de\ncandidaturas a financiamento p\u00fablico. Esta solu\u00e7\u00e3o representa um avan\u00e7o significativo em\ntermos de inova\u00e7\u00e3o e transforma\u00e7\u00e3o digital no setor, caracterizando-se por ser um produto\naltamente especializado, tecnologicamente sofisticado e \u00fanico no mercado.\nO projeto prop\u00f5e a cria\u00e7\u00e3o de um software propriet\u00e1rio, desenvolvido integralmente com\nrecursos internos, que agrega v\u00e1rias funcionalidades baseadas em IA, com destaque para a\ngera\u00e7\u00e3o autom\u00e1tica e personalizada de candidaturas. A conce\u00e7\u00e3o deste projeto foi pensada\npara integrar as mais recentes tend\u00eancias em intelig\u00eancia artificial, adaptando-as \u00e0 pr\u00e1tica\nconcreta do financiamento p\u00fablico. A ferramenta combina metodologias como Redes\nGenerativas Adversariais (GANs) e Adversarial In-Context Learning (Adv-ICL), permitindo\nproduzir conte\u00fados otimizados, alinhados com crit\u00e9rios espec\u00edficos de cada aviso de\nfinanciamento. Esta abordagem assegura n\u00e3o apenas inova\u00e7\u00e3o no produto final, mas\ntamb\u00e9m na metodologia de desenvolvimento, com uma clara valoriza\u00e7\u00e3o de I&D e\ntransfer\u00eancia de conhecimento tecnol\u00f3gico para o mercado.\nAs funcionalidades do Agente de IA abrangem todas as etapas do processo de candidatura:\ndesde a identifica\u00e7\u00e3o de oportunidades, an\u00e1lise de elegibilidade e reda\u00e7\u00e3o da candidatura,\nat\u00e9 \u00e0 sua avalia\u00e7\u00e3o, submiss\u00e3o automatizada e gest\u00e3o dos projetos ap\u00f3s a sua aprova\u00e7\u00e3o.\nEsta abrang\u00eancia confere \u00e0 ferramenta um elevado valor acrescentado, com impacto direto\nna efici\u00eancia e efic\u00e1cia do processo de acesso a financiamento.\nA relev\u00e2ncia do projeto manifesta-se ainda na sua capacidade de responder a uma\nnecessidade real e crescente do ecossistema empresarial: o acesso eficaz a mecanismos de\nfinanciamento p\u00fablico. Atrav\u00e9s da automatiza\u00e7\u00e3o e simplifica\u00e7\u00e3o de processos altamente\ncomplexos, o Agente de IA da Granter.ai permitir\u00e1 aumentar a produtividade dos\nespecialistas e das empresas, reduzir erros e inefici\u00eancias, e melhorar a taxa de sucesso nas\ncandidaturas. Ao mesmo tempo, introduz uma l\u00f3gica de apoio estrat\u00e9gico, ao ajudar os\nutilizadores a enquadrar melhor os seus projetos nos objetivos e prioridades da Uni\u00e3o\nEuropeia, elevando a qualidade estrutural das propostas apresentadas.""
+63,"Technological Component","Opportunity",""
+64,"Scalability Potential","Opportunity",""
+65,"Funding Application Agent","Opportunity",""
+66,"Artificial Intelligence Agent","Opportunity",""
+67,"Internal Resources","Databasetable",""
+68,"Ai Functionalities","Opportunity",""
+69,"Content Generation","Opportunity",""
+70,"Financing Opportunities","Opportunity",""
+71,"Eligibility Analysis","Opportunity",""
+72,"Application Writing","Opportunity",""
+73,"Application Evaluation","Opportunity",""
+74,"Automated Submission","Opportunity",""
+75,"Project Management","Opportunity",""
+76,"Business Ecosystem","Opportunity",""
+77,"Public Funding Mechanisms","Opportunity",""
+78,"European Union","Person",""
+79,"Chunk_5","TextChunk",""Este novo produto ser\u00e1 desenhado para responder a uma multiplicidade de contextos e\nperfis de utilizador, incorporando uma arquitetura modular e escal\u00e1vel, que permite adaptar\nfacilmente a solu\u00e7\u00e3o a diferentes mercados e l\u00ednguas. A pr\u00f3pria l\u00f3gica de desenvolvimento\ntem em vista a replicabilidade internacional, sendo j\u00e1 identificados os mercados de Espanha,\nIt\u00e1lia e EUA para a expans\u00e3o inicial da Granter.ai. A escalabilidade \u00e9 tamb\u00e9m assegurada\npelo modelo de neg\u00f3cio proposto, baseado numa estrat\u00e9gia de subscri\u00e7\u00e3o anual um tanto\nsemelhante \u00e0 estrat\u00e9gia utilizada em modelos de neg\u00f3cio SaaS (software as a service), com\ndiferentes n\u00edveis de acesso dependendo da necessidade de cada indiv\u00edduo ou empresa.\nA proposta da Granter.ai tem ainda uma dimens\u00e3o estrat\u00e9gica no contexto da transi\u00e7\u00e3o\ndigital promovida pelo PRR. Ao dotar as empresas de uma ferramenta que alia intelig\u00eancia\nartificial, automatiza\u00e7\u00e3o e usabilidade, o projeto contribui diretamente para os objetivos da\nmedida \u201cEmpresas 4.0\u201d, promovendo a moderniza\u00e7\u00e3o dos modelos de neg\u00f3cio, a capacita\u00e7\u00e3o\ntecnol\u00f3gica do tecido empresarial e a difus\u00e3o de solu\u00e7\u00f5es digitais inteligentes.\nAdicionalmente, \u00e9 expect\u00e1vel que se verifique um impacto positivo, ainda que indireto, na\npromo\u00e7\u00e3o da eco-inova\u00e7\u00e3o e na transforma\u00e7\u00e3o digital: ao facilitar o acesso a financiamento\nem programas ligados \u00e0 sustentabilidade, efici\u00eancia e \u00e0 economia verde, a Granter.ai pode\npotenciar pr\u00e1ticas empresariais mais sustent\u00e1veis, fomenta a ecoefici\u00eancia e incentiva o\nsurgimento de novos modelos de neg\u00f3cio com base tecnol\u00f3gica.\nA relev\u00e2ncia do projeto \u00e9 refor\u00e7ada pela vis\u00e3o estrat\u00e9gica que lhe est\u00e1 subjacente. O Agente\nde IA representa um novo eixo de crescimento para a empresa, mas tamb\u00e9m uma proposta\nde valor diferenciadora para o mercado, com capacidade para redefinir os padr\u00f5es de\nefici\u00eancia e qualidade no setor da consultoria de financiamento p\u00fablico. Este projeto\nposiciona a Granter.ai como uma empresa de base tecnol\u00f3gica, inovadora e capaz de liderar\numa mudan\u00e7a de paradigma, em Portugal e em toda a Uni\u00e3o Europeia.\nO projeto apresentado cumpre integralmente os objetivos da medida ao propor o\ndesenvolvimento de um produto com base tecnol\u00f3gica s\u00f3lida e elevado potencial de\nescalabilidade. A proposta da Granter.ai constitui um exemplo claro de como a digitaliza\u00e7\u00e3o\ne a intelig\u00eancia artificial podem ser aplicadas de forma estrat\u00e9gica para gerar valor\nacrescentado e acelerar o crescimento de startups tecnol\u00f3gicas.\n\nCapacidade de implementa\u00e7\u00e3o dos benefici\u00e1rios atrav\u00e9s de uma equipa\nde gest\u00e3o com compet\u00eancias tecnol\u00f3gicas e de gest\u00e3o adequadas ao\ndesenvolvimento do modelo de neg\u00f3cio\u200b\n(limite 5000)""
+80,"Product","Concept",""
+81,"User Profiles","Concept",""
+82,"Modular And Scalable Architecture","Concept",""
+83,"Markets And Languages","Concept",""
+84,"International Replicability","Concept",""
+85,"Spain","Country",""
+86,"Italy","Country",""
+87,"Usa","Country",""
+88,"Business Model","Concept",""
+89,"Annual Subscription Model","Concept",""
+90,"Saas Model","Concept",""
+91,"Access Levels","Concept",""
+92,"Digital Transition Prr","Concept",""
+93,"Companies 4.0","Initiative",""
+94,"Digital Tools","Concept",""
+95,"Artificial Intelligence","Technology",""
+96,"Automation","Technology",""
+97,"Usability","Concept",""
+98,"Eco-Innovation","Concept",""
+99,"Digital Transformation","Concept",""
+100,"Funding Access","Concept",""
+101,"Sustainable Practices","Concept",""
+102,"Eco-Efficiency","Concept",""
+103,"New Business Models","Concept",""
+104,"Technological Base","Concept",""
+105,"Portugal","Country",""
+106,"Growth Axis","Concept",""
+107,"Market Standards","Concept",""
+108,"Public Funding Consultancy","Concept",""
+109,"Technology-Based Company","Company",""
+110,"Innovative Company","Company",""
+111,"Paradigm Shift","Concept",""
+112,"Digitalization","Concept",""
+113,"Artificial Intelligence Application","Technology",""
+114,"Startups","Organization",""
+115,"Management Team","Organization",""
+116,"Technological Skills","Skill",""
+117,"Management Skills","Skill",""
+118,"Chunk_6","TextChunk",""A Granter.ai re\u00fane uma equipa de gest\u00e3o altamente qualificada, com compet\u00eancias t\u00e9cnicas e\nde gest\u00e3o plenamente adequadas ao desenvolvimento e implementa\u00e7\u00e3o do projeto proposto.\nA execu\u00e7\u00e3o do presente projeto - o desenvolvimento de um Agente de IA no contexto dos\nfundos p\u00fablicos - exige um conjunto alargado de capacidades nas \u00e1reas da intelig\u00eancia\nartificial, engenharia de software, lideran\u00e7a estrat\u00e9gica, gest\u00e3o de produto e expans\u00e3o\ncomercial. A composi\u00e7\u00e3o da equipa fundadora da Granter.ai garante a presen\u00e7a de todas""
+119,"Team","Person",""
+120,"Technical Skills","Person",""
+121,"Ai Agent Development","Opportunity",""
+122,"Software Engineering","Person",""
+123,"Strategic Leadership","Person",""
+124,"Product Management","Person",""
+125,"Commercial Expansion","Person",""
+126,"Chunk_7","TextChunk",""estas compet\u00eancias, estando os pap\u00e9is claramente distribu\u00eddos e alinhados com os objetivos\ndo projeto.\nA lideran\u00e7a do projeto est\u00e1 a cargo de Bernardo Seixas, CEO e fundador da empresa, que traz\nconsigo uma s\u00f3lida experi\u00eancia na cria\u00e7\u00e3o e escalabilidade de neg\u00f3cios. Pertenceu \u00e0 equipa\ninicial da Uber Eats em Portugal e fundou tr\u00eas startups, acumulando mais de oito anos de\nexperi\u00eancia em vendas B2B e gest\u00e3o de equipas. O seu papel neste projeto centra-se na\ndefini\u00e7\u00e3o da estrat\u00e9gia geral, gest\u00e3o da opera\u00e7\u00e3o e lideran\u00e7a do crescimento internacional\nda solu\u00e7\u00e3o. A sua experi\u00eancia pr\u00e1tica no contacto com clientes e no posicionamento de\nsolu\u00e7\u00f5es digitais complexas no mercado garante a orienta\u00e7\u00e3o comercial e estrat\u00e9gica do\nprojeto.\nA vertente tecnol\u00f3gica \u00e9 liderada por Bernardo Tavares, cofundador e CTO da Granter.ai,\ncom mais de uma d\u00e9cada de experi\u00eancia como Chief Technology Officer em v\u00e1rias startups e\nscale-ups. Foi tamb\u00e9m Head of Incubation da Demium em Portugal e CTO da GoParity,\nacumulando compet\u00eancias em gest\u00e3o de equipas t\u00e9cnicas, arquitetura de sistemas e\ndesenvolvimento de produtos digitais. No \u00e2mbito deste projeto, Bernardo Tavares ser\u00e1 o\nrespons\u00e1vel t\u00e9cnico pelo planeamento e execu\u00e7\u00e3o da solu\u00e7\u00e3o, liderando a defini\u00e7\u00e3o\ntecnol\u00f3gica, a escolha das abordagens de IA a adotar (incluindo GANs e Adv-ICL), e o\nacompanhamento do desenvolvimento do software propriet\u00e1rio.\nComplementando a estrutura de gest\u00e3o operacional, Bernardo Moutinho, Head of\nOperations desempenha um papel-chave no aprimoramento da parte t\u00e9cnica (output)\nobtida atrav\u00e9s do Agente de AI. Com quatro anos de experi\u00eancia em gest\u00e3o e lideran\u00e7a\noperacional, incluindo trabalho com multinacionais em tr\u00eas continentes, Bernardo\nMoutinho ser\u00e1 respons\u00e1vel pela execu\u00e7\u00e3o t\u00e9cnica do projeto, bem como pela constru\u00e7\u00e3o e\nvalida\u00e7\u00e3o das diferentes bases de dados necess\u00e1rias. A sua experi\u00eancia anterior como\nconsultor de expans\u00e3o internacional \u00e9 um ativo importante para garantir uma\nimplementa\u00e7\u00e3o eficiente e orientada para resultados.\nNa \u00e1rea t\u00e9cnica, o projeto conta ainda com Francisco Belo, Tech Lead da Granter.ai. Com\nquatro anos de experi\u00eancia em desenvolvimento de software, foi anteriormente CTO de uma\nstartup na \u00e1rea de HR Tech e trabalhou na Siemens em redes e ciberseguran\u00e7a. Francisco\nser\u00e1 respons\u00e1vel pela implementa\u00e7\u00e3o pr\u00e1tica das funcionalidades do Agente de IA, pela\nintegra\u00e7\u00e3o de modelos de IA e pela aplica\u00e7\u00e3o das melhores pr\u00e1ticas de desenvolvimento\nseguro e escal\u00e1vel. A sua experi\u00eancia em ambientes empresariais complexos acrescenta\nrobustez ao projeto.\nPor fim, a componente de go-to-market e comercializa\u00e7\u00e3o ser\u00e1 conduzida por Francisco\nMeirelles, Head of Sales, com mais de sete anos de experi\u00eancia em vendas e marketing\nestrat\u00e9gico. O seu percurso profissional inclui empresas como Otovo e Too Good To Go, e o\nseu papel no projeto ser\u00e1 assegurar a penetra\u00e7\u00e3o no mercado nacional e internacional,\nliderando as estrat\u00e9gias de aquisi\u00e7\u00e3o de utilizadores e defini\u00e7\u00e3o de pacotes de""
+127,"Bernardo Seixas","Person",""
+128,"Ceo","Person",""
+129,"Founder","Person",""
+130,"Uber Eats Portugal Team","Person",""
+131,"Bernardo Tavares","Person",""
+132,"Cofounder","Person",""
+133,"Cto","Person",""
+134,"Granters.Ai","Person",""
+135,"Demium Portugal","Person",""
+136,"Goparity","Person",""
+137,"Bernardo Moutinho","Person",""
+138,"Head Of Operations","Person",""
+139,"Francisco Belo","Person",""
+140,"Tech Lead","Person",""
+141,"Francisco Meirelles","Person",""
+142,"Head Of Sales","Person",""
+143,"Chunk_8","TextChunk",""licenciamento. A sua experi\u00eancia na comunica\u00e7\u00e3o de propostas de valor tecnol\u00f3gicas junto""
+144,"Licenciamento","Geographiccriterion",""
+145,"Communication_Experience","Person",""
+146,"Value_Proposals","Concept",""
+147,"Chunk_9","TextChunk",""de diferentes segmentos de mercado \u00e9 essencial para assegurar o sucesso comercial do\nprojeto.\nEste conjunto de perfis combina know-how t\u00e9cnico com uma compreens\u00e3o profunda dos\nmercados digitais, permitindo \u00e0 Granter.ai reunir internamente todas as compet\u00eancias\nnecess\u00e1rias \u00e0 execu\u00e7\u00e3o do projeto. A equipa \u00e9 \u00e1gil, multidisciplinar e altamente motivada,\ncom hist\u00f3rico de colabora\u00e7\u00e3o eficaz e de concretiza\u00e7\u00e3o de objetivos ambiciosos em curtos\nper\u00edodos de tempo. A exist\u00eancia de um n\u00facleo com experi\u00eancia comprovada na cria\u00e7\u00e3o e\nimplementa\u00e7\u00e3o de produtos digitais confere \u00e0 candidatura uma base s\u00f3lida de execu\u00e7\u00e3o.\nAdicionalmente, o projeto ser\u00e1 refor\u00e7ado com a contrata\u00e7\u00e3o de um front-end developer com\nespecializa\u00e7\u00e3o em intelig\u00eancia artificial, que ser\u00e1 preponderante para a cria\u00e7\u00e3o da\nferramenta garantindo que a mesma se mant\u00e9m intuitiva. Esta contrata\u00e7\u00e3o \u00e9 essencial para\nassegurar capacidade de resposta \u00e0s exig\u00eancias t\u00e9cnicas do projeto.\nEm s\u00edntese, a equipa da Granter.ai est\u00e1 plenamente alinhada com os requisitos do projeto,\ntanto ao n\u00edvel da lideran\u00e7a estrat\u00e9gica como da execu\u00e7\u00e3o t\u00e9cnica e comercial. A\ncomplementaridade entre os elementos da equipa, aliada \u00e0 sua experi\u00eancia anterior e \u00e0\ncapacidade de execu\u00e7\u00e3o j\u00e1 demonstrada, garante que a implementa\u00e7\u00e3o do Agente de IA se\nfar\u00e1 com sucesso, contribuindo de forma efetiva para os objetivos da medida e para o\ncrescimento sustentado da empresa.\n\nImpacto do projeto na competitividade das benefici\u00e1rias atrav\u00e9s do\ncontributo do projeto para uma diferencia\u00e7\u00e3o das entidades, face \u00e0 sua\nconcorr\u00eancia no mercado\u200b\n(limite 5000)\n\nO projeto apresentado pela Granter.ai ter\u00e1 um impacto profundo na sua competitividade,\nconferindo-lhe uma posi\u00e7\u00e3o diferenciadora no mercado de solu\u00e7\u00f5es tecnol\u00f3gicas aplicadas \u00e0\nconsultoria. Com a cria\u00e7\u00e3o de um Agente de IA dedicado \u00e0 prepara\u00e7\u00e3o de candidaturas a\nfundos comunit\u00e1rios, a empresa coloca-se na vanguarda da transforma\u00e7\u00e3o digital no setor,\noferecendo uma solu\u00e7\u00e3o tecnologicamente robusta e de elevada utilidade pr\u00e1tica.\nA diferencia\u00e7\u00e3o da Granter.ai face \u00e0 concorr\u00eancia assenta na proposta de valor \u00fanica do\nprojeto: a disponibiliza\u00e7\u00e3o de uma ferramenta digital inteligente, capaz de automatizar e\notimizar todas as fases do processo de candidatura, desde a identifica\u00e7\u00e3o da oportunidade\nat\u00e9 \u00e0 submiss\u00e3o final. Esta abordagem end-to-end, aliada \u00e0 aplica\u00e7\u00e3o de metodologias\navan\u00e7adas como GANs e Adv-ICL, permite oferecer um servi\u00e7o sem paralelo, altamente\npersonalizado, com ganhos significativos de tempo, efici\u00eancia e qualidade.\nEnquanto a maioria das solu\u00e7\u00f5es atualmente dispon\u00edveis no mercado se limita \u00e0\ndisponibiliza\u00e7\u00e3o de bases de dados ou modelos gen\u00e9ricos de candidatura, a ferramenta da\nGranter.ai vai posicionar-se como uma plataforma inteligente e interativa, com capacidade\npara compreender o perfil e os objetivos de cada utilizador, e gerar conte\u00fados otimizados,\nalinhados com os requisitos espec\u00edficos de cada oportunidade de financiamento. Esta""
+148,"Market Segments","Concept",""
+149,"Know-How","Concept",""
+150,"Digital Markets","Concept",""
+151,"Core Team","Person",""
+152,"Digital Products","Concept",""
+153,"Front-End Developer","Person",""
+154,"Tool","Concept",""
+155,"Strategy Leadership","Concept",""
+156,"Technical Execution","Concept",""
+157,"Commercial Execution","Concept",""
+158,"Team Complementarity","Concept",""
+159,"Previous Experience","Concept",""
+160,"Measure Objectives","Concept",""
+161,"Competitiveness","Concept",""
+162,"Differentiation","Concept",""
+163,"Market Solutions","Concept",""
+164,"Technological Solution","Concept",""
+165,"Solution Robustness","Concept",""
+166,"Practical Utility","Concept",""
+167,"Value Proposition","Concept",""
+168,"Digital Tool","Concept",""
+169,"Automation Process","Concept",""
+170,"Optimization Process","Concept",""
+171,"Application Submission","Concept",""
+172,"Market Data Bases","Concept",""
+173,"Generic Models","Concept",""
+174,"Interactive Platform","Concept",""
+175,"User Profile","Concept",""
+176,"Chunk_10","TextChunk",""capacidade de adapta\u00e7\u00e3o din\u00e2mica, aliada a uma interface intuitiva e funcional, cria um claro\nfator de diferencia\u00e7\u00e3o que aumenta a reten\u00e7\u00e3o e satisfa\u00e7\u00e3o dos clientes.\nO impacto do projeto estende-se tamb\u00e9m \u00e0 experi\u00eancia dos utilizadores finais, que v\u00e3o\npassar a dispor de uma solu\u00e7\u00e3o que simplifica processos complexos e potencia a qualidade\nestrat\u00e9gica das candidaturas apresentadas. A ferramenta apoiar\u00e1 os utilizadores na\nestrutura\u00e7\u00e3o das suas propostas, promovendo o alinhamento com os objetivos e metas\ndefinidas pela UE, o que, por sua vez, aumentar\u00e1 as probabilidades de aprova\u00e7\u00e3o e\nfinanciamento. Esta capacidade de apoio estrat\u00e9gico, baseada em intelig\u00eancia artificial,\nposiciona a Granter.ai como uma parceira fundamental no sucesso dos seus clientes.\nA inova\u00e7\u00e3o tecnol\u00f3gica incorporada na ferramenta traduz-se tamb\u00e9m numa nova proposta\nde neg\u00f3cio para a empresa. O modelo de monetiza\u00e7\u00e3o previsto assenta numa estrat\u00e9gia de\nsubscri\u00e7\u00e3o anual, com diferentes n\u00edveis de acesso dependendo da necessidade de cada\nutilizador. Este modelo garante a sustentabilidade financeira do projeto e a sua\nescalabilidade, permitindo adaptar a oferta \u00e0s necessidades de diferentes mercados e\np\u00fablicos-alvo.\nA estrat\u00e9gia comercial da empresa contempla, numa primeira fase, a consolida\u00e7\u00e3o da\npresen\u00e7a em Portugal, alavancando a rede de mais de 2.500 empresas j\u00e1 registadas na\nantiga plataforma da Granter.ai, e a r\u00e1pida expans\u00e3o para os mercados de Espanha, It\u00e1lia e\nEUA. Estes pa\u00edses foram identificados com base na sua elevada procura por financiamento\np\u00fablico, e na exist\u00eancia de contextos regulat\u00f3rios favor\u00e1veis \u00e0 ado\u00e7\u00e3o de ferramentas\ndigitais inovadoras. A capacidade do Agente de IA para operar em diferentes idiomas e\nadaptar-se a diferentes enquadramentos legais refor\u00e7a o seu potencial competitivo e de\ninternacionaliza\u00e7\u00e3o.\nDo ponto de vista estrat\u00e9gico, o projeto permitir\u00e1 \u00e0 Granter.ai desenvolver um produto\ndigital escal\u00e1vel e com capacidade de lideran\u00e7a de mercado. Este novo posicionamento\npermitir\u00e1 captar novos perfis de clientes, refor\u00e7ar a notoriedade da marca e atrair\ninvestimento estrat\u00e9gico, consolidando o crescimento sustent\u00e1vel da empresa. A\ndiferencia\u00e7\u00e3o tecnol\u00f3gica, aliada a uma abordagem centrada no utilizador e numa l\u00f3gica de\nmercado internacional, constitui um fator-chave na constru\u00e7\u00e3o de vantagens competitivas\nduradouras.\nImporta ainda destacar que a componente de propriedade intelectual associada ao\ndesenvolvimento do software - incluindo a prote\u00e7\u00e3o de metodologias e algoritmos pr\u00f3prios refor\u00e7a a posi\u00e7\u00e3o da empresa no ecossistema de inova\u00e7\u00e3o, assegurando a valoriza\u00e7\u00e3o dos\nativos criados e a sua prote\u00e7\u00e3o face a eventuais concorrentes. Esta dimens\u00e3o de prote\u00e7\u00e3o da\ninova\u00e7\u00e3o \u00e9 essencial para garantir a vantagem competitiva no m\u00e9dio e longo prazo.\nEm s\u00edntese, o impacto do projeto na competitividade da Granter.ai ser\u00e1 m\u00faltiplo: permitir\u00e1 \u00e0\nempresa destacar-se tecnologicamente no seu setor; oferecer um produto de elevado valor""
+177,"Adaptability","Concept",""
+178,"Intuitive_Interface","Concept",""
+179,"Differentiation_Factor","Concept",""
+180,"Customer_Retention_And_Satisfaction","Concept",""
+181,"End_User_Experience","Concept",""
+182,"Simplifies_Processes","Concept",""
+183,"Enhances_Strategic_Quality","Concept",""
+184,"Proposal_Structure","Concept",""
+185,"Alignment_With_Eu_Goals","Concept",""
+186,"Approval_And_Funding_Probabilities","Concept",""
+187,"Strategic_Support_Capability","Concept",""
+188,"Artificial_Intelligence","Concept",""
+189,"Business_Model","Concept",""
+190,"Subscription_Strategy","Concept",""
+191,"Market_Access_Levels","Concept",""
+192,"Financial_Sustainability","Concept",""
+193,"Scalability","Concept",""
+194,"Market_Needs","Concept",""
+195,"Portuguese_Market","Market",""
+196,"Registered_Companies_In_Portugal","Entity",""
+197,"Regulatory_Context","Concept",""
+198,"Multilingual_Ai_Agent","Technology",""
+199,"Internationalization_Potential","Concept",""
+200,"Market_Leadership","Concept",""
+201,"Brand_Awareness","Concept",""
+202,"Strategic_Investment","Concept",""
+203,"Sustainable_Growth","Concept",""
+204,"Technological_Differentiation","Concept",""
+205,"User_Centric_Approach","Concept",""
+206,"International_Market_Strategy","Concept",""
+207,"Intellectual_Property","Concept",""
+208,"Software_Development","Concept",""
+209,"Methodologies_And_Algorithms","Concept",""
+210,"Innovation_Ecosystem","Concept",""
+211,"Asset_Valuation","Concept",""
+212,"Competitive_Advantage","Concept",""
+213,"Chunk_11","TextChunk",""acrescentado com base em IA; aceder a novos mercados atrav\u00e9s de um modelo de neg\u00f3cio\nescal\u00e1vel; posicionar-se como uma refer\u00eancia no apoio digital \u00e0 capta\u00e7\u00e3o de financiamento""
+214,"Ia","Person",""
+215,"New Markets","Geographiccriterion",""
+216,"Scalable Business Model","Opportunity",""
+217,"Digital Support For Funding Acquisition","Opportunity",""
+218,"Chunk_12","TextChunk",""europeu. A Granter.ai acredita que a implementa\u00e7\u00e3o do projeto se vai traduzir numa\nrevolu\u00e7\u00e3o no panorama da consultoria para fundos europeus e, com toda a certeza, a\nGranter.ai ser\u00e1 o catalisador desta mudan\u00e7a. Este projeto representa um refor\u00e7o da\ncapacidade operacional da empresa e uma transforma\u00e7\u00e3o estrat\u00e9gica da sua posi\u00e7\u00e3o no\nmercado, alinhada com os des\u00edgnios da economia digital e da inova\u00e7\u00e3o.\n\nFundamenta\u00e7\u00e3o - N\u00ba de Produtos ou Servi\u00e7os com Forte Componente\nDigital/Tecnol\u00f3gica com Potencial de Escalabilidade (Preencher apenas se tiver\nsido selecionada a tipologia de Dota\u00e7\u00e3o Geral)\u200b\n(limite 2000)\n\nO projeto da Granter.ai prop\u00f5e o desenvolvimento de um produto - um Agente de\nIntelig\u00eancia Artificial (IA) para empresas - uma solu\u00e7\u00e3o digital inovadora e de forte\ncomponente tecnol\u00f3gica, que visa automatizar e otimizar todo o processo de prepara\u00e7\u00e3o de\ncandidaturas a fundos p\u00fablicos. Este produto \u00e9 uma solu\u00e7\u00e3o end-to-end que integra as mais\nrecentes metodologias de IA, como Redes Generativas Adversariais (GANs) e Adversarial\nIn-Context Learning (Adv-ICL), permitindo a gera\u00e7\u00e3o autom\u00e1tica de conte\u00fados\npersonalizados e alinhados com os requisitos espec\u00edficos de cada oportunidade de\nfinanciamento.\nA escalabilidade do produto ser\u00e1 garantida pela sua arquitetura modular e flex\u00edvel, que\npermite a r\u00e1pida adapta\u00e7\u00e3o a diferentes mercados internacionais, a partir de uma base\ns\u00f3lida constru\u00edda com tecnologia avan\u00e7ada. A ferramenta est\u00e1 projetada para operar em\nm\u00faltiplos idiomas e para se integrar de forma eficiente aos diferentes enquadramentos\nregulat\u00f3rios de cada pa\u00eds, atrav\u00e9s da liga\u00e7\u00e3o a diferentes bases de dados, com o objetivo de\nexpandir para mercados estrat\u00e9gicos como Espanha, It\u00e1lia e EUA.\nAl\u00e9m disso, o modelo de neg\u00f3cio adotado - baseado numa estrat\u00e9gia de subscri\u00e7\u00e3o anual assegura a escalabilidade financeira do produto, permitindo que a Granter.ai adapte a oferta\nde acordo com as necessidades de diferentes segmentos de clientes. Este modelo possibilita\na expans\u00e3o cont\u00ednua da base de clientes e garante um crescimento sustent\u00e1vel do produto,\ncom altas perspectivas de sucesso comercial.\nPortanto, o Agente de IA da Granter.ai vai ser um produto digital com forte potencial de\nescalabilidade, n\u00e3o s\u00f3 em termos de crescimento da base de clientes, mas tamb\u00e9m pela sua\ncapacidade de adapta\u00e7\u00e3o a diferentes mercados e necessidades, oferecendo uma solu\u00e7\u00e3o\ndiferenciada e de alto valor agregado para os especialistas e empresas que atuam no setor\nde financiamento p\u00fablico.\n\n\fTabela de Investimentos (AI Proposal)\nExpense category\n\nBudget allocated\n\nDetails\n\nAnswers\n\nCosts with Human\nResources\n\n20,000\u20ac\n\nNumber of new\nhires\n\nBased on\nGranter.ai's focus on\ninternal\ndevelopment and\ngiven the current\nteam composition,\nwe may anticipate\nthe hiring of 2-3\nnew software\ndevelopers to assist\nin this project.\n\nExpenses with\ntechnological\naccreditation of\nHuman Resources\n\n5,000\u20ac\n\nName of the\nplanned\ncertifications""
+219,"European Funds","Fund",""
+220,"Generative Adversarial Networks","Technology",""
+221,"Adversarial In-Context Learning","Technology",""
+222,"International Markets","Market",""
+223,"Subscription Business Model","Business model",""
+224,"Client Segments","Segment",""
+225,"Data Bases","Technology",""
+226,"Regulatory Frameworks","Concept",""
+227,"Growth Strategy","Strategy",""
+228,"Market Expansion","Strategy",""
+229,"Team Of Software Developers","Team",""
+230,"Certifications","Certification",""
+231,"Chunk_13","TextChunk",""5,000\u20ac\n\nName of the\nplanned\ncertifications\n\nConsidering the\nproject's focus on AI\ntechnology and the\ncomplexity of\ngrant-writing\nprocesses, we\npropose to certify\nthe team in\nAdvanced AI\n\n\fcourses, and\npotentially in\nspecialized grant\napplication\nprocedure courses.\nExpenses with\nExternal Services\n\n4,000\u20ac\n\nTypes of external\nservices planned\n\nEven though\nGranter.ai is focused\non internal\ndevelopment, we\nanticipate the need\nfor some external\nservices. These\ncould include\nspecialized legal\nadvice related to\npatent application\nand external\nsecurity audits for\nthe developed\nsoftware.\n\nExpenses with the\nacquisition or\nrenting of\nequipment\n\n5,000\u20ac\n\nName of the\nplanned\nacquisitions\n\nThis line includes\nexpenses with\npersonal computers\nfor the new hires\nand potential\nsoftware\nsubscriptions\nnecessary for the\nproject\ndevelopment, like\ncloud storage or\nspecialized AI\ndevelopment\ntools/subscriptions.\n\nExpenses with the\nprotection of\nintellectual\nproperty\n\n11,000\u20ac\n\nIntellectual\nproperty rights\n\nGiven the unique,\nproprietary nature\nof the software\nbeing developed, a\nlarge portion of the\nbudget will be\nallocated towards\n\n\fpatent-related\nexpenses, legal fees\nand advice to\nensure the\nprotection of\nintellectual\nproperty.""
+232,"Ai Certification","Grant",""
+233,"Advanced Ai","Person",""
+234,"External Services","Grant",""
+235,"Legal Advice","Grant",""
+236,"Security Audits","Grant",""
+237,"Equipment Acquisition","Grant",""
+238,"Personal Computers","Person",""
+239,"Software Subscriptions","Grant",""
+240,"Intellectual Property Rights","Grant",""
+241,"Patent Expenses","Grant",""
+242,"Legal Fees","Grant",""
+243,"Software Development Tools","Grant",""
 
-src,edge_attr,dst
-1,"CONTAINS_ENTITY",2
-1,"CONTAINS_ENTITY",3
-1,"CONTAINS_ENTITY",4
-1,"CONTAINS_ENTITY",5
-1,"CONTAINS_ENTITY",6
-1,"CONTAINS_ENTITY",7
-1,"CONTAINS_ENTITY",8
-1,"CONTAINS_ENTITY",9
-1,"CONTAINS_ENTITY",10
-1,"CONTAINS_ENTITY",11
-1,"CONTAINS_ENTITY",12
-1,"CONTAINS_ENTITY",13
-1,"CONTAINS_ENTITY",14
-1,"CONTAINS_ENTITY",15
-1,"CONTAINS_ENTITY",16
-2,"PROFESSOR",3
-2,"PROFESSOR",16
-2,"PROFESSOR",4
-6,"PROFESSOR",10
-6,"PROFESSOR",15
-6,"PROFESSOR",7
-10,"PROFESSOR",11
-12,"PROFESSOR",13
-12,"PROFESSOR",14
-16,"PROFESSOR",15
-17,"CONTAINS_ENTITY",2
-17,"CONTAINS_ENTITY",6
-17,"CONTAINS_ENTITY",18
-17,"CONTAINS_ENTITY",19
-17,"CONTAINS_ENTITY",20
-17,"CONTAINS_ENTITY",21
-17,"CONTAINS_ENTITY",22
-17,"CONTAINS_ENTITY",8
-17,"CONTAINS_ENTITY",9
-17,"CONTAINS_ENTITY",23
-17,"CONTAINS_ENTITY",24
-17,"CONTAINS_ENTITY",25
-17,"CONTAINS_ENTITY",26
-17,"CONTAINS_ENTITY",27
-17,"CONTAINS_ENTITY",28
-17,"CONTAINS_ENTITY",29
-17,"CONTAINS_ENTITY",30
-17,"CONTAINS_ENTITY",31
-17,"CONTAINS_ENTITY",32
-17,"CONTAINS_ENTITY",33
-17,"CONTAINS_ENTITY",34
-17,"CONTAINS_ENTITY",35
-17,"CONTAINS_ENTITY",36
-17,"CONTAINS_ENTITY",37
-17,"CONTAINS_ENTITY",38
-17,"CONTAINS_ENTITY",39
-17,"CONTAINS_ENTITY",40
-17,"CONTAINS_ENTITY",41
-17,"CONTAINS_ENTITY",42
-17,"CONTAINS_ENTITY",43
-2,"PROFESSOR",6
-2,"ACCESS",20
-6,"SERVES",18
-6,"SERVES",19
-6,"APPLIES_TO",21
-6,"TARGETS",22
-8,"INTEGRATED_IN",6
-9,"INTEGRATED_IN",6
-23,"USED_IN",6
-24,"APPLIED_IN",23
-25,"APPLIED_IN",23
-26,"SUPPORTS",6
-27,"CONNECTED_TO",6
-28,"EXPAND_IN",27
-29,"EXPAND_IN",27
-30,"EXPAND_IN",27
-31,"FACILITATES",21
-32,"SUPPORTS",31
-33,"PROMOTES",31
-34,"DRIVES",33
-35,"INFLUENCES",34
-36,"RELATES",37
-38,"STARTS",39
-39,"SUBMIT",40
-40,"LEADS_TO",41
-44,"CONTAINS_ENTITY",2
-44,"CONTAINS_ENTITY",45
-44,"CONTAINS_ENTITY",16
-44,"CONTAINS_ENTITY",46
-44,"CONTAINS_ENTITY",47
-44,"CONTAINS_ENTITY",48
-44,"CONTAINS_ENTITY",49
-44,"CONTAINS_ENTITY",10
-44,"CONTAINS_ENTITY",50
-44,"CONTAINS_ENTITY",51
-44,"CONTAINS_ENTITY",52
-44,"CONTAINS_ENTITY",53
-44,"CONTAINS_ENTITY",54
-44,"CONTAINS_ENTITY",55
-44,"CONTAINS_ENTITY",56
-44,"CONTAINS_ENTITY",57
-44,"CONTAINS_ENTITY",58
-44,"CONTAINS_ENTITY",59
-44,"CONTAINS_ENTITY",60
-44,"CONTAINS_ENTITY",61
-44,"CONTAINS_ENTITY",62
-44,"CONTAINS_ENTITY",63
-2,"PROFESSOR",45
-2,"DEVELOP",16
-2,"CREATE",46
-46,"INCLUDE",47
-47,"IDENTIFY",48
-47,"APPLY",48
-16,"EXPAND",49
-16,"DIVERSIFY",55
-16,"INCREASE",56
-10,"LOCALIZE",57
-10,"ADAPT",58
-10,"ENABLE",59
-54,"TRANSFORM",61
-16,"FUND",60
-16,"FULFILL",62
-16,"FORM",63
-64,"CONTAINS_ENTITY",65
-64,"CONTAINS_ENTITY",66
-64,"CONTAINS_ENTITY",67
-64,"CONTAINS_ENTITY",68
-64,"CONTAINS_ENTITY",69
-65,"RELATESTO",66
-66,"RELATESTO",67
-66,"RELATESTO",68
-66,"RELATESTO",69
-70,"CONTAINS_ENTITY",2
-70,"CONTAINS_ENTITY",66
-70,"CONTAINS_ENTITY",46
-70,"CONTAINS_ENTITY",71
-70,"CONTAINS_ENTITY",72
-70,"CONTAINS_ENTITY",6
-70,"CONTAINS_ENTITY",16
-70,"CONTAINS_ENTITY",73
-70,"CONTAINS_ENTITY",74
-70,"CONTAINS_ENTITY",75
-70,"CONTAINS_ENTITY",27
-70,"CONTAINS_ENTITY",10
-70,"CONTAINS_ENTITY",76
-70,"CONTAINS_ENTITY",77
-70,"CONTAINS_ENTITY",8
-70,"CONTAINS_ENTITY",9
-70,"CONTAINS_ENTITY",78
-70,"CONTAINS_ENTITY",15
-70,"CONTAINS_ENTITY",79
-70,"CONTAINS_ENTITY",80
-70,"CONTAINS_ENTITY",81
-70,"CONTAINS_ENTITY",82
-70,"CONTAINS_ENTITY",83
-70,"CONTAINS_ENTITY",84
-70,"CONTAINS_ENTITY",85
-70,"CONTAINS_ENTITY",86
-70,"CONTAINS_ENTITY",87
-70,"CONTAINS_ENTITY",88
-70,"CONTAINS_ENTITY",89
-70,"CONTAINS_ENTITY",90
-70,"CONTAINS_ENTITY",91
-70,"CONTAINS_ENTITY",18
-70,"CONTAINS_ENTITY",19
-70,"CONTAINS_ENTITY",92
-2,"PROFESSOR",66
-2,"DEVELOPS",6
-66,"HASCOMPONENT",46
-66,"HASCOMPONENT",71
-66,"HASCOMPONENT",72
-6,"DEVELOPS",16
-6,"SUPPORTS",73
-16,"DEVELOPS",10
-10,"CREATEDWITH",76
-10,"INCLUDES",77
-77,"USES",8
-77,"USES",9
-78,"ENABLES",77
-15,"RELATESTO",82
-82,"INCLUDES",86
-82,"INCLUDES",85
-82,"INCLUDES",87
-82,"IMPROVES",89
-82,"IMPROVES",90
-91,"SERVES",18
-91,"SERVES",19
-91,"ALIGNSWITH",92
-93,"CONTAINS_ENTITY",2
-93,"CONTAINS_ENTITY",94
-93,"CONTAINS_ENTITY",95
-93,"CONTAINS_ENTITY",96
-93,"CONTAINS_ENTITY",97
-93,"CONTAINS_ENTITY",98
-93,"CONTAINS_ENTITY",99
-93,"CONTAINS_ENTITY",100
-93,"CONTAINS_ENTITY",32
-93,"CONTAINS_ENTITY",101
-93,"CONTAINS_ENTITY",6
-93,"CONTAINS_ENTITY",16
-93,"CONTAINS_ENTITY",27
-93,"CONTAINS_ENTITY",102
-93,"CONTAINS_ENTITY",92
-2,"RELATESTO",94
-2,"RELATESTO",95
-2,"RELATESTO",96
-2,"RELATESTO",102
-2,"RELATESTO",92
-2,"PROFESSOR",27
-2,"RELATESTO",99
-2,"RELATESTO",100
-2,"RELATESTO",32
-2,"RELATESTO",101
-6,"PROFESSOR",16
-16,"RELATESTO",27
-16,"RELATESTO",102
-27,"RELATESTO",92
-103,"CONTAINS_ENTITY",2
-103,"CONTAINS_ENTITY",50
-103,"CONTAINS_ENTITY",104
-103,"CONTAINS_ENTITY",105
-103,"CONTAINS_ENTITY",66
-103,"CONTAINS_ENTITY",106
-103,"CONTAINS_ENTITY",20
-103,"CONTAINS_ENTITY",107
-103,"CONTAINS_ENTITY",108
-103,"CONTAINS_ENTITY",109
-103,"CONTAINS_ENTITY",110
-103,"CONTAINS_ENTITY",111
-2,"HASTEAM",50
-50,"HASSKILL",104
-50,"HASSKILL",105
-50,"WORKSON",66
-66,"INCLUDES",106
-66,"FUNDEDBY",20
-106,"REQUIRES",107
-106,"REQUIRES",108
-106,"REQUIRES",109
-106,"REQUIRES",110
-106,"REQUIRES",111
-112,"CONTAINS_ENTITY",113
-112,"CONTAINS_ENTITY",114
-112,"CONTAINS_ENTITY",115
-112,"CONTAINS_ENTITY",116
-112,"CONTAINS_ENTITY",117
-112,"CONTAINS_ENTITY",118
-112,"CONTAINS_ENTITY",119
-112,"CONTAINS_ENTITY",120
-112,"CONTAINS_ENTITY",121
-112,"CONTAINS_ENTITY",122
-112,"CONTAINS_ENTITY",123
-112,"CONTAINS_ENTITY",124
-112,"CONTAINS_ENTITY",125
-112,"CONTAINS_ENTITY",126
-112,"CONTAINS_ENTITY",127
-112,"CONTAINS_ENTITY",128
-112,"CONTAINS_ENTITY",129
-112,"CONTAINS_ENTITY",130
-112,"CONTAINS_ENTITY",131
-113,"PROFESSOR",114
-113,"PROFESSOR",115
-113,"MEMBER_OF",116
-113,"COLLABORATES_WITH",117
-117,"FOUNDED_BY",120
-117,"WORKS_AT",121
-117,"WORKED_AT",122
-123,"PROFESSOR",124
-125,"PROFESSOR",126
-125,"WORKED_AT",127
-128,"PROFESSOR",129
-128,"WORKED_AT",130
-128,"WORKED_AT",131
-132,"CONTAINS_ENTITY",133
-132,"CONTAINS_ENTITY",134
-132,"CONTAINS_ENTITY",135
-132,"CONTAINS_ENTITY",136
-133,"RELATESTO",134
-134,"RELATESTO",135
-135,"RELATESTO",136
-133,"RELATESTO",135
-137,"CONTAINS_ENTITY",2
-137,"CONTAINS_ENTITY",66
-137,"CONTAINS_ENTITY",50
-137,"CONTAINS_ENTITY",138
-137,"CONTAINS_ENTITY",27
-137,"CONTAINS_ENTITY",75
-137,"CONTAINS_ENTITY",139
-137,"CONTAINS_ENTITY",140
-137,"CONTAINS_ENTITY",141
-137,"CONTAINS_ENTITY",61
-137,"CONTAINS_ENTITY",142
-137,"CONTAINS_ENTITY",143
-66,"USES",139
-140,"CONTRIBUTESTO",66
-66,"DEVELOPS",138
-27,"AFFECTS",61
-75,"DRIVES",27
-142,"APPLIEDIN",66
-141,"INFLUENCES",143
-61,"CONTRIBUTESTO",141
-144,"CONTAINS_ENTITY",145
-144,"CONTAINS_ENTITY",146
-144,"CONTAINS_ENTITY",147
-144,"CONTAINS_ENTITY",148
-144,"CONTAINS_ENTITY",149
-144,"CONTAINS_ENTITY",150
-144,"CONTAINS_ENTITY",151
-144,"CONTAINS_ENTITY",152
-144,"CONTAINS_ENTITY",153
-144,"CONTAINS_ENTITY",154
-144,"CONTAINS_ENTITY",155
-144,"CONTAINS_ENTITY",156
-144,"CONTAINS_ENTITY",2
-144,"CONTAINS_ENTITY",157
-144,"CONTAINS_ENTITY",158
-144,"CONTAINS_ENTITY",159
-144,"CONTAINS_ENTITY",160
-144,"CONTAINS_ENTITY",161
-144,"CONTAINS_ENTITY",102
-144,"CONTAINS_ENTITY",28
-144,"CONTAINS_ENTITY",29
-144,"CONTAINS_ENTITY",30
-144,"CONTAINS_ENTITY",162
-144,"CONTAINS_ENTITY",163
-144,"CONTAINS_ENTITY",164
-144,"CONTAINS_ENTITY",165
-144,"CONTAINS_ENTITY",166
-144,"CONTAINS_ENTITY",167
-144,"CONTAINS_ENTITY",168
-144,"CONTAINS_ENTITY",169
-144,"CONTAINS_ENTITY",170
-144,"CONTAINS_ENTITY",171
-144,"CONTAINS_ENTITY",172
-144,"CONTAINS_ENTITY",173
-144,"CONTAINS_ENTITY",174
-144,"CONTAINS_ENTITY",175
-144,"CONTAINS_ENTITY",176
-145,"RELATESTO",147
-146,"RELATESTO",147
-147,"RELATESTO",148
-149,"RELATESTO",150
-149,"RELATESTO",151
-152,"RELATESTO",153
-153,"RELATESTO",154
-155,"RELATESTO",156
-2,"PROFESSOR",157
-157,"RELATESTO",158
-160,"RELATESTO",161
-102,"RELATESTO",28
-102,"RELATESTO",29
-102,"RELATESTO",30
-162,"RELATESTO",163
-164,"RELATESTO",165
-165,"RELATESTO",166
-166,"RELATESTO",167
-168,"RELATESTO",169
-170,"RELATESTO",163
-171,"RELATESTO",172
-172,"RELATESTO",173
-173,"RELATESTO",174
-175,"RELATESTO",172
-177,"CONTAINS_ENTITY",178
-177,"CONTAINS_ENTITY",179
-177,"CONTAINS_ENTITY",157
-177,"CONTAINS_ENTITY",180
-177,"CONTAINS_ENTITY",181
-178,"RELATESTO",157
-157,"RELATESTO",179
-180,"RELATESTO",181
-180,"RELATESTO",179
-178,"RELATESTO",180
-157,"RELATESTO",180
-182,"CONTAINS_ENTITY",2
-182,"CONTAINS_ENTITY",66
-182,"CONTAINS_ENTITY",183
-182,"CONTAINS_ENTITY",48
-182,"CONTAINS_ENTITY",184
-182,"CONTAINS_ENTITY",136
-182,"CONTAINS_ENTITY",185
-182,"CONTAINS_ENTITY",186
-182,"CONTAINS_ENTITY",187
-182,"CONTAINS_ENTITY",188
-182,"CONTAINS_ENTITY",189
-182,"CONTAINS_ENTITY",190
-182,"CONTAINS_ENTITY",191
-182,"CONTAINS_ENTITY",192
-182,"CONTAINS_ENTITY",193
-182,"CONTAINS_ENTITY",194
-182,"CONTAINS_ENTITY",195
-182,"CONTAINS_ENTITY",196
-182,"CONTAINS_ENTITY",197
-66,"HASAPPLICATION",183
-183,"RELATESTO",48
-183,"RELATESTO",184
-183,"RELATESTO",136
-183,"RELATESTO",185
-183,"RELATESTO",186
-183,"RELATESTO",187
-183,"RELATESTO",188
-183,"RELATESTO",189
-189,"HASAPPLICATION",190
-183,"RELATESTO",191
-183,"RELATESTO",192
-193,"FUNDEDBY",194
-194,"HASPROVENANCE",195
-194,"HASPROVENANCE",196
-194,"HASPROVENANCE",197
-198,"CONTAINS_ENTITY",199
-198,"CONTAINS_ENTITY",50
-198,"CONTAINS_ENTITY",200
-198,"CONTAINS_ENTITY",201
-198,"CONTAINS_ENTITY",202
-198,"CONTAINS_ENTITY",203
-198,"CONTAINS_ENTITY",204
-198,"CONTAINS_ENTITY",205
-198,"CONTAINS_ENTITY",206
-198,"CONTAINS_ENTITY",207
-198,"CONTAINS_ENTITY",208
-198,"CONTAINS_ENTITY",209
-198,"CONTAINS_ENTITY",210
-198,"CONTAINS_ENTITY",211
-199,"PROFESSOR",50
-199,"PROFESSOR",200
-199,"PROFESSOR",201
-202,"PROFESSOR",203
-202,"PROFESSOR",204
-205,"PROFESSOR",206
-205,"PROFESSOR",207
-208,"PROFESSOR",209
-208,"PROFESSOR",210
-208,"PROFESSOR",211
+src,edge_attr,dst,is_chunk_relation
+1,"CONTAINS_ENTITY",2,1
+1,"CONTAINS_ENTITY",3,1
+1,"CONTAINS_ENTITY",4,1
+1,"CONTAINS_ENTITY",5,1
+1,"CONTAINS_ENTITY",6,1
+1,"CONTAINS_ENTITY",7,1
+1,"CONTAINS_ENTITY",8,1
+1,"CONTAINS_ENTITY",9,1
+1,"CONTAINS_ENTITY",10,1
+1,"CONTAINS_ENTITY",11,1
+1,"CONTAINS_ENTITY",12,1
+1,"CONTAINS_ENTITY",13,1
+1,"CONTAINS_ENTITY",14,1
+1,"CONTAINS_ENTITY",15,1
+1,"CONTAINS_ENTITY",16,1
+1,"CONTAINS_ENTITY",17,1
+2,"PROFESSOR",3,0
+2,"PROFESSOR",4,0
+4,"RELATESTO",5,0
+4,"RELATESTO",6,0
+6,"INCLUDESPARTNER",7,0
+6,"INCLUDESPARTNER",8,0
+4,"HASAPPLICATION",9,0
+9,"RELATESTO",10,0
+9,"RELATESTO",11,0
+9,"RELATESTO",12,0
+13,"BELONGSTOAPPLICATION",14,0
+14,"RELATESTO",12,0
+14,"RELATESTO",5,0
+4,"RELATESTO",15,0
+4,"RELATESTO",16,0
+4,"RELATESTO",17,0
+18,"CONTAINS_ENTITY",2,1
+18,"CONTAINS_ENTITY",19,1
+18,"CONTAINS_ENTITY",20,1
+18,"CONTAINS_ENTITY",21,1
+18,"CONTAINS_ENTITY",22,1
+18,"CONTAINS_ENTITY",23,1
+18,"CONTAINS_ENTITY",24,1
+18,"CONTAINS_ENTITY",25,1
+18,"CONTAINS_ENTITY",26,1
+18,"CONTAINS_ENTITY",27,1
+18,"CONTAINS_ENTITY",28,1
+18,"CONTAINS_ENTITY",29,1
+18,"CONTAINS_ENTITY",30,1
+18,"CONTAINS_ENTITY",31,1
+18,"CONTAINS_ENTITY",32,1
+18,"CONTAINS_ENTITY",33,1
+18,"CONTAINS_ENTITY",34,1
+18,"CONTAINS_ENTITY",35,1
+18,"CONTAINS_ENTITY",36,1
+18,"CONTAINS_ENTITY",37,1
+18,"CONTAINS_ENTITY",38,1
+18,"CONTAINS_ENTITY",39,1
+2,"PROFESSOR",19,0
+19,"SERVES",20,0
+19,"SERVES",21,0
+19,"ACCESS",22,0
+19,"ACCESS",23,0
+19,"IDENTIFIES",24,0
+25,"INTEGRATED_IN",19,0
+26,"INTEGRATED_IN",19,0
+27,"USED_IN",19,0
+28,"APPLIED_TO",23,0
+29,"APPLIED_TO",22,0
+30,"SUPPORTS",19,0
+31,"EXPAND_TO",19,0
+32,"FUNDED_BY",22,0
+33,"FUNDED_BY",22,0
+34,"FUNDED_BY",22,0
+35,"SUPPORTS",37,0
+36,"SUPPORTS",37,0
+37,"INVOLVES",38,0
+37,"PARTICIPATES_IN",39,0
+40,"CONTAINS_ENTITY",2,1
+40,"CONTAINS_ENTITY",41,1
+40,"CONTAINS_ENTITY",37,1
+40,"CONTAINS_ENTITY",42,1
+40,"CONTAINS_ENTITY",43,1
+40,"CONTAINS_ENTITY",44,1
+40,"CONTAINS_ENTITY",45,1
+40,"CONTAINS_ENTITY",46,1
+40,"CONTAINS_ENTITY",47,1
+40,"CONTAINS_ENTITY",48,1
+40,"CONTAINS_ENTITY",49,1
+40,"CONTAINS_ENTITY",50,1
+40,"CONTAINS_ENTITY",51,1
+40,"CONTAINS_ENTITY",52,1
+40,"CONTAINS_ENTITY",53,1
+40,"CONTAINS_ENTITY",54,1
+40,"CONTAINS_ENTITY",55,1
+40,"CONTAINS_ENTITY",56,1
+2,"PROFESSOR",41,0
+2,"DEVELOPING",37,0
+2,"DEVELOPING",42,0
+42,"INCLUDES",43,0
+43,"UTILIZES",48,0
+48,"INCLUDES",49,0
+42,"CREATES",50,0
+50,"TRANSFORMS",51,0
+37,"ENHANCES",52,0
+42,"DIVERSIFIES",45,0
+42,"INCREASES",44,0
+42,"USES",54,0
+37,"FULFILLS",55,0
+42,"ENHANCES",53,0
+42,"FACILITATES",56,0
+57,"CONTAINS_ENTITY",58,1
+57,"CONTAINS_ENTITY",59,1
+57,"CONTAINS_ENTITY",60,1
+57,"CONTAINS_ENTITY",61,1
+58,"RELATESTO",59,0
+58,"HASGRANT",60,0
+59,"HASOBJECTIVE",61,0
+62,"CONTAINS_ENTITY",2,1
+62,"CONTAINS_ENTITY",59,1
+62,"CONTAINS_ENTITY",42,1
+62,"CONTAINS_ENTITY",63,1
+62,"CONTAINS_ENTITY",64,1
+62,"CONTAINS_ENTITY",65,1
+62,"CONTAINS_ENTITY",66,1
+62,"CONTAINS_ENTITY",46,1
+62,"CONTAINS_ENTITY",67,1
+62,"CONTAINS_ENTITY",68,1
+62,"CONTAINS_ENTITY",69,1
+62,"CONTAINS_ENTITY",25,1
+62,"CONTAINS_ENTITY",26,1
+62,"CONTAINS_ENTITY",70,1
+62,"CONTAINS_ENTITY",71,1
+62,"CONTAINS_ENTITY",72,1
+62,"CONTAINS_ENTITY",73,1
+62,"CONTAINS_ENTITY",74,1
+62,"CONTAINS_ENTITY",75,1
+62,"CONTAINS_ENTITY",76,1
+62,"CONTAINS_ENTITY",77,1
+62,"CONTAINS_ENTITY",20,1
+62,"CONTAINS_ENTITY",21,1
+62,"CONTAINS_ENTITY",78,1
+2,"PROFESSOR",59,0
+59,"INCLUDES",42,0
+42,"HASCOMPONENT",63,0
+42,"HASPOTENTIAL",64,0
+59,"INCLUDES",65,0
+65,"ISSUPPORTEDBY",66,0
+46,"DEVELOPEDWITH",67,0
+46,"HASFUNCTIONALITY",68,0
+68,"ENABLES",69,0
+68,"USES",25,0
+68,"USES",26,0
+59,"ADDRESSES",70,0
+70,"INCLUDES",71,0
+70,"INCLUDES",72,0
+70,"INCLUDES",73,0
+70,"INCLUDES",74,0
+70,"INCLUDES",75,0
+76,"ADDRESSES",77,0
+20,"SUPPORT",59,0
+21,"SUPPORT",59,0
+78,"INFLUENCES",59,0
+79,"CONTAINS_ENTITY",2,1
+79,"CONTAINS_ENTITY",80,1
+79,"CONTAINS_ENTITY",81,1
+79,"CONTAINS_ENTITY",82,1
+79,"CONTAINS_ENTITY",83,1
+79,"CONTAINS_ENTITY",84,1
+79,"CONTAINS_ENTITY",85,1
+79,"CONTAINS_ENTITY",86,1
+79,"CONTAINS_ENTITY",87,1
+79,"CONTAINS_ENTITY",88,1
+79,"CONTAINS_ENTITY",89,1
+79,"CONTAINS_ENTITY",90,1
+79,"CONTAINS_ENTITY",91,1
+79,"CONTAINS_ENTITY",92,1
+79,"CONTAINS_ENTITY",93,1
+79,"CONTAINS_ENTITY",94,1
+79,"CONTAINS_ENTITY",95,1
+79,"CONTAINS_ENTITY",96,1
+79,"CONTAINS_ENTITY",97,1
+79,"CONTAINS_ENTITY",32,1
+79,"CONTAINS_ENTITY",98,1
+79,"CONTAINS_ENTITY",99,1
+79,"CONTAINS_ENTITY",100,1
+79,"CONTAINS_ENTITY",101,1
+79,"CONTAINS_ENTITY",102,1
+79,"CONTAINS_ENTITY",103,1
+79,"CONTAINS_ENTITY",104,1
+79,"CONTAINS_ENTITY",78,1
+79,"CONTAINS_ENTITY",105,1
+79,"CONTAINS_ENTITY",106,1
+79,"CONTAINS_ENTITY",107,1
+79,"CONTAINS_ENTITY",108,1
+79,"CONTAINS_ENTITY",109,1
+79,"CONTAINS_ENTITY",110,1
+79,"CONTAINS_ENTITY",111,1
+79,"CONTAINS_ENTITY",112,1
+79,"CONTAINS_ENTITY",113,1
+79,"CONTAINS_ENTITY",114,1
+79,"CONTAINS_ENTITY",115,1
+79,"CONTAINS_ENTITY",116,1
+79,"CONTAINS_ENTITY",117,1
+2,"PRODUCES",80,0
+2,"EXPANDS_IN",228,0
+228,"EXPANDS_TO",85,0
+228,"EXPANDS_TO",86,0
+228,"EXPANDS_TO",87,0
+80,"BASED_ON",88,0
+88,"INCLUDES",89,0
+88,"SIMILAR_TO",90,0
+80,"CONTRIBUTES_TO",92,0
+92,"PROMOTES",93,0
+80,"USES",94,0
+94,"INCLUDES",95,0
+94,"INCLUDES",96,0
+94,"ENHANCES",97,0
+80,"FACILITATES",100,0
+100,"PROMOTES",101,0
+101,"ENCOURAGES",98,0
+80,"CONTRIBUTES_TO",99,0
+99,"ENHANCES",32,0
+80,"SET_BY",107,0
+80,"COMPETES_WITH",108,0
+80,"ESTABLISHES",109,0
+109,"IS_A",110,0
+80,"DRIVES",111,0
+112,"UTILIZES",113,0
+114,"LED_BY",115,0
+115,"POSSESSES",116,0
+115,"POSSESSES",117,0
+118,"CONTAINS_ENTITY",2,1
+118,"CONTAINS_ENTITY",119,1
+118,"CONTAINS_ENTITY",117,1
+118,"CONTAINS_ENTITY",120,1
+118,"CONTAINS_ENTITY",59,1
+118,"CONTAINS_ENTITY",121,1
+118,"CONTAINS_ENTITY",22,1
+118,"CONTAINS_ENTITY",95,1
+118,"CONTAINS_ENTITY",122,1
+118,"CONTAINS_ENTITY",123,1
+118,"CONTAINS_ENTITY",124,1
+118,"CONTAINS_ENTITY",125,1
+2,"HASTEAM",119,0
+119,"HASSKILL",117,0
+119,"HASSKILL",120,0
+59,"INCLUDES",121,0
+121,"FUNDEDBY",22,0
+121,"REQUIRESSKILL",95,0
+121,"REQUIRESSKILL",122,0
+121,"REQUIRESSKILL",123,0
+121,"REQUIRESSKILL",124,0
+121,"REQUIRESSKILL",125,0
+126,"CONTAINS_ENTITY",127,1
+126,"CONTAINS_ENTITY",128,1
+126,"CONTAINS_ENTITY",129,1
+126,"CONTAINS_ENTITY",130,1
+126,"CONTAINS_ENTITY",131,1
+126,"CONTAINS_ENTITY",132,1
+126,"CONTAINS_ENTITY",133,1
+126,"CONTAINS_ENTITY",134,1
+126,"CONTAINS_ENTITY",135,1
+126,"CONTAINS_ENTITY",136,1
+126,"CONTAINS_ENTITY",137,1
+126,"CONTAINS_ENTITY",138,1
+126,"CONTAINS_ENTITY",139,1
+126,"CONTAINS_ENTITY",140,1
+126,"CONTAINS_ENTITY",141,1
+126,"CONTAINS_ENTITY",142,1
+127,"PROFESSOR",128,0
+127,"PROFESSOR",129,0
+127,"MEMBER_OF",130,0
+127,"COLLABORATES_WITH",131,0
+131,"PROFESSOR",132,0
+131,"PROFESSOR",133,0
+131,"LEADS",134,0
+131,"INVOLVED_IN",135,0
+131,"INVOLVED_IN",136,0
+137,"PROFESSOR",138,0
+137,"COLLABORATES_WITH",127,0
+139,"PROFESSOR",140,0
+139,"WORKS_ON",134,0
+141,"PROFESSOR",142,0
+141,"LEADS",59,0
+143,"CONTAINS_ENTITY",144,1
+143,"CONTAINS_ENTITY",145,1
+143,"CONTAINS_ENTITY",146,1
+144,"RELATESTO",145,0
+145,"RELATESTO",146,0
+144,"RELATESTO",146,0
+147,"CONTAINS_ENTITY",2,1
+147,"CONTAINS_ENTITY",59,1
+147,"CONTAINS_ENTITY",148,1
+147,"CONTAINS_ENTITY",149,1
+147,"CONTAINS_ENTITY",150,1
+147,"CONTAINS_ENTITY",119,1
+147,"CONTAINS_ENTITY",151,1
+147,"CONTAINS_ENTITY",152,1
+147,"CONTAINS_ENTITY",153,1
+147,"CONTAINS_ENTITY",95,1
+147,"CONTAINS_ENTITY",154,1
+147,"CONTAINS_ENTITY",37,1
+147,"CONTAINS_ENTITY",155,1
+147,"CONTAINS_ENTITY",156,1
+147,"CONTAINS_ENTITY",157,1
+147,"CONTAINS_ENTITY",158,1
+147,"CONTAINS_ENTITY",159,1
+147,"CONTAINS_ENTITY",19,1
+147,"CONTAINS_ENTITY",160,1
+147,"CONTAINS_ENTITY",52,1
+147,"CONTAINS_ENTITY",161,1
+147,"CONTAINS_ENTITY",162,1
+147,"CONTAINS_ENTITY",163,1
+147,"CONTAINS_ENTITY",164,1
+147,"CONTAINS_ENTITY",99,1
+147,"CONTAINS_ENTITY",165,1
+147,"CONTAINS_ENTITY",166,1
+147,"CONTAINS_ENTITY",167,1
+147,"CONTAINS_ENTITY",168,1
+147,"CONTAINS_ENTITY",169,1
+147,"CONTAINS_ENTITY",170,1
+147,"CONTAINS_ENTITY",24,1
+147,"CONTAINS_ENTITY",171,1
+147,"CONTAINS_ENTITY",172,1
+147,"CONTAINS_ENTITY",173,1
+147,"CONTAINS_ENTITY",174,1
+147,"CONTAINS_ENTITY",175,1
+147,"CONTAINS_ENTITY",69,1
+59,"CONTRIBUTED_TO",148,0
+59,"CONTRIBUTED_TO",149,0
+149,"INCLUDES",150,0
+119,"HAS",151,0
+119,"DEVELOPS",152,0
+153,"SPECIALIZES_IN",95,0
+154,"USES",95,0
+37,"HAS",155,0
+37,"HAS",156,0
+37,"HAS",157,0
+119,"EXHIBITS",158,0
+119,"HAS",159,0
+19,"DRIVES",59,0
+160,"CONTRIBUTES",52,0
+37,"IMPROVES",161,0
+59,"ENHANCES",162,0
+163,"COMPETES_WITH",164,0
+164,"DRIVES",99,0
+165,"ENHANCES",166,0
+167,"INCLUDES",168,0
+168,"ENABLES",169,0
+168,"ENABLES",170,0
+24,"FACILITATES",171,0
+172,"COMPETES_WITH",173,0
+174,"CUSTOMIZES",175,0
+69,"USES",175,0
+176,"CONTAINS_ENTITY",177,1
+176,"CONTAINS_ENTITY",178,1
+176,"CONTAINS_ENTITY",179,1
+176,"CONTAINS_ENTITY",180,1
+176,"CONTAINS_ENTITY",181,1
+176,"CONTAINS_ENTITY",182,1
+176,"CONTAINS_ENTITY",183,1
+176,"CONTAINS_ENTITY",184,1
+176,"CONTAINS_ENTITY",185,1
+176,"CONTAINS_ENTITY",186,1
+176,"CONTAINS_ENTITY",187,1
+176,"CONTAINS_ENTITY",188,1
+176,"CONTAINS_ENTITY",2,1
+176,"CONTAINS_ENTITY",189,1
+176,"CONTAINS_ENTITY",190,1
+176,"CONTAINS_ENTITY",191,1
+176,"CONTAINS_ENTITY",192,1
+176,"CONTAINS_ENTITY",193,1
+176,"CONTAINS_ENTITY",194,1
+176,"CONTAINS_ENTITY",195,1
+176,"CONTAINS_ENTITY",196,1
+176,"CONTAINS_ENTITY",85,1
+176,"CONTAINS_ENTITY",86,1
+176,"CONTAINS_ENTITY",87,1
+176,"CONTAINS_ENTITY",197,1
+176,"CONTAINS_ENTITY",198,1
+176,"CONTAINS_ENTITY",199,1
+176,"CONTAINS_ENTITY",200,1
+176,"CONTAINS_ENTITY",201,1
+176,"CONTAINS_ENTITY",202,1
+176,"CONTAINS_ENTITY",203,1
+176,"CONTAINS_ENTITY",204,1
+176,"CONTAINS_ENTITY",205,1
+176,"CONTAINS_ENTITY",206,1
+176,"CONTAINS_ENTITY",207,1
+176,"CONTAINS_ENTITY",208,1
+176,"CONTAINS_ENTITY",209,1
+176,"CONTAINS_ENTITY",210,1
+176,"CONTAINS_ENTITY",211,1
+176,"CONTAINS_ENTITY",212,1
+177,"RELATESTO",179,0
+178,"RELATESTO",180,0
+179,"RELATESTO",180,0
+181,"RELATESTO",182,0
+181,"RELATESTO",183,0
+184,"RELATESTO",185,0
+185,"RELATESTO",186,0
+187,"RELATESTO",188,0
+2,"HASBUSINESSMODEL",189,0
+189,"HASSTRATEGY",190,0
+190,"HASACCESSLEVEL",191,0
+191,"SUPPORTS",192,0
+191,"SUPPORTS",193,0
+194,"TARGETS",195,0
+195,"HAS",196,0
+194,"TARGETS",85,0
+194,"TARGETS",86,0
+194,"TARGETS",87,0
+197,"ENABLES",198,0
+198,"SUPPORTS",199,0
+200,"SUPPORTS",201,0
+200,"ATTRACTS",202,0
+200,"SUPPORTS",203,0
+204,"SUPPORTS",205,0
+206,"SUPPORTS",200,0
+207,"PROTECTS",208,0
+208,"INCLUDES",209,0
+209,"SUPPORTS",210,0
+211,"RELATESTO",208,0
+212,"RELATESTO",204,0
+213,"CONTAINS_ENTITY",214,1
+213,"CONTAINS_ENTITY",215,1
+213,"CONTAINS_ENTITY",216,1
+213,"CONTAINS_ENTITY",217,1
+213,"CONTAINS_ENTITY",37,1
+214,"RELATESTO",216,0
+37,"RELATESTO",217,0
+37,"RELATESTO",215,0
+37,"RELATESTO",214,0
+218,"CONTAINS_ENTITY",2,1
+218,"CONTAINS_ENTITY",219,1
+218,"CONTAINS_ENTITY",66,1
+218,"CONTAINS_ENTITY",220,1
+218,"CONTAINS_ENTITY",221,1
+218,"CONTAINS_ENTITY",222,1
+218,"CONTAINS_ENTITY",85,1
+218,"CONTAINS_ENTITY",86,1
+218,"CONTAINS_ENTITY",87,1
+218,"CONTAINS_ENTITY",223,1
+218,"CONTAINS_ENTITY",224,1
+218,"CONTAINS_ENTITY",99,1
+218,"CONTAINS_ENTITY",11,1
+218,"CONTAINS_ENTITY",225,1
+218,"CONTAINS_ENTITY",226,1
+218,"CONTAINS_ENTITY",227,1
+218,"CONTAINS_ENTITY",228,1
+218,"CONTAINS_ENTITY",229,1
+218,"CONTAINS_ENTITY",230,1
+2,"RELATESTO",219,0
+2,"PROFESSOR",66,0
+66,"RELATESTO",220,0
+66,"RELATESTO",221,0
+66,"RELATESTO",222,0
+222,"RELATESTO",85,0
+222,"RELATESTO",86,0
+222,"RELATESTO",87,0
+66,"RELATESTO",223,0
+66,"RELATESTO",224,0
+66,"RELATESTO",99,0
+66,"RELATESTO",11,0
+66,"RELATESTO",225,0
+66,"RELATESTO",226,0
+66,"RELATESTO",227,0
+66,"RELATESTO",228,0
+229,"HASAPPLICATION",66,0
+231,"CONTAINS_ENTITY",232,1
+231,"CONTAINS_ENTITY",233,1
+231,"CONTAINS_ENTITY",234,1
+231,"CONTAINS_ENTITY",235,1
+231,"CONTAINS_ENTITY",236,1
+231,"CONTAINS_ENTITY",237,1
+231,"CONTAINS_ENTITY",238,1
+231,"CONTAINS_ENTITY",239,1
+231,"CONTAINS_ENTITY",240,1
+231,"CONTAINS_ENTITY",241,1
+231,"CONTAINS_ENTITY",242,1
+231,"CONTAINS_ENTITY",243,1
+232,"PROFESSOR",233,0
+234,"INCLUDES",235,0
+234,"INCLUDES",236,0
+237,"PROFESSOR",238,0
+237,"INCLUDES",239,0
+240,"PROFESSOR",241,0
+240,"INCLUDES",242,0
+240,"INCLUDES",243,0

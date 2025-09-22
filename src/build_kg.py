@@ -465,7 +465,7 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
     csv_data = []
     
     # Add header for nodes section
-    csv_data.append("node_id,node_attr,node_type,properties")
+    csv_data.append("node_id,node_attr,node_type,properties") 
     
     # Add nodes with their attributes
     for node in nodes:
@@ -475,10 +475,10 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
         is_chunk = hasattr(node, 'type') and node.type == "TextChunk"
         
         # Get node type
-        node_type = node.type if hasattr(node, 'type') and node.type else "Unknown"
+        node_type = node.type if hasattr(node, 'type') and node.type else "Unknown" 
         
         # Format node attribute
-        node_attr = f"{node_type}: {node.id}"
+        node_attr = f"{node.id}"
         
         # Get properties as JSON string
         properties = ""
@@ -496,7 +496,7 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
             except:
                 properties = str(node.properties)
         
-        csv_data.append(f'{node_id},"{node_attr}","{node_type}","{properties}"')
+        csv_data.append(f'{node_id},"{node_attr}","{node_type}","{properties}"') 
     
     # Add empty line separator
     csv_data.append("")

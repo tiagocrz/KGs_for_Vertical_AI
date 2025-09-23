@@ -1,0 +1,418 @@
+node_id,node_attr
+1,"Person: Granter.Ai"
+2,"Person: Technology Sector"
+3,"Person: Artificial Intelligence Solutions"
+4,"Person: Funding Programs"
+5,"Person: Research And Technological Development Activities"
+6,"Person: Generative Adversarial Networks (Gans)"
+7,"Person: Adversarial In-Context Learning (Adv-Icl)"
+8,"Person: Software"
+9,"Person: Knowledge Application"
+10,"Person: Market Adaptation"
+11,"Person: High-Tech Sector"
+12,"Person: Growth Potential"
+13,"Person: Startups"
+14,"Person: Ai Agent"
+15,"Person: Companies"
+16,"Person: Funding Application Process"
+17,"Person: Automation Methodologies"
+18,"Person: Public Funds"
+19,"Person: Optimized Content"
+20,"Person: Technology Development"
+21,"Person: Scalable Solution"
+22,"Person: Specialists"
+23,"Person: Funding Opportunities"
+24,"Person: Generative Adversarial Networks"
+25,"Person: Adv-Icl"
+26,"Person: Public Policies"
+27,"Person: Public Funds Policies"
+28,"Person: Market"
+29,"Person: Spain"
+30,"Person: Italy"
+31,"Person: Usa"
+32,"Person: Climate Transition"
+33,"Person: Sustainability Programs"
+34,"Person: Green Economy"
+35,"Person: Business Initiatives"
+36,"Person: Environmental Impact"
+37,"Person: Initial Growth Phase"
+38,"Person: December 2024"
+39,"Person: Companies Registered"
+40,"Person: Funding Applications"
+41,"Person: Funding Projects"
+42,"Person: Investment Rounds"
+43,"Person: €400,000"
+44,"Person: Quarterly Growth"
+45,"Person: Ani"
+46,"Person: Company"
+47,"Person: Product"
+48,"Person: Agente De Ia"
+49,"Person: Funds"
+50,"Person: Markets"
+51,"Person: Team"
+52,"Person: Knowledge"
+53,"Person: Methodologies"
+54,"Person: Solution"
+55,"Person: Internationalization"
+56,"Person: Growth Support"
+57,"Person: Expansion"
+58,"Person: Partnerships"
+59,"Concept: Support_For_Startup_Or_Growth"
+60,"Concept: Project"
+61,"Opportunity: Digital Product"
+62,"Opportunity: Technological Component"
+63,"Opportunity: Scalability Potential"
+64,"Opportunity: Funding Opportunity"
+65,"Opportunity: Public Funding"
+66,"Person: Internal Resources"
+67,"Opportunity: Ai Functionalities"
+68,"Opportunity: Gans"
+69,"Person: Financing Sector"
+70,"Opportunity: Innovation"
+71,"Opportunity: Digital Transformation"
+72,"Opportunity: R&D"
+73,"Opportunity: Knowledge Transfer"
+74,"Opportunity: Application Process"
+75,"Opportunity: Opportunity Identification"
+76,"Opportunity: Eligibility Analysis"
+77,"Opportunity: Application Writing"
+78,"Opportunity: Evaluation"
+79,"Opportunity: Automatic Submission"
+80,"Opportunity: Project Management"
+81,"Person: Business Ecosystem"
+82,"Opportunity: Public Funding Mechanisms"
+83,"Person: European Union"
+84,"Opportunity: Proposal Quality"
+85,"Person: Prr"
+86,"Geographiccriterion: Empresa 4.0"
+87,"Geographiccriterion: Saas Model"
+88,"Person: Artificial Intelligence"
+89,"Person: Automation"
+90,"Person: Digital Usability"
+91,"Person: Sustainable Financing Programs"
+92,"Person: Eco-Inovation"
+93,"Geographiccriterion: Portugal"
+94,"Person: Technology-Based Company"
+95,"Person: Growth Axis"
+96,"Person: Funding Consultancy Sector"
+97,"Person: Management Team"
+98,"Geographiccriterion: Capabilities"
+99,"Geographiccriterion: Software Engineering"
+100,"Geographiccriterion: Strategic Leadership"
+101,"Geographiccriterion: Product Management"
+102,"Geographiccriterion: Commercial Expansion"
+103,"Person: Bernardo Seixas"
+104,"Person: Ceo"
+105,"Person: Founder Of The Company"
+106,"Person: Uber Eats Portugal Team"
+107,"Person: Bernardo Tavares"
+108,"Person: Cofounder Of Granter.Ai"
+109,"Person: Cto Of Granter.Ai"
+110,"Person: Head Of Incubation At Demium Portugal"
+111,"Person: Cto Of Goparity"
+112,"Person: Bernardo Moutinho"
+113,"Person: Head Of Operations"
+114,"Person: Francisco Belo"
+115,"Person: Tech Lead At Granter.Ai"
+116,"Person: Francisco Meirelles"
+117,"Person: Head Of Sales"
+118,"Person: Startup"
+119,"Person: Multinational Company"
+120,"Person: Hr Tech Startup"
+121,"Person: Siemens"
+122,"Person: Otovo"
+123,"Person: Too Good To Go"
+124,"Concept: Digital Solutions"
+125,"Concept: Market Penetration"
+126,"Concept: User Acquisition"
+127,"Concept: Market Strategy"
+128,"Concept: Business"
+129,"Concept: Licenciamento"
+130,"Concept: Communication"
+131,"Concept: Value_Proposals"
+132,"Person: Front-End Developer"
+133,"Geographiccriterion: Competition"
+134,"Opportunity: Market Solutions"
+135,"Concept: Adaptability"
+136,"Concept: Intuitive_Interface"
+137,"Concept: Differentiation_Factor"
+138,"Concept: Customer_Retention_Satisfaction"
+139,"Concept: User_Experience"
+140,"Concept: Simplifies_Processes"
+141,"Concept: Enhances_Strategic_Quality"
+142,"Concept: Proposal_Structure"
+143,"Concept: Alignment_With_Eu_Goals"
+144,"Concept: Approval_Probability"
+145,"Concept: Funding"
+146,"Concept: Strategic_Support_Capability"
+147,"Concept: Artificial_Intelligence"
+148,"Concept: Business_Model"
+149,"Concept: Annual_Subscription_Strategy"
+150,"Concept: Access_Levels"
+151,"Concept: Market_Sustainability"
+152,"Concept: Market_Scalability"
+153,"Concept: Public_Funding_Demand"
+154,"Concept: Regulatory_Context"
+155,"Concept: Multilingual_Ai_Agent"
+156,"Concept: Internationalization_Potential"
+157,"Concept: Market_Leadership"
+158,"Concept: Brand_Awareness"
+159,"Concept: Strategic_Investment"
+160,"Concept: Sustainable_Growth"
+161,"Concept: Technological_Differentiation"
+162,"Concept: User_Centric_Approach"
+163,"Concept: International_Market_Strategy"
+164,"Concept: Intellectual_Property"
+165,"Concept: Software_Development"
+166,"Concept: Protection_Of_Methodologies"
+167,"Concept: Algorithm_Protection"
+168,"Concept: Innovation_Ecosystem"
+169,"Concept: Asset_Valuation"
+170,"Concept: Competitive_Advantage"
+171,"Concept: Long_Term_Vantage"
+172,"Concept: Technological_Advancement"
+173,"Concept: Product_Value"
+174,"Person: Ia-Based Enhancement"
+175,"Person: New Markets"
+176,"Person: Scalable Business Model"
+177,"Person: Digital Support For Funding Acquisition"
+178,"Product: Artificial Intelligence Agent"
+179,"Concept: Digital Solution"
+180,"Concept: Technology"
+181,"Concept: Countries"
+182,"Concept: Business Model"
+183,"Strategy: Subscription Strategy"
+184,"Concept: Client Segments"
+185,"Concept: Market Expansion"
+186,"Concept: Product Scalability"
+187,"Concept: Regulatory Frameworks"
+188,"Concept: Databases"
+189,"Document: Investment Table"
+190,"Cost: Costs With Human Resources"
+191,"Quantity: Number Of Hires"
+192,"Cost: Technological Accreditation"
+193,"Concept: Certifications"
+194,"Person: Ai_Certification"
+195,"Person: Granting_Process"
+196,"Person: External_Services"
+197,"Person: Legal_Advice"
+198,"Person: Security_Audits"
+199,"Person: Equipment_Acquisition"
+200,"Person: Software_Subscriptions"
+201,"Person: Intellectual_Property_Protection"
+202,"Person: Patent_Expenses"
+203,"Person: Legal_Fees"
+
+src,edge_attr,dst
+1,"PROFESSOR",2
+1,"PROFESSOR",3
+1,"PROFESSOR",4
+1,"PROFESSOR",5
+1,"PROFESSOR",6
+1,"PROFESSOR",7
+1,"PROFESSOR",8
+1,"PROFESSOR",9
+1,"PROFESSOR",10
+1,"PROFESSOR",11
+1,"PROFESSOR",12
+13,"PROFESSOR",14
+13,"PROFESSOR",15
+14,"PROFESSOR",16
+14,"PROFESSOR",17
+14,"PROFESSOR",18
+14,"PROFESSOR",19
+14,"PROFESSOR",4
+20,"PROFESSOR",21
+1,"PROFESSOR",14
+14,"ASSISTED_BY",22
+14,"USED_BY",15
+14,"ACCESS_TO",18
+14,"TARGETS",23
+14,"UTILIZES",24
+14,"UTILIZES",25
+14,"APPLIED_TO",26
+14,"APPLIED_TO",27
+28,"EXPANDS_TO",29
+28,"EXPANDS_TO",30
+28,"EXPANDS_TO",31
+32,"AFFECTS",33
+32,"AFFECTS",34
+35,"IMPACTS",36
+37,"STARTS_AT",38
+39,"STARTS_AT",38
+40,"SUBMITTED_BY",39
+41,"INVOLVES",40
+42,"RAISED_IN",43
+44,"CORRESPONDS_TO",43
+1,"PROFESSOR",45
+1,"DEVELOPS",46
+1,"CREATES",47
+47,"INCLUDES",48
+48,"TARGETS",49
+48,"TARGETS",50
+8,"DEVELOPED_BY",51
+8,"REQUIRES",52
+8,"USES",53
+54,"PROVIDES",48
+55,"ADAPTS_TO",48
+56,"SUPPORTS",46
+57,"DRIVES",46
+58,"ENABLES",46
+58,"RELATESTO",59
+59,"REFLECTS",60
+58,"SUPPORTS",60
+1,"PROPOSES",60
+60,"INCLUDES",61
+60,"INCLUDES",62
+60,"INCLUDES",63
+1,"DEVELOPS",14
+46,"SEEKING",64
+14,"SUPPORTS",65
+8,"DEVELOPED_WITH",66
+67,"UTILIZES",68
+67,"UTILIZES",25
+74,"INCLUDES",75
+74,"INCLUDES",76
+74,"INCLUDES",77
+74,"INCLUDES",78
+74,"INCLUDES",79
+60,"ADDRESSES",81
+82,"SERVES",22
+82,"SERVES",15
+83,"INFLUENCES",84
+84,"IMPROVES",74
+1,"RELATESTO",29
+1,"RELATESTO",30
+1,"RELATESTO",31
+1,"RELATESTO",93
+1,"RELATESTO",83
+1,"PROFESSOR",88
+1,"PROFESSOR",89
+1,"PROFESSOR",90
+1,"PROFESSOR",96
+1,"PROFESSOR",95
+1,"PROFESSOR",97
+1,"RELATESTO",87
+1,"RELATESTO",86
+1,"RELATESTO",13
+1,"RELATESTO",71
+1,"RELATESTO",92
+1,"RELATESTO",91
+1,"RELATESTO",94
+1,"RELATESTO",95
+1,"RELATESTO",96
+1,"HASTEAM",51
+1,"DEVELOPS",60
+60,"INCLUDES",14
+60,"FUNDEDBY",49
+51,"HASCAPABILITY",98
+98,"RELATEDTO",88
+98,"RELATEDTO",99
+98,"RELATEDTO",100
+98,"RELATEDTO",101
+98,"RELATEDTO",102
+103,"PROFESSOR",104
+103,"PROFESSOR",105
+103,"PROFESSOR",106
+107,"PROFESSOR",108
+107,"PROFESSOR",109
+107,"PROFESSOR",110
+107,"PROFESSOR",111
+112,"PROFESSOR",113
+112,"PROFESSOR",119
+114,"PROFESSOR",115
+114,"PROFESSOR",120
+114,"PROFESSOR",121
+116,"PROFESSOR",117
+116,"PROFESSOR",28
+116,"PROFESSOR",126
+116,"PROFESSOR",127
+46,"PROFESSOR",118
+46,"PROFESSOR",128
+54,"PROFESSOR",124
+14,"PROFESSOR",8
+28,"PROFESSOR",125
+28,"PROFESSOR",126
+28,"PROFESSOR",127
+128,"PROFESSOR",28
+129,"RELATESTO",130
+129,"RELATESTO",131
+130,"RELATESTO",131
+51,"BELONGS_TO",1
+132,"ADDS_TO",51
+60,"TARGETS",49
+60,"AIMED_AT",28
+46,"OWNS",1
+60,"DEVELOPS",124
+60,"CREATES",14
+46,"COMPETES_WITH",133
+60,"USES",53
+134,"TARGETS",28
+135,"PROVIDES",137
+136,"ENHANCES",138
+135,"ENABLED_BY",142
+142,"ENSURES",143
+143,"INCREASES",144
+145,"AFFECTS",144
+146,"UTILIZES",147
+1,"HAS",148
+148,"BASED_ON",149
+151,"ENHANCES",152
+93,"EXPANDS_TO",29
+29,"EXPANDS_TO",30
+30,"EXPANDS_TO",31
+153,"DRIVES",154
+155,"ENHANCES",156
+157,"REINFORCES",158
+157,"ATTRACTS",159
+157,"CONTRIBUTES_TO",160
+161,"SUPPORTS",162
+163,"DRIVES",157
+164,"PROTECTS",165
+165,"INCLUDES",166
+165,"INCLUDES",167
+166,"STRENGTHENS",168
+169,"VALUED_AT",164
+170,"CONTRIBUTED_BY",171
+172,"ENHANCES",173
+174,"RELATESTO",175
+176,"RELATESTO",175
+177,"RELATESTO",175
+177,"RELATESTO",176
+60,"DEVELOPES",178
+178,"AIMS",49
+178,"IS",179
+178,"USES",180
+180,"INCLUDES",53
+53,"INCLUDES",68
+53,"INCLUDES",25
+178,"OPERATES_IN",50
+50,"INCLUDES",181
+181,"INCLUDES",29
+181,"INCLUDES",30
+181,"INCLUDES",31
+178,"FOLLOWS",182
+182,"USES",183
+178,"SERVES",184
+178,"ENABLED_BY",185
+178,"HAS",186
+178,"ADAPTS_TO",187
+187,"LINKS_TO",188
+188,"EXPANDS_TO",29
+188,"EXPANDS_TO",30
+188,"EXPANDS_TO",31
+189,"INCLUDES",190
+190,"INVOLVES",191
+189,"INCLUDES",192
+192,"REQUIRES",193
+194,"RELATESTO",195
+196,"RELATESTO",197
+196,"RELATESTO",198
+199,"RELATESTO",200
+201,"RELATESTO",202
+201,"RELATESTO",203
+202,"RELATESTO",203
+195,"RELATESTO",196
+195,"RELATESTO",199
+195,"RELATESTO",200
+195,"RELATESTO",201

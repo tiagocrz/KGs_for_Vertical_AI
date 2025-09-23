@@ -5,15 +5,20 @@ from rdflib import Graph
 
 from langchain_openai import AzureChatOpenAI
 import os
-from dotenv import load_dotenv
-load_dotenv()
+# Import settings from the central configuration file
+from app_settings import (
+    AZURE_OPENAI_API_KEY,
+    AZURE_OPENAI_ENDPOINT,
+    AZURE_OPENAI_API_VERSION,
+    AZURE_DEPLOYMENT_GPT41_NANO
+)
 
 gpt41_nano = AzureChatOpenAI(
-    azure_deployment = os.getenv("AZURE_DEPLOYMENT_GPT41_NANO"),
-    api_version = os.getenv("AZURE_OPENAI_API_VERSION"),
-    azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key = os.getenv("AZURE_OPENAI_API_KEY"),
-    temperature = 0.0
+    azure_deployment = AZURE_DEPLOYMENT_GPT41_NANO,
+    api_version = AZURE_OPENAI_API_VERSION,
+    azure_endpoint = AZURE_OPENAI_ENDPOINT,
+    api_key = AZURE_OPENAI_API_KEY,
+    temperature = 0.3
 )
 
 prompt_c_step_1 = """Extract classes in ttl format from the following text, only return the created ttl code. 
@@ -259,7 +264,7 @@ def save_and_validate_ttl(ontology_string: str, filename: str = None):
         print(f"Invalid Turtle syntax: {error}")
         return None
     
-    output_dir = "output/ontologies/text"
+    output_dir = "results/ontologies/text"
     os.makedirs(output_dir, exist_ok=True)
     filepath = os.path.join(output_dir, filename)
     
@@ -361,9 +366,9 @@ if __name__ == "__main__":
         
     print(f"Successfully processed {len(text) - len(unsuccessful)} sentences.\n\nUnsuccessful sentences: {[text[i] for i, _ in unsuccessful]}")
 
-    ontology = gpt_results_to_ttl(relations, 'output/ontologies/text/text_ontology_val.txt')
+    ontology = gpt_results_to_ttl(relations, 'results/ontologies/text/text_ontology_val.txt')
 
-    #with open('output/ontologies/text/text_ontology_val.txt', 'r', encoding='utf-8') as f:
+    #with open('results/ontologies/text/text_ontology_val.txt', 'r', encoding='utf-8') as f:
     #    ontology = f.read()
 
     # Add prefixes since gpt_results_to_ttl doesn't include them

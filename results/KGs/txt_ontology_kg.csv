@@ -1,0 +1,869 @@
+node_id,node_attr,node_type,properties
+1,"TextChunk: Chunk_0","TextChunk","{"content": "Vouchers para Startups \u2013 Novos produtos\ndigitais/tecnol\u00f3gicos Granter.ai\nAtividade Econ\u00f3mica Princip...", "chunk_index": 0, "metadata": "{}"}"
+2,"Organization: Granter.Ai","Organization",""
+3,"Concept: Artificial Intelligence","Concept",""
+4,"Concept: Funding Programs","Concept",""
+5,"Concept: Gans","Concept",""
+6,"Concept: Adv-Icl","Concept",""
+7,"Concept: Software","Concept",""
+8,"Concept: Research And Development","Concept",""
+9,"Concept: Technology Sector","Concept",""
+10,"Organization: Startup","Organization",""
+11,"Product: Agente De Ia","Product",""
+12,"Organization: Companies","Organization",""
+13,"Concept: Funding Applications","Concept",""
+14,"Concept: Automation Processes","Concept",""
+15,"Concept: Content Generation","Concept",""
+16,"Concept: Innovation","Concept",""
+17,"Concept: Growth Potential","Concept",""
+18,"TextChunk: Chunk_1","TextChunk","{"content": "Fundamenta\u00e7\u00e3o dos Objectivos\u200b\n(limite 2000)\n\nA Granter.ai tem como miss\u00e3o democratizar e facilitar o...", "chunk_index": 1, "metadata": "{}"}"
+19,"Organization: Ganter.Ai","Organization",""
+20,"Concept: Mission","Concept",""
+21,"Concept: Democratize_Access_To_Public_Funds","Concept",""
+22,"Concept: Project","Concept",""
+23,"Concept: Ai Agent","Concept",""
+24,"Person: Specialists","Person",""
+25,"Concept: Funding_Opportunities","Concept",""
+26,"Concept: Methodologies","Concept",""
+27,"Concept: Generative Adversarial Networks","Concept",""
+28,"Concept: Adversarial In-Context Learning","Concept",""
+29,"Concept: Content_Generation","Concept",""
+30,"Concept: Research_Process","Concept",""
+31,"Concept: Model_Validation","Concept",""
+32,"Concept: Public_Policies","Concept",""
+33,"Concept: Public_Funds","Concept",""
+34,"Concept: Market_Impact","Concept",""
+35,"Concept: Scalability","Concept",""
+36,"Concept: Modular_Structure","Concept",""
+37,"Concept: Adaptability","Concept",""
+38,"Concept: Markets","Concept",""
+39,"Concept: Markets_In_Europe_And_Usa","Concept",""
+40,"Location: Spain","Location",""
+41,"Location: Italy","Location",""
+42,"Location: Usa","Location",""
+43,"Concept: Climate_Transition","Concept",""
+44,"Concept: Sustainability_Programs","Concept",""
+45,"Concept: Green_Economy","Concept",""
+46,"Concept: Business_Initiatives","Concept",""
+47,"Concept: Environmental_Impact","Concept",""
+48,"Concept: Economic_Ecosystem","Concept",""
+49,"Concept: Support_Startup_Growth","Concept",""
+50,"Concept: Initial_Phase","Concept",""
+51,"Event: Activity_Start","Event",""
+52,"Date: December_2024","Date",""
+53,"Concept: Traction_Signs","Concept",""
+54,"Organization: Registered_Companies","Organization",""
+55,"Organization: 2500_Companies","Organization",""
+56,"Concept: Submissions","Concept",""
+57,"Concept: 150_Applications","Concept",""
+58,"Concept: Funding_Volume","Concept",""
+59,"Amount: 20_Million_Euros","Amount",""
+60,"Concept: Investment_Rounds","Concept",""
+61,"Concept: Funding","Concept",""
+62,"Amount: €400,000","Amount",""
+63,"Concept: Growth_Rate","Concept",""
+64,"Percentage: Quarterly_Growth","Percentage",""
+65,"Percentage: 45%","Percentage",""
+66,"TextChunk: Chunk_2","TextChunk","{"content": "crescimento a Granter.ai est\u00e1 atualmente a desenvolver o processo para obten\u00e7\u00e3o do\nreconhecimento de...", "chunk_index": 2, "metadata": "{}"}"
+67,"Organization: Ani","Organization",""
+68,"Concept: Product Digital Inovador","Concept",""
+69,"Concept: Fundos Públicos","Concept",""
+70,"Market: Market National","Market",""
+71,"Market: Market International","Market",""
+72,"Country: Espanha","Country",""
+73,"Country: Itália","Country",""
+74,"Country: Eua","Country",""
+75,"Concept: Software Proprietário","Concept",""
+76,"Concept: Knowledge Technical Advanced","Concept",""
+77,"Technology: Redes Generativas Adversariais (Gans)","Technology",""
+78,"Technology: Adversarial In-Context Learning (Adv-Icl)","Technology",""
+79,"Concept: Solution Robusta","Concept",""
+80,"Concept: Solution Intuitiva","Concept",""
+81,"Concept: Solution Eficaz","Concept",""
+82,"Sector: Sector","Sector",""
+83,"Concept: Candidaturas A Fundos Públicos","Concept",""
+84,"Concept: Modelo De Licenciamento Escalável","Concept",""
+85,"Concept: Idiomas","Concept",""
+86,"Concept: Enquadramentos Jurídicos E Operacionais","Concept",""
+87,"Concept: Países","Concept",""
+88,"Support_type: Apoio Ao Arranque Ou Ao Crescimento","Support_type",""
+89,"Concept: Missão Da Empresa","Concept",""
+90,"Concept: Expansão Da Empresa","Concept",""
+91,"Concept: Parcerias","Concept",""
+92,"TextChunk: Chunk_3","TextChunk","{"content": "parcerias.\nFace ao exposto, considera-se que a tipologia \u201cApoio ao arranque ou ao crescimento\u201d \u00e9 a q...", "chunk_index": 3, "metadata": "{}"}"
+93,"Concept: Support For Startup Or Growth","Concept",""
+94,"TextChunk: Chunk_4","TextChunk","{"content": "alavanca necess\u00e1ria para consolidar o posicionamento competitivo da Granter.ai e acelerar o\nseu perc...", "chunk_index": 4, "metadata": "{}"}"
+95,"Concept: Public Funding Applications","Concept",""
+96,"Concept: Digital Product","Concept",""
+97,"Concept: Technological Component","Concept",""
+98,"Concept: Scalability Potential","Concept",""
+99,"Concept: Digital Transformation","Concept",""
+100,"Concept: Internal Resources","Concept",""
+101,"Concept: Ai Functionalities","Concept",""
+102,"Concept: Automatic And Personalized Application Generation","Concept",""
+103,"Technology: Generative Adversarial Networks (Gans)","Technology",""
+104,"Concept: Funding Notices","Concept",""
+105,"Concept: Market","Concept",""
+106,"Concept: Research And Development (R&D)","Concept",""
+107,"Concept: Knowledge Transfer","Concept",""
+108,"Concept: Application Process","Concept",""
+109,"Concept: Opportunities Identification","Concept",""
+110,"Concept: Eligibility Analysis","Concept",""
+111,"Concept: Application Writing","Concept",""
+112,"Concept: Application Evaluation","Concept",""
+113,"Concept: Automated Submission","Concept",""
+114,"Concept: Project Management","Concept",""
+115,"Concept: Business Ecosystem","Concept",""
+116,"Concept: Public Funding Mechanisms","Concept",""
+117,"Concept: Automation And Simplification","Concept",""
+118,"Concept: Productivity Increase","Concept",""
+119,"Concept: Error Reduction","Concept",""
+120,"Concept: Efficiency Improvement","Concept",""
+121,"Concept: Success Rate","Concept",""
+122,"Concept: Strategic Support","Concept",""
+123,"Concept: European Union Objectives","Concept",""
+124,"Concept: Project Quality","Concept",""
+125,"TextChunk: Chunk_5","TextChunk","{"content": "Este novo produto ser\u00e1 desenhado para responder a uma multiplicidade de contextos e\nperfis de utiliz...", "chunk_index": 5, "metadata": "{}"}"
+126,"Organization: Prr","Organization",""
+127,"Initiative: Empresas 4.0","Initiative",""
+128,"Business model: Saas","Business model",""
+129,"Technology: Automation","Technology",""
+130,"Concept: Usability","Concept",""
+131,"Concept: Digital Transition","Concept",""
+132,"Program: Sustainability Programs","Program",""
+133,"Concept: Eco-Innovation","Concept",""
+134,"Concept: Funding Access","Concept",""
+135,"Concept: Business Models","Concept",""
+136,"Organization: Startups","Organization",""
+137,"Country: Portugal","Country",""
+138,"Organization: European Union","Organization",""
+139,"Organization: Technology-Based Company","Organization",""
+140,"Concept: Growth","Concept",""
+141,"Organization: Management Team","Organization",""
+142,"Skill: Technological Skills","Skill",""
+143,"Skill: Management Skills","Skill",""
+144,"TextChunk: Chunk_6","TextChunk","{"content": "A Granter.ai re\u00fane uma equipa de gest\u00e3o altamente qualificada, com compet\u00eancias t\u00e9cnicas e\nde gest\u00e3o...", "chunk_index": 6, "metadata": "{}"}"
+145,"Group: Highly Qualified Management Team","Group",""
+146,"Concept: Technical Skills","Concept",""
+147,"Concept: Project Development And Implementation","Concept",""
+148,"Project: Ai Agent Development","Project",""
+149,"Concept: Public Funds","Concept",""
+150,"Concept: Software Engineering","Concept",""
+151,"Concept: Strategic Leadership","Concept",""
+152,"Concept: Product Management","Concept",""
+153,"Concept: Commercial Expansion","Concept",""
+154,"Group: Founding Team","Group",""
+155,"TextChunk: Chunk_7","TextChunk","{"content": "estas compet\u00eancias, estando os pap\u00e9is claramente distribu\u00eddos e alinhados com os objetivos\ndo projet...", "chunk_index": 7, "metadata": "{}"}"
+156,"Person: Bernardo Seixas","Person",""
+157,"Role: Ceo","Role",""
+158,"Role: Founder","Role",""
+159,"Organization: Uber Eats Portugal Team","Organization",""
+160,"Organization: Three Startups","Organization",""
+161,"Concept: Experience In Sales B2B And Team Management","Concept",""
+162,"Concept: Strategy Definition","Concept",""
+163,"Concept: Operation Management","Concept",""
+164,"Concept: International Growth Leadership","Concept",""
+165,"Concept: Client Contact Experience","Concept",""
+166,"Concept: Digital Solutions Positioning","Concept",""
+167,"Person: Bernardo Tavares","Person",""
+168,"Role: Cofounder","Role",""
+169,"Role: Cto Of Granter.Ai","Role",""
+170,"Concept: Chief Technology Officer In Startups And Scale-Ups","Concept",""
+171,"Role: Head Of Incubation At Demium Portugal","Role",""
+172,"Role: Cto Of Goparity","Role",""
+173,"Concept: Management Of Technical Teams","Concept",""
+174,"Concept: System Architecture","Concept",""
+175,"Concept: Digital Product Development","Concept",""
+176,"Concept: Technology Planning And Execution","Concept",""
+177,"Concept: Ai Approaches Including Gans And Adv-Icl","Concept",""
+178,"Concept: Software Development Supervision","Concept",""
+179,"Person: Bernardo Moutinho","Person",""
+180,"Role: Head Of Operations","Role",""
+181,"Concept: Operational Management","Concept",""
+182,"Concept: Ai Agent Technical Output Enhancement","Concept",""
+183,"Concept: Management And Leadership Experience In Multinational Companies","Concept",""
+184,"Concept: International Expansion Consulting","Concept",""
+185,"Person: Francisco Belo","Person",""
+186,"Role: Tech Lead At Granter.Ai","Role",""
+187,"Concept: Software Development Experience","Concept",""
+188,"Role: Former Cto In Hr Tech Startup","Role",""
+189,"Role: Worked At Siemens In Networks And Cybersecurity","Role",""
+190,"Concept: Implementation Of Ai Agent Functionalities","Concept",""
+191,"Concept: Ai Model Integration","Concept",""
+192,"Concept: Secure And Scalable Development Practices","Concept",""
+193,"Concept: Complex Business Environments Experience","Concept",""
+194,"Person: Francisco Meirelles","Person",""
+195,"Role: Head Of Sales","Role",""
+196,"Concept: Sales And Strategic Marketing Experience","Concept",""
+197,"Organization: Companies Otovo And Too Good To Go","Organization",""
+198,"Concept: Market Penetration","Concept",""
+199,"Concept: User Acquisition Strategies","Concept",""
+200,"Concept: Package Definition","Concept",""
+201,"TextChunk: Chunk_8","TextChunk","{"content": "licenciamento. A sua experi\u00eancia na comunica\u00e7\u00e3o de propostas de valor tecnol\u00f3gicas junto...", "chunk_index": 8, "metadata": "{}"}"
+202,"Concept: Licenciamento","Concept",""
+203,"Concept: Communication","Concept",""
+204,"Concept: Value Propositions","Concept",""
+205,"Concept: Technology","Concept",""
+206,"TextChunk: Chunk_9","TextChunk","{"content": "de diferentes segmentos de mercado \u00e9 essencial para assegurar o sucesso comercial do\nprojeto.\nEste c...", "chunk_index": 9, "metadata": "{}"}"
+207,"Concept: Market Segments","Concept",""
+208,"Concept: Know-How Technical","Concept",""
+209,"Concept: Digital Markets","Concept",""
+210,"Person: Team","Person",""
+211,"Person: Core Team","Person",""
+212,"Concept: Digital Products Creation And Implementation Experience","Concept",""
+213,"Person: Front-End Developer With Ai Specialization","Person",""
+214,"Concept: Digital Tool","Concept",""
+215,"Concept: Company Growth","Concept",""
+216,"Concept: Competitiveness Of Beneficiaries","Concept",""
+217,"Concept: Market Competition","Concept",""
+218,"Concept: Technological Solutions For Consulting","Concept",""
+219,"Concept: Funds Application Preparation Agent","Concept",""
+220,"Concept: Advanced Methodologies (Gans, Adv-Icl)","Concept",""
+221,"Concept: Market Data Bases Or Generic Models","Concept",""
+222,"Concept: Interactive Platform","Concept",""
+223,"Concept: User Profile And Objectives","Concept",""
+224,"TextChunk: Chunk_10","TextChunk","{"content": "capacidade de adapta\u00e7\u00e3o din\u00e2mica, aliada a uma interface intuitiva e funcional, cria um claro\nfator ...", "chunk_index": 10, "metadata": "{}"}"
+225,"Concept: Intuitive_Interface","Concept",""
+226,"Concept: Differentiation_Factor","Concept",""
+227,"Concept: Customer_Satisfaction","Concept",""
+228,"Concept: User_Experience","Concept",""
+229,"Concept: Complex_Processes","Concept",""
+230,"Concept: Strategic_Quality","Concept",""
+231,"Concept: Project_Impact","Concept",""
+232,"Person: End_Users","Person",""
+233,"Concept: Solution","Concept",""
+234,"Concept: Processes","Concept",""
+235,"Concept: Strategic_Alignment","Concept",""
+236,"Concept: Eu_Goals","Concept",""
+237,"Concept: Approval_Probabilities","Concept",""
+238,"Concept: Strategic_Support","Concept",""
+239,"Concept: Artificial_Intelligence","Concept",""
+240,"Organization: Partner","Organization",""
+241,"Person: Clients","Person",""
+242,"Concept: Business_Model","Concept",""
+243,"Concept: Subscription_Strategy","Concept",""
+244,"Concept: Market_Needs","Concept",""
+245,"Concept: Regulatory_Context","Concept",""
+246,"Concept: Multilingual_Capability","Concept",""
+247,"Concept: Legal_Frameworks","Concept",""
+248,"Concept: Market_Internationalization","Concept",""
+249,"Concept: Digital_Product","Concept",""
+250,"Concept: Market_Leadership","Concept",""
+251,"Concept: Brand_Awareness","Concept",""
+252,"Concept: Investment","Concept",""
+253,"Concept: Technology_Differentiation","Concept",""
+254,"Concept: User_Centric_Approach","Concept",""
+255,"Concept: International_Market_Strategy","Concept",""
+256,"Concept: Intellectual_Property","Concept",""
+257,"Concept: Software_Development","Concept",""
+258,"Concept: Algorithms","Concept",""
+259,"Concept: Innovation_Ecosystem","Concept",""
+260,"Concept: Assets_Protection","Concept",""
+261,"Concept: Competitive_Advantage","Concept",""
+262,"Concept: Long_Term_Vantage","Concept",""
+263,"Concept: Technological_Advancement","Concept",""
+264,"Concept: Product_Value","Concept",""
+265,"TextChunk: Chunk_11","TextChunk","{"content": "acrescentado com base em IA; aceder a novos mercados atrav\u00e9s de um modelo de neg\u00f3cio\nescal\u00e1vel; posi...", "chunk_index": 11, "metadata": "{}"}"
+266,"Concept: Ia","Concept",""
+267,"Concept: New_Markets","Concept",""
+268,"Concept: Scalable_Business_Model","Concept",""
+269,"Concept: Digital_Support_For_Funding","Concept",""
+270,"TextChunk: Chunk_12","TextChunk","{"content": "europeu. A Granter.ai acredita que a implementa\u00e7\u00e3o do projeto se vai traduzir numa\nrevolu\u00e7\u00e3o no pano...", "chunk_index": 12, "metadata": "{}"}"
+271,"Product: Artificial Intelligence Agent","Product",""
+272,"Concept: Ai Methodologies","Concept",""
+273,"Concept: Digital Solution","Concept",""
+274,"Concept: Market Adaptation","Concept",""
+275,"Concept: International Markets","Concept",""
+276,"Concept: Regulatory Frameworks","Concept",""
+277,"Concept: Database Integration","Concept",""
+278,"Concept: Subscription Model","Concept",""
+279,"Concept: Customer Base","Concept",""
+280,"Sector: Public Funding Sector","Sector",""
+281,"Document: Investment Table","Document",""
+282,"Concept: Budget Allocation","Concept",""
+283,"Cost: Human Resources Costs","Cost",""
+284,"Person: Software Developers","Person",""
+285,"Concept: Certifications","Concept",""
+286,"TextChunk: Chunk_13","TextChunk","{"content": "5,000\u20ac\n\nName of the\nplanned\ncertifications\n\nConsidering the\nproject's focus on AI\ntechnology and the...", "chunk_index": 13, "metadata": "{}"}"
+287,"First-level entity: Ai Certification","First-level entity",""
+288,"Second-level entity: Advanced Ai Courses","Second-level entity",""
+289,"Second-level entity: Grant Application Courses","Second-level entity",""
+290,"First-level entity: External Services","First-level entity",""
+291,"Second-level entity: Legal Advice","Second-level entity",""
+292,"Second-level entity: Security Audits","Second-level entity",""
+293,"First-level entity: Equipment","First-level entity",""
+294,"Second-level entity: Personal Computers","Second-level entity",""
+295,"Second-level entity: Software Subscriptions","Second-level entity",""
+296,"First-level entity: Intellectual Property Rights","First-level entity",""
+297,"Second-level entity: Patent Expenses","Second-level entity",""
+298,"Second-level entity: Legal Fees","Second-level entity",""
+
+src,edge_attr,dst,is_chunk_relation
+1,"CONTAINS_ENTITY",2,1
+1,"CONTAINS_ENTITY",3,1
+1,"CONTAINS_ENTITY",4,1
+1,"CONTAINS_ENTITY",5,1
+1,"CONTAINS_ENTITY",6,1
+1,"CONTAINS_ENTITY",7,1
+1,"CONTAINS_ENTITY",8,1
+1,"CONTAINS_ENTITY",9,1
+1,"CONTAINS_ENTITY",10,1
+1,"CONTAINS_ENTITY",11,1
+1,"CONTAINS_ENTITY",12,1
+1,"CONTAINS_ENTITY",13,1
+1,"CONTAINS_ENTITY",14,1
+1,"CONTAINS_ENTITY",15,1
+1,"CONTAINS_ENTITY",16,1
+1,"CONTAINS_ENTITY",17,1
+2,"ENGAGES_IN",3,0
+2,"DEVELOPS",4,0
+3,"USES",5,0
+3,"USES",6,0
+11,"AIMS_AT",12,0
+11,"AIMS_AT",13,0
+11,"ENHANCES",14,0
+11,"ENHANCES",15,0
+8,"INCLUDES",7,0
+7,"DRIVES",16,0
+9,"ENABLED_BY",17,0
+10,"DEVELOPS",11,0
+18,"CONTAINS_ENTITY",19,1
+18,"CONTAINS_ENTITY",20,1
+18,"CONTAINS_ENTITY",21,1
+18,"CONTAINS_ENTITY",22,1
+18,"CONTAINS_ENTITY",23,1
+18,"CONTAINS_ENTITY",24,1
+18,"CONTAINS_ENTITY",12,1
+18,"CONTAINS_ENTITY",25,1
+18,"CONTAINS_ENTITY",26,1
+18,"CONTAINS_ENTITY",27,1
+18,"CONTAINS_ENTITY",5,1
+18,"CONTAINS_ENTITY",28,1
+18,"CONTAINS_ENTITY",6,1
+18,"CONTAINS_ENTITY",29,1
+18,"CONTAINS_ENTITY",30,1
+18,"CONTAINS_ENTITY",31,1
+18,"CONTAINS_ENTITY",32,1
+18,"CONTAINS_ENTITY",33,1
+18,"CONTAINS_ENTITY",34,1
+18,"CONTAINS_ENTITY",35,1
+18,"CONTAINS_ENTITY",36,1
+18,"CONTAINS_ENTITY",37,1
+18,"CONTAINS_ENTITY",38,1
+18,"CONTAINS_ENTITY",39,1
+18,"CONTAINS_ENTITY",40,1
+18,"CONTAINS_ENTITY",41,1
+18,"CONTAINS_ENTITY",42,1
+18,"CONTAINS_ENTITY",43,1
+18,"CONTAINS_ENTITY",44,1
+18,"CONTAINS_ENTITY",45,1
+18,"CONTAINS_ENTITY",46,1
+18,"CONTAINS_ENTITY",47,1
+18,"CONTAINS_ENTITY",48,1
+18,"CONTAINS_ENTITY",49,1
+18,"CONTAINS_ENTITY",50,1
+18,"CONTAINS_ENTITY",51,1
+18,"CONTAINS_ENTITY",52,1
+18,"CONTAINS_ENTITY",53,1
+18,"CONTAINS_ENTITY",54,1
+18,"CONTAINS_ENTITY",55,1
+18,"CONTAINS_ENTITY",56,1
+18,"CONTAINS_ENTITY",57,1
+18,"CONTAINS_ENTITY",58,1
+18,"CONTAINS_ENTITY",59,1
+18,"CONTAINS_ENTITY",60,1
+18,"CONTAINS_ENTITY",61,1
+18,"CONTAINS_ENTITY",62,1
+18,"CONTAINS_ENTITY",63,1
+18,"CONTAINS_ENTITY",64,1
+18,"CONTAINS_ENTITY",65,1
+19,"HAS_MISSION",20,0
+20,"AIMS",21,0
+19,"HAS_PROJECT",22,0
+22,"INCLUDES",23,0
+23,"USED_BY",24,0
+23,"USED_BY",12,0
+23,"AIMS_AT",25,0
+23,"USES",26,0
+26,"INCLUDES",27,0
+26,"INCLUDES",28,0
+23,"APPLIES",29,0
+30,"INVOLVES",31,0
+23,"ADAPTS_TO",32,0
+23,"USES",33,0
+23,"AIMS_AT",34,0
+23,"HAS",35,0
+35,"FEATURES",36,0
+35,"FEATURES",37,0
+38,"INCLUDES",39,0
+39,"INCLUDES",40,0
+39,"INCLUDES",41,0
+39,"INCLUDES",42,0
+43,"SUPPORTS",44,0
+43,"SUPPORTS",45,0
+46,"AIMS_AT",47,0
+47,"AFFECTS",48,0
+49,"OCCURS_IN",50,0
+50,"BEGINS",51,0
+51,"OCCURS_IN",52,0
+53,"INDICATES",54,0
+54,"INCLUDES",55,0
+56,"INCLUDES",57,0
+58,"AMOUNT_OF",59,0
+60,"INCLUDES",61,0
+61,"AMOUNT_OF",62,0
+63,"MEASURED_BY",64,0
+64,"EQUALS",65,0
+66,"CONTAINS_ENTITY",2,1
+66,"CONTAINS_ENTITY",67,1
+66,"CONTAINS_ENTITY",68,1
+66,"CONTAINS_ENTITY",11,1
+66,"CONTAINS_ENTITY",69,1
+66,"CONTAINS_ENTITY",70,1
+66,"CONTAINS_ENTITY",71,1
+66,"CONTAINS_ENTITY",72,1
+66,"CONTAINS_ENTITY",73,1
+66,"CONTAINS_ENTITY",74,1
+66,"CONTAINS_ENTITY",75,1
+66,"CONTAINS_ENTITY",76,1
+66,"CONTAINS_ENTITY",77,1
+66,"CONTAINS_ENTITY",78,1
+66,"CONTAINS_ENTITY",79,1
+66,"CONTAINS_ENTITY",80,1
+66,"CONTAINS_ENTITY",81,1
+66,"CONTAINS_ENTITY",82,1
+66,"CONTAINS_ENTITY",83,1
+66,"CONTAINS_ENTITY",84,1
+66,"CONTAINS_ENTITY",85,1
+66,"CONTAINS_ENTITY",86,1
+66,"CONTAINS_ENTITY",87,1
+66,"CONTAINS_ENTITY",88,1
+66,"CONTAINS_ENTITY",89,1
+66,"CONTAINS_ENTITY",90,1
+66,"CONTAINS_ENTITY",91,1
+2,"SEEKS_RECOGNITION",67,0
+2,"DEVELOPS",68,0
+68,"IS_A",11,0
+11,"HELPS_IDENTIFY",69,0
+11,"TARGETS",70,0
+11,"TARGETS",71,0
+71,"EXPANDS_TO",72,0
+71,"EXPANDS_TO",73,0
+71,"EXPANDS_TO",74,0
+75,"REQUIRES",76,0
+77,"USED_IN",78,0
+79,"COMPLEMENTARY",81,0
+82,"DIGITAL_TRANSFORMATION",11,0
+83,"AIMS_AT",69,0
+84,"SUPPORTS",11,0
+85,"SUPPORTS",11,0
+86,"ADAPTS_TO",11,0
+87,"ADAPTS_TO",11,0
+88,"SUPPORTS",90,0
+89,"SUPPORTS",90,0
+90,"ENABLES",91,0
+92,"CONTAINS_ENTITY",93,1
+92,"CONTAINS_ENTITY",22,1
+93,"REFLECTS",22,0
+94,"CONTAINS_ENTITY",2,1
+94,"CONTAINS_ENTITY",23,1
+94,"CONTAINS_ENTITY",95,1
+94,"CONTAINS_ENTITY",96,1
+94,"CONTAINS_ENTITY",97,1
+94,"CONTAINS_ENTITY",98,1
+94,"CONTAINS_ENTITY",16,1
+94,"CONTAINS_ENTITY",99,1
+94,"CONTAINS_ENTITY",7,1
+94,"CONTAINS_ENTITY",100,1
+94,"CONTAINS_ENTITY",101,1
+94,"CONTAINS_ENTITY",102,1
+94,"CONTAINS_ENTITY",103,1
+94,"CONTAINS_ENTITY",78,1
+94,"CONTAINS_ENTITY",104,1
+94,"CONTAINS_ENTITY",26,1
+94,"CONTAINS_ENTITY",105,1
+94,"CONTAINS_ENTITY",106,1
+94,"CONTAINS_ENTITY",107,1
+94,"CONTAINS_ENTITY",108,1
+94,"CONTAINS_ENTITY",109,1
+94,"CONTAINS_ENTITY",110,1
+94,"CONTAINS_ENTITY",111,1
+94,"CONTAINS_ENTITY",112,1
+94,"CONTAINS_ENTITY",113,1
+94,"CONTAINS_ENTITY",114,1
+94,"CONTAINS_ENTITY",115,1
+94,"CONTAINS_ENTITY",116,1
+94,"CONTAINS_ENTITY",117,1
+94,"CONTAINS_ENTITY",118,1
+94,"CONTAINS_ENTITY",119,1
+94,"CONTAINS_ENTITY",120,1
+94,"CONTAINS_ENTITY",121,1
+94,"CONTAINS_ENTITY",122,1
+94,"CONTAINS_ENTITY",123,1
+94,"CONTAINS_ENTITY",124,1
+2,"PRODUCES",23,0
+23,"SUPPORTS",95,0
+23,"IS_A",96,0
+23,"CONTAINS",97,0
+23,"HAS",98,0
+23,"DRIVES",16,0
+23,"DRIVES",99,0
+7,"DEVELOPED_WITH",100,0
+7,"INCLUDES",101,0
+101,"ENABLES",102,0
+101,"UTILIZES",5,0
+101,"UTILIZES",6,0
+104,"COVERS",108,0
+26,"INTEGRATES",101,0
+106,"PROMOTES",107,0
+108,"INCLUDES",109,0
+108,"INCLUDES",110,0
+108,"INCLUDES",111,0
+108,"INCLUDES",112,0
+108,"INCLUDES",113,0
+108,"INCLUDES",114,0
+115,"REQUIRES",116,0
+23,"ENHANCES",117,0
+23,"IMPROVES",118,0
+23,"IMPROVES",119,0
+23,"IMPROVES",120,0
+23,"INCREASES",121,0
+23,"PROVIDES",122,0
+122,"ALIGN_WITH",123,0
+23,"IMPROVES",124,0
+125,"CONTAINS_ENTITY",2,1
+125,"CONTAINS_ENTITY",40,1
+125,"CONTAINS_ENTITY",41,1
+125,"CONTAINS_ENTITY",42,1
+125,"CONTAINS_ENTITY",126,1
+125,"CONTAINS_ENTITY",127,1
+125,"CONTAINS_ENTITY",128,1
+125,"CONTAINS_ENTITY",3,1
+125,"CONTAINS_ENTITY",129,1
+125,"CONTAINS_ENTITY",130,1
+125,"CONTAINS_ENTITY",131,1
+125,"CONTAINS_ENTITY",132,1
+125,"CONTAINS_ENTITY",133,1
+125,"CONTAINS_ENTITY",99,1
+125,"CONTAINS_ENTITY",134,1
+125,"CONTAINS_ENTITY",135,1
+125,"CONTAINS_ENTITY",136,1
+125,"CONTAINS_ENTITY",137,1
+125,"CONTAINS_ENTITY",138,1
+125,"CONTAINS_ENTITY",139,1
+125,"CONTAINS_ENTITY",140,1
+125,"CONTAINS_ENTITY",141,1
+125,"CONTAINS_ENTITY",142,1
+125,"CONTAINS_ENTITY",143,1
+2,"EXPANDS_TO",40,0
+2,"EXPANDS_TO",41,0
+2,"EXPANDS_TO",42,0
+2,"OPERATES_IN",137,0
+2,"OPERATES_IN",138,0
+2,"USES",3,0
+2,"USES",129,0
+2,"ADOPTS",128,0
+2,"SUPPORTS",131,0
+127,"SUPPORTS",131,0
+134,"FACILITATES",132,0
+134,"PROMOTES",133,0
+134,"PROMOTES",99,0
+2,"ACCELERATES",136,0
+2,"DRIVES",140,0
+141,"POSSESSES",142,0
+141,"POSSESSES",143,0
+2,"IS_A",139,0
+144,"CONTAINS_ENTITY",2,1
+144,"CONTAINS_ENTITY",141,1
+144,"CONTAINS_ENTITY",145,1
+144,"CONTAINS_ENTITY",146,1
+144,"CONTAINS_ENTITY",143,1
+144,"CONTAINS_ENTITY",147,1
+144,"CONTAINS_ENTITY",22,1
+144,"CONTAINS_ENTITY",148,1
+144,"CONTAINS_ENTITY",149,1
+144,"CONTAINS_ENTITY",3,1
+144,"CONTAINS_ENTITY",150,1
+144,"CONTAINS_ENTITY",151,1
+144,"CONTAINS_ENTITY",152,1
+144,"CONTAINS_ENTITY",153,1
+144,"CONTAINS_ENTITY",154,1
+2,"HAS",141,0
+141,"HAS",145,0
+145,"POSSESSES",146,0
+145,"POSSESSES",143,0
+22,"INVOLVES",147,0
+22,"INCLUDES",148,0
+22,"CONCERNS",149,0
+148,"REQUIRES",3,0
+148,"REQUIRES",150,0
+148,"REQUIRES",151,0
+148,"REQUIRES",152,0
+148,"REQUIRES",153,0
+154,"FOUNDED_BY",2,0
+154,"INCLUDES",141,0
+155,"CONTAINS_ENTITY",156,1
+155,"CONTAINS_ENTITY",157,1
+155,"CONTAINS_ENTITY",158,1
+155,"CONTAINS_ENTITY",159,1
+155,"CONTAINS_ENTITY",160,1
+155,"CONTAINS_ENTITY",161,1
+155,"CONTAINS_ENTITY",162,1
+155,"CONTAINS_ENTITY",163,1
+155,"CONTAINS_ENTITY",164,1
+155,"CONTAINS_ENTITY",165,1
+155,"CONTAINS_ENTITY",166,1
+155,"CONTAINS_ENTITY",167,1
+155,"CONTAINS_ENTITY",168,1
+155,"CONTAINS_ENTITY",169,1
+155,"CONTAINS_ENTITY",170,1
+155,"CONTAINS_ENTITY",171,1
+155,"CONTAINS_ENTITY",172,1
+155,"CONTAINS_ENTITY",173,1
+155,"CONTAINS_ENTITY",174,1
+155,"CONTAINS_ENTITY",175,1
+155,"CONTAINS_ENTITY",176,1
+155,"CONTAINS_ENTITY",177,1
+155,"CONTAINS_ENTITY",178,1
+155,"CONTAINS_ENTITY",179,1
+155,"CONTAINS_ENTITY",180,1
+155,"CONTAINS_ENTITY",181,1
+155,"CONTAINS_ENTITY",182,1
+155,"CONTAINS_ENTITY",183,1
+155,"CONTAINS_ENTITY",184,1
+155,"CONTAINS_ENTITY",185,1
+155,"CONTAINS_ENTITY",186,1
+155,"CONTAINS_ENTITY",187,1
+155,"CONTAINS_ENTITY",188,1
+155,"CONTAINS_ENTITY",189,1
+155,"CONTAINS_ENTITY",190,1
+155,"CONTAINS_ENTITY",191,1
+155,"CONTAINS_ENTITY",192,1
+155,"CONTAINS_ENTITY",193,1
+155,"CONTAINS_ENTITY",194,1
+155,"CONTAINS_ENTITY",195,1
+155,"CONTAINS_ENTITY",196,1
+155,"CONTAINS_ENTITY",197,1
+155,"CONTAINS_ENTITY",198,1
+155,"CONTAINS_ENTITY",199,1
+155,"CONTAINS_ENTITY",200,1
+156,"PROFESSOR",157,0
+156,"PROFESSOR",158,0
+156,"MEMBER_OF",159,0
+156,"FOUNDED",160,0
+156,"HAS_EXPERIENCE",161,0
+156,"FOCUSES_ON",162,0
+156,"FOCUSES_ON",163,0
+156,"LEADS",164,0
+156,"ENSURES",165,0
+156,"ENSURES",166,0
+167,"PROFESSOR",168,0
+167,"PROFESSOR",169,0
+167,"HAS_EXPERIENCE",170,0
+167,"HAD_ROLE",171,0
+167,"HAD_ROLE",172,0
+167,"MANAGES",173,0
+167,"INVOLVED_IN",174,0
+167,"INVOLVED_IN",175,0
+167,"LEADS",176,0
+167,"DETERMINES",177,0
+167,"SUPERVISES",178,0
+179,"PROFESSOR",180,0
+179,"MANAGES",181,0
+179,"IMPROVES",182,0
+179,"HAS_EXPERIENCE",183,0
+179,"HAS_EXPERIENCE",184,0
+185,"PROFESSOR",186,0
+185,"HAS_EXPERIENCE",187,0
+185,"HAD_ROLE",188,0
+185,"HAD_ROLE",189,0
+185,"RESPONSIBLE_FOR",190,0
+185,"INVOLVED_IN",191,0
+185,"APPLIES",192,0
+185,"HAS_EXPERIENCE",193,0
+194,"PROFESSOR",195,0
+194,"HAS_EXPERIENCE",196,0
+194,"WORKS_FOR",197,0
+194,"ENSURES",198,0
+194,"DEVELOPS",199,0
+194,"DEFINES",200,0
+201,"CONTAINS_ENTITY",202,1
+201,"CONTAINS_ENTITY",203,1
+201,"CONTAINS_ENTITY",204,1
+201,"CONTAINS_ENTITY",205,1
+202,"RELATES_TO",203,0
+203,"RELATES_TO",204,0
+204,"INVOLVES",205,0
+205,"USES",203,0
+206,"CONTAINS_ENTITY",2,1
+206,"CONTAINS_ENTITY",22,1
+206,"CONTAINS_ENTITY",207,1
+206,"CONTAINS_ENTITY",208,1
+206,"CONTAINS_ENTITY",209,1
+206,"CONTAINS_ENTITY",210,1
+206,"CONTAINS_ENTITY",211,1
+206,"CONTAINS_ENTITY",212,1
+206,"CONTAINS_ENTITY",213,1
+206,"CONTAINS_ENTITY",23,1
+206,"CONTAINS_ENTITY",214,1
+206,"CONTAINS_ENTITY",215,1
+206,"CONTAINS_ENTITY",216,1
+206,"CONTAINS_ENTITY",217,1
+206,"CONTAINS_ENTITY",218,1
+206,"CONTAINS_ENTITY",219,1
+206,"CONTAINS_ENTITY",99,1
+206,"CONTAINS_ENTITY",220,1
+206,"CONTAINS_ENTITY",221,1
+206,"CONTAINS_ENTITY",222,1
+206,"CONTAINS_ENTITY",223,1
+2,"HAS",22,0
+207,"RELATES_TO",22,0
+208,"CONTRIBUTES_TO",22,0
+210,"HAS",22,0
+211,"HAS",212,0
+213,"DEVELOPS",23,0
+23,"CREATES",214,0
+22,"AIMS_TO_ACHIEVE",215,0
+22,"IMPROVES",216,0
+216,"AFFECTED_BY",217,0
+214,"COMPARED_TO",221,0
+214,"IS",222,0
+222,"USES",223,0
+99,"DRIVES",22,0
+220,"INTEGRATES",214,0
+224,"CONTAINS_ENTITY",37,1
+224,"CONTAINS_ENTITY",225,1
+224,"CONTAINS_ENTITY",226,1
+224,"CONTAINS_ENTITY",227,1
+224,"CONTAINS_ENTITY",228,1
+224,"CONTAINS_ENTITY",229,1
+224,"CONTAINS_ENTITY",230,1
+224,"CONTAINS_ENTITY",231,1
+224,"CONTAINS_ENTITY",232,1
+224,"CONTAINS_ENTITY",233,1
+224,"CONTAINS_ENTITY",234,1
+224,"CONTAINS_ENTITY",235,1
+224,"CONTAINS_ENTITY",236,1
+224,"CONTAINS_ENTITY",237,1
+224,"CONTAINS_ENTITY",61,1
+224,"CONTAINS_ENTITY",238,1
+224,"CONTAINS_ENTITY",239,1
+224,"CONTAINS_ENTITY",2,1
+224,"CONTAINS_ENTITY",240,1
+224,"CONTAINS_ENTITY",241,1
+224,"CONTAINS_ENTITY",242,1
+224,"CONTAINS_ENTITY",243,1
+224,"CONTAINS_ENTITY",244,1
+224,"CONTAINS_ENTITY",105,1
+224,"CONTAINS_ENTITY",137,1
+224,"CONTAINS_ENTITY",40,1
+224,"CONTAINS_ENTITY",41,1
+224,"CONTAINS_ENTITY",42,1
+224,"CONTAINS_ENTITY",245,1
+224,"CONTAINS_ENTITY",246,1
+224,"CONTAINS_ENTITY",247,1
+224,"CONTAINS_ENTITY",248,1
+224,"CONTAINS_ENTITY",249,1
+224,"CONTAINS_ENTITY",250,1
+224,"CONTAINS_ENTITY",251,1
+224,"CONTAINS_ENTITY",252,1
+224,"CONTAINS_ENTITY",253,1
+224,"CONTAINS_ENTITY",254,1
+224,"CONTAINS_ENTITY",255,1
+224,"CONTAINS_ENTITY",256,1
+224,"CONTAINS_ENTITY",257,1
+224,"CONTAINS_ENTITY",26,1
+224,"CONTAINS_ENTITY",258,1
+224,"CONTAINS_ENTITY",259,1
+224,"CONTAINS_ENTITY",260,1
+224,"CONTAINS_ENTITY",261,1
+224,"CONTAINS_ENTITY",262,1
+224,"CONTAINS_ENTITY",263,1
+224,"CONTAINS_ENTITY",264,1
+37,"PROVIDES",233,0
+225,"PROVIDES",233,0
+226,"CREATES",233,0
+227,"INCREASES",233,0
+228,"IMPROVES",233,0
+232,"USE",233,0
+233,"SERVES",232,0
+233,"SIMPLIFIES",229,0
+233,"ENHANCES",230,0
+233,"PROMOTES",236,0
+233,"INCREASES",237,0
+233,"INCREASES",61,0
+246,"ADAPTS_TO",247,0
+257,"USES",26,0
+257,"UTILIZES",258,0
+265,"CONTAINS_ENTITY",266,1
+265,"CONTAINS_ENTITY",267,1
+265,"CONTAINS_ENTITY",268,1
+265,"CONTAINS_ENTITY",269,1
+266,"ENABLED_BY",268,0
+268,"ACCESS",267,0
+269,"SUPPORTS",266,0
+269,"FACILITATES",267,0
+270,"CONTAINS_ENTITY",2,1
+270,"CONTAINS_ENTITY",271,1
+270,"CONTAINS_ENTITY",272,1
+270,"CONTAINS_ENTITY",27,1
+270,"CONTAINS_ENTITY",6,1
+270,"CONTAINS_ENTITY",273,1
+270,"CONTAINS_ENTITY",274,1
+270,"CONTAINS_ENTITY",275,1
+270,"CONTAINS_ENTITY",276,1
+270,"CONTAINS_ENTITY",277,1
+270,"CONTAINS_ENTITY",40,1
+270,"CONTAINS_ENTITY",41,1
+270,"CONTAINS_ENTITY",42,1
+270,"CONTAINS_ENTITY",278,1
+270,"CONTAINS_ENTITY",279,1
+270,"CONTAINS_ENTITY",17,1
+270,"CONTAINS_ENTITY",280,1
+270,"CONTAINS_ENTITY",281,1
+270,"CONTAINS_ENTITY",282,1
+270,"CONTAINS_ENTITY",283,1
+270,"CONTAINS_ENTITY",284,1
+270,"CONTAINS_ENTITY",285,1
+2,"PRODUCES",271,0
+271,"USES",272,0
+272,"INCLUDES",27,0
+272,"INCLUDES",6,0
+271,"IS_A",273,0
+271,"ADAPTS_TO",274,0
+274,"TARGETS",275,0
+274,"COMPLIES_WITH",276,0
+271,"INTEGRATES_WITH",277,0
+277,"EXPANDS_TO",40,0
+277,"EXPANDS_TO",41,0
+277,"EXPANDS_TO",42,0
+271,"USES",278,0
+278,"TARGETS",279,0
+278,"ENHANCES",17,0
+271,"SERVES",280,0
+281,"CONTAINS",282,0
+281,"DETAILS",283,0
+283,"INVOLVES",284,0
+284,"HIRES",2,0
+281,"DETAILS",285,0
+286,"CONTAINS_ENTITY",287,1
+286,"CONTAINS_ENTITY",288,1
+286,"CONTAINS_ENTITY",289,1
+286,"CONTAINS_ENTITY",290,1
+286,"CONTAINS_ENTITY",291,1
+286,"CONTAINS_ENTITY",292,1
+286,"CONTAINS_ENTITY",293,1
+286,"CONTAINS_ENTITY",294,1
+286,"CONTAINS_ENTITY",295,1
+286,"CONTAINS_ENTITY",296,1
+286,"CONTAINS_ENTITY",297,1
+286,"CONTAINS_ENTITY",298,1
+287,"CERTIFIES",288,0
+287,"CERTIFIES",289,0
+290,"INCLUDES",291,0
+290,"INCLUDES",292,0
+293,"INCLUDES",294,0
+293,"INCLUDES",295,0
+296,"ALLOCATED_FOR",297,0
+296,"ALLOCATED_FOR",298,0
+297,"RELATED_TO",298,0

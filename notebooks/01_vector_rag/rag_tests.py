@@ -65,7 +65,7 @@ questions = [
 #    'what are knowledge graphs used for?'
 #]
 
-results_dir = "approaches/01_vector_rag/results"
+results_dir = "notebooks/01_vector_rag/results"
 os.makedirs(results_dir, exist_ok=True) # create/check results folder
 output_file = os.path.join(results_dir, "vector_rag_results.txt")
 

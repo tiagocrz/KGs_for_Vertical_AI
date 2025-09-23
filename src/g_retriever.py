@@ -8,9 +8,6 @@ import torch
 
 # PyG
 from torch_geometric.data import Data
-from torch_geometric.nn import GATConv
-from torch_geometric.nn.models import GRetriever 
-from torch_geometric.nn.nlp.llm import LLM
 
 # Embeddings
 from sentence_transformers import SentenceTransformer
@@ -20,6 +17,8 @@ import pcst_fast
 
 import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/..'))
+
+
 
 
 def read_kg_csv(input_file):
@@ -154,33 +153,6 @@ def textualize_subgraph(nodes: pd.DataFrame, edges: pd.DataFrame,
 
 
 
-class TinyGAT(torch.nn.Module):
-    """
-    A tiny GAT-based encoder with an `out_channels` attribute, as expected by GRetriever.
-    It ignores edge_attr 
-    """
-    def __init__(self, in_channels: int, hidden_channels: int = 128, out_channels: int = 256, heads: int = 4, num_layers: int = 2, dropout: float = 0.1):
-        super().__init__()
-        self.layers = torch.nn.ModuleList()
-        self.layers.append(GATConv(in_channels, hidden_channels, heads=heads, dropout=dropout, concat=True))
-        cur_channels = hidden_channels * heads
-        for _ in range(num_layers - 2):
-            self.layers.append(GATConv(cur_channels, hidden_channels, heads=heads, dropout=dropout, concat=True))
-            cur_channels = hidden_channels * heads
-        self.layers.append(GATConv(cur_channels, out_channels, heads=1, dropout=dropout, concat=False))
-        self.act = torch.nn.GELU()
-        self.out_channels = out_channels
-
-    def forward(self, x, edge_index, edge_attr=None):
-        for i, conv in enumerate(self.layers):
-            x = conv(x, edge_index)
-            if i < len(self.layers) - 1:
-                x = self.act(x)
-        return x
-
-
-
-
 def format_graph_context(textualized_subgraph: str) -> str:
     """
     Converts the textualized subgraph output into a string of edges in the format:
@@ -213,68 +185,6 @@ def format_graph_context(textualized_subgraph: str) -> str:
     return "\n".join(formatted_edges)
 
 
-
-
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--graph", required=True, help="Path to graph.csv (node_id,node_attr)")
-    ap.add_argument("--question", required=True, help="Question to ask")
-    ap.add_argument("--embed-model", default="paraphrase-multilingual-MiniLM-L12-v2", help="SentenceTransformer for node text")
-    ap.add_argument("--llm", default="meta-llama/Llama-2-7b-chat-hf", help="HF LLM model (tested: Llama-2-7b-chat, Gemma-7B)")
-    ap.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
-    ap.add_argument("--topk", type=int, default=50)
-    ap.add_argument("--edge-cost", type=float, default=1.0)
-    ap.add_argument("--base-prize", type=float, default=1.0)
-    ap.add_argument("--hidden", type=int, default=128)
-    ap.add_argument("--out", type=int, default=256)
-    ap.add_argument("--layers", type=int, default=2)
-    ap.add_argument("--max-out-tokens", type=int, default=128)
-    args = ap.parse_args()
-
-    # 1) Load graph
-    data, nodes, edges = load_graph(args.graph)
-
-    # 2) Embeddings (node features)
-    print("Embedding nodes...")
-    node_emb, enc = build_embeddings(nodes, args.embed_model, args.device)
-    x = torch.tensor(node_emb, dtype=torch.float)
-
-    # 3) Retrieval + PCST
-    print("Retrieving & building PCST subgraph...")
-    q_vec = enc.encode([args.question], normalize_embeddings=True, convert_to_numpy=True)[0]
-    node_topk, sims = cosine_topk(node_emb, q_vec, args.topk)
-    undirected_edges, undirected_costs = build_undirected_edges(data.edge_index.numpy())
-    undirected_costs = np.full_like(undirected_costs, args.edge_cost, dtype=np.float64)
-    prizes = make_prizes(data.num_nodes, node_topk, sims, args.base_prize)
-    selected_nodes, selected_edge_ids = pcst(undirected_edges, prizes, undirected_costs, root=-1, num_clusters=1, pruning="strong")
-
-    # 4) Textualize the subgraph for LLM context
-    ctx = textualize_subgraph(nodes, edges, selected_nodes, selected_edge_ids, undirected_edges)
-
-    # 5) Build GRetriever (HuggingFace Llama-2 + GNN)
-    print("Loading HuggingFace Llama-2 LLM wrapper...")
-    llm = LLM(model_name="meta-llama/Llama-2-7b-hf", num_params=7_000_000_000)
-    gnn = TinyGAT(in_channels=x.size(-1), hidden_channels=args.hidden, out_channels=args.out, num_layers=args.layers)
-    model = GRetriever(llm=llm, gnn=gnn, use_lora=False)
-
-    # Batch vector: one graph → all zeros
-    batch = torch.zeros(data.num_nodes, dtype=torch.long)
-
-    # 6) Inference
-    print("\n--- TEXTUALIZED SUBGRAPH ---")
-    print(ctx)
-
-    print("\n--- LLM ANSWER ---")
-    outs = model.inference(
-        question=[args.question],
-        x=x,
-        edge_index=data.edge_index,
-        batch=batch,
-        edge_attr=None,  # TinyGAT ignores edge attributes
-        additional_text_context=[ctx],
-        max_out_tokens=args.max_out_tokens,
-    )
-    print(outs[0])
 
 
 def retrieve(graph_csv: str, question: str, embed_model: str = "paraphrase-multilingual-MiniLM-L12-v2",

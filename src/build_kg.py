@@ -175,7 +175,7 @@ def merge_graph_documents_with_chunks(graph_documents):
     # Add chunk nodes and track relationships between entities and chunks
     for i, doc in enumerate(graph_documents):
         # Create a node representing this chunk
-        chunk_id = f"Chunk_{i}"
+        chunk_id = f"Chunk_{i}: "
         chunk_node = Node(
             id=chunk_id,
             type="TextChunk",
@@ -465,8 +465,8 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
     csv_data = []
     
     # Add header for nodes section
-    csv_data.append("node_id,node_attr,node_type,properties") 
-    
+    csv_data.append("node_id,node_attr,node_type") 
+
     # Add nodes with their attributes
     for node in nodes:
         node_id = node_id_mapping[node.id]
@@ -483,25 +483,21 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
         # Get properties as JSON string
         properties = ""
         if hasattr(node, 'properties') and node.properties:
-            try:
-                import json
-                # Limit content preview length for readability
-                if is_chunk and 'content' in node.properties:
-                    node_properties = node.properties.copy()
-                    properties = json.dumps(node_properties['content'])
-                else:
-                    properties = json.dumps(node.properties)
-            except:
-                properties = str(node.properties)
+            import json
+            if is_chunk and 'content' in node.properties:
+                node_properties = node.properties.copy()
+                properties = json.dumps(node_properties['content'])
+            else:
+                continue
         
-        csv_data.append(f'{node_id},"{node_attr}","{node_type}","{properties}"') 
-    
+        csv_data.append(f'{node_id},"{node_attr + properties.replace('"', "'")}","{node_type}"') 
+
     # Add empty line separator
     csv_data.append("")
     
     # Add header for edges section
     csv_data.append("src,edge_attr,dst,is_chunk_relation")
-    
+
     # Add edges
     for rel in relationships:
         src_id = node_id_mapping.get(rel.source.id)
@@ -521,7 +517,7 @@ def save_graph_to_csv(graph_documents, output_file="graph.csv"):
         )
         
         csv_data.append(f'{src_id},"{edge_attr}",{dst_id},{1 if is_chunk_rel else 0}')
-    
+
     # Write to file
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write('\n'.join(csv_data))

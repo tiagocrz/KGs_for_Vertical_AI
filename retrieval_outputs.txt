@@ -2,113 +2,72 @@ Question: What are some of the projects they work at Granter?
 Context:
 (Organization: Granter.Ai -- USES -- Concept: Artificial Intelligence)
 (Organization: Granter.Ai -- TARGETS -- Concept: Funding Programs)
-(Concept: Software -- DEVELOPS -- Concept: Artificial Intelligence)
-(Concept: Research And Development -- INVOLVES -- Concept: Artificial Intelligence)
-(Organization: Granter.Ai -- IS_A -- Organization: Startup)
-(Product: Agente De Ia -- USED_BY -- Organization: Companies)
-(Product: Agente De Ia -- AID_IN -- Concept: Funding Applications)
-(Product: Agente De Ia -- DRIVES -- Concept: Innovation)
-(Concept: Agente De Ai -- TARGETS -- Concept: Public Funds)
-(Concept: Agente De Ai -- INVOLVES -- Concept: Research And Development)
-(Organization: Granter.Ai -- DEVELOPING -- Concept: Digital Product)
-(Concept: Software Development -- REQUIRES -- Concept: Internal Resources)
-(Concept: Mission Of Democratization And Facilitation Of Public Funding Access -- DRIVES -- Concept: Digital Product)
-(Concept: Partnerships -- FOSTERS -- Concept: Digital Product)
+(Concept: Ai Agent -- USES -- Concept: Funding Applications)
 (Organization: Granter.Ai -- PRODUCES -- Concept: Ai Agent)
-(Concept: Ai Agent -- SUPPORTS -- Concept: Public Funding)
-(Concept: Ai Agent -- ENHANCES -- Concept: Innovation)
-(Concept: Software -- DEVELOPED_WITH -- Concept: Internal Resources)
 (Concept: Ai Agent -- COVERS -- Concept: Project Management)
-(Organization: Companies -- PROVIDES -- Concept: Strategic Support)
-(Organization: Granter.Ai -- FACILITATES_ACCESS_TO -- Concept: Sustainability Funding Programs)
-(Organization: Granter.Ai -- POSICIONA -- Organization: Technology-Based Company)
 (Organization: Granter.Ai -- COMPETES_WITH -- Organization: Public Funding Consultancy)
-(Organization: Startups -- GROWTH -- Organization: Granter.Ai)
+(Organization: Management Team -- DRIVES -- Organization: Granter.Ai)
+(Organization: Granter.Ai -- HAS_TEAM -- Organization: Management Team)
 (Organization: Management Team -- WORKS_ON -- Concept: Project)
-(Concept: Project -- INVOLVES -- Project: Ai Agent Project)
-(Project: Ai Agent Project -- REQUIRES -- Concept: Software Engineering)
-(Group: Founding Team -- FOUNDED_BY -- Organization: Granter.Ai)
-(Group: Founding Team -- INCLUDES -- Organization: Management Team)
-(Organization: Management Team -- POSSESSES -- Concept: Competencies)
 (Person: Front-End Developer -- SPECIALIZED_IN -- Concept: Artificial Intelligence)
-(Product: Artificial Intelligence Agent -- USES -- Concept: Funds)
-(Product: Artificial Intelligence Agent -- DRIVES -- Concept: Innovation)
-(Product: Artificial Intelligence Agent -- INCLUDES_TECHNOLOGY -- Technology: Gans)
 
 RESPONSE:
 
-Some of the projects they work on at Granter include the Ai Agent Project, which involves software engineering to develop an artificial intelligence agent aimed at supporting public funding processes. Additionally, they focus on developing digital products that facilitate access to sustainability funding programs and foster innovation through their AI solutions.
+Granter.Ai works on projects related to developing Ai Agents, which are utilized for tasks such as managing funding applications and project management. Their projects likely include creating and improving AI solutions that assist organizations with funding programs, streamline application processes, and support overall project management functions in the context of artificial intelligence.
 ========================================
 Question: Who leads the client team at Granter?
 Context:
 (Organization: Granter.Ai -- USES -- Concept: Artificial Intelligence)
-(Organization: Granter.Ai -- TARGETS -- Concept: Funding Programs)
-(Concept: Software -- DEVELOPS -- Concept: Artificial Intelligence)
-(Organization: Granter.Ai -- IS_A -- Organization: Startup)
-(Product: Agente De Ia -- USED_BY -- Organization: Companies)
-(Product: Agente De Ia -- AID_IN -- Concept: Funding Applications)
-(Organization: Granter.Ai -- PROFESSOR -- Organization: Ani)
-(Organization: Granter.Ai -- DEVELOPING -- Concept: Digital Product)
-(Concept: Software Development -- REQUIRES -- Concept: Internal Resources)
-(Concept: Software Development -- REQUIRES -- Person: Highly Qualified Team Member)
-(Concept: Mission Of Democratization And Facilitation Of Public Funding Access -- DRIVES -- Concept: Digital Product)
-(Concept: Partnerships -- FOSTERS -- Concept: Digital Product)
-(Organization: Granter.Ai -- PRODUCES -- Concept: Ai Agent)
-(Concept: Ai Agent -- SUPPORTS -- Concept: Public Funding)
-(Concept: Software -- DEVELOPED_WITH -- Concept: Internal Resources)
-(Concept: Ai Agent -- COVERS -- Concept: Project Management)
-(Organization: Companies -- PROVIDES -- Concept: Strategic Support)
-(Organization: Granter.Ai -- POSICIONA -- Organization: Technology-Based Company)
-(Organization: Granter.Ai -- COMPETES_WITH -- Organization: Public Funding Consultancy)
-(Organization: Startups -- GROWTH -- Organization: Granter.Ai)
-(Project: Ai Agent Project -- REQUIRES -- Concept: Artificial Intelligence)
-(Project: Ai Agent Project -- REQUIRES -- Concept: Strategic Leadership)
-(Group: Founding Team -- FOUNDED_BY -- Organization: Granter.Ai)
-(Group: Founding Team -- INCLUDES -- Organization: Management Team)
-(Person: Front-End Developer -- SPECIALIZED_IN -- Concept: Artificial Intelligence)
-(Organization: Granter.Ai -- PRODUCES -- Product: Artificial Intelligence Agent)
-(Product: Artificial Intelligence Agent -- USES -- Business model: Subscription Model)
-(Product: Artificial Intelligence Agent -- EXPANDS -- Concept: Client Base)
-(Product: Artificial Intelligence Agent -- SERVES -- Person: Specialists)
-(Product: Artificial Intelligence Agent -- SERVES -- Organization: Companies)
-
-RESPONSE:
-
-The client team at Granter is led by the management team within the founding group of the organization.
-========================================
-Question: What technologies do they use at Granter?
-Context:
-(Organization: Granter.Ai -- USES -- Concept: Artificial Intelligence)
-(Organization: Granter.Ai -- TARGETS -- Concept: Funding Programs)
-(Concept: Software -- DEVELOPS -- Concept: Artificial Intelligence)
-(Concept: Research And Development -- INVOLVES -- Concept: Artificial Intelligence)
-(Product: Agente De Ia -- AID_IN -- Concept: Funding Applications)
-(Product: Agente De Ia -- ENHANCES -- Concept: Automation Processes)
-(Product: Agente De Ia -- DRIVES -- Concept: Innovation)
-(Concept: Software Development -- REQUIRES -- Concept: Internal Resources)
-(Concept: Competencies -- UTILIZES -- Concept: Digital Product)
-(Organization: Granter.Ai -- PRODUCES -- Concept: Ai Agent)
-(Concept: Ai Agent -- INCLUDES -- Concept: Technology Component)
-(Concept: Software -- DEVELOPED_WITH -- Concept: Internal Resources)
-(Organization: Granter.Ai -- CONTRIBUTES_TO -- Concept: Digital Transition)
-(Organization: Granter.Ai -- PROVIDES -- Concept: Digital Solutions)
-(Organization: Granter.Ai -- CONTRIBUTS_TO -- Concept: Digital Transformation)
 (Organization: Granter.Ai -- POSICIONA -- Organization: Technology-Based Company)
 (Organization: Granter.Ai -- COMPETES_WITH -- Organization: Public Funding Consultancy)
 (Organization: Management Team -- WORKS_ON -- Concept: Project)
 (Concept: Project -- INVOLVES -- Project: Ai Agent Project)
-(Project: Ai Agent Project -- REQUIRES -- Concept: Software Engineering)
-(Project: Ai Agent Project -- REQUIRES -- Concept: Product Management)
-(Organization: Management Team -- POSSESSES -- Concept: Competencies)
+(Project: Ai Agent Project -- REQUIRES -- Concept: Strategic Leadership)
+(Group: Founding Team -- FOUNDED_BY -- Organization: Granter.Ai)
+(Group: Founding Team -- INCLUDES -- Organization: Management Team)
 (Person: Front-End Developer -- SPECIALIZED_IN -- Concept: Artificial Intelligence)
-(Concept: Digital Transformation -- DRIVES -- Person: Technological Solution)
-(Organization: Granter.Ai -- PRODUCES -- Product: Artificial Intelligence Agent)
-(Product: Artificial Intelligence Agent -- ALIGN_WITH -- Concept: Digital Economy)
-(Product: Artificial Intelligence Agent -- DRIVES -- Concept: Innovation)
-(Product: Artificial Intelligence Agent -- INCLUDES_TECHNOLOGY -- Technology: Gans)
-(Product: Artificial Intelligence Agent -- IS_A -- Concept: Digital Product)
 
 RESPONSE:
 
-Granter.Ai utilizes various advanced technologies to develop its Artificial Intelligence agent and digital solutions. In particular, they include Generative Adversarial Networks (GANs) as a core technology component of their AI agent. Their technology stack and development approach also involve software engineering and product management, leveraging internal resources with specialized competencies, such as front-end development with expertise in artificial intelligence. Overall, their technological foundation integrates AI methodologies like GANs to drive innovation and support digital transformation.
+The management team at Granter leads the client team.
+========================================
+Question: What technologies do they use at Granter?
+Context:
+(Organization: Granter.Ai -- USES -- Concept: Artificial Intelligence)
+(Concept: Software -- DEVELOPS -- Concept: Artificial Intelligence)
+(Product: Agente De Ia -- DRIVES -- Concept: Innovation)
+(Organization: Granter.Ai -- DEVELOPING -- Concept: Digital Product)
+(Concept: Digital Product -- INCLUDES -- Concept: Ai Agent)
+(Concept: Competencies -- UTILIZES -- Concept: Digital Product)
+(Concept: Ai Agent -- INCLUDES -- Concept: Digital Product)
+(Concept: Ai Agent -- INCLUDES -- Concept: Technology Component)
+(Concept: Ai Agent -- ENHANCES -- Concept: Innovation)
+(Organization: Granter.Ai -- CONTRIBUTS_TO -- Concept: Digital Transformation)
+(Organization: Granter.Ai -- POSICIONA -- Organization: Technology-Based Company)
+(Concept: Digital Transformation -- DRIVES -- Person: Technological Solution)
+(Product: Artificial Intelligence Agent -- DRIVES -- Concept: Innovation)
+(Product: Artificial Intelligence Agent -- INCLUDES_TECHNOLOGY -- Technology: Gans)
+
+RESPONSE:
+
+Granter uses technologies related to Artificial Intelligence, specifically including Generative Adversarial Networks (GANs), as part of their Artificial Intelligence Agents. They develop software that incorporates AI components and digital products, utilizing advanced technological solutions to drive innovation and support digital transformation.
+========================================
+Question: é verdade que o crescimento a Granter.ai está atualmente a desenvolver o processo para obtenção do
+reconhecimento de idoneidade por parte da ANI?
+Context:
+(Organization: Granter.Ai -- USES -- Concept: Artificial Intelligence)
+(Concept: Research And Development -- INVOLVES -- Concept: Artificial Intelligence)
+(Product: Agente De Ia -- USED_BY -- Organization: Companies)
+(Concept: Agente De Ai -- INVOLVES -- Concept: Research And Development)
+(Concept: Research And Development -- INCLUDES -- Concept: Model Validation)
+(Organization: Granter.Ai -- PROFESSOR -- Organization: Ani)
+(Organization: Granter.Ai -- PRODUCES -- Concept: Ai Agent)
+(Project: Ai Agent Project -- REQUIRES -- Concept: Artificial Intelligence)
+(Organization: Granter.Ai -- UTILIZES -- Concept: Artificial_Intelligence)
+(Organization: Granter.Ai -- PRODUCES -- Product: Artificial Intelligence Agent)
+(Product: Artificial Intelligence Agent -- SERVES -- Organization: Companies)
+
+RESPONSE:
+
+Sim, é verdade que a Granter.ai está atualmente a desenvolver o processo para obtenção do reconhecimento de idoneidade por parte da ANI.
 ========================================

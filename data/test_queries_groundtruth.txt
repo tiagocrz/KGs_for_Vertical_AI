@@ -1,0 +1,59 @@
+What is Granter.ai's main business activity?
+Answer: Granter.ai specializes in developing AI solutions applied to public funding applications, helping businesses identify, prepare, and submit funding applications efficiently.
+
+Which AI methodologies/technological features does Granter.ai use in its solution?
+Answer: Granter.ai uses Generative Adversarial Networks (GANs) and Adversarial In-Context Learning (Adv-ICL) for content generation in public funding applications.
+
+What is the ultimate goal of Granter.ai's project?
+Answer: The goal is to create an AI Agent that helps businesses prepare applications for funding programs, improving efficiency and automating the application process.
+
+What is Granter.ai's mission?
+Answer: Granter.ai's mission is to democratize and facilitate access to public funding opportunities for businesses.
+
+What is the business model for Granter.ai's solution?
+Answer: Granter.ai will use an annual subscription-based business model, similar to Software as a Service (SaaS), with different access levels based on user needs.
+
+What is the main competitive advantage of Granter.ai?
+Answer: Granter.ai's AI-powered solution automates the entire process of preparing public funding applications, offering highly personalized and optimized content.
+
+Which team member at Granter.ai is responsible for the strategic direction and international expansion of the AI Agent?
+Answer: Duarte Gomes, CEO and founder of Granter.ai, is responsible for the strategic direction and international expansion of the AI Agent.
+
+What is the role of Joel Rodrigues at Granter.ai?
+Answer: Joel Rodrigues is the CTO of Granter.ai and is responsible for the technical planning and execution of the AI Agent, including the adoption of GANs and Adv-ICL.
+
+Which team member is responsible for the technical execution of the AI Agent at Granter.ai?
+Answer: Luis Batista, Head of Operations, is responsible for the technical execution and validation of the AI Agent.
+
+Which countries are targeted for Granter.ai's initial expansion?
+Answer: Granter.ai plans to expand to Spain, Italy, and the USA.
+
+What was the total volume of projects Granter.ai managed in terms of financing?
+Answer: Granter.ai has managed a total volume of more than 20 million euros in projects related to public funding.
+
+What is the focus of Granter.ai's research and development process?
+Answer: The R&D process focuses on experimenting, fine-tuning, and validating AI models specifically tailored to the domain of public funding and policy.
+
+How many companies were registered on Granter.ai's platform by the time the project was described?
+Answer: Granter.ai had over 2,500 companies registered on its platform at the time the project was described.
+
+How much funding did Granter.ai raise in investment rounds?
+Answer: Granter.ai raised 400,000€ in investment rounds.
+
+When did Granter.ai start its operations?
+Answer: Granter.ai started its operations in December 2024.
+
+What is the primary target user group for Granter.ai’s AI Agent?
+Answer: The primary target user group for Granter.ai's AI Agent includes businesses and specialists involved in preparing public funding applications.
+
+What new position does Granter.ai plan to fill to strengthen its team for the AI Agent project?
+Answer: Granter.ai plans to hire a front-end developer specializing in artificial intelligence to ensure the AI Agent remains intuitive and user-friendly.
+
+What makes Granter.ai’s solution scalable in terms of adapting to different industries or sectors?
+Answer: Granter.ai’s solution is scalable due to its modular structure and flexible design, which allows it to quickly adapt to various industries, sectors, and funding requirements.
+
+What is Granter.ai's projected timeline for launching its AI Agent in international markets?
+Answer: Granter.ai plans to launch its AI Agent to international markets by the end of 2025.
+
+How does Granter.ai’s AI Agent improve the success rate of funding applications?
+Answer: Granter.ai’s AI Agent improves the success rate by automating complex processes, reducing errors, and aligning projects with funding program priorities, which enhances proposal quality and increases approval chances.

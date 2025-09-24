@@ -1,0 +1,444 @@
+Vouchers for Startups – New
+Digital/Technological Products Granter.ai
+Main Economic Activity of the Benefeciary (Justification)
+(limit XX)
+
+The main activity of Granter.ai is fully aligned with technology-intensive sectors, as the
+company specializes in the development of artificial intelligence (AI) solutions applied to
+public funding applications. The proposed project involves the creation of an AI agent that
+will assist businesses in preparing applications for financing programs, integrating research
+and technological development activities. It incorporates advanced methodologies such as
+Generative Adversarial Networks (GANs) and Adversarial In-Context Learning (Adv-ICL),
+enabling the generation of specialized content adapted to the client's context. This is a
+proprietary software, developed internally, that values the practical application of technical
+and scientific knowledge by transforming theoretical AI models into solutions with direct
+impact on sector efficiency and innovation. The ability to adapt to multiple markets and the
+strong emphasis on automating complex processes reinforce its alignment with a high-tech
+sector, with strong growth potential..
+
+Project Summary
+(limit 1000)
+
+Granter.ai is a startup focused on AI solutions applied to public funding. Granter aims to
+develop an AI Agent for use by businesses in preparing applications for financing programs.
+This tool seeks to transform the way these applications are prepared, assisting in identifying
+opportunities, automating submissions, managing associated bureaucracy, and monitoring
+projects. The solution will integrate AI methodologies tailored to the reality and context of
+public funds, such as Generative Adversarial Networks and Adversarial In-Context Learning,
+ensuring optimized content aligned with financing program requirements. The goal is to
+provide an intelligent, accessible, and highly efficient tool that optimizes the entire funding
+application process. The development of this AI Agent represents a significant technological
+leap, being a scalable solution with strong potential.
+
+Justification of Objectives
+(limit 2000)
+
+Granter.ai's mission is to democratize and facilitate access to public funding. The presented
+project involves the creation of an AI Agent to be used by specialists and businesses in
+preparing applications for funding opportunities. The AI Agent will incorporate highly
+sophisticated methodologies, including Generative Adversarial Networks (GANs) and
+Adversarial In-Context Learning (Adv-ICL), applied to the generation of specialized content.
+Its development involves an intensive process of applied research, with a strong focus on
+experimentation, fine-tuning, and validation of linguistic models adapted to the specific
+domain of public policies and public funds, aiming to create a new tool with direct impact on
+the market.
+The scalability of the solution is ensured by its modular structure, which will allow rapid
+adaptation to different national contexts. The final product is expected to be easily adapted
+to any market, language, or legal context. The digital nature of the AI Agent and its
+infrastructure, which is expected to be highly adaptable, will allow the tool to easily adapt to
+any market by simply connecting to a database containing all relevant information. With the
+launch of this tool, Granter expects to enter markets like Spain, Italy, and the USA by the end
+of 2025, where the demand for public funding solutions is high.
+Additionally, Granter.ai believes the AI Agent will have a significant indirect contribution to
+the climate transition: by facilitating access to funding programs related to sustainability and
+the green economy, it will boost business initiatives with a positive environmental impact.
+Thus, this project represents a highly differentiated technological solution capable of
+generating impact in the economic ecosystem, both nationally and internationally.
+
+Justification for the Typology
+(limit 5000)
+
+Typology to be selected – Support for Startup or Growth
+Granter.ai is in an early stage of accelerated growth, which clearly justifies the project's
+classification under "Support for Startup or Growth." Having started operations in December
+2024, Granter.ai has already shown consistent signs of traction and scalability potential, with
+a base of over 2,500 registered companies, more than 150 submitted applications, and a total
+volume of over 20 million euros in funded projects. Additionally, the company raised
+400,000€ in investment rounds and reports sustained quarterly growth of 45%. These
+indicators reflect a business model with strong market acceptance and clear expansion phase.
+As part of its growth process, Granter.ai is currently developing the process for obtaining
+recognition of competence by ANI, demonstrating the company's desire to be recognized as
+a competent entity for R&D activities in its field.
+
+The proposed project is unequivocally aligned with the company's growth support, as it aims
+to develop and consolidate an innovative digital product with a strong technological
+foundation: an AI Agent for use by businesses in identifying and preparing applications for
+public funds. This new product represents a qualitative leap in Granter.ai's value proposition
+and is critical to strengthening its competitive position in both the national and international
+markets, such as Spain, Italy, and the USA.
+This project will be entirely developed with internal company resources, with plans to further
+strengthen the team with a highly qualified new member. Developing the tool internally
+demonstrates the company's commitment to producing proprietary software. Its
+implementation requires the mobilization of advanced technical knowledge, with a strong
+component of applied research and experimental development. The use of methodologies
+such as Generative Adversarial Networks (GANs) and Adversarial In-Context Learning (AdvICL) adds significant technological complexity to the project. This technological effort is
+aimed at creating a robust, intuitive, and highly effective solution that meets the specific
+needs of users.
+The nature of the project - focused on the development of a digital solution with the potential
+to transform the sector - aligns with the company's growth objectives. The creation of the AI
+Agent will allow Granter.ai to consolidate its position in the public funding application sector
+and diversify its service offering, increasing its responsiveness to new markets and
+generating new revenue streams through a scalable licensing model. It is expected to be
+available in different languages and adapted to the legal and operational frameworks of other
+countries, which reinforces its replicability and the solution's internationalization potential.
+The choice of the "Support for Startup or Growth" typology is even more relevant considering
+that this product will be the strategic engine for the company's future growth. It is a central
+element in Granter.ai's medium- and long-term vision, and it is also essential for fulfilling the
+company's mission, which is to democratize and facilitate access to public funding
+opportunities. This project is not just another tool - it is the catalyst for a new phase of
+expansion, enabling the leveraging of already developed competencies and opening the door
+for new applications and partnerships.
+Therefore, the "Support for Startup or Growth" typology is considered the best fit to reflect
+the nature, objectives, and ambition of this project, being the necessary lever to consolidate
+Granter.ai's competitive position and accelerate its sustainable and innovative growth
+trajectory.
+
+Relevance of the Project to the Measure’s Objectives by Presenting an
+Innovative Business Model, Product, or Service with String Digital or
+Technological Components and Scalability Potential
+(limit 5000)
+
+Granter.ai presents a project that fully meets the objectives of the measure by developing a
+digital product with a strong technological component and high scalability potential. This is
+the first AI Agent specifically designed to support businesses in identifying, planning,
+monitoring, and submitting public funding applications. This solution represents a significant
+advance in terms of innovation and digital transformation in the sector, characterized as a
+highly specialized, technologically sophisticated, and unique product in the market.
+The project proposes the creation of proprietary software, developed entirely with internal
+resources, which combines several AI-based functionalities, with an emphasis on the
+automatic and personalized generation of applications. The design of this project was
+conceived to integrate the latest trends in artificial intelligence, adapting them to the concrete
+practice of public funding. The tool combines methodologies such as Generative Adversarial
+Networks (GANs) and Adversarial In-Context Learning (Adv-ICL), allowing the generation of
+optimized content aligned with the specific criteria of each funding notice. This approach
+ensures not only innovation in the final product but also in the development methodology,
+with a clear emphasis on R&D and technological knowledge transfer to the market.
+The functionalities of the AI Agent cover all stages of the application process: from identifying
+opportunities, analyzing eligibility, and drafting the application, to evaluating, automating
+submission, and managing projects after approval. This comprehensive approach provides
+the tool with added value, with a direct impact on the efficiency and effectiveness of the
+access to funding process.
+The project's relevance is also evident in its ability to address a real and growing need in the
+business ecosystem: effective access to public funding mechanisms. Through the automation
+and simplification of highly complex processes, Granter.ai's AI Agent will increase the
+productivity of specialists and businesses, reduce errors and inefficiencies, and improve the
+success rate of applications. At the same time, it introduces a strategic support logic, helping
+users better align their projects with the objectives and priorities of the European Union,
+which will increase the structural quality of the submitted proposals.
+This new product will be designed to respond to a variety of contexts and user profiles,
+incorporating a modular and scalable architecture that allows the solution to be easily
+adapted to different markets and languages. The very development logic aims at international
+replicability, with identified markets such as Spain, Italy, and the USA for Granter.ai's initial
+expansion. Scalability is also ensured by the proposed business model, based on an annual
+subscription strategy somewhat similar to that used in SaaS (Software as a Service) business
+models, with different access levels depending on each individual or business needs.
+
+Granter.ai's proposal also has a strategic dimension within the context of the digital transition
+promoted by the PRR. By providing businesses with a tool that combines artificial
+intelligence, automation, and usability, the project directly contributes to the "Companies
+4.0" measure's objectives, promoting business model modernization, technological
+empowerment of the business fabric, and the spread of intelligent digital solutions.
+Additionally, it is expected that there will be a positive, albeit indirect, impact on promoting
+eco-innovation and digital transformation: by facilitating access to funding in programs
+related to sustainability, efficiency, and the green economy, Granter.ai can enhance more
+sustainable business practices, promote eco-efficiency, and encourage the emergence of new
+technology-based business models.
+The project's relevance is further reinforced by the strategic vision behind it. The AI Agent
+represents a new growth axis for the company, but also a differentiated value proposition for
+the market, with the capacity to redefine efficiency and quality standards in public funding
+consultancy. This project positions Granter.ai as a technology-driven, innovative company
+capable of leading a paradigm shift, both in Portugal and across the European Union.
+The presented project fully meets the objectives of the measure by proposing the
+development of a product with a solid technological foundation and high scalability potential.
+Granter.ai's proposal is a clear example of how digitalization and artificial intelligence can be
+strategically applied to generate added value and accelerate the growth of tech startups.
+
+Implementation Capacity of the Beneficiaries through a Management
+Team with Adequate Technological and Management Skills for Business
+Model Development
+(limit 5000)
+
+Granter.ai brings together a highly qualified management team, with technical and
+managerial skills fully suitable for the development and implementation of the proposed
+project. The execution of this project – the development of an AI Agent in the context of public
+funds – requires a wide range of capabilities in artificial intelligence, software engineering,
+strategic leadership, product management, and commercial expansion. The founding team of
+Granter.ai ensures the presence of all these skills, with roles clearly distributed and aligned
+with the project's objectives.
+The project leadership is under the responsibility of Duarte Gomes, CEO and founder of the
+company, who brings a solid experience in business creation and scalability. He was part of
+the initial Uber Eats team in Portugal and founded three startups, accumulating over eight
+years of experience in B2B sales and team management. His role in this project focuses on
+defining the overall strategy, managing operations, and leading the international growth of
+the solution. His practical experience with clients and positioning complex digital solutions
+in the market ensures the commercial and strategic direction of the project.
+
+The technological aspect is led by Joel Rodrigues, co-founder and CTO of Granter.ai, with more
+than a decade of experience as Chief Technology Officer in various startups and scale-ups. He
+was also Head of Incubation at Demium in Portugal and CTO of GoParity, accumulating
+expertise in team management, system architecture, and digital product development. Within
+this project, Joel Rodrigues will be responsible for the technical planning and execution of the
+solution, leading the technological definition, the selection of AI approaches to be adopted
+(including GANs and Adv-ICL), and overseeing the development of the proprietary software.
+Complementing the operational management structure, Luis Batista, Head of Operations,
+plays a key role in improving the technical output obtained through the AI Agent. With four
+years of experience in management and operational leadership, including working with
+multinational companies across three continents, Luis Batista will be responsible for the
+technical execution of the project, as well as building and validating the different databases
+required. His previous experience as an international expansion consultant is an important
+asset for ensuring an efficient and results-oriented implementation.
+On the technical side, the project also includes Ricardo Moreira, Tech Lead at Granter.ai. With
+four years of experience in software development, he was previously CTO of an HR Tech
+startup and worked at Siemens in networking and cybersecurity. Ricardo will be responsible
+for the practical implementation of the AI Agent's features, the integration of AI models, and
+applying best practices for secure and scalable development. His experience in complex
+business environments adds robustness to the project.
+Finally, the go-to-market and commercialization component will be led by Rodrigo Mendes,
+Head of Sales, with over seven years of experience in sales and strategic marketing. His
+professional experience includes companies like Otovo and Too Good To Go, and his role in
+the project will be to ensure market penetration both nationally and internationally, leading
+user acquisition strategies and defining licensing packages. His experience in communicating
+technological value propositions to different market segments is essential for ensuring the
+project's commercial success.
+This team combines technical know-how with a deep understanding of digital markets,
+allowing Granter.ai to internally gather all the necessary skills for the project's execution. The
+team is agile, multidisciplinary, and highly motivated, with a proven track record of effective
+collaboration and achieving ambitious goals in short periods. The existence of a core team
+with proven experience in creating and implementing digital products provides a solid
+foundation for the execution of the project.
+Additionally, the project will be strengthened with the hiring of a front-end developer
+specializing in artificial intelligence, who will be crucial for creating the tool, ensuring it
+remains intuitive. This hire is essential to ensure the project's technical demands are met.
+In summary, Granter.ai's team is fully aligned with the project's requirements, both at the
+strategic leadership level and in technical and commercial execution. The complementarity
+between the team members, combined with their previous experience and demonstrated
+
+execution capacity, ensures the AI Agent's successful implementation, making a meaningful
+contribution to the measure's objectives and the company's sustainable growth.
+
+Impact of the Project on the Competitiveness of the Beneficiaries through
+the Project’s Contribution to Differentiation in the Market
+(limit 5000)
+
+The project presented by Granter.ai will have a profound impact on its competitiveness,
+giving it a differentiating position in the market for technological solutions applied to
+consultancy. By creating an AI Agent dedicated to preparing applications for community
+funds, the company places itself at the forefront of digital transformation in the sector,
+offering a technologically robust and highly practical solution.
+Granter.ai's differentiation from the competition lies in the unique value proposition of the
+project: providing an intelligent digital tool capable of automating and optimizing every stage
+of the application process, from identifying the opportunity to final submission. This end-toend approach, combined with the application of advanced methodologies such as GANs and
+Adv-ICL, enables the provision of an unparalleled, highly personalized service, with
+significant time, efficiency, and quality gains.
+While most solutions currently available in the market are limited to providing databases or
+generic application models, Granter.ai's tool will position itself as an intelligent and
+interactive platform, capable of understanding the profile and objectives of each user and
+generating optimized content aligned with the specific requirements of each funding
+opportunity. This dynamic adaptability, combined with an intuitive and functional interface,
+creates a clear differentiating factor that increases customer retention and satisfaction.
+The project's impact also extends to the experience of end-users, who will have access to a
+solution that simplifies complex processes and enhances the strategic quality of the
+applications submitted. The tool will support users in structuring their proposals, promoting
+alignment with the European Union's goals and objectives, which will, in turn, increase the
+chances of approval and funding. This strategic support capability, powered by artificial
+intelligence, positions Granter.ai as a key partner in the success of its clients.
+The technological innovation embedded in the tool also translates into a new business
+proposition for the company. The monetization model proposed is based on an annual
+subscription strategy, with different levels of access depending on the needs of each user.
+This model ensures the project's financial sustainability and scalability, allowing Granter.ai
+to adapt the offering to the needs of different markets and target audiences.
+The company's commercial strategy includes, initially, consolidating its presence in Portugal,
+leveraging the network of over 2,500 companies already registered on Granter.ai's old
+platform, and rapidly expanding into Spain, Italy, and the USA. These countries have been
+
+identified based on their high demand for public funding and the existence of favorable
+regulatory contexts for the adoption of innovative digital tools. The AI Agent's ability to
+operate in different languages and adapt to various legal frameworks enhances its
+competitive and internationalization potential.
+Strategically, the project will allow Granter.ai to develop a scalable digital product with
+market leadership potential. This new positioning will enable the company to attract new
+customer profiles, strengthen brand awareness, and attract strategic investment,
+consolidating the company's sustainable growth. Technological differentiation, combined
+with a user-centered approach and an international market logic, constitutes a key factor in
+building lasting competitive advantages.
+It is also important to highlight the intellectual property component associated with the
+software development – including the protection of proprietary methodologies and
+algorithms – which strengthens the company's position in the innovation ecosystem,
+ensuring the valuation of the assets created and their protection against potential
+competitors. This dimension of innovation protection is essential to ensure the competitive
+advantage in the medium and long term.
+In summary, the project's impact on Granter.ai's competitiveness will be manifold: it will
+enable the company to stand out technologically in its sector, offer a high-value-added
+product based on AI, access new markets through a scalable business model, and position
+itself as a leader in digital support for accessing European funding. Granter.ai believes the
+project will lead to a revolution in the European funding consultancy landscape, and
+Granter.ai will undoubtedly be the catalyst for this change. This project represents a
+strengthening of the company's operational capacity and a strategic transformation of its
+market position, aligned with the goals of the digital economy and innovation.
+
+Justification – Number of Products or Services with Strong
+Digital/Technological Components with Scalability Potential (Fill Only if
+General Allocation Typology Has Been Selected)
+(limit 2000)
+
+Granter.ai's project proposes the development of a product – an Artificial Intelligence (AI)
+Agent for businesses – an innovative digital solution with a strong technological component,
+designed to automate and optimize the entire process of preparing applications for public
+funds. This product is an end-to-end solution that integrates the latest AI methodologies, such
+as Generative Adversarial Networks (GANs) and Adversarial In-Context Learning (Adv-ICL),
+enabling the automatic generation of personalized content aligned with the specific
+requirements of each funding opportunity.
+The scalability of the product will be ensured by its modular and flexible architecture,
+allowing rapid adaptation to different international markets, built on a solid foundation using
+advanced technology. The tool is designed to operate in multiple languages and integrate
+
+efficiently into the legal frameworks of each country by connecting to various databases, with
+the goal of expanding into strategic markets such as Spain, Italy, and the USA.
+Moreover, the adopted business model – based on an annual subscription strategy – ensures
+the product's financial scalability, allowing Granter.ai to adapt the offering based on the needs
+of different customer segments. This model enables continuous expansion of the customer
+base and guarantees sustainable product growth, with high commercial success prospects.
+Therefore, Granter.ai's AI Agent will be a digital product with strong scalability potential, not
+only in terms of customer base growth but also in its capacity to adapt to different markets
+and needs, offering a differentiated, high-value solution to specialists and businesses in the
+public funding sector.
+
+Tabela de Investimentos (AI Proposal)
+Expense category
+
+Budget allocated
+
+Details
+
+Answers
+
+Costs with Human
+Resources
+
+20,000€
+
+Number of new
+hires
+
+Based on
+Granter.ai's focus on
+internal
+development and
+given the current
+team composition,
+we may anticipate
+the hiring of 2-3
+new software
+developers to assist
+in this project.
+
+Expenses with
+technological
+accreditation of
+Human Resources
+
+5,000€
+
+Name of the
+planned
+certifications
+
+Considering the
+project's focus on AI
+technology and the
+complexity of grantwriting processes,
+we propose to
+certify the team in
+Advanced AI
+courses, and
+potentially in
+specialized grant
+application
+procedure courses.
+
+Expenses with
+External Services
+
+4,000€
+
+Types of external
+services planned
+
+Even though
+Granter.ai is focused
+on internal
+development, we
+anticipate the need
+for some external
+services. These
+could include
+specialized legal
+advice related to
+patent application
+and external
+security audits for
+
+the developed
+software.
+Expenses with the
+acquisition or
+renting of
+equipment
+
+5,000€
+
+Name of the
+planned
+acquisitions
+
+This line includes
+expenses with
+personal computers
+for the new hires
+and potential
+software
+subscriptions
+necessary for the
+project
+development, like
+cloud storage or
+specialized AI
+development
+tools/subscriptions.
+
+Expenses with the
+protection of
+intellectual
+property
+
+11,000€
+
+Intellectual
+property rights
+
+Given the unique,
+proprietary nature
+of the software
+being developed, a
+large portion of the
+budget will be
+allocated towards
+patent-related
+expenses, legal fees
+and advice to
+ensure the
+protection of
+intellectual
+property.
+
+

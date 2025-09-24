@@ -1,0 +1,836 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix schema: <http://schema.org/> .
+@prefix dg: <https://w3id.org/dingo#> .
+
+dg:Grant a rdfs:Class ;
+    rdfs:label "Grant" ;
+    rdfs:comment "The class for grant: a disbursed fund payed to a recipient or beneficiary and the process for it." ;
+    rdfs:isDefinedBy dg: ;
+	skos:closeMatch schema:MonetaryGrant ;
+	skos:closeMatch frapo:Funding ;
+	skos:narrowMatch frapo:Grant ;
+	skos:broadMatch wd:Q230788 .
+
+dg:GrantPayment a rdfs:Class ;
+    rdfs:label "GrantPayment" ;
+    rdfs:comment "The class for grant payments: a single payment to a recipient or beneficiary within a Grant." ;
+    rdfs:isDefinedBy dg: ;
+	skos:broadMatch frapo:Payment ;
+	skos:broadMatch wd:Q1148747 .
+
+dg:GrantShare a rdfs:Class ;
+    rdfs:label "GrantShare" ;
+    rdfs:comment "The class for grant shares: the full or proper portion or part allotted or belonging to or contributed to an individual entity within a Grant." ;
+    rdfs:isDefinedBy dg: .	
+	
+dg:Project a rdfs:Class ;
+    rdfs:label "Project" ;
+    rdfs:comment "The class for projects: an organised endeavour (collective or individual) planned to reach a particular aim or achieve a result." ;
+    rdfs:isDefinedBy dg: ;
+	skos:closeMatch schema:Project ;
+	skos:closeMatch foaf:Project ;
+	skos:narrowMatch frapo:Project ;
+	skos:narrowMatch frapo:Investigation ;
+	skos:closeMatch wd:Q170584 .
+
+dg:Role a rdfs:Class ;
+    rdfs:label "Role" ;
+    rdfs:comment """The class for roles: the function assumed by or ascribed to an entity (typically person, group of persons or organisation) in a particular situation.
+It can be used to precise or represent additional information about a relationship or property such as participation or membership. The class should be only used to derive subclasses.""" ;
+    rdfs:isDefinedBy dg: ;
+    skos:closeMatch schema:Role .
+
+dg:PersonRole a rdfs:Class ;
+    rdfs:label "PersonRole" ;
+    rdfs:comment "The class for person roles: function assumed by or ascribed to a person that takes part in something." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Role .
+
+dg:OrganisationRole a rdfs:Class ;
+    rdfs:label "OrganisationRole" ;
+    rdfs:comment "The class for organisation roles: function assumed by or ascribed to an organisation that takes part in something." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Role .
+
+dg:Person a rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "The class for persons: alive, dead, undead, or fictional." ;
+    rdfs:isDefinedBy dg: ;
+    owl:equivalentClass schema:Person ;
+	owl:equivalentClass foaf:Person ;
+	skos:relatedMatch wd:Q5 ;
+	skos:relatedMatch wd:Q215627 ;
+	skos:closeMatch wd:Q215627 .
+
+dg:Organisation a rdfs:Class ;
+    rdfs:label "Organisation" ;
+    rdfs:comment "The class for organisations: social entities with a collective goal." ;
+    rdfs:isDefinedBy dg: ;
+    owl:equivalentClass schema:Organization ;
+	skos:closeMatch foaf:Oranization ;
+	owl:equivalentClass wd:Q43229 ;
+	skos:closeMatch wd:Q43229 .
+
+dg:Company a rdfs:Class ;
+    rdfs:label "Company" ;
+    rdfs:comment "A commercial business." ;
+    rdfs:isDefinedBy dg: ;
+	skos:closeMatch schema:Corporation ;
+	skos:closeMatch frapo:Company ;
+    rdfs:subClassOf dg:Organisation ;
+	skos:closeMatch wd:Q783794 .
+
+dg:ForProfitOrganisation a rdfs:Class ;
+    rdfs:label "ForProfictOrganisation" ;
+    rdfs:comment "For profit entity." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:EducationOrganisation a rdfs:Class ;
+    rdfs:label "EducationOrganisation" ;
+    rdfs:comment "Institution that provides education." ;
+    rdfs:isDefinedBy dg: ;
+    owl:equivalentClass schema:EducationalOrganization ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:HigherEducationOrganisation a rdfs:Class ;
+    rdfs:label "HigherEducationOrganisation" ;
+    rdfs:comment "Place of postsecondary education (e.g., universities, vocational universities, community colleges, liberal arts colleges, institutes of technology, and others)." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:ResearchPerformingOrganisation a rdfs:Class ;
+    rdfs:label "ResearchPerformingOrganisation" ;
+    rdfs:comment "Organisations devoted to research activities." ;
+    rdfs:isDefinedBy dg: ;
+	skos:relatedMatch frapo:ResearchInstitute ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:HealthcareOrganisation a rdfs:Class ;
+    rdfs:label "HealthcareOrganisation" ;
+    rdfs:comment "Organization that provides health care and related services." ;
+    rdfs:isDefinedBy dg: ;
+    owl:equivalentClass schema:MedicalOrganization ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:NonprofitOrganisation a rdfs:Class ;
+    rdfs:label "NonprofitOrganisation" ;
+    rdfs:comment "Business entity that pays no income tax, as it furthers a religious, scientific or social cause, providing a public benefit." ;
+    rdfs:isDefinedBy dg: ;
+	skos:closeMatch frapo:NotForProfitOrganization ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:FacilityOrganisation a rdfs:Class ;
+    rdfs:label "FacilityOrganisation" ;
+    rdfs:comment "A place providing for a particular purpose." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:GovernmentalOrganisation a rdfs:Class ;
+    rdfs:label "GovernmentalOrganisation" ;
+    rdfs:comment "Organisation or agency depending on a government, State or other supranational organisation and mainly operated by the government." ;
+    rdfs:isDefinedBy dg: ;
+    owl:equivalentClass schema:GovernmentOrganization ;
+	skos:relatedMatch frapo:GovernmentOrganization ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:ArchiveOrganisation a rdfs:Class ;
+    rdfs:label "ArchiveOrganisation" ;
+    rdfs:comment "Institution that holds artifacts and other objects of scientific, artistic, cultural, historical, or other importance." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:CulturalOrganisation a rdfs:Class ;
+    rdfs:label "CulturalOrganisation" ;
+    rdfs:comment "Cultural institution or cultural organization is an organization within a culture/subculture that works for the preservation or promotion of culture." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:PerformingGroup a rdfs:Class ;
+    rdfs:label "PerformingGroup" ;
+    rdfs:comment "A performance group, such as a band, an orchestra, or a circus." ;
+    rdfs:isDefinedBy dg: ;
+    owl:equivalentClass schema:PerformingGroup ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:SportsOrganisation a rdfs:Class ;
+    rdfs:label "SportsOrganisation" ;
+    rdfs:comment "Represents the class of all sports organizations, including sports teams, governing bodies, and sports associations." ;
+    rdfs:isDefinedBy dg: ;
+    owl:equivalentClass schema:SportsOrganisation ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:SupranationalOrganisation a rdfs:Class ;
+    rdfs:label "SupranationalOrganisation" ;
+    rdfs:comment "International organisation with power and influence in the jurisdictions of its member states. Example: European Union." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:IntergovernmentalOrganisation a rdfs:Class ;
+    rdfs:label "IntergovernmentalOrganisation" ;
+    rdfs:comment "Organization composed primarily of sovereign states. Example: United Nations." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Organisation .
+
+dg:FundingAgency a rdfs:Class ;
+    rdfs:label "FundingAgency" ;
+    rdfs:comment "The class for funding agencies: organisations that materially disburse and administer the Grant process." ;
+    rdfs:isDefinedBy dg: ;
+	skos:closeMatch schema:FundingAgency ;
+	skos:closeMatch frapo:FundingAgency ;
+    rdfs:subClassOf dg:Organisation.
+
+dg:FundingScheme a rdfs:Class ;
+    rdfs:label "FundingScheme" ;
+    rdfs:comment "The class for funding schemes: plans, designs, and/or programs that determines and organizes the funding." ;
+    rdfs:isDefinedBy dg: ;
+	skos:closeMatch frapo:FundingProgramme ;
+	skos:closeMatch schema:FundingScheme .
+
+dg:Criterion a rdfs:Class ;
+    rdfs:label "Criterion" ;
+    rdfs:comment "Specification of Grant coverage, Grant eligibility, Grant reimbursement rates, Grant specific criteria for funding, Grant population targets, and similar features." ;
+    rdfs:isDefinedBy dg: .
+
+dg:ThematicCriterion a rdfs:Class ;
+    rdfs:label "ThematicCriterion" ;
+    rdfs:comment "Specifies that grants are awarded to projects on the basis of specified thematic/subject areas or well-defined areas of investigation indicated by the funding body." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Criterion.
+
+dg:OrganisationalCriterion a rdfs:Class ;
+    rdfs:label "OrganisationalCriterion" ;
+    rdfs:comment "Specifies that grants are awarded on the basis of specified organisational form of the project, for instance demanding for participation of different research groups (synergy)." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Criterion.
+
+dg:CareerPurposeCriterion a rdfs:Class ;
+    rdfs:label "CareerPurposeCriterion" ;
+    rdfs:comment "Specifies that grants are awarded on the basis of career-related goals and applicants must be at a defined career stage (defined academic degree) to be achieved." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Criterion.
+
+dg:InfrastructurePurposeCriterion a rdfs:Class ;
+    rdfs:label "InfrastructurePurposeCriterion" ;
+    rdfs:comment "Specifies that grants are awarded to cover for the expenses of infrastructure." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Criterion.
+
+dg:CareerStageCriterion a rdfs:Class ;
+    rdfs:label "CareerStageCriterion" ;
+    rdfs:comment "Specifies that grants are awarded to projects on the basis of career stage limits." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Criterion.
+
+dg:EmploymentCriterion a rdfs:Class ;
+    rdfs:label "EmploymentCriterion" ;
+    rdfs:comment "Specifies that grants are awarded on the basis of employment conditions by an organisation eligible for funding at the time of applying or receiving the funds." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Criterion.
+
+dg:AgeCriterion a rdfs:Class ;
+    rdfs:label "AgeCriterion" ;
+    rdfs:comment "Specifies that grants are awarded to projects on the basis of age limits." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Criterion.
+
+dg:WorkingTimeCriterion a rdfs:Class ;
+    rdfs:label "WorkingTimeCriterion" ;
+    rdfs:comment "Specifies that grants are awarded to projects on the basis of percentage of work time specifically devoted to the funded research." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Criterion.
+
+dg:GeographicCriterion a rdfs:Class ;
+    rdfs:label "GeographicCriterion" ;
+    rdfs:comment "Specifies that grants are awarded to projects on the basis of geographic areas, either where the project has to be implemented, or where the researcher must have been operating before applying for funding, or where the participants must be resident or citizens." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Criterion.
+
+dg:BottomUpCriterion a rdfs:Class ;
+    rdfs:label "BottomUpCriterion" ;
+    rdfs:comment "Specifies that grants are awarded to projects on the basis of the research proposal itself without restriction on theme/subject or research area. The funding body does not specifies beforehand missions, targets nor topics of the research projects that can apply." ;
+    rdfs:isDefinedBy dg: ;
+    rdfs:subClassOf dg:Criterion.
+
+dg:AcademicDegree a rdfs:Class ;
+    rdfs:label "AcademicDegree" ;
+    rdfs:comment "The class for academic degrees: college or university diploma." ;
+    rdfs:isDefinedBy dg: ;
+    owl:equivalentClass wd:Q189533 .
+	
+dg:Identifier a rdfs:Class ;
+    rdfs:label "Identifier" ;
+    rdfs:comment "The class for identifiers." ;
+	skos:closeMatch wd:Q853614 ;
+	skos:closeMatch wd:Q6545185 ;
+    rdfs:isDefinedBy dg: .
+
+dg:InformationBase a rdfs:Class ;
+    rdfs:label "InformationBase" ;
+    rdfs:comment "An organized collection of data and/or information. It can use any available technology. The temr can also indicate in general the information system built integrating such information bases." ;
+    rdfs:isDefinedBy dg: . 
+
+dg:id_value a rdf:Property ;
+    rdfs:label "id_value" ;
+    rdfs:comment "String representing the identifier." ;
+    rdfs:domain dg:Identifier ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy dg: .
+
+dg:used_in a rdf:Property ;
+    rdfs:label "used_in" ;
+    rdfs:comment "Database or information system where the identifier is/was used." ;
+    rdfs:domain dg:Identifier ;
+    rdfs:range  dg:InformationBase ;
+    rdfs:isDefinedBy dg: .
+
+dg:id_context_agent a rdf:Property ;
+    rdfs:label "id_context_agent" ;
+    rdfs:comment "Organization, Person, Agency related to the identifiers (for instance, creator, attributor, curator, maintainer, or similar). The specific semantic should be indicated with dedicated ontologies, such as PROV-O." ;
+    rdfs:domain dg:Identifier ;
+    rdfs:range [ a owl:Class; owl:unionOf (dg:Person dg:Organisation dg:FundingAgency) ] ;
+    rdfs:isDefinedBy dg: .
+
+dg:economic_value a rdf:Property ;
+    rdfs:label "economic_value" ;
+    rdfs:comment "Amount or value expressed in a specific currency (relationship between the item and a value expressed in a currency unit)." ;
+    rdfs:range schema:MonetaryAmount ;
+	skos:broader schema:amount ;
+    rdfs:isDefinedBy dg: .
+
+dg:implementation_of a rdf:Property ;
+    rdfs:label "implementation_of" ;
+    rdfs:comment "The relationship between the grant (subject) and the decision, plan, program (object) that the grant is the concrete realisation of." ;
+    rdfs:domain dg:Grant ;
+    rdfs:range dg:FundingScheme ;
+    owl:inverseOf dg:has_implementation ;
+    rdfs:isDefinedBy dg: .
+
+dg:has_implementation a rdf:Property ;
+    rdfs:label "has_implementation" ;
+    rdfs:comment "The relationship between the decision, plan, program (subject) and the grant (object) that the grant is the concrete realisation of." ;
+    rdfs:domain dg:FundingScheme ;
+    rdfs:range dg:Grant ;
+    owl:inverseOf dg:implementation_of ;
+    rdfs:isDefinedBy dg: .
+
+dg:implements a rdf:Property ;
+    rdfs:label "implements" ;
+    rdfs:comment "The relationship between the funding agency (subject) and the decision, plan, program (object) that the funding agency implements and administers." ;
+    rdfs:domain dg:FundingAgency ;
+    rdfs:range dg:FundingScheme ;
+    owl:inverseOf dg:implemented_by ;
+    rdfs:isDefinedBy dg: .
+
+dg:implemented_by a rdf:Property ;
+    rdfs:label "implemented_by" ;
+    rdfs:comment "The relationship between the decision, plan, program (subject) and the funding agency (object) that the funding agency implements and administers." ;
+    rdfs:domain dg:FundingScheme ;
+    rdfs:range dg:FundingAgency ;
+    owl:inverseOf dg:implements ;
+    rdfs:isDefinedBy dg: .
+
+
+dg:finances a rdf:Property ;
+    rdfs:label "finances" ;
+    rdfs:comment "The relation between the Grant (subject) and the Project (object)." ;
+    rdfs:domain dg:Grant ;
+    rdfs:range dg:Project ;
+    owl:inverseOf dg:funded_by ;
+	skos:closeMatch p:P2770 ;
+	skos:broadMatch frapo:funds ;
+	skos:broadMatch frapo:supports ;
+    rdfs:isDefinedBy dg: .
+
+dg:funded_by a rdf:Property ;
+    rdfs:label "funded_by" ;
+    rdfs:comment "The relation between the Project (subject) and the Grant (object)." ;
+    rdfs:domain dg:Project ;
+    rdfs:range dg:Grant ;
+    owl:inverseOf dg:finances ;
+	skos:broadMatch frapo:isFundedBy ;
+	skos:broadMatch frapo:isSupportedBy ;
+    rdfs:isDefinedBy dg: .
+
+dg:budget a rdf:Property ;
+    rdfs:label "budget" ;
+    rdfs:comment "Amount of money necessary or planned for a determined project/activity." ;
+    rdfs:domain dg:Project ;
+    rdfs:range schema:MonetaryAmount ;
+	skos:related p:P2769 ;
+    rdfs:isDefinedBy dg: .
+
+dg:beneficiary a rdf:Property ;
+    rdfs:label "beneficiary" ;
+    rdfs:comment "The relation between the Grant (subject) and a (one of the) person(s) or organisation(s) receiving benefits from it identified by his/her/its role." ;
+    rdfs:domain dg:Grant ;
+    rdfs:range dg:Role ;
+    owl:inverseOf dg:beneficiary_of ;
+	skos:broadMatch schema:recipient ;
+    rdfs:isDefinedBy dg: .
+
+dg:recipient a rdf:Property ;
+    rdfs:label "recipient" ;
+    rdfs:comment "The receiver of a GrantPayment or receiver/beneficiary of a GrantShare." ;
+    rdfs:domain [ a owl:Class; owl:unionOf (dg:GrantPayment dg:GrantShare) ] ;
+    rdfs:range [ a owl:Class; owl:unionOf (dg:Person dg:Organisation) ] ;
+	skos:broadMatch schema:recipient ;
+    rdfs:isDefinedBy dg: .	
+	
+dg:beneficiary_of a rdf:Property ;
+    rdfs:label "beneficiary_of" ;
+    rdfs:comment "The relation between a (one of the) person(s) or organisation(s) receiving benefits from a Grant identified by his/her/its role (subject), and the Grant." ;
+    rdfs:domain dg:Role ;
+    rdfs:range dg:Grant ;
+    owl:inverseOf dg:beneficiary ;
+    rdfs:isDefinedBy dg: .
+	
+dg:participant a rdf:Property ;
+    rdfs:label "participant" ;
+    rdfs:comment "The relation between the Project (subject) and a (one of the) person(s) or organisation(s) contributing to or taking part in it identified by his/her/its role." ;
+    rdfs:domain dg:Project ;
+    rdfs:range dg:Role ;
+    owl:inverseOf dg:participant_of ;
+	skos:closeMatch p:P710 ;
+	skos:broadMatch schema:participant ;
+    rdfs:isDefinedBy dg: .
+
+dg:participant_of a rdf:Property ;
+    rdfs:label "participant_of" ;
+    rdfs:comment "The relation between a (one of the) person(s) or organisation(s) participant of a Project identified by his/her/its role (subject), and the Project." ;
+    rdfs:domain dg:Role ;
+    rdfs:range dg:Project ;
+    owl:inverseOf dg:participant ;
+    rdfs:isDefinedBy dg: .
+
+dg:hasPart a rdf:Property ;
+    rdfs:label "hasPart" ;
+    rdfs:comment "The relation between a superset and its direct subset(s). Indicates an item that is a part (also in generalised sense) of the subject item." ;
+	owl:inverseOf dg:isPartOf ;
+	skos:closeMatch p:P527 ;
+    rdfs:isDefinedBy dg: .
+
+dg:isPartOf a rdf:Property ;
+    rdfs:label "isPartOf" ;
+    rdfs:comment "The relation between a subset and its direct superset(s). Indicates an item that is a part (also in generalised sense) of the object item." ;
+    rdfs:range rdfs:Resource ;
+    owl:inverseOf dg:hasPart ;
+	skos:closeMatch p:361 ;
+    rdfs:isDefinedBy dg: .
+
+dg:early_termination a rdf:Property ;
+    rdfs:label "early_termination" ;
+    rdfs:comment "Indicates if the role was ended ahead of time with respect to the grant contract of project ending." ;
+    rdfs:domain dg:Role ;
+    rdfs:range xsd:boolean ;
+    rdfs:isDefinedBy dg: .	
+	
+dg:point_in_time a rdf:Property ;
+    rdfs:label "point_in_time" ;
+    rdfs:comment "The moment in time when an event occurs." ;
+    rdfs:range [ a owl:Class; owl:unionOf (xsd:date xsd:dateTime) ] ;
+    owl:equivalentProperty p:P585 ;
+    rdfs:isDefinedBy dg: .
+
+dg:inception a rdf:Property ;
+    rdfs:label "inception" ;
+    rdfs:comment "Date or point in time when the subject was founded/created." ;
+    rdfs:range [ a owl:Class; owl:unionOf (xsd:date xsd:dateTime) ] ;
+    owl:equivalentProperty p:P571 ;
+    rdfs:isDefinedBy dg: .
+
+dg:start_time a rdf:Property ;
+    rdfs:label "start_time" ;
+    rdfs:comment "The time an item starts to exist/operate or a statement starts being valid." ;
+    rdfs:range [ a owl:Class; owl:unionOf (xsd:date xsd:dateTime) ] ;
+	owl:equivalentProperty p:P580 ;
+	skos:closeMatch schema:startTime ;
+	skos:closeMatch frapo:hasStartDate ;
+    rdfs:isDefinedBy dg: .
+
+dg:end_time a rdf:Property ;
+    rdfs:label "end_time" ;
+    rdfs:comment "The time an item ceases to exist or a statement stops being valid." ;
+    rdfs:range [ a owl:Class; owl:unionOf (xsd:date xsd:dateTime) ] ;
+    owl:equivalentProperty p:P582 ;
+	skos:closeMatch schema:endTime ;
+	skos:closeMatch frapo:hasEndDate ;
+    rdfs:isDefinedBy dg: .
+
+dg:title a rdf:Property ;
+    rdfs:label "title" ;
+    rdfs:comment "The title of a project (original or translated)." ;
+    rdfs:domain dg:Project ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy dg: .
+
+dg:field_of_work a rdf:Property ;
+    rdfs:label "title" ;
+    rdfs:comment "Specialisation of a person, project or organisation." ;
+    rdfs:domain [ a owl:Class; owl:unionOf (dg:Person dg:Project dg:Organisation) ] ;
+    rdfs:range rdfs:Resource ;
+	skos:exactMatch p:P101 ;
+    rdfs:isDefinedBy dg: .
+
+dg:objective a rdf:Property ;
+    rdfs:label "objective" ;
+    rdfs:comment "Desired result or outcome." ;
+    rdfs:domain dg:Project ;
+    rdfs:range rdfs:Resource ;
+	skos:exactMatch p:P3712 ;
+    rdfs:isDefinedBy dg: .
+
+dg:product_or_material_produced a rdf:Property ;
+    rdfs:label "product_or_material_produced" ;
+    rdfs:comment "Material, product or output produced by a Project." ;
+    rdfs:domain dg:Project ;
+    rdfs:range rdfs:Resource ;
+	skos:broader p:P1056 ;
+	skos:broadMatch schema:produces ;
+	skos:closeMatch frapo:hasOutput ;
+    rdfs:isDefinedBy dg: .
+
+dg:abstract_or_summary_description a rdf:Property ;
+    rdfs:label "abstract_or_summary_description" ;
+    rdfs:comment "Short summary description of a project." ;
+    rdfs:domain dg:Project ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy dg: .
+
+dg:role_label a rdf:Property ;
+    rdfs:label "role_label" ;
+    rdfs:comment "Label (name) of a Role." ;
+    rdfs:domain dg:Role ;
+    rdfs:range xsd:string ;
+	skos:closeMatch schema:roleName ;
+    rdfs:isDefinedBy dg: .
+
+dg:role_type a rdf:Property ;
+    rdfs:label "role_type" ;
+    rdfs:comment "Item representing the specific class of a Role." ;
+    rdfs:domain dg:Role ;
+    rdfs:range rdfs:Resource ;
+    rdfs:isDefinedBy dg: .
+
+dg:entity_taking_role a rdf:Property ;
+    rdfs:label "entity_taking_role" ;
+    rdfs:comment "The person or organisation or entity (object) assuming or to whom is assigned the role (subject)." ;
+    rdfs:domain dg:Role ;
+    rdfs:range [ a owl:Class; owl:unionOf (dg:Person dg:Organisation) ] ;
+	owl:inverseOf dg:takes_role ;
+    rdfs:isDefinedBy dg: .
+	
+dg:takes_role a rdf:Property ;
+    rdfs:label "takes_role" ;
+    rdfs:comment "The role (object) assumed or assigned to a person or organisation or entity (subject)." ;
+    rdfs:domain [ a owl:Class; owl:unionOf (dg:Person dg:Organisation) ] ;
+    rdfs:range dg:Role ;
+	owl:inverseOf dg:entity_taking_role ;
+    rdfs:isDefinedBy dg: .	
+
+dg:academic_degree a rdf:Property ;
+    rdfs:label "academic_degree" ;
+    rdfs:comment "Qualification awarded to the person taking the role by a higher education organisation, normally at a college or university." ;
+    rdfs:domain dg:Person ;
+    rdfs:range dg:AcademicDegree ;
+    skos:exactMatch p:P512 ;
+    rdfs:isDefinedBy dg: .
+
+dg:surname a rdf:Property ;
+    rdfs:label "surname" ;
+    rdfs:comment "Part of a person's name shared with a group (typically family or tribe or clan depending on the culture), and/or used in formal contexts or with people that do not know the person well." ;
+    rdfs:domain dg:Person ;
+    rdfs:range xsd:string ;
+    skos:closeMatch schema:familyName ;
+	skos:closeMatch p:P734 ;
+	skos:closeMatch foaf:family_name ;
+	skos:closeMatch foaf:surname ;
+    rdfs:isDefinedBy dg: .
+
+dg:givenName a rdf:Property ;
+    rdfs:label "givenName" ;
+    rdfs:comment "Part of a person's name that individuates the person within the (typically closest) group that shares the same surname." ;
+    rdfs:domain dg:Person ;
+    rdfs:range xsd:string ;
+    skos:closeMatch schema:givenName ;
+	skos:closeMatch p:P735 ;
+	skos:closeMatch foaf:firstName ;
+    rdfs:isDefinedBy dg: .	
+
+dg:additionalName a rdf:Property ;
+    rdfs:label "additionalName" ;
+    rdfs:comment "Additional part of a person's beyond given name and surname, can be used for a middle name." ;
+    rdfs:domain dg:Person ;
+    rdfs:range xsd:string ;
+    owl:equivalentProperty schema:additionalName ;
+    rdfs:isDefinedBy dg: .
+	
+dg:affiliation a rdf:Property ;
+    rdfs:label "affiliation" ;
+    rdfs:comment "An organization that this person is affiliated with. For example, a school/university, a club, or a team." ;
+    rdfs:domain dg:Person ;
+    rdfs:range dg:Organisation ;
+    owl:equivalentProperty schema:affiliation ;
+    rdfs:isDefinedBy dg: .
+	
+dg:employer a rdf:Property ;
+    rdfs:label "employer" ;
+    rdfs:comment "A person or company that provides a job (possibly paying wages or a salary) to the person taking the role." ;
+    rdfs:domain dg:PersonRole ;
+    rdfs:range [ a owl:Class; owl:unionOf (dg:Person dg:Organisation) ] ;
+    rdfs:isDefinedBy dg: .
+
+dg:legalName a rdf:Property ;
+    rdfs:label "legalName" ;
+    rdfs:comment "The official name of the organization, for example the registered company name." ;
+    rdfs:domain dg:Organisation ;
+    rdfs:range xsd:string ;
+    owl:equivalentProperty schema:legalName ;
+    rdfs:isDefinedBy dg: .		
+	
+dg:country a rdf:Property ;
+    rdfs:label "country" ;
+    rdfs:comment "Country where the organisation is located ufficially." ;
+    rdfs:domain dg:Organisation ;
+    rdfs:range schema:Country ;
+	skos:closeMatch p:P17 ;
+    rdfs:isDefinedBy dg: .
+
+dg:headquarters_location a rdf:Property ;
+    rdfs:label "headquarters_location" ;
+    rdfs:comment "Address of the headquarters of the organisation." ;
+    rdfs:domain dg:Organisation ;
+    rdfs:range schema:PostalAddress ;
+	skos:closeMatch p:P159 ;
+	skos:braoder frapo:hasLocation ;
+    rdfs:isDefinedBy dg: .
+
+dg:official_website a rdf:Property ;
+    rdfs:label "official_website" ;
+    rdfs:comment "URL of the official website of an item." ;
+    rdfs:domain [ a owl:Class; owl:unionOf (dg:Organisation dg:Person dg:FundingAgency dg:Project dg:FundingScheme) ] ;
+    rdfs:range [ a owl:Class; owl:unionOf (xsd:string xsd:anyURI schema:url) ] ;
+    skos:closeMatch p:P856 ;
+    rdfs:isDefinedBy dg: .
+
+dg:short_name a rdf:Property ;
+    rdfs:label "short_name" ;
+    rdfs:comment "Acronym or short name of an organisation or project or funding scheme." ;
+    rdfs:domain [ a owl:Class; owl:unionOf (dg:Organisation dg:Project dg:FundingScheme) ] ;
+    rdfs:range xsd:string ;
+    skos:closeMatch p:P1813 ;
+	skos:broadMatch frapo:hasAcronym ;
+    rdfs:isDefinedBy dg: .
+
+dg:disburses a rdf:Property ;
+    rdfs:label "disburses" ;
+    rdfs:comment "The relation between the funding agency (subject) and the disbursed grant (object)." ;
+    rdfs:domain dg:FundingAgency ;
+    rdfs:range dg:Grant ;
+    owl:inverseOf dg:disbursed_by ;
+    rdfs:isDefinedBy dg: .
+
+dg:disbursed_by a rdf:Property ;
+    rdfs:label "disbursed_by" ;
+    rdfs:comment "The relation between the disbursed grant (subject) and the funding agency (object)." ;
+    rdfs:domain dg:Grant ;
+    rdfs:range dg:FundingAgency ;
+    owl:inverseOf dg:disburses ;
+    rdfs:isDefinedBy dg: .
+
+dg:funder a rdf:Property ;
+    rdfs:label "funder" ;
+    rdfs:comment """The ultimate funder who decided and is ultimately responsible for the funding scheme.
+(Example: FundingScheme Horizon2020 dg:funder European Commission).""" ;
+    rdfs:domain dg:FundingScheme ;
+    rdfs:range rdfs:Resource ;
+	skos:broader frapo:isFundedBy ;
+	skos:broader frapo:isSupportedBy ;
+    rdfs:isDefinedBy dg: .
+
+dg:criterion a rdf:Property ;
+    rdfs:label "criterion" ;
+    rdfs:comment "Property by which a distinction or classification is made. When applied to, for instance, FundingScheme items it indicates criterion item establishing the eligibility conditions, target and other relevant points of the FundingScheme to fund an application." ;
+    rdfs:domain dg:FundingScheme ;
+    rdfs:range dg:Criterion ;
+	skos:closeMatch p:P1013 ;
+    rdfs:isDefinedBy dg: .
+		
+dg:criterion_description a rdf:Property ;
+    rdfs:label "criterion_description" ;
+    rdfs:comment "Description of the eligibility, targets and other relevant points of the FundingScheme." ;
+    rdfs:domain dg:Criterion ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy dg: .
+
+dg:thematic_area a rdf:Property ;
+    rdfs:label "thematic_area" ;
+    rdfs:comment "Topics and/or area of interest." ;
+    rdfs:domain dg:ThematicCriterion ;
+    rdfs:range rdfs:Resource ;
+    rdfs:isDefinedBy dg: .
+	
+dg:agency_identifier a rdf:Property ;
+    rdfs:label "agency_identifier" ;
+    rdfs:comment "Identifier (for example of Project, Grant, GrantPayment, PersonRole instance, OrganizationRole instance, FundingScheme, Person, Organisation) in the database/archive of the funding agency/funding body/funder." ;
+    rdfs:domain [ a owl:Class; owl:unionOf (dg:Grant dg:GrantPayment dg:Project dg:Role dg:FundingScheme dg:Person dg:Organisation) ]; 
+    rdfs:range dg:Identifier ;
+	skos:narrowMatch frapo:hasGrantNumber ;
+	skos:narrower frapo:hasPersonalIdentifier ;
+	skos:broader dcterms:identifier ;
+    rdfs:isDefinedBy dg: .
+
+dg:grid_id a rdf:Property ;
+    rdfs:label "grid_id" ;
+    rdfs:comment "Institutional identifier from the GRID.ac global research identifier database." ;
+    rdfs:domain dg:Organisation ;
+    rdfs:range xsd:string ;
+	owl:equivalentProperty p:P2427 ;	
+    rdfs:isDefinedBy dg: .
+
+dg:crossref_id a rdf:Property ;
+    rdfs:label "crossref_id" ;
+    rdfs:comment "Identifier for an organisation that funds research, in the Crossref registry." ;
+    rdfs:domain dg:FundingAgency ;
+    rdfs:range xsd:string ;
+	owl:equivalentProperty p:P3153 ;
+    rdfs:isDefinedBy dg: .
+	
+dg:crossref_grantid a rdf:Property ;
+    rdfs:label "crossref_grantid" ;
+    rdfs:comment "Identifier for funding in the Crossref registry." ;
+    rdfs:domain dg:Grant ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy dg: .
+
+dg:wikidata_item_id a rdf:Property ;
+    rdfs:label "wikidata_item_id" ;
+    rdfs:comment "Identifier for a class or item existing in Wikidata." ;
+    rdfs:domain dg:Grant ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy dg: .
+
+dg:orcid_id a rdf:Property ;
+    rdfs:label "orcid_id" ;
+    rdfs:comment "Nonproprietary alphanumeric code to uniquely identify scientific and other academic authors." ;
+    rdfs:domain dg:Person ;
+    rdfs:range xsd:string ;
+	owl:equivalentProperty p:P496 ;
+	skos:equivalentProperty frapo:hasORCID ;
+    rdfs:isDefinedBy dg: .
+
+dg:baseline_academic_degree a rdf:Property ;
+    rdfs:label "baseline_academic_degree" ;
+    rdfs:comment "Academic degree used as minimal/reference point for establishing a set of age limits or other classification." ;
+    rdfs:domain dg:CareerStageCriterion ;
+    rdfs:range dg:AcademicDegree ;
+    rdfs:isDefinedBy dg: .
+
+dg:min_years_from_baseline_degree a rdf:Property ;
+    rdfs:label "min_years_from_baseline_degree" ;
+    rdfs:comment "Minimum number of years counting from the year of when the dg:baseline_academic_degree was obtained." ;
+    rdfs:domain dg:CareerStageCriterion ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:isDefinedBy dg: .
+
+dg:max_years_from_baseline_degree a rdf:Property ;
+    rdfs:label "max_years_from_baseline_degree" ;
+    rdfs:comment "Maximum number of years counting from the year of when the dg:baseline_academic_degree was obtained." ;
+    rdfs:domain dg:CareerStageCriterion ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:isDefinedBy dg: .
+
+dg:min_research_years a rdf:Property ;
+    rdfs:label "min_research_years" ;
+    rdfs:comment "Minimum number of research years required." ;
+    rdfs:domain dg:CareerStageCriterion ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:isDefinedBy dg: .
+
+dg:excluded_academic_degree a rdf:Property ;
+    rdfs:label "excluded_academic_degree" ;
+    rdfs:comment "Academic degree possessing which the subject of the statement cannot apply to the funding program." ;
+    rdfs:domain dg:CareerStageCriterion ;
+    rdfs:range dg:AcademicDegree ;
+    rdfs:isDefinedBy dg: .
+
+dg:min_age a rdf:Property ;
+    rdfs:label "min_age" ;
+    rdfs:comment "Minimum age required." ;
+    rdfs:domain dg:AgeCriterion ;
+    rdfs:range xsd:positiveInteger ;
+	skos:narrowMatch p:P2899 ;
+    rdfs:isDefinedBy dg: .
+
+dg:max_age a rdf:Property ;
+    rdfs:label "max_age" ;
+    rdfs:comment "Maximum age allowed." ;
+    rdfs:domain dg:AgeCriterion ;
+    rdfs:range xsd:positiveInteger ;
+	skos:closeMatch p:P4135 ;
+    rdfs:isDefinedBy dg: .
+
+dg:implementation_country a rdf:Property ;
+    rdfs:label "implementation_country" ;
+    rdfs:comment "Country where the project must be implemented." ;
+    rdfs:domain dg:GeographicCriterion ;
+    rdfs:range schema:Country ;
+    rdfs:isDefinedBy dg: .
+
+dg:person_location a rdf:Property ;
+    rdfs:label "person_location" ;
+    rdfs:comment "Country or geographical administrative entity where the person must reside or be citizen or have undertaken research up to the moment of applying for funding." ;
+    rdfs:domain dg:GeographicCriterion ;
+    rdfs:range schema:Country ;
+	skos:broader frapo:hasLocation ;
+    rdfs:range schema:SupranationalOrganisation ;
+    rdfs:isDefinedBy dg: .
+
+dg:organisation_location a rdf:Property ;
+    rdfs:label "organisation_location" ;
+    rdfs:comment "Country or geographical administrative entity where an organisation must be established to apply for funding." ;
+    rdfs:domain dg:GeographicCriterion ;
+    rdfs:range schema:Country ;
+    rdfs:range schema:SupranationalOrganisation ;
+    rdfs:isDefinedBy dg: .
+
+dg:percentage_working_time a rdf:Property ;
+    rdfs:label "percentage_working_time" ;
+    rdfs:comment "Amount of working time in percentage." ;
+    rdfs:domain dg:WorkingTimeCriterion ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:isDefinedBy dg: .
+
+dg:percentage_employment a rdf:Property ;
+    rdfs:label "percentage_employment" ;
+    rdfs:comment "Minimum percentage of employment required (for example to be eligible for funding)." ;
+    rdfs:domain dg:EmploymentCriterion ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:isDefinedBy dg: .
+
+dg:degree_title a rdf:Property ;
+    rdfs:label "degree_title" ;
+    rdfs:comment "Title denoting the academic degree." ;
+    rdfs:domain dg:AcademicDegree ;
+    rdfs:range xsd:string ;
+	skos:realted frapo:hasDegreeSuffix ;
+    rdfs:isDefinedBy dg: .
+
+dg: a owl:Ontology ;
+    dc:title "DINGO Ontology" ;
+	dc:issued "2018-10-26T00:00:00Z" ;
+    dcterms:creator [a foaf:Person; foaf:name "Diego Chialva"] ;
+	dc:contributor [a foaf:Person; foaf:name "Alexis-Michel Mugabushaka"], [a foaf:Person; foaf:name "Andra Waagmeester"], [a foaf:Person; foaf:name "Eric Prud'hommeaux"], [a foaf:Person; foaf:name "Thomas Baker"], [a foaf:Person; foaf:name "Dan Brickley"] ;
+    dcterms:modified "2020-01-10T10:20:10Z" ;
+    rdfs:comment "The DINGO ontology (Data Integration for Grant Ontology) defines the terms of the DINGO vocabulary and provides a machine readable extensible framework to model data relative to projects, funding, project and funding actors, and, notably, funding policies. It is designed to yield high modeling power and elasticity to cope with the huge variety in funding and project practices, which makes it applicable to many areas where funding is an important aspect: first of all research, but also the arts, cultural conservation, and many others." ;
+    owl:versionInfo "2020-01-10T10:20:10Z" .

@@ -1,0 +1,10 @@
+1. pip install graphrag
+2. create folders ragtest/input
+3. Put text Documents in input foler
+4. In the terminal:
+
+graphrag init --root ./GraphRAG/ragtest
+
+graphrag index --root ./GraphRAG/ragtest
+
+graphrag query -q "what are knowledge graphs used for?" --root ./GraphRAG/ragtest --method local

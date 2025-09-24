@@ -70,7 +70,7 @@ def extract_local_names(ttl_file_path):
     if not os.path.isabs(ttl_file_path):
         ttl_file_path = os.path.join(PROJECT_ROOT, ttl_file_path)
     # Convert to file URI for rdflib
-    file_uri = 'file:///' + os.path.abspath(ttl_file_path).replace('\\', '/')
+    file_uri = os.path.abspath(ttl_file_path).replace('\\', '/')
     g = Graph()
     g.parse(file_uri, format="turtle")
     
@@ -302,7 +302,7 @@ def visualize_graph(graph_documents, output_file = "knowledge_graph.html"):
             """)
         
     net.save_graph(output_file)
-    print(f"Graph saved to {os.path.abspath(output_file)}")
+    print(f"HTML visualization: {os.path.abspath(output_file)}")
 
     # Try to open in browser
     try:
@@ -437,7 +437,7 @@ def visualize_graph_with_chunks(graph_documents, output_file = "knowledge_graph.
         """)
     
     net.save_graph(output_file)
-    print(f"Graph saved to {os.path.abspath(output_file)}")
+    print(f"HTML visualization: {os.path.abspath(output_file)}")
 
     # Try to open in browser
     try:
@@ -498,7 +498,7 @@ def save_graph_to_csv(graph_documents, output_file="."):
                 properties = json.dumps(node_properties['content'])
             else:
                 continue
-        
+
         csv_data.append(f'{node_id},"{node_attr + properties.replace('"', "'")}","{node_type}"') 
 
     # Add empty line separator
@@ -671,23 +671,19 @@ async def abuild_kg(
         "strict_mode": False, # Only use allowed nodes/relationships (True by default)
         "additional_instructions": additional_instructions
     }
-    print("Graph transformer settings:", transformer_kwargs)
         
     graph_transformer = LLMGraphTransformer(**transformer_kwargs)
 
     # Convert to graph
     print("Converting text to graph documents...")
     graph_documents = await graph_transformer.aconvert_to_graph_documents(chunks)
-
-    for graph in graph_documents:
-        print(f"Graph document: {(graph.nodes)} nodes, {(graph.relationships)} relationships. Document: {graph.source.page_content[:25]}...")
     
     # Merge documents
     if include_chunks:
-        print("Using merge_graph_documents_with_chunks to preserve chunk information...")
+        print("Merging documents while preserving chunk information...")
         graph_documents = merge_graph_documents_with_chunks(graph_documents)
     else:
-        print("Using regular merge_graph_documents...")
+        print("Merging documents...")
         graph_documents = merge_graph_documents(graph_documents)
         
     if not graph_documents:
@@ -696,15 +692,13 @@ async def abuild_kg(
 
     if visualize:
         if include_chunks:
-            print("Using visualize_graph_with_chunks for better chunk visualization...")
+            print("Visualizing graph with chunks...")
             visualize_graph_with_chunks(graph_documents, output_file=html_output)
         else:
-            print("Using regular visualize_graph...")
+            print("Visualizing graph...")
             visualize_graph(graph_documents, output_file=html_output)
 
     print(f"Knowledge graph built successfully!")
-    if visualize:
-        print(f"HTML visualization: {os.path.abspath(html_output)}")
     
     return graph_documents
 

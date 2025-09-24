@@ -21,7 +21,7 @@ gpt41_nano = AzureChatOpenAI(
     temperature = 0.3
 )
 
-prompt_c_step_1 = """Extract classes in ttl format from the following text, only return the created ttl code. 
+prompt_step_1 = """Extract classes in ttl format from the following text, only return the created ttl code. 
 Make sure to label all classes as of type rdfs:Class: 
 Always output ontology elements in English, regardless of the input language.
 Do NOT include any other commentary outside this format.
@@ -31,7 +31,7 @@ STRICT NAMING RULES:
 """
 
 
-prompt_c_step_2 = """Extract individuals and relations in ttl format from the following sentence, based on the given classes.
+prompt_step_2 = """Extract individuals and relations in ttl format from the following sentence, based on the given classes.
 Only return the ttl code, include the individuals and relations in this sentence, and the classes already provided.
 Make sure to label all classes as of rdfs:Class, all individuals as owl:NamedIndividual, and all properties as owl:ObjectProperty, owl:DatatypeProperty, or owl:AnnotationProperty. 
 Always output ontology elements in English, regardless of the input language. 
@@ -44,7 +44,7 @@ STRICT NAMING RULES:
 """
 
 
-#prompt_c_step_2 = """Extract individuals and relations in ttl format from the following sentence, based on the given classes.
+#prompt_step_2 = """Extract individuals and relations in ttl format from the following sentence, based on the given classes.
 #Only return the ttl code, include the classes, individuals, and relations in this sentence. 
 #Make sure to label all classes as of rdfs:Class, all individuals as owl:NamedIndividual, and all properties as owl:ObjectProperty, owl:DatatypeProperty, or owl:AnnotationProperty. 
 #Always output ontology elements (classes, relations, individuals) in English, regardless of the input language. 
@@ -65,7 +65,7 @@ def read_text_file(file: str) -> list:
     """
     with open(file, 'r', encoding='utf-8') as file:
         text = file.read()
-        sentences = nltk.sent_tokenize(text, language='portuguese')
+        sentences = nltk.sent_tokenize(text)
     return sentences
 
 
@@ -289,10 +289,10 @@ def query_azure_gpt(text: list):
     relations = []
 
     try:
-        response_1 = get_azure_response(text, prompt_c_step_1)
+        response_1 = get_azure_response(text, prompt_step_1)
         
         for sentence in text:
-            response_2 = get_azure_response(sentence, prompt_c_step_2, get_results_from_response(response_1))
+            response_2 = get_azure_response(sentence, prompt_step_2, get_results_from_response(response_1))
             relations.append(get_results_from_response(response_2))
 
     except Exception as e:
@@ -309,7 +309,7 @@ if __name__ == "__main__":
     text = read_text_file('data/texts/application_example.txt')
 
     # Classes
-    response_1 = get_azure_response(text, prompt_c_step_1)
+    response_1 = get_azure_response(text, prompt_step_1)
     print(response_1)
     if '```' in response_1:
         response_1 = "\n".join(get_results_from_response(response_1))
@@ -328,7 +328,7 @@ if __name__ == "__main__":
     relations = []
     for i, sentence in enumerate(text):
         print(f"\nProcessing sentence {i+1}/{len(text)}")
-        response_2 = get_azure_response(sentence, prompt_c_step_2, 
+        response_2 = get_azure_response(sentence, prompt_step_2, 
                                         get_results_from_response(response_1))
         
         response_2_with_prefixes = ("\n".join(standard_prefixes) + 

@@ -1,0 +1,422 @@
+node_id,node_attr,node_type
+1,"Granter.Ai","Grantersapplicationfile"
+2,"Ai Solutions","Opportunity"
+3,"Public Funding","Opportunity"
+4,"Ai Agent","Opportunity"
+5,"Businesses","Recipient"
+6,"Financing Programs","Opportunity"
+7,"Generative Adversarial Networks","Opportunity"
+8,"Adversarial In-Context Learning","Opportunity"
+9,"Proprietary Software","Opportunity"
+10,"Artificial Intelligence Solutions","Opportunity"
+11,"Research And Technological Development Activities","Opportunity"
+12,"Sector Efficiency","Opportunity"
+13,"Sector Innovation","Opportunity"
+14,"Technology-Intensive Sectors","Geographiccriterion"
+15,"Startups","Personlocation"
+16,"Specialists","Person"
+17,"Funding Opportunities","Concept"
+18,"Linguistic Models","Concept"
+19,"Public Policies","Concept"
+20,"Public Funds","Concept"
+21,"Market","Concept"
+22,"National Contexts","Concept"
+23,"Market Adaptation","Concept"
+24,"Database","Concept"
+25,"Spain","Location"
+26,"Italy","Location"
+27,"Usa","Location"
+28,"Climate Transition","Concept"
+29,"Sustainability","Concept"
+30,"Green Economy","Concept"
+31,"Business Initiatives","Concept"
+32,"Economic Ecosystem","Concept"
+33,"Typology Support For Startup Or Growth","Concept"
+34,"December 2024","Date"
+35,"Registered Companies","Concept"
+36,"Applications Submitted","Concept"
+37,"Funded Projects","Concept"
+38,"Investment Rounds","Concept"
+39,"Quarterly Growth","Concept"
+40,"Ani Recognition","Concept"
+41,"Company","Person"
+42,"Project","Grant"
+43,"Digital Product","Databasetable"
+44,"Markets","Geographiccriterion"
+45,"Team","Person"
+46,"New Member","Person"
+47,"Software","Databasetable"
+48,"Technologies","Databasetable"
+49,"Gans","Databasetable"
+50,"Advicl","Databasetable"
+51,"Methodologies","Databasetable"
+52,"Scalable Licensing Model","Databasetable"
+53,"Languages","Databasetable"
+54,"Legal Frameworks","Databasetable"
+55,"Operational Frameworks","Databasetable"
+56,"Growth Support","Grant"
+57,"Growth Objectives","Databasetable"
+58,"Value Proposition","Databasetable"
+59,"Competitive Position","Databasetable"
+60,"International Markets","Geographiccriterion"
+61,"Company'S Mission","Databasetable"
+62,"Expansion","Databasetable"
+63,"Competencies","Databasetable"
+64,"Partnerships","Databasetable"
+65,"Public Funding Applications","Concept"
+66,"Innovation","Concept"
+67,"Digital Transformation","Concept"
+68,"Ai Functionalities","Concept"
+69,"Adv-Icl","Concept"
+70,"Funding Notice","Concept"
+71,"R&D","Concept"
+72,"Technological Knowledge Transfer","Concept"
+73,"Application Process","Concept"
+74,"Opportunities","Concept"
+75,"Eligibility Analysis","Concept"
+76,"Application Drafting","Concept"
+77,"Application Evaluation","Concept"
+78,"Automated Submission","Concept"
+79,"Project Management","Concept"
+80,"Public Funding Mechanisms","Concept"
+81,"Business Ecosystem","Concept"
+82,"European Union","Person"
+83,"International Expansion","Concept"
+84,"Business Model","Concept"
+85,"Subscription Strategy","Concept"
+86,"Models","Databasetable"
+87,"Access Levels","Databasetable"
+88,"Individual","Person"
+89,"Business","Person"
+90,"Prr","Person"
+91,"Companies 4.0","Geographiccriterion"
+92,"Digital Transition","Geographiccriterion"
+93,"Artificial Intelligence","Person"
+94,"Automation","Person"
+95,"Usability","Person"
+96,"Business Model Modernization","Person"
+97,"Technological Empowerment","Person"
+98,"Digital Solutions","Person"
+99,"Eco-Innovation","Person"
+100,"Funding Programs","Person"
+101,"Efficiency","Person"
+102,"Eco-Efficiency","Person"
+103,"Technology-Based Business Models","Person"
+104,"Public Funding Consultancy","Person"
+105,"Tech Startups","Person"
+106,"Management Team","Person"
+107,"Duarte Gomes","Person"
+108,"Uber Eats","Company"
+109,"Software Engineering","Concept"
+110,"Strategic Leadership","Concept"
+111,"Product Management","Concept"
+112,"Commercial Expansion","Concept"
+113,"Skills","Concept"
+114,"Roles","Concept"
+115,"Project Objectives","Concept"
+116,"Business Creation","Concept"
+117,"Scalability","Concept"
+118,"Initial Uber Eats Team In Portugal","Team"
+119,"B2B Sales","Concept"
+120,"Team Management","Concept},{"
+121,"Joel Rodrigues","Person"
+122,"Demium","Person"
+123,"Goparity","Person"
+124,"Luis Batista","Person"
+125,"Ricardo Moreira","Person"
+126,"Rodrigo Mendes","Person"
+127,"Otovo","Person"
+128,"Too Good To Go","Person"
+129,"Front-End Developer","Person"
+130,"Ai Approaches","Provenanceinfo"
+131,"System Architecture","Provenanceinfo"
+132,"Digital Product Development","Provenanceinfo"
+133,"Ai Models","Provenanceinfo"
+134,"Market Penetration","Provenanceinfo"
+135,"User Acquisition Strategies","Provenanceinfo"
+136,"Licensing Packages","Provenanceinfo"
+137,"Digital Markets","Provenanceinfo"
+138,"Specializing In Artificial Intelligence","Concept"
+139,"Tool","Concept"
+140,"The Project","Concept"
+141,"Grantersteam","Person"
+142,"Technical And Commercial Execution","Concept"
+143,"Team Members","Person"
+144,"Experience","Concept"
+145,"Execution Capacity","Concept"
+146,"Measure'S Objectives","Concept"
+147,"Company'S Sustainable Growth","Concept"
+148,"Beneficiaries","Organization"
+149,"Market Differentiation","Concept"
+150,"Technological Solutions","Geographiccriterion"
+151,"Consultancy Sector","Geographiccriterion"
+152,"Funding Opportunity","Opportunity"
+153,"End-Users","Person"
+154,"Application Models","Geographiccriterion"
+155,"Application Content","Geographiccriterion"
+156,"Subscription Model","Geographiccriterion"
+157,"Portugal","Geographiccriterion"
+158,"Market Leadership","Concept"
+159,"Brand Awareness","Concept"
+160,"Strategic Investment","Concept"
+161,"Technological Differentiation","Concept"
+162,"User-Centered Approach","Concept"
+163,"International Market Logic","Concept"
+164,"Lasting Competitive Advantages","Concept"
+165,"Intellectual Property","Concept"
+166,"Software Development","Concept"
+167,"Proprietary Methodologies","Concept"
+168,"Algorithms","Concept"
+169,"Innovation Ecosystem","Concept"
+170,"Assets Valuation","Concept"
+171,"Protection Against Competitors","Concept"
+172,"Medium And Long Term","Concept"
+173,"European Funding","Concept"
+174,"European Funding Consultancy Landscape","Concept"
+175,"Digital Economy","Concept"
+176,"Ai Methodologies","Concept"
+177,"Public Funds Application Process","Concept"
+178,"Annual Subscription Strategy","Concept"
+179,"Customer Segments","Concept"
+180,"Customer Base","Concept"
+181,"Product Growth","Concept"
+182,"Public Funding Sector","Sector"
+183,"Database Connections","Technology"
+184,"Databases","Technology"
+185,"Software Developers","Person"
+186,"Ai Certifications","Concept"
+187,"Grantwriting Processes","Concept"
+188,"Legal Advice","Service"
+189,"Security Audits","Service"
+190,"Equipment Acquisitions","Technology"
+191,"Planned Acquisitions","Opportunity"
+192,"Expenses With Personal Computers","Grant"
+193,"Expenses With Software Subscriptions","Grant"
+194,"Expenses With Intellectual Property Protection","Grant"
+195,"Intellectual Property Rights","Grant"
+196,"Software Being Developed","Opportunity"
+197,"Patent-Related Expenses","Grant"
+198,"Legal Fees And Advice","Grant"
+199,"Budget For Software Development","Grant"
+
+src,edge_attr,dst,is_chunk_relation
+1,"RELATESTOOPPORTUNITY",2,0
+1,"RELATESTOOPPORTUNITY",3,0
+1,"RELATESTOOPPORTUNITY",4,0
+2,"RELATESTO",5,0
+2,"RELATESTOOPPORTUNITY",6,0
+2,"RELATESTO",7,0
+2,"RELATESTO",8,0
+2,"RELATESTO",9,0
+2,"RELATESTO",10,0
+2,"RELATESTO",11,0
+2,"RELATESTO",12,0
+2,"RELATESTO",13,0
+14,"RELATESTO",15,0
+1,"PROFESSOR",4,0
+4,"USEDBY",16,0
+4,"USEDBY",5,0
+4,"FACILITATES",3,0
+4,"TARGETS",17,0
+4,"INCORPORATES",7,0
+4,"INCORPORATES",8,0
+18,"ADAPTEDTO",19,0
+18,"ADAPTEDTO",20,0
+4,"IMPACT",21,0
+4,"MODULARLYADAPTS",22,0
+4,"CONNECTSTO",24,0
+4,"ENTERMARKET",25,0
+4,"ENTERMARKET",26,0
+4,"ENTERMARKET",27,0
+4,"CONTRIBUTESTO",28,0
+28,"RELATEDTO",29,0
+28,"RELATEDTO",30,0
+31,"POSITIVEIMPACT",30,0
+31,"CONTRIBUTESTO",28,0
+1,"STARTEDOPERATION",34,0
+1,"HAS",35,0
+1,"HAS",36,0
+1,"HAS",37,0
+1,"RAISED",38,0
+1,"REPORTS",39,0
+1,"SEEKS",40,0
+42,"PROFESSOR",41,0
+42,"HASAPPLICATION",43,0
+43,"HASASSOCIATEDFILE",4,0
+4,"RELATESTO",20,0
+4,"RELATESTO",44,0
+44,"RELATESTO",25,0
+44,"RELATESTO",26,0
+44,"RELATESTO",27,0
+42,"HASAPPLICATION",45,0
+45,"INCLUDESPARTNER",46,0
+47,"HASPROVENANCE",48,0
+48,"RELATESTO",49,0
+48,"RELATESTO",50,0
+42,"RELATESTO",56,0
+56,"HASAPPLICATION",57,0
+42,"RELATESTO",58,0
+42,"RELATESTO",59,0
+42,"RELATESTO",60,0
+41,"HASAPPLICATION",61,0
+41,"HASAPPLICATION",62,0
+41,"HASAPPLICATION",63,0
+41,"HASAPPLICATION",64,0
+1,"PRODUCES",42,0
+42,"DEVELOPS",43,0
+43,"INCLUDES",4,0
+4,"SUPPORTS",5,0
+4,"SUPPORTS",65,0
+4,"COVERS",73,0
+73,"IDENTIFIES",74,0
+73,"ANALYZES",75,0
+73,"DRAFTS",76,0
+73,"EVALUATES",77,0
+73,"AUTOMATES",78,0
+73,"MANAGES",79,0
+42,"ADDRESSES",80,0
+80,"AFFECTS",81,0
+5,"BENEFITS",16,0
+42,"ADAPTS_TO",44,0
+42,"SUPPORTS",53,0
+42,"PLANS",83,0
+83,"EXPANDS_IN",25,0
+83,"EXPANDS_IN",26,0
+83,"EXPANDS_IN",27,0
+84,"USES",85,0
+86,"HASFOREIGNKEY",87,0
+87,"RELATESTO",88,0
+87,"RELATESTO",89,0
+86,"RELATESTO",88,0
+86,"RELATESTO",89,0
+1,"PROMOTES",92,0
+1,"CONTRIBUTES",91,0
+1,"COMBINES",93,0
+1,"COMBINES",94,0
+1,"COMBINES",95,0
+1,"PROMOTES",96,0
+1,"PROMOTES",97,0
+1,"SPREADS",98,0
+1,"INDIRECTLY_PROMOTES",99,0
+1,"INDIRECTLY_PROMOTES",67,0
+100,"RELATED_TO",29,0
+100,"RELATED_TO",101,0
+100,"RELATED_TO",30,0
+1,"PROMOTES",102,0
+1,"PROMOTES",103,0
+4,"REPRESENTS",41,0
+4,"REDEFINES",104,0
+41,"OPERATES_IN",82,0
+41,"LEADS",105,0
+1,"HAS",106,0
+107,"FOUNDER",1,0
+107,"WORKED_AT",108,0
+107,"FOUNDED",15,0
+107,"HAS",116,0
+107,"HAS",117,0
+4,"FUNDED_BY",20,0
+4,"REQUIRES",93,0
+4,"REQUIRES",109,0
+4,"REQUIRES",110,0
+4,"REQUIRES",111,0
+4,"REQUIRES",112,0
+106,"POSSESSES",113,0
+106,"HAS",114,0
+107,"DEFINES",115,0
+107,"WAS_PART_OF",118,0
+107,"GAINED_EXPERIENCE_IN",119,0
+107,"HAS",120,0
+121,"PROFESSOR",1,0
+121,"PROFESSOR",122,0
+121,"PROFESSOR",123,0
+124,"RESPONSIBLE_FOR",4,0
+125,"RESPONSIBLE_FOR",4,0
+126,"LEADS",134,0
+126,"LEADS",135,0
+126,"DEFINES",136,0
+130,"INCLUDES",49,0
+130,"INCLUDES",69,0
+125,"APPLIES",133,0
+121,"HAS_EXPERIENCE",131,0
+121,"HAS_EXPERIENCE",132,0
+121,"HAS_EXPERIENCE",120,0
+1,"HAS_EXPERIENCE",120,0
+1,"UNDERSTANDS",137,0
+124,"BUILDS_AND_VALIDATES",184,0
+124,"HAS_EXPERIENCE",83,0
+45,"UNDERSTANDS",137,0
+138,"RELATESTO",140,0
+138,"RELATESTO",139,0
+140,"HASTEAMMEMBER",141,0
+141,"RELATESTO",110,0
+141,"RELATESTO",142,0
+143,"HASEXPERIENCE",144,0
+143,"RELATESTO",138,0
+145,"ENABLES",4,0
+4,"SUPPORTS",41,0
+145,"ENSURES",146,0
+146,"CONTRIBUTESTO",147,0
+42,"AFFECTS",148,0
+42,"CONTRIBUTESTO",149,0
+148,"INFLUENCES",149,0
+1,"PROVIDES",42,0
+42,"PROVIDED_BY",41,0
+42,"USES",4,0
+42,"IMPACT_ON",67,0
+42,"IMPACT_ON",150,0
+42,"IMPACT_ON",151,0
+42,"IMPACT_ON",73,0
+42,"TARGETS",152,0
+152,"PROMOTES",82,0
+42,"AFFECTS",153,0
+154,"RELATED_TO",24,0
+42,"PROPOSED_BY",156,0
+41,"CONSOLIDATES_IN",157,0
+41,"EXPANDS_IN",25,0
+41,"EXPANDS_IN",26,0
+41,"EXPANDS_IN",27,0
+1,"PRODUCES",43,0
+43,"ENHANCES",158,0
+43,"INCREASES",159,0
+43,"ATTRACTS",160,0
+41,"DEVELOPS",43,0
+41,"USES",161,0
+41,"OWNS",165,0
+165,"ASSOCIATED_WITH",166,0
+166,"INCLUDES",167,0
+166,"INCLUDES",168,0
+41,"PART_OF",169,0
+170,"STRENGTHENS",165,0
+171,"PROTECTS",165,0
+41,"ACCESS",173,0
+173,"REVOLUTIONIZES",174,0
+41,"ALIGN_WITH",175,0
+41,"DRIVES",66,0
+1,"PRODUCES",4,0
+4,"USES",93,0
+4,"USES",7,0
+4,"USES",8,0
+4,"AIMS_AT",177,0
+4,"EXPANDS_INTO",60,0
+60,"INCLUDES",25,0
+60,"INCLUDES",26,0
+60,"INCLUDES",27,0
+1,"USES",84,0
+84,"INCLUDES",178,0
+84,"TARGETS",179,0
+84,"EXPANDS",180,0
+84,"DRIVES",181,0
+182,"INVOLVES",177,0
+1,"HIRES",185,0
+185,"OBTAINS",186,0
+186,"PREPARES_FOR",187,0
+1,"REQUIRES",188,0
+1,"REQUIRES",189,0
+190,"SUPPLIES",1,0
+191,"RELATESTO",192,0
+191,"RELATESTO",193,0
+191,"RELATESTO",194,0
+194,"RELATESTO",195,0
+196,"RELATESTO",197,0
+196,"RELATESTO",198,0
+199,"RELATESTO",194,0

@@ -1,10 +1,52 @@
+conda create --name graphrag_local
+
+conda activate graphrag_local
+
 1. pip install graphrag
 2. create folders ragtest/input
-3. Put text Documents in input foler
+3. Put text Documents in input folder
 4. In the terminal:
 
-graphrag init --root ./GraphRAG/ragtest
+graphrag init --root ./ragtest
 
-graphrag index --root ./GraphRAG/ragtest
+graphrag index --root ./ragtest
 
-graphrag query -q "what are knowledge graphs used for?" --root ./GraphRAG/ragtest --method local
+graphrag query -q "What is Granter.ai's main business activity?" --root ./ragtest --method local
+
+graphrag query -q "Which AI methodologies/technological features does Granter.ai use in its solution?" --root ./ragtest --method local
+
+graphrag query -q "What is the ultimate goal of Granter.ai's project?" --root ./ragtest --method local
+
+graphrag query -q "What is Granter.ai's mission?" --root ./ragtest --method local
+
+graphrag query -q "What is the business model for Granter.ai's solution?" --root ./ragtest --method local
+
+graphrag query -q "What is the main competitive advantage of Granter.ai?" --root ./ragtest --method local
+
+graphrag query -q "Which team member at Granter.ai is responsible for the strategic direction and international expansion of the AI Agent?" --root ./ragtest --method local
+
+graphrag query -q "What is the role of Joel Rodrigues at Granter.ai?" --root ./ragtest --method local
+
+graphrag query -q "Which team member is responsible for the technical execution of the AI Agent at Granter.ai?" --root ./ragtest --method local
+
+graphrag query -q "Which countries are targeted for Granter.ai's initial expansion?" --root ./ragtest --method local
+
+graphrag query -q "What was the total volume of projects Granter.ai managed in terms of financing?" --root ./ragtest --method local
+
+graphrag query -q "What is the focus of Granter.ai's research and development process?" --root ./ragtest --method local
+
+graphrag query -q "How many companies were registered on Granter.ai's platform by the time the project was described?" --root ./ragtest --method local
+
+graphrag query -q "How much funding did Granter.ai raise in investment rounds?" --root ./ragtest --method local
+
+graphrag query -q "When did Granter.ai start its operations?" --root ./ragtest --method local
+
+graphrag query -q "What is the primary target user group for Granter.ai’s AI Agent?" --root ./ragtest --method local
+
+graphrag query -q "What new position does Granter.ai plan to fill to strengthen its team for the AI Agent project?" --root ./ragtest --method local
+
+graphrag query -q "What makes Granter.ai’s solution scalable in terms of adapting to different industries or sectors?" --root ./ragtest --method local
+
+graphrag query -q "What is Granter.ai's projected timeline for launching its AI Agent in international markets?" --root ./ragtest --method local
+
+graphrag query -q "How does Granter.ai’s AI Agent improve the success rate of funding applications?" --root ./ragtest --method local

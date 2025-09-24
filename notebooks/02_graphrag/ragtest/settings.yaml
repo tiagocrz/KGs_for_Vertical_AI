@@ -6,22 +6,21 @@
 
 models:
   default_chat_model:
-    type: openai_chat # or azure_openai_chat
-    api_base: http://localhost:11434/v1
-    # api_version: 2024-05-01-preview
+    type: azure_openai_chat 
+    api_base: "https://granteraistudi5497094960.cognitiveservices.azure.com/openai/deployments/resarch-gpt-4.1-nano/chat/completions?api-version=2025-01-01-preview"
+    api_version: 2025-01-01-preview
     auth_type: api_key # or azure_managed_identity
-    api_key: "ollama" # set this in the generated .env file
+    api_key: ${GRAPHRAG_API_KEY} # set this in the generated .env file
     # audience: "https://cognitiveservices.azure.com/.default"
     # organization: <organization_id>
-    model: llama3.2:3b
-    # deployment_name: <azure_model_deployment_name>
-    encoding_model: cl100k_base # automatically set by tiktoken if left undefined
+    model: gpt-4.1-nano
+    deployment_name: resarch-gpt-4.1-nano
+    # encoding_model: cl100k_base # automatically set by tiktoken if left undefined
     model_supports_json: true # recommended if this is available for your model.
-    request_timeout: 900.0
-    concurrent_requests: 1 # max number of simultaneous LLM requests allowed
+    concurrent_requests: 25 # max number of simultaneous LLM requests allowed
     async_mode: threaded # or asyncio
     retry_strategy: native
-    max_retries: 3
+    max_retries: 10
     tokens_per_minute: auto              # set to null to disable rate limiting
     requests_per_minute: auto            # set to null to disable rate limiting
   default_embedding_model:
@@ -42,6 +41,7 @@ models:
     max_retries: 3
     tokens_per_minute: null              # set to null to disable rate limiting or auto for dynamic
     requests_per_minute: null            # set to null to disable rate limiting or auto for dynamic
+
 
 ### Input settings ###
 
@@ -70,7 +70,7 @@ cache:
   base_dir: "cache"
 
 reporting:
-  type: file # [file, blob, cosmosdb]
+  type: file # [file, blob]
   base_dir: "logs"
 
 vector_store:
@@ -89,8 +89,8 @@ embed_text:
 extract_graph:
   model_id: default_chat_model
   prompt: "prompts/extract_graph.txt"
-  entity_types: [organization,person,event] # add geo to be same as default
-  max_gleanings: 0 # default is 1
+  entity_types: [organization,person,geo,event]
+  max_gleanings: 1
 
 summarize_descriptions:
   model_id: default_chat_model
@@ -100,6 +100,7 @@ summarize_descriptions:
 extract_graph_nlp:
   text_analyzer:
     extractor_type: regex_english # [regex_english, syntactic_parser, cfg]
+  async_mode: threaded # or asyncio
 
 cluster_graph:
   max_cluster_size: 10

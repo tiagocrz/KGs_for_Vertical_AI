@@ -6,6 +6,9 @@ from rdflib import Graph
 from langchain_openai import AzureChatOpenAI
 import os
 # Import settings from the central configuration file
+
+import sys
+sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/..'))
 from app_settings import (
     AZURE_OPENAI_API_KEY,
     AZURE_OPENAI_ENDPOINT,
@@ -71,15 +74,6 @@ def read_text_file(file: str) -> list:
 
 
 
-def byte_to_str(text):
-    if isinstance(text, (bytes, bytearray)):
-        return text.decode("utf-8", errors="strict")
-    
-    return str(text)
-
-
-
-
 def get_azure_response(text, prompt, ontology_info=None):
     """Get response from Azure OpenAI"""
     if ontology_info is None:
@@ -101,6 +95,7 @@ def get_results_from_response(response_content: str) -> List[str]:
     """Extract results from Azure OpenAI response content"""
     standard_prefixes = [
         "@prefix : <http://example.org#> .",
+        '@prefix : <http://example.org/ontology#> .',
         "@prefix owl: <http://www.w3.org/2002/07/owl#> .",
         "@prefix prov: <http://www.w3.org/ns/prov#> .",
         "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .",
@@ -108,7 +103,8 @@ def get_results_from_response(response_content: str) -> List[str]:
         "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ."
     ]
     try:
-        response_content = response_content.split('\n')
+        response_content = response_content.split('\n') if isinstance(response_content, str) else response_content
+        response_content = [line.strip() for line in response_content]
         response_content = [line for line in response_content if not any(line.strip().startswith(prefix) 
                                                                          for prefix in standard_prefixes)]
         
@@ -123,37 +119,7 @@ def get_results_from_response(response_content: str) -> List[str]:
         print(f'Error processing response: {e}')
         return []
     
-
-
-#def clean_relations(relations: List):
-#    ttl_output = []
-#    for relation in relations:
-#        for triple in relation:
-#            if triple:
-#                cleaned_triple = triple.strip().strip('```').strip("ttl").strip("```")
-#                ttl_output.append(cleaned_triple)
-#    return ttl_output
-#
-#
-#                
-#
-#def gpt_results_to_ttl(relations: List):
-#    ttl_output = "\n".join(clean_relations(relations))
-#    return ttl_output
-
-
-
-
-def gpt_results_to_ttl(relations: List, output: str):
-    ttl_output = []
-    clean_relations(relations, ttl_output)
-
-    with open(output, 'w', encoding='utf-8') as f:
-        f.write("\n".join(ttl_output))
-        
-    return "\n".join(ttl_output)
-
-
+    
 
 
 def clean_relations(relations, ttl_output):
@@ -236,25 +202,6 @@ def build_validation_prompt(results, error_message) -> str:
 
 
 
-def extract_ontology_block(text: str) -> str:
-    inside_block = False
-    lines = []
-    
-    for line in text.splitlines():
-        if line.strip().startswith("```"):
-            if inside_block:
-                break  # end of block
-            else:
-                inside_block = True
-                continue  # skip the line with ```
-        if inside_block:
-            lines.append(line)
-    
-    return "\n".join(lines).strip()
-
-
-
-
 def save_and_validate_ttl(ontology_string: str, filename: str = None):
     """
     Save ontology string as .ttl file with validation
@@ -282,31 +229,10 @@ def save_and_validate_ttl(ontology_string: str, filename: str = None):
         return None
 
 
-
-
-def query_azure_gpt(text: list):
-    """Query Azure GPT with the text"""
-    relations = []
-
-    try:
-        response_1 = get_azure_response(text, prompt_step_1)
-        
-        for sentence in text:
-            response_2 = get_azure_response(sentence, prompt_step_2, get_results_from_response(response_1))
-            relations.append(get_results_from_response(response_2))
-
-    except Exception as e:
-        print(f"Error querying Azure GPT: {e}")
-        return []
-
-    print(f"Extracted {len(relations)} relation sets")
-    return relations
-
-
 # ---------------------------------- RUNNING ----------------------------------
 
 if __name__ == "__main__":
-    text = read_text_file('data/texts/application_example.txt')
+    text = read_text_file('data/texts/Voucher_Granter_Application.txt')
 
     # Classes
     response_1 = get_azure_response(text, prompt_step_1)
@@ -316,6 +242,7 @@ if __name__ == "__main__":
 
     standard_prefixes = [
             "@prefix : <http://example.org#> .",
+            '@prefix : <http://example.org/ontology#> .',
             "@prefix owl: <http://www.w3.org/2002/07/owl#> .",
             "@prefix prov: <http://www.w3.org/ns/prov#> .",
             "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .",
@@ -334,8 +261,6 @@ if __name__ == "__main__":
         response_2_with_prefixes = ("\n".join(standard_prefixes) + 
                                     "\n" + 
                                     "\n".join(get_results_from_response(response_2)))
-        
-        response_2_with_prefixes = byte_to_str(response_2_with_prefixes)
 
         is_valid, error_message = validate_turtle_string(response_2_with_prefixes)
         print(is_valid)
@@ -349,7 +274,6 @@ if __name__ == "__main__":
 
             fix = gpt41_nano.invoke(build_validation_prompt(response_2_with_prefixes,  
                                                         error_message)).content
-            fix = byte_to_str(fix)
 
             print(f'Object type: {type(fix)} \n\nGENERATED FIX: \n\n{fix}')
 
@@ -366,37 +290,26 @@ if __name__ == "__main__":
         
     print(f"Successfully processed {len(text) - len(unsuccessful)} sentences.\n\nUnsuccessful sentences: {[text[i] for i, _ in unsuccessful]}")
 
-    ontology = gpt_results_to_ttl(relations, 'results/ontologies/text/text_ontology_val.txt')
 
-    #with open('results/ontologies/text/text_ontology_val.txt', 'r', encoding='utf-8') as f:
-    #    ontology = f.read()
+    ttl_output = []
+    clean_relations(relations, ttl_output)
 
-    # Add prefixes since gpt_results_to_ttl doesn't include them
+    ttl_output = get_results_from_response(ttl_output)
+
+    ontology = "\n".join(ttl_output)
+
     ontology = "\n".join(standard_prefixes) + "\n\n" + ontology
-    print(ontology)
+
+    with open('results/ontologies/text/text_ontology.txt', 'w', encoding='utf-8') as f:
+        f.write(ontology)
+
+    print(ontology[:700])
 
     is_valid, error_message = validate_turtle_string(ontology)
-    filename = "text_ontology_val.ttl"
 
     if is_valid:
         print("Final ontology is valid Turtle syntax.")
-        save_and_validate_ttl(ontology, filename=filename)
+        save_and_validate_ttl(ontology, filename="text_ontology.ttl")
 
     else:
-        print(f"Ontology is invalid: {error_message}")
-        #current_ontology = ontology
-        #for i in range(6):
-        #    print(f"Attempt {i+1} to validate ontology")
-        #    # validator_prompt = build_validation_prompt(current_ontology) 
-        #    
-        #    validator_prompt = build_merge_validation_prompt(relations)
-
-        #    revision = gpt41_nano.invoke(validator_prompt).content
-        #    current_ontology = extract_ontology_block(revision)
-        #    print(current_ontology)
-        #    is_valid, error_message = validate_turtle_string(current_ontology)
-        #
-        #    if is_valid:
-        #        print("Final ontology is valid Turtle syntax.")
-        #        save_and_validate_ttl(current_ontology, filename=filename)
-        #        break
+        print(f"Ontology is invalid:\n{error_message}")

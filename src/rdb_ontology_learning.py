@@ -11,7 +11,8 @@ embedding = OllamaEmbeddings(model="nomic-embed-text:v1.5")
 
 from langchain_openai import AzureChatOpenAI
 import os
-# Import settings from the central configuration file
+import sys
+sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/..'))
 from app_settings import (
     AZURE_OPENAI_API_KEY,
     AZURE_OPENAI_ENDPOINT,

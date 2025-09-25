@@ -1,169 +1,3096 @@
-@prefix : <http://example.org#> .
+@prefix : <http://example.org/> .
+@prefix ns1: <http://example.org/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:AdversarialInContextLearning a rdfs:Class .
-
-:AgenteDeIA a rdfs:Class .
-
-:ApoioAoArranqueOuAoCrescimento a rdfs:Class .
-
-:AtividadeEconómicaPrincipalBeneficiário a rdfs:Class .
-
-:CategoriaDeDespesa a rdfs:Class .
-
-:Certificações a rdfs:Class .
-
-:Equipamentos a rdfs:Class .
-
-:FerramentaInteligente a rdfs:Class .
-
-:Investimentos a rdfs:Class .
-
-:MetodologiasIA a rdfs:Class .
-
-:ModeloDeNegócio a rdfs:Class .
-
-:ProdutoDigital a rdfs:Class .
-
-:Projeto a rdfs:Class .
-
-:PropriedadeIntelectual a rdfs:Class .
-
-:RecursosHumanos a rdfs:Class .
-
-:RedesGenerativasAdversariais a rdfs:Class .
-
-:ServiçosExternos a rdfs:Class .
-
-:SetorX a rdfs:Class .
-
-:SoftwareProprietário a rdfs:Class .
-
-:Tipologia a rdfs:Class .
-
-:VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAi a rdfs:Class .
-
-:CertificacaoTecnica1 a :Certificações .
-
-:EquipamentoTecnologico1 a :Equipamentos .
-
-:GranterAi a :AgenteDeIA,
+:AIAbility a rdfs:Class,
         owl:NamedIndividual .
 
-:ProdutoDigital1 a :ProdutoDigital .
+:AIContentGenerationMethodology a rdfs:Class .
 
-:adquire a owl:ObjectProperty ;
-    rdfs:domain :Equipamentos ;
-    rdfs:range :SoftwareProprietário .
+:AbilityLanguageAdaptation a rdfs:Class,
+        owl:NamedIndividual .
 
-:agenteIA1 a :AgenteDeIA ;
-    rdfs:label "Agente de IA" .
+:AdversarialInContextLearning a rdfs:Class,
+        owl:NamedIndividual .
 
-:aplicadasAFundosPublicos a owl:ObjectProperty ;
-    rdfs:domain :SolucoesBaseadasEmIA ;
-    rdfs:range :FundosPublicos .
+:Agent a rdfs:Class .
 
-:apoia a owl:ObjectProperty ;
-    rdfs:domain :AgenteDeIA ;
-    rdfs:range :Projeto .
+:ApplicationPreparationAgent a rdfs:Class ;
+    rdfs:subClassOf :Agent .
 
-:certifica a owl:ObjectProperty ;
-    rdfs:domain :Certificações ;
-    rdfs:range :PropriedadeIntelectual .
+:ArtificialIntelligenceSpecialist a rdfs:Class .
 
-:classificaComo a owl:ObjectProperty ;
-    rdfs:domain :ProdutoDigital ;
-    rdfs:range :Tipologia .
+:BusinessGoal a rdfs:Class .
 
-:contrata a owl:ObjectProperty ;
-    rdfs:domain :ServiçosExternos ;
-    rdfs:range :AgenteDeIA .
+:BusinessModel a rdfs:Class .
 
-:dedicaAoDesenvolvimento a owl:ObjectProperty ;
-    rdfs:domain :VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAi ;
-    rdfs:range :SolucoesBaseadasEmIA .
+:BusinessModelAnalysis a rdfs:Class .
 
-:desenvolve a owl:ObjectProperty ;
-    rdfs:domain :AgenteDeIA ;
-    rdfs:range :FerramentaInteligente .
+:BusinessModelAssessment a rdfs:Class .
 
-:destinaA a owl:ObjectProperty ;
-    rdfs:domain :CategoriaDeDespesa ;
-    rdfs:range :PropriedadeIntelectual .
+:BusinessModelComponent a rdfs:Class .
 
-:elabora a owl:ObjectProperty ;
-    rdfs:domain :AgenteDeIA ;
-    rdfs:range :AtividadeEconómicaPrincipalBeneficiário .
+:BusinessModelDesign a rdfs:Class .
 
-:enquadraNosSetores a owl:ObjectProperty ;
-    rdfs:domain :VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAi ;
-    rdfs:range :SetorX .
+:BusinessModelDevelopment a rdfs:Class .
 
-:financia a owl:ObjectProperty ;
-    rdfs:domain :Investimentos ;
-    rdfs:range :VouchersParaStartupsNovosProdutosDigitaisTecnológicosGranterAi .
+:BusinessModelEvaluation a rdfs:Class .
 
-:incorpora a owl:ObjectProperty ;
-    rdfs:domain :Projeto ;
-    rdfs:range :MetodologiasIA .
+:BusinessModelImplementation a rdfs:Class .
 
-:integra a owl:ObjectProperty ;
-    rdfs:domain :Projeto ;
-    rdfs:range :Investimentos .
+:BusinessModelInnovation a :BusinessModel,
+        rdfs:Class,
+        owl:NamedIndividual .
 
-:metodologiaAdvICL a :MetodologiasIA ;
-    rdfs:label "Adversarial In-Context Learning (Adv-ICL)" .
+:BusinessModelObjective a rdfs:Class .
 
-:metodologiaGANs a :RedesGenerativasAdversariais ;
-    rdfs:label "Redes Generativas Adversariais (GANs)" .
+:BusinessModelOptimization a rdfs:Class .
 
-:permiteGerar a owl:ObjectProperty ;
-    rdfs:domain :AgenteDeIA ;
-    rdfs:range :ProdutoDigital .
+:BusinessModelRefinement a rdfs:Class .
 
-:projeto1 a :Projeto ;
-    rdfs:label "Projeto proposto" .
+:BusinessModelRefinementAssessment a rdfs:Class .
 
-:recruta a owl:ObjectProperty ;
-    rdfs:domain :RecursosHumanos ;
-    rdfs:range :AgenteDeIA .
+:BusinessModelRefinementEvaluation a rdfs:Class .
 
-:reforça a owl:ObjectProperty ;
-    rdfs:domain :Individual1 ;
-    rdfs:range :AutomaçãoDeProcessosComplexos .
+:BusinessModelRefinementImplementation a rdfs:Class .
 
-:temEnquadramento a owl:ObjectProperty ;
-    rdfs:domain :Individual1 ;
-    rdfs:range :SetorDeAltaIntensidadeTecnológica .
+:BusinessModelRefinementMethodology a rdfs:Class .
 
-:temImpactoDireto a owl:ObjectProperty ;
-    rdfs:domain :ProdutoDigital ;
-    rdfs:range :SetorX .
+:BusinessModelRefinementOptimization a rdfs:Class .
 
-:transformaModelos a owl:ObjectProperty ;
-    rdfs:domain :IAModel1 ;
-    rdfs:range :ProdutoDigital .
+:BusinessModelRefinementProcess a rdfs:Class .
 
-:usaMetodologia a owl:ObjectProperty ;
-    rdfs:domain :AgenteDeIA ;
-    rdfs:range :MetodologiasIA .
+:BusinessModelRefinementRefinement a rdfs:Class .
 
-:utilizaTecnologia a owl:ObjectProperty ;
-    rdfs:domain :AgenteDeIA ;
-    rdfs:range :RedesGenerativasAdversariais .
+:BusinessModelRefinementRefinementAssessment a rdfs:Class .
 
-:valorizaAplicacaoPratica a owl:ObjectProperty ;
-    rdfs:domain :softwareProprietario1 ;
-    rdfs:range :IAModel1 .
+:BusinessModelRefinementRefinementEvaluation a rdfs:Class .
 
-:AutomaçãoDeProcessosComplexos a owl:Class .
+:BusinessModelRefinementRefinementImplementation a rdfs:Class .
 
-:SetorDeAltaIntensidadeTecnológica a owl:Class .
+:BusinessModelRefinementRefinementMethodology a rdfs:Class .
 
-:softwareProprietario1 a :SoftwareProprietário .
+:BusinessModelRefinementRefinementOptimization a rdfs:Class .
 
-:IAModel1 a :ModeloDeNegócio .
+:BusinessModelRefinementRefinementProcess a rdfs:Class .
 
-:SolucoesBaseadasEmIA a :SoftwareProprietário .
+:BusinessModelRefinementRefinementRefinement a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementAssessment a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementEvaluation a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementImplementation a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementMethodology a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementOptimization a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementProcess a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinement a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementAssessment a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementEvaluation a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementImplementation a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementMethodology a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementOptimization a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementProcess a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinement a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementAssessment a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementEvaluation a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementImplementation a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementMethodology a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementOptimization a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementProcess a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRefinement a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRefinementImplementation a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRefinementMethodology a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRefinementOptimization a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRefinementProcess a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRefinementRefinement a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRefinementReview a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRefinementRevision a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRefinementStrategy a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRefinementUpdate a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementReview a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementRevision a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementStrategy a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRefinementUpdate a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementReview a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementRevision a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementStrategy a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRefinementUpdate a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementReview a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementRevision a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementStrategy a rdfs:Class .
+
+:BusinessModelRefinementRefinementRefinementUpdate a rdfs:Class .
+
+:BusinessModelRefinementRefinementReview a rdfs:Class .
+
+:BusinessModelRefinementRefinementRevision a rdfs:Class .
+
+:BusinessModelRefinementRefinementStrategy a rdfs:Class .
+
+:BusinessModelRefinementRefinementUpdate a rdfs:Class .
+
+:BusinessModelRefinementReview a rdfs:Class .
+
+:BusinessModelRefinementRevision a rdfs:Class .
+
+:BusinessModelRefinementStrategy a rdfs:Class .
+
+:BusinessModelRefinementUpdate a rdfs:Class .
+
+:BusinessModelReview a rdfs:Class .
+
+:BusinessModelRevision a rdfs:Class .
+
+:BusinessModelStrategy a rdfs:Class .
+
+:BusinessModelUpdate a rdfs:Class .
+
+:BusinessObjective a rdfs:Class .
+
+:BusinessProposition a rdfs:Class .
+
+:BusinessStrategy a rdfs:Class .
+
+:BusinessTool a rdfs:Class .
+
+:CentralElement a rdfs:Class .
+
+:CertificationName a rdfs:Class .
+
+:CommunityFunds a rdfs:Class .
+
+:Company a :Company,
+        rdfs:Class,
+        owl:NamedIndividual .
+
+:CompanyFundingMission a rdfs:Class .
+
+:CompetitiveDifferentiation a rdfs:Class .
+
+:Country a rdfs:Class .
+
+:CustomerBase a rdfs:Class,
+        owl:NamedIndividual .
+
+:DigitalProduct a rdfs:Class,
+        owl:NamedIndividual .
+
+:DigitalTransformation a rdfs:Class .
+
+:DigitalTransition a rdfs:Class .
+
+:Expenses a rdfs:Class,
+        owl:DatatypeProperty .
+
+:FoundingTeam a rdfs:Class .
+
+:Funding a rdfs:Class .
+
+:FundingApplication a :FundingApplication,
+        rdfs:Class .
+
+:FundingSupportTypology a rdfs:Class .
+
+:GenerativeAdversarialNetworks a rdfs:Class,
+        owl:NamedIndividual .
+
+:Granters a rdfs:Class,
+        owl:Class,
+        owl:NamedIndividual ;
+    :hasValueProposition "Providing an intelligent digital tool capable of automating and optimizing every stage of the application process, from identifying the opportunity to final submission." .
+
+:GrantersMediumLongTermVision a rdfs:Class .
+
+:GrantersProposal a rdfs:Class,
+        owl:NamedIndividual ;
+    :hasProposalDescription "A clear example of how digitalization and artificial intelligence can be strategically applied to generate added value and accelerate the growth of tech startups." ;
+    :relatesTo :ArtificialIntelligence,
+        :Digitalization,
+        :TechStartups .
+
+:HighTechSector a rdfs:Class,
+        owl:NamedIndividual .
+
+:HisExperience a :HisExperience,
+        rdfs:Class,
+        owl:AnnotationProperty,
+        owl:NamedIndividual .
+
+:HisExperienceInComplexBusinessEnvironments a :AddsRobustnessToTheProject,
+        rdfs:Class,
+        owl:NamedIndividual .
+
+:InnovationComponent a :InnovationComponent,
+        rdfs:Class .
+
+:IntellectualProperty a rdfs:Class .
+
+:InternationalExpansionStrategy a :InternationalExpansionStrategy,
+        rdfs:Class .
+
+:InvestmentBudget a rdfs:Class .
+
+:KnowledgeDomain a rdfs:Class .
+
+:Leader a rdfs:Class .
+
+:LeadershipLevel a rdfs:Class .
+
+:LegalFrameworks a rdfs:Class,
+        owl:NamedIndividual .
+
+:Location a rdfs:Class .
+
+:ManagementTeam a :ManagementTeam,
+        :OperationalManagement,
+        :TechnicalLeadership,
+        rdfs:Class .
+
+:Market a rdfs:Class .
+
+:MarketPositioning a rdfs:Class .
+
+:Methodologies a rdfs:Class .
+
+:OperationalManagement a :OperationalManagement,
+        rdfs:Class .
+
+:Organization a rdfs:Class .
+
+:PRR a rdfs:Class .
+
+:Person a rdfs:Class .
+
+:Position a rdfs:Class .
+
+:PositioningStrategy a rdfs:Class .
+
+:Product a rdfs:Class .
+
+:ProductGrowth a rdfs:Class,
+        owl:NamedIndividual .
+
+:Project a :CompetitiveDifferentiation,
+        :DigitalProduct,
+        :InnovationComponent,
+        :MarketPositioning,
+        :StartupActivity,
+        rdfs:Class,
+        owl:Class,
+        owl:NamedIndividual ;
+    :presentedBy :GrantersAI .
+
+:ProprietarySoftware a :ProprietarySoftware,
+        rdfs:Class .
+
+:ProtectionOfIntellectualProperty a rdfs:Class .
+
+:Responsibility a rdfs:Class .
+
+:Role a rdfs:Class .
+
+:ScalabilityModel a rdfs:Class .
+
+:Sector a rdfs:Class .
+
+:Skill a rdfs:Class .
+
+:StartupActivity a :StartupActivity,
+        rdfs:Class,
+        owl:NamedIndividual .
+
+:StartupExpansion a rdfs:Class .
+
+:StrategicDimension a rdfs:Class .
+
+:SuccessProspects a rdfs:Class,
+        owl:NamedIndividual .
+
+:SupportForStartupOrGrowth a rdfs:Class .
+
+:Team a rdfs:Class,
+        owl:NamedIndividual .
+
+:TeamMember a rdfs:Class .
+
+:TechnicalLeadership a :TechnicalLeadership,
+        rdfs:Class .
+
+:TechnologicalInnovation a rdfs:Class .
+
+:Tool a rdfs:Class .
+
+:ToolOntology a rdfs:Class,
+        owl:NamedIndividual .
+
+:agile a rdfs:Class,
+        owl:NamedIndividual .
+
+:ambitiousGoals a rdfs:Class,
+        owl:NamedIndividual .
+
+:businessModel a rdfs:Class .
+
+:competitiveDifferentiation a rdfs:Class .
+
+:digitalTransformation a rdfs:Class .
+
+:effectiveCollaboration a rdfs:Class,
+        owl:NamedIndividual .
+
+:intellectualProperty a rdfs:Class .
+
+:investmentBudget a rdfs:Class .
+
+:managementTeam a rdfs:Class .
+
+:marketPositioning a rdfs:Class .
+
+:motivated a rdfs:Class,
+        owl:NamedIndividual .
+
+:multidisciplinary a rdfs:Class,
+        owl:NamedIndividual .
+
+ns1:AIContentGenerationMethodology a rdfs:Class .
+
+ns1:Business a rdfs:Class,
+        owl:NamedIndividual .
+
+ns1:BusinessModel a rdfs:Class .
+
+ns1:Company a rdfs:Class,
+        owl:NamedIndividual .
+
+ns1:CompetitiveDifferentiation a rdfs:Class .
+
+ns1:Database a rdfs:Class,
+        owl:NamedIndividual .
+
+ns1:DigitalInfrastructure a rdfs:Class,
+        owl:NamedIndividual .
+
+ns1:DigitalProduct a rdfs:Class .
+
+ns1:DigitalTransformation a rdfs:Class .
+
+ns1:FundingApplication a rdfs:Class,
+        owl:NamedIndividual .
+
+ns1:FundingSupportTypology a rdfs:Class .
+
+ns1:Goal a rdfs:Class .
+
+ns1:HighTechSector a rdfs:Class .
+
+ns1:InnovationComponent a rdfs:Class .
+
+ns1:IntellectualProperty a rdfs:Class .
+
+ns1:InternationalExpansionStrategy a rdfs:Class .
+
+ns1:InvestmentBudget a rdfs:Class .
+
+ns1:ManagementTeam a rdfs:Class .
+
+ns1:Market a rdfs:Class,
+        owl:NamedIndividual .
+
+ns1:MarketPositioning a rdfs:Class .
+
+ns1:OperationalManagement a rdfs:Class .
+
+ns1:Organization a rdfs:Class .
+
+ns1:Person a rdfs:Class .
+
+ns1:Project a rdfs:Class .
+
+ns1:ProposedProject a rdfs:Class,
+        owl:NamedIndividual ;
+    ns1:aimsToConsolidate ns1:DigitalProduct ;
+    ns1:aimsToDevelop ns1:DigitalProduct ;
+    ns1:hasAlignmentWith ns1:Company ;
+    ns1:hasDevelopmentGoal ns1:DigitalProduct ;
+    ns1:hasInnovationComponent ns1:InnovationComponent ;
+    ns1:hasProductType ns1:AIContentGenerationMethodology ;
+    ns1:hasTechnologicalFoundation ns1:TechnicalFoundation ;
+    ns1:identifiesApplicationsFor ns1:FundingApplication ;
+    ns1:preparesApplicationsFor ns1:FundingApplication ;
+    ns1:usedBy ns1:Business .
+
+ns1:ProprietarySoftware a rdfs:Class .
+
+ns1:ResearchProcess a rdfs:Class .
+
+ns1:ResearchProject a rdfs:Class .
+
+ns1:Researcher a rdfs:Class .
+
+ns1:ScalabilityModel a rdfs:Class .
+
+ns1:Skill a rdfs:Class .
+
+ns1:StartupActivity a rdfs:Class .
+
+ns1:TechnicalLeadership a rdfs:Class .
+
+ns1:Technology a rdfs:Class .
+
+ns1:Tool a rdfs:Class,
+        owl:NamedIndividual .
+
+ns1:project a rdfs:Class .
+
+:operationalManagement a rdfs:Class .
+
+:scalabilityModel a rdfs:Class .
+
+:shortPeriods a rdfs:Class,
+        owl:NamedIndividual .
+
+:technicalLeadership a rdfs:Class .
+
+:AIContentGenMethodologyY a :AIContentGenerationMethodology,
+        owl:NamedIndividual .
+
+:AIContentGenerationMethodology1 a :AIContentGenerationMethodology,
+        owl:NamedIndividual ;
+    rdfs:label "AI Content Generation Methodology 1" .
+
+:AIContentGenerationMethodologyX a :AIContentGenerationMethodology,
+        owl:NamedIndividual .
+
+:AIContentMethodologyX a :AIContentGenerationMethodology,
+        owl:NamedIndividual .
+
+:AIProduct a :DigitalProduct .
+
+:AI_Agent a :AIContentGenerationMethodology,
+        owl:NamedIndividual .
+
+:AI_AgentDevelopment a :StartupActivity,
+        owl:NamedIndividual .
+
+:AcmeFunding a :FundingApplication,
+        owl:NamedIndividual .
+
+:AcmeInc a :HighTechSector,
+        owl:NamedIndividual .
+
+:Alice a :ManagementTeam,
+        owl:NamedIndividual .
+
+:Allows a owl:ObjectProperty .
+
+:AnnualSubscriptionModel a :BusinessModel,
+        owl:NamedIndividual .
+
+:Application a :FundingApplication,
+        owl:NamedIndividual .
+
+:ApplicationDrafting1 a :ApplicationDrafting,
+        owl:NamedIndividual .
+
+:ApplicationDrafting2 a :ApplicationDrafting,
+        owl:NamedIndividual .
+
+:ApplicationPreparation a :StartupActivity,
+        owl:NamedIndividual .
+
+:ApplicationProcess a :StartupActivity,
+        owl:NamedIndividual .
+
+:ApplyingBestPractices a owl:AnnotationProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+
+:Automation a owl:NamedIndividual .
+
+:AutomationEnhancement a owl:NamedIndividual .
+
+:AutomationSubmission a :SubmissionAutomation,
+        owl:NamedIndividual .
+
+:Bob a :TechnicalLeadership,
+        owl:NamedIndividual .
+
+:Budget1 a :InvestmentBudget .
+
+:Budget2024 a :InvestmentBudget,
+        owl:NamedIndividual .
+
+:BudgetAllocation a :InvestmentBudget,
+        owl:NamedIndividual .
+
+:BudgetX a :InvestmentBudget,
+        owl:NamedIndividual .
+
+:BusinessModel1 a :BusinessModel,
+        owl:NamedIndividual ;
+    rdfs:label "Business Model 1" .
+
+:BusinessModelBeta a :BusinessModel,
+        owl:NamedIndividual .
+
+:BusinessModelInnovative a :BusinessModel,
+        owl:NamedIndividual .
+
+:BusinessModelMain a :BusinessModel,
+        owl:NamedIndividual .
+
+:BusinessModelTheta a :BusinessModel,
+        owl:NamedIndividual ;
+    rdfs:label "Business Model Theta" .
+
+:BusinessModelX a :BusinessModel,
+        owl:NamedIndividual .
+
+:BusinessModelY a :BusinessModel,
+        owl:NamedIndividual .
+
+:BusinessModelZ a :BusinessModel,
+        owl:NamedIndividual .
+
+:BusinessSupportAI a :StartupActivity ;
+    rdfs:label "Business Support AI" .
+
+:Businesses a owl:NamedIndividual .
+
+:CTO a owl:NamedIndividual .
+
+:Certification1 a :CertificationName ;
+    :hasCertificationName "Advanced AI" .
+
+:Certification2 a :CertificationName ;
+    :hasCertificationName "Specialized Grant Application Procedures" .
+
+:Charlie a :FundingApplication,
+        :OperationalManagement,
+        owl:NamedIndividual .
+
+:ChiefTechnologyOfficer a :Position .
+
+:CommercializationComponent a owl:NamedIndividual ;
+    :ledBy :RodrigoMendes .
+
+:Company1 a :Company ;
+    rdfs:label "the company" ;
+    :hasTool :Tool1 .
+
+:CompanyA a :Company,
+        :ManagementTeam,
+        :StartupActivity,
+        owl:NamedIndividual ;
+    :hasPresenceIn :Italy,
+        :Portugal,
+        :Spain,
+        :USA .
+
+:CompetitiveAdvantage a owl:NamedIndividual .
+
+:CompetitiveDifferentiation1 a :CompetitiveDifferentiation,
+        owl:NamedIndividual ;
+    rdfs:label "Competitive Differentiation 1" .
+
+:CompetitiveDifferentiationUnique a :CompetitiveDifferentiation,
+        owl:NamedIndividual .
+
+:CompetitiveDifferentiationX a :CompetitiveDifferentiation,
+        owl:NamedIndividual .
+
+:CompetitiveEdgeX a :CompetitiveDifferentiation,
+        owl:NamedIndividual .
+
+:ContinuousExpansion a owl:NamedIndividual .
+
+:CustomerBaseExpansion a owl:NamedIndividual .
+
+:Delta a :DigitalProduct,
+        :FundingSupportTypology,
+        :StartupActivity,
+        owl:NamedIndividual .
+
+:DeltaSoftware a :ProprietarySoftware,
+        owl:NamedIndividual .
+
+:Demium a owl:NamedIndividual .
+
+:DevelopingTheToolInternally a :StartupActivity ;
+    :producesProprietarySoftware :ProprietarySoftware .
+
+:DevelopmentOfAIAgent a :StartupActivity,
+        owl:NamedIndividual ;
+    :executionOfProject :Project .
+
+:Develops a :DigitalProduct,
+        :InnovationComponent,
+        owl:NamedIndividual,
+        owl:ObjectProperty ;
+    :hasScalabilityPotential :ScalabilityPotential ;
+    :hasTechnologicalComponent :TechnologicalComponent .
+
+:Diana a :DigitalProduct,
+        owl:NamedIndividual .
+
+:Differentiation1 a :CompetitiveDifferentiation .
+
+:DifferentiationEpsilon a owl:NamedIndividual .
+
+:DifferentiationFromCompetition a owl:AnnotationProperty .
+
+:DifferentiationX a :CompetitiveDifferentiation,
+        owl:NamedIndividual .
+
+:DigitalProduct1 a :DigitalProduct,
+        owl:NamedIndividual ;
+    rdfs:label "Digital Product 1" .
+
+:DigitalProductAlpha a :DigitalProduct,
+        owl:NamedIndividual .
+
+:DigitalProductX a :DigitalProduct,
+        owl:NamedIndividual .
+
+:DigitalProductY a :DigitalProduct,
+        owl:NamedIndividual .
+
+:DigitalProductZ a :DigitalProduct,
+        owl:NamedIndividual .
+
+:DigitalSupportLeader a :Leader .
+
+:DigitalTransformation1 a :DigitalTransformation,
+        owl:NamedIndividual ;
+    rdfs:label "Digital Transformation 1" .
+
+:DigitalTransformation2024 a :DigitalTransformation,
+        owl:NamedIndividual .
+
+:DigitalTransformationEta a :DigitalTransformation,
+        owl:NamedIndividual ;
+    rdfs:label "Digital Transformation Eta" .
+
+:DigitalTransformationInitiative a :DigitalTransformation,
+        owl:NamedIndividual .
+
+:DigitalTransformationX a :DigitalTransformation,
+        owl:NamedIndividual .
+
+:DigitalTransformationY a :DigitalTransformation,
+        owl:NamedIndividual .
+
+:DimensionOfInnovationProtection a owl:NamedIndividual .
+
+:DynamicAdaptability a :StartupActivity,
+        owl:NamedIndividual .
+
+:EcoInnovationPromotion a :DigitalTransformation,
+        owl:NamedIndividual .
+
+:EfficientlyConnectsToDatabases a owl:ObjectProperty .
+
+:EligibilityAnalysis1 a :EligibilityAnalysis,
+        owl:NamedIndividual .
+
+:EligibilityAssessment a :EligibilityAnalysis,
+        owl:NamedIndividual .
+
+:Epsilon a :DigitalProduct,
+        owl:NamedIndividual .
+
+:ErrorReduction a owl:NamedIndividual .
+
+:Errors a owl:NamedIndividual .
+
+:Eta a :InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+:EuropeanFundingMarket a :Market .
+
+:EuropeanUnion a :Region ;
+    rdfs:label "European Union" .
+
+:Evaluation1 a :Evaluation,
+        owl:NamedIndividual .
+
+:Evaluation2 a :Evaluation,
+        owl:NamedIndividual .
+
+:Eve a :ProprietarySoftware,
+        owl:NamedIndividual .
+
+:ExecutionOfProject a owl:ObjectProperty ;
+    rdfs:label "executionOfProject" .
+
+:ExistenceOfCoreTeam a owl:AnnotationProperty .
+
+:ExpansionFundingApplication a :FundingApplication,
+        owl:NamedIndividual .
+
+:ExpansionMarkets a owl:NamedIndividual .
+
+:ExpansionModel a owl:NamedIndividual .
+
+:ExpansionStrategyGlobal a :InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+:ExpansionStrategyX a :InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+:Expense1 a :Expenses,
+        owl:NamedIndividual ;
+    :hasAmount "11000â‚¬"^^xsd:string ;
+    :relatesTo :IntellectualPropertyRights .
+
+:Experience a owl:NamedIndividual ;
+    :hasDuration "over seven years" .
+
+:FirstAIAgent a :AIContentGenerationMethodology,
+        :BusinessModel,
+        :CompetitiveDifferentiation,
+        :DigitalProduct,
+        :DigitalTransformation,
+        :FundingSupportTypology,
+        :HighTechSector,
+        :InnovationComponent,
+        :IntellectualProperty,
+        :InternationalExpansionStrategy,
+        :InvestmentBudget,
+        :ManagementTeam,
+        :MarketPositioning,
+        :OperationalManagement,
+        :ProprietarySoftware,
+        :ScalabilityModel,
+        :StartupActivity,
+        :TechnicalLeadership,
+        owl:NamedIndividual ;
+    rdfs:label "First AI Agent" .
+
+:FoundingTeamMember a :FoundingTeam,
+        owl:NamedIndividual ;
+    :hasRole :Role1,
+        :Role2 ;
+    :hasSkill :Skill1,
+        :Skill2 .
+
+:FunctionalityCoverage a :StartupActivity,
+        owl:NamedIndividual .
+
+:Funding1 a :FundingApplication,
+        :FundingSupportTypology .
+
+:FundingApplication1 a :FundingApplication,
+        owl:NamedIndividual ;
+    rdfs:label "Funding Application 1" .
+
+:FundingApplication123 a :FundingApplication,
+        owl:NamedIndividual .
+
+:FundingApplication2 a :FundingApplication,
+        owl:NamedIndividual .
+
+:FundingBudgetX a :InvestmentBudget,
+        owl:NamedIndividual .
+
+:FundingProposal1 a :FundingApplication,
+        owl:NamedIndividual .
+
+:FundingProposal2024 a :FundingApplication,
+        owl:NamedIndividual .
+
+:FundingRequest1 a :FundingApplication,
+        owl:NamedIndividual .
+
+:FundingRequest2024 a :FundingApplication,
+        owl:NamedIndividual .
+
+:FundingSupport a :FundingSupportTypology .
+
+:FundingSupportType1 a :FundingSupportType,
+        :FundingSupportTypology,
+        owl:NamedIndividual .
+
+:FundingSupportType2 a :FundingSupportType,
+        :FundingSupportTypology,
+        owl:NamedIndividual .
+
+:FundingSupportTypeA a :FundingSupportTypology,
+        owl:NamedIndividual .
+
+:FundingSupportTypeX a :FundingSupportTypology,
+        owl:NamedIndividual .
+
+:FundingSupportTypology1 a :FundingSupportTypology,
+        owl:NamedIndividual ;
+    rdfs:label "Funding Support Typology 1" .
+
+:FundingSupportTypologyX a :FundingSupportTypology,
+        owl:NamedIndividual .
+
+:Gamma a :DigitalProduct,
+        owl:NamedIndividual .
+
+:GlobalExpansionPlan a :InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+:GlobalExpansionStrategy a :InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+:GoParity a owl:NamedIndividual .
+
+:GoToMarketComponent a owl:NamedIndividual ;
+    :ledBy :RodrigoMendes .
+
+:GoalOfExpansion a owl:ObjectProperty .
+
+:GranterAICompany a :Company ;
+    :hasName "Granter.ai" .
+
+:GranteraAI a owl:NamedIndividual .
+
+:GranteraI a owl:NamedIndividual .
+
+:Granteraia a :StartupActivity,
+        owl:NamedIndividual .
+
+:GrantersAIProject a :StartupActivity ;
+    :proposesDevelopmentOf :ApplicationPreparationProcess,
+        :ArtificialIntelligenceAgent,
+        :DigitalSolution .
+
+:GrantersTeam a :Team,
+        owl:NamedIndividual .
+
+:GrowthStrategy a owl:NamedIndividual .
+
+:HRTechStartup a :Company .
+
+:HasExperienceYears a owl:DatatypeProperty .
+
+:HasRole a owl:DatatypeProperty .
+
+:He a owl:NamedIndividual .
+
+:HeadOfIncubation a owl:NamedIndividual .
+
+:HeadOfSales a :ManagementTeam,
+        owl:NamedIndividual ;
+    :relatesTo :RodrigoMendes .
+
+:HighTechInc a :HighTechSector,
+        owl:NamedIndividual .
+
+:HighTechSector1 a :HighTechSector,
+        owl:NamedIndividual ;
+    rdfs:label "High Tech Sector 1" .
+
+:HighTechSectorEntity a :HighTechSector,
+        owl:NamedIndividual .
+
+:HighTechSectorExample a :HighTechSector,
+        owl:NamedIndividual .
+
+:HighTechSectorX a :HighTechSector,
+        owl:NamedIndividual .
+
+:HighTechSectorXYZ a :HighTechSector,
+        owl:NamedIndividual .
+
+:Hiring a :HiringProcess,
+        owl:NamedIndividual .
+
+:His a :ManagementTeam,
+        owl:NamedIndividual ;
+    :definesLicensingPackages :LicensingPackages ;
+    :hasCompany :Otovo,
+        :TooGoodToGo ;
+    :hasMarketStrategy :MarketPenetrationStrategy ;
+    :hasRole :ProjectRole ;
+    :hasUserAcquisitionStrategy :UserAcquisitionStrategy .
+
+:HisExperienceInCommunicating a owl:AnnotationProperty .
+
+:HisExperienceInCommunicatingTechnologicalValuePropositionsToDifferentMarketSegments a owl:NamedIndividual .
+
+:IP1 a :IntellectualProperty .
+
+:IPPortfolio a :IntellectualProperty,
+        owl:NamedIndividual .
+
+:IPX a :IntellectualProperty,
+        owl:NamedIndividual .
+
+:ImpactOn a owl:ObjectProperty .
+
+:ImpactOnCompetitiveness a owl:NamedIndividual .
+
+:ImplementationOf a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :StartupActivity .
+
+:Individual1 a :Country,
+        :ManagementTeam,
+        :Person,
+        :StartupActivity,
+        owl:NamedIndividual ;
+    :hasDevelopmentObjective "Development of a product with technological foundation and scalability." ;
+    :hasFavorableRegulatoryContext true ;
+    :hasHighDemandForPublicFunding true .
+
+:Individual10 a :DigitalTransformation,
+        owl:NamedIndividual .
+
+:Individual11 a :BusinessModel,
+        owl:NamedIndividual .
+
+:Individual12 a :InvestmentBudget,
+        owl:NamedIndividual .
+
+:Individual2 a :Company,
+        :DigitalProduct,
+        :TechnicalLeadership,
+        owl:NamedIndividual .
+
+:Individual3 a :OperationalManagement,
+        :ScalabilityModel,
+        owl:NamedIndividual .
+
+:Individual4 a :ManagementTeam,
+        :MarketPositioning,
+        owl:NamedIndividual .
+
+:Individual5 a :CompetitiveDifferentiation,
+        :TechnicalLeadership,
+        owl:NamedIndividual .
+
+:Individual6 a :OperationalManagement,
+        owl:NamedIndividual .
+
+:Individual7 a :MarketPositioning,
+        owl:NamedIndividual .
+
+:Individual8 a :CompetitiveDifferentiation,
+        owl:NamedIndividual .
+
+:Individual9 a :IntellectualProperty,
+        owl:NamedIndividual .
+
+:IndividualBusinessModel a owl:NamedIndividual .
+
+:IndividualComponent a owl:NamedIndividual .
+
+:IndividualDifferentiation a owl:NamedIndividual .
+
+:IndividualDigitalTransformation a owl:NamedIndividual .
+
+:IndividualFundingApplication a owl:NamedIndividual .
+
+:IndividualIntellectualProperty a owl:NamedIndividual .
+
+:IndividualInvestmentBudget a owl:NamedIndividual .
+
+:IndividualManagementTeam a owl:NamedIndividual .
+
+:IndividualMarketPositioning a owl:NamedIndividual .
+
+:IndividualMethodology a owl:NamedIndividual .
+
+:IndividualOperationalManagement a owl:NamedIndividual .
+
+:IndividualProduct a owl:NamedIndividual .
+
+:IndividualScalabilityModel a owl:NamedIndividual .
+
+:IndividualSector a owl:NamedIndividual .
+
+:IndividualSoftware a owl:NamedIndividual .
+
+:IndividualStartup a owl:NamedIndividual .
+
+:IndividualStrategy a owl:NamedIndividual .
+
+:IndividualSupportTypology a owl:NamedIndividual .
+
+:IndividualTechnicalLeadership a owl:NamedIndividual .
+
+:Inefficiencies a owl:NamedIndividual .
+
+:InefficiencyReduction a owl:NamedIndividual .
+
+:InnovateAI a :AIContentGenerationMethodology,
+        owl:NamedIndividual .
+
+:Innovation1 a :InnovationComponent .
+
+:InnovationComponentA a :InnovationComponent,
+        owl:NamedIndividual .
+
+:InnovationComponentAlpha a :InnovationComponent,
+        owl:NamedIndividual .
+
+:InnovationComponentX a :InnovationComponent,
+        owl:NamedIndividual .
+
+:InnovationProtectionDimension a owl:NamedIndividual .
+
+:InnovationStrategy1 a :InnovationComponent,
+        owl:NamedIndividual .
+
+:InnovativeAIContentMethod a :AIContentGenerationMethodology,
+        owl:NamedIndividual .
+
+:InnovativeDigitalProduct a :DigitalProduct,
+        owl:NamedIndividual .
+
+:IntegrationOf a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :StartupActivity .
+
+:IntellectualProperty1 a :IntellectualProperty,
+        owl:NamedIndividual ;
+    rdfs:label "Intellectual Property 1" .
+
+:IntellectualPropertyPatent1 a :IntellectualProperty,
+        owl:NamedIndividual .
+
+:IntellectualPropertyPatentX a :IntellectualProperty,
+        owl:NamedIndividual .
+
+:IntellectualPropertyX a :IntellectualProperty,
+        owl:NamedIndividual .
+
+:IntellectualPropertyZeta a :IntellectualProperty,
+        owl:NamedIndividual ;
+    rdfs:label "Intellectual Property Zeta" .
+
+:InternationalExpansionConsultant a :Person,
+        owl:NamedIndividual .
+
+:InternationalExpansionStrategy1 a :InternationalExpansionStrategy,
+        owl:NamedIndividual ;
+    rdfs:label "International Expansion Strategy 1" .
+
+:InternationalExpansionStrategyA a :InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+:InternationalExpansionStrategyX a :InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+:InternationalStrategyBeta a owl:NamedIndividual .
+
+:InternationalStrategyY a :InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+:IntuitiveInterface a :StartupActivity,
+        owl:NamedIndividual .
+
+:InvestmentBudget1 a :InvestmentBudget,
+        owl:NamedIndividual ;
+    rdfs:label "Investment Budget 1" .
+
+:InvestmentBudget2024 a :InvestmentBudget,
+        owl:NamedIndividual .
+
+:InvestmentBudgetIota a :InvestmentBudget,
+        owl:NamedIndividual ;
+    rdfs:label "Investment Budget Iota" .
+
+:InvestmentBudgetPlan a :InvestmentBudget,
+        owl:NamedIndividual .
+
+:InvestmentBudgetQ1 a :InvestmentBudget,
+        owl:NamedIndividual .
+
+:InvestmentBudgetX a :InvestmentBudget,
+        owl:NamedIndividual .
+
+:Iota a :MarketPositioning,
+        owl:NamedIndividual .
+
+:JaneSmith a :Person,
+        :TechnicalLeadership,
+        owl:NamedIndividual ;
+    :hasExpertise :ArtificialIntelligenceSpecialist ;
+    :specializesIn :ArtificialIntelligenceSpecialist .
+
+:JohnDoe a :ManagementTeam,
+        :Person,
+        :TeamMember,
+        owl:NamedIndividual ;
+    :hasKnowledgeDomain :DigitalMarketsKnowledge ;
+    :hasRole :FrontEndDeveloper ;
+    :hasSkill :TechnicalExpertise .
+
+:Kappa a :CompetitiveDifferentiation,
+        owl:NamedIndividual .
+
+:Lambda a :IntellectualProperty,
+        owl:NamedIndividual .
+
+:Leadership a owl:NamedIndividual ;
+    :hasLeader :RodrigoMendes .
+
+:LuisBatista a :ManagementTeam,
+        :Person,
+        owl:NamedIndividual ;
+    :HasExperienceYears 4 ;
+    :HasRole "Management and Operational Leadership" ;
+    :ResponsibleFor :TechnicalExecution ;
+    :WorksWith :MultinationalCompanies ;
+    :hasRole "Head of Operations" .
+
+:ManagementTeam1 a :ManagementTeam,
+        owl:NamedIndividual ;
+    rdfs:label "Management Team 1" .
+
+:ManagementTeamIndividual1 a :ManagementTeam,
+        owl:NamedIndividual .
+
+:ManagementTeamMember1 a owl:NamedIndividual .
+
+:ManagementTeamX a :ManagementTeam,
+        owl:NamedIndividual .
+
+:MarketExpansionPlan a owl:NamedIndividual .
+
+:MarketLeader a :MarketPositioning,
+        owl:NamedIndividual .
+
+:MarketPositioning1 a :MarketPositioning,
+        owl:NamedIndividual ;
+    rdfs:label "Market Positioning 1" .
+
+:MarketPositioningDelta a owl:NamedIndividual .
+
+:MarketPositioningPremium a :MarketPositioning,
+        owl:NamedIndividual .
+
+:MarketPositioningX a :MarketPositioning,
+        owl:NamedIndividual .
+
+:Markets a owl:NamedIndividual .
+
+:MediumLongTerm a owl:NamedIndividual .
+
+:Methodology1 a :AIContentGenerationMethodology .
+
+:Mu a :DigitalTransformation,
+        owl:NamedIndividual .
+
+:NewProductDevelopment a owl:NamedIndividual .
+
+:Nu a :BusinessModel,
+        owl:NamedIndividual .
+
+:Omicron a :InvestmentBudget,
+        owl:NamedIndividual .
+
+:OperationalManagement1 a :OperationalManagement,
+        owl:NamedIndividual ;
+    rdfs:label "Operational Management 1" .
+
+:OperationalManagementTeam a owl:NamedIndividual .
+
+:OperationalManagementX a :OperationalManagement,
+        owl:NamedIndividual .
+
+:Opportunity a :OpportunityIdentification,
+        owl:NamedIndividual .
+
+:OpportunityAnalysis a :StartupActivity,
+        owl:NamedIndividual .
+
+:OpportunityIdentification1 a :OpportunityIdentification,
+        owl:NamedIndividual .
+
+:OpportunityIdentification2 a :OpportunityIdentification,
+        owl:NamedIndividual .
+
+:Patent123 a :IntellectualProperty,
+        owl:NamedIndividual .
+
+:PatentRights a :IntellectualProperty,
+        owl:NamedIndividual .
+
+:Person1 a :Person ;
+    :hasExperienceDuration "8 years"^^xsd:duration ;
+    :hasExperienceType "B2B sales and team management" ;
+    :hasName "Human Resources Team" ;
+    :hasResponsibility :DefiningStrategy,
+        :LeadingInternationalGrowth,
+        :ManagingOperations ;
+    :hasRole :ProjectLeader ;
+    :wasPartOf :UberEatsTeam .
+
+:PreviousExperience a owl:NamedIndividual .
+
+:ProductGrowthGuarantee a owl:NamedIndividual .
+
+:ProductivityIncrease a owl:NamedIndividual .
+
+:ProjectContributionToDifferentiation a owl:NamedIndividual .
+
+:ProjectHasObjective a owl:ObjectProperty .
+
+:ProjectManagement1 a :ProjectManagement,
+        owl:NamedIndividual .
+
+:ProjectManagement2 a :ProjectManagement,
+        owl:NamedIndividual .
+
+:ProposalDescription a owl:AnnotationProperty .
+
+:ProposalRelatedTo a owl:ObjectProperty .
+
+:ProprietaryAIPlatform a :ProprietarySoftware,
+        owl:NamedIndividual .
+
+:ProprietarySoftX a :ProprietarySoftware,
+        owl:NamedIndividual .
+
+:ProprietarySoftware1 a :ProprietarySoftware,
+        owl:NamedIndividual ;
+    rdfs:label "Proprietary Software 1" .
+
+:ProprietarySoftwareABC a :ProprietarySoftware,
+        owl:NamedIndividual .
+
+:ProprietarySoftwareBeta a :ProprietarySoftware,
+        owl:NamedIndividual .
+
+:ProprietarySoftwareX a :ProprietarySoftware,
+        owl:NamedIndividual .
+
+:ProprietarySoftwareZ a :ProprietarySoftware,
+        owl:NamedIndividual .
+
+:ProtectionDimension a owl:NamedIndividual .
+
+:ProvenExperience a owl:NamedIndividual .
+
+:PublicFundingApplicationSector a owl:NamedIndividual .
+
+:PublicFunds a owl:NamedIndividual .
+
+:Relation1 a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Company .
+
+:Relation2 a owl:ObjectProperty ;
+    rdfs:domain :Company ;
+    rdfs:range :Person .
+
+:Relation3 a owl:ObjectProperty .
+
+:Relation4 a owl:ObjectProperty .
+
+:Relation5 a owl:ObjectProperty .
+
+:RelevanceOfProjectToObjectives a owl:NamedIndividual ;
+    :project :Project .
+
+:ResponsibleFor a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :StartupActivity .
+
+:RevenueStreams a owl:NamedIndividual .
+
+:Ricardo a :Person,
+        owl:NamedIndividual .
+
+:RicardoMoreira a owl:NamedIndividual .
+
+:Sales a owl:NamedIndividual .
+
+:SalesExperience a owl:NamedIndividual ;
+    :hasDuration "over seven years" ;
+    :relatedTo :RodrigoMendes .
+
+:Scalability1 a :ScalabilityModel .
+
+:ScalabilityModel1 a :ScalabilityModel,
+        owl:NamedIndividual ;
+    rdfs:label "Scalability Model 1" .
+
+:ScalabilityModelA a :ScalabilityModel,
+        owl:NamedIndividual .
+
+:ScalabilityModelAlpha a :ScalabilityModel,
+        owl:NamedIndividual .
+
+:ScalabilityModelBeta a :ScalabilityModel,
+        owl:NamedIndividual .
+
+:ScalabilityModelGamma a owl:NamedIndividual .
+
+:ScalabilityModelV1 a :ScalabilityModel,
+        owl:NamedIndividual .
+
+:ScalabilityModelX a :ScalabilityModel,
+        owl:NamedIndividual .
+
+:ScalabilityModelZ a :ScalabilityModel,
+        owl:NamedIndividual .
+
+:ScalableBusinessModel a :ScalabilityModel .
+
+:ServiceOffering a owl:NamedIndividual .
+
+:Siemens a :Company .
+
+:Software a :ProprietarySoftware,
+        owl:NamedIndividual .
+
+:Software1 a :DigitalProduct,
+        :ProprietarySoftware .
+
+:SoftwareProductX a owl:NamedIndividual .
+
+:SpecialistInField a owl:ObjectProperty .
+
+:Specialists a owl:NamedIndividual .
+
+:StartupActivityXYZ a :StartupActivity,
+        owl:NamedIndividual .
+
+:StartupFounder a :ManagementTeam,
+        owl:NamedIndividual .
+
+:StrategicLeadership a :LeadershipLevel,
+        owl:NamedIndividual .
+
+:StrategicMarketing a owl:NamedIndividual .
+
+:StrategicMarketingExperience a owl:NamedIndividual ;
+    :relatedTo :RodrigoMendes .
+
+:StrategicPlanning a owl:ObjectProperty .
+
+:Strategy1 a :BusinessModel,
+        :InternationalExpansionStrategy .
+
+:SubmissionAutomation1 a :SubmissionAutomation,
+        owl:NamedIndividual .
+
+:SubscriptionStrategy a :MonetizationModel,
+        owl:NamedIndividual .
+
+:SuccessProspectsHigh a owl:NamedIndividual .
+
+:SuccessRate a owl:NamedIndividual .
+
+:SuccessRateImprovement a owl:NamedIndividual .
+
+:SupportTypeGrant a :FundingSupportTypology,
+        owl:NamedIndividual .
+
+:SupportTypologyA a owl:NamedIndividual .
+
+:SupportTypologyX a :FundingSupportTypology,
+        owl:NamedIndividual .
+
+:TechLeadership a owl:NamedIndividual .
+
+:TechnicalLeadership1 a :TechnicalLeadership,
+        owl:NamedIndividual ;
+    rdfs:label "Technical Leadership 1" .
+
+:TechnicalLeadershipIndividual1 a :TechnicalLeadership,
+        owl:NamedIndividual .
+
+:TechnicalLeadershipX a :TechnicalLeadership,
+        owl:NamedIndividual .
+
+:TechnologicalAccreditationOfHumanResources a owl:AnnotationProperty .
+
+:TechnologyLeadership a :TechnicalLeadership,
+        owl:NamedIndividual .
+
+:TechnologySector a :HighTechSector .
+
+:Theta a :ScalabilityModel,
+        owl:NamedIndividual .
+
+:WorksWith a owl:ObjectProperty .
+
+:Zeta a :InnovationComponent,
+        owl:NamedIndividual .
+
+:acquisitionOrRentingOfEquipment a owl:ObjectProperty .
+
+:adaptsToContextOf a owl:ObjectProperty ;
+    rdfs:domain :AIContentGenerationMethodology ;
+    rdfs:range :DigitalTransformation .
+
+:adoptsApproaches a owl:ObjectProperty .
+
+:adoptsInternationalExpansionStrategy a owl:ObjectProperty .
+
+:adoptsInternationalStrategy a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :InternationalExpansionStrategy .
+
+:adoptsStrategy a owl:ObjectProperty .
+
+:affectsMarket a owl:ObjectProperty .
+
+:aimsMarketPositioning a owl:ObjectProperty .
+
+:alignedWith a owl:ObjectProperty .
+
+:alignsWithObjectives a owl:ObjectProperty .
+
+:allocatesBudget a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :InvestmentBudget .
+
+:appliesFor a owl:ObjectProperty ;
+    rdfs:domain :FundingApplication ;
+    rdfs:range :FundingSupportTypology .
+
+:basedOnBusinessModel a owl:ObjectProperty .
+
+:belongsToSector a owl:ObjectProperty .
+
+:builds a owl:ObjectProperty .
+
+:classifiedAsTypology a owl:ObjectProperty .
+
+:clients a :ManagementTeam,
+        owl:NamedIndividual .
+
+:combinesMethodologies a owl:ObjectProperty .
+
+:communicating a owl:ObjectProperty .
+
+:company a :Company,
+        :SupportForStartupOrGrowth,
+        owl:NamedIndividual ;
+    :hasPositioningStrategy :companyPositioningStrategy .
+
+:companyGrowthObjectives a owl:AnnotationProperty .
+
+:complexDigitalSolutions a :ManagementTeam,
+        owl:NamedIndividual .
+
+:consolidatesPositionInPublicFundingApplicationSector a owl:ObjectProperty .
+
+:coreTeam a owl:NamedIndividual .
+
+:coreTeamFoundation a owl:NamedIndividual .
+
+:creates a :StartupActivity,
+        owl:ObjectProperty .
+
+:createsAndImplements a owl:ObjectProperty .
+
+:creationOfTheAIAgent a owl:ObjectProperty .
+
+:definesLicensingPackages a owl:ObjectProperty .
+
+:develops a owl:ObjectProperty ;
+    rdfs:domain :DigitalProduct ;
+    rdfs:range :InnovationComponent .
+
+:developsDigitalProduct a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :DigitalProduct .
+
+:developsFor a owl:ObjectProperty .
+
+:developsProduct a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :DigitalProduct .
+
+:developsSoftware a owl:ObjectProperty .
+
+:differentiatesCompetitively a owl:ObjectProperty .
+
+:differentiatesFrom a owl:ObjectProperty .
+
+:differentiatesFromCompetitors a owl:ObjectProperty .
+
+:differentiatesWith a owl:ObjectProperty .
+
+:diversifiesServiceOffering a owl:ObjectProperty .
+
+:drivesDigitalTransformation a owl:ObjectProperty .
+
+:drivesTransformation a owl:ObjectProperty .
+
+:enables a owl:ObjectProperty .
+
+:enablesExpansion a owl:ObjectProperty .
+
+:enhances a :StartupActivity,
+        owl:ObjectProperty .
+
+:enhancesPotential a owl:AnnotationProperty .
+
+:ensures a :ManagementTeam,
+        owl:NamedIndividual .
+
+:ensuresDirection a owl:ObjectProperty .
+
+:ensuring a owl:ObjectProperty .
+
+:essentialFor a owl:ObjectProperty .
+
+:expensesWithPersonalComputers a owl:NamedIndividual .
+
+:expensesWithSoftwareSubscriptions a owl:NamedIndividual .
+
+:followsScalabilityModel a owl:ObjectProperty .
+
+:foundationForExecution a owl:AnnotationProperty .
+
+:founded a owl:ObjectProperty .
+
+:generatesRevenueStreams a owl:ObjectProperty .
+
+:guaranteesGrowth a owl:ObjectProperty .
+
+:handlesOperationalManagement a owl:ObjectProperty .
+
+:handlesOperations a owl:ObjectProperty .
+
+:hasAIContentGenerationMethodology a owl:ObjectProperty .
+
+:hasAbilityLanguageAdaptation a owl:ObjectProperty .
+
+:hasAchievement a owl:ObjectProperty .
+
+:hasAdoptionOfInnovativeDigitalTools a owl:ObjectProperty .
+
+:hasAmount a owl:DatatypeProperty .
+
+:hasApplicant a owl:ObjectProperty .
+
+:hasApplication a owl:ObjectProperty .
+
+:hasApplicationPreparation a owl:ObjectProperty .
+
+:hasAssetImportance a owl:ObjectProperty .
+
+:hasAttribute a owl:ObjectProperty .
+
+:hasBudget a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :InvestmentBudget ;
+    rdfs:range xsd:decimal .
+
+:hasBusinessModel a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :BusinessModel .
+
+:hasBusinessProposition a owl:ObjectProperty ;
+    rdfs:domain :Tool ;
+    rdfs:range :BusinessProposition .
+
+:hasCertificationName a owl:DatatypeProperty .
+
+:hasCharacteristic a owl:ObjectProperty .
+
+:hasClient a owl:ObjectProperty .
+
+:hasCompany a owl:ObjectProperty .
+
+:hasCompetitiveDifferentiation a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :CompetitiveDifferentiation .
+
+:hasComponent a owl:ObjectProperty .
+
+:hasContext a owl:ObjectProperty .
+
+:hasContributionTo a owl:ObjectProperty .
+
+:hasCustomerBase a owl:ObjectProperty .
+
+:hasDescription a owl:DatatypeProperty .
+
+:hasDevelopmentObjective a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :DevelopmentObjective .
+
+:hasDevelopmentStrategy a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :DevelopmentStrategy .
+
+:hasDifferentiation a owl:ObjectProperty ;
+    rdfs:domain :CompetitiveDifferentiation,
+        :StartupActivity ;
+    rdfs:range :CompetitiveDifferentiation,
+        :MarketPositioning .
+
+:hasDigitalProduct a owl:ObjectProperty ;
+    rdfs:domain :InnovationComponent,
+        :ManagementTeam,
+        :StartupActivity ;
+    rdfs:range :DigitalProduct .
+
+:hasDigitalTransformation a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :DigitalTransformation .
+
+:hasEndDate a owl:DatatypeProperty .
+
+:hasExpansionMarket a owl:ObjectProperty .
+
+:hasExpansionStrategy a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :InternationalExpansionStrategy .
+
+:hasExperience a owl:DatatypeProperty,
+        owl:ObjectProperty .
+
+:hasExperienceDuration a owl:DatatypeProperty .
+
+:hasExperienceType a owl:DatatypeProperty .
+
+:hasExperienceYears a owl:DatatypeProperty .
+
+:hasExpertise a owl:ObjectProperty .
+
+:hasFavorableRegulatoryContext a owl:ObjectProperty .
+
+:hasFounder a owl:ObjectProperty .
+
+:hasFunctionalityCoverage a owl:ObjectProperty .
+
+:hasFundingAmount a owl:DatatypeProperty .
+
+:hasFundingApplication a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :FundingApplication .
+
+:hasFundingProposal a owl:ObjectProperty .
+
+:hasFundingSupport a owl:ObjectProperty .
+
+:hasFundingSupportType a owl:ObjectProperty .
+
+:hasFundingSupportTypology a owl:ObjectProperty ;
+    rdfs:domain :FundingApplication ;
+    rdfs:range :FundingSupportTypology .
+
+:hasFundingType a owl:ObjectProperty .
+
+:hasGoal a owl:ObjectProperty .
+
+:hasHighDemandForPublicFunding a owl:ObjectProperty .
+
+:hasHighTechSector a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :HighTechSector .
+
+:hasImpactOn a owl:ObjectProperty .
+
+:hasInnovation a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :InnovationComponent .
+
+:hasInnovationComponent a owl:ObjectProperty ;
+    rdfs:domain :DigitalProduct,
+        :TechnologicalInnovation ;
+    rdfs:range :InnovationComponent .
+
+:hasIntellectualProperty a owl:ObjectProperty ;
+    rdfs:domain :DigitalProduct,
+        :ProprietarySoftware ;
+    rdfs:range :IntellectualProperty .
+
+:hasInternationalExpansionStrategy a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :InternationalExpansionStrategy .
+
+:hasInvestmentBudget a owl:ObjectProperty ;
+    rdfs:domain :FundingApplication,
+        :StartupActivity ;
+    rdfs:range :InvestmentBudget .
+
+:hasKnowledgeDomain a owl:ObjectProperty .
+
+:hasLeader a owl:ObjectProperty .
+
+:hasLeadership a owl:ObjectProperty ;
+    rdfs:domain :ManagementTeam ;
+    rdfs:range :TechnicalLeadership .
+
+:hasLeadershipLevel a owl:ObjectProperty .
+
+:hasManagementTeam a owl:ObjectProperty ;
+    rdfs:domain :BusinessModel,
+        :ImplementationCapacity,
+        :StartupActivity ;
+    rdfs:range :ManagementTeam .
+
+:hasMarketAnalysis a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :MarketAnalysis .
+
+:hasMarketPositioning a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :MarketPositioning .
+
+:hasMarketStrategy a owl:ObjectProperty .
+
+:hasMember a owl:ObjectProperty ;
+    rdfs:domain :ManagementTeam ;
+    rdfs:range :ManagementTeam .
+
+:hasMethodology a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :InnovationMethodology .
+
+:hasModel a owl:ObjectProperty .
+
+:hasName a owl:DatatypeProperty .
+
+:hasOperationalManagement a owl:ObjectProperty ;
+    rdfs:domain :ManagementTeam,
+        :StartupActivity ;
+    rdfs:range :OperationalManagement .
+
+:hasOpportunity a owl:ObjectProperty .
+
+:hasOpportunityAnalysis a owl:ObjectProperty .
+
+:hasPosition a owl:ObjectProperty .
+
+:hasPositioning a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :MarketPositioning .
+
+:hasPositioningStrategy a owl:ObjectProperty .
+
+:hasPresenceIn a rdfs:Label,
+        owl:ObjectProperty .
+
+:hasPreviousExperience a owl:ObjectProperty .
+
+:hasProduct a owl:ObjectProperty .
+
+:hasProductGrowth a owl:ObjectProperty .
+
+:hasProjectName a owl:DatatypeProperty .
+
+:hasProposalDescription a owl:AnnotationProperty ;
+    rdfs:label "GrantersProposal" .
+
+:hasProprietarySoftware a owl:ObjectProperty ;
+    rdfs:domain :DigitalProduct,
+        :ManagementTeam ;
+    rdfs:range :ProprietarySoftware .
+
+:hasResponsibility a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Responsibility .
+
+:hasRole a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Role .
+
+:hasScalabilityModel a owl:ObjectProperty ;
+    rdfs:domain :BusinessModel,
+        :StartupActivity ;
+    rdfs:range :ScalabilityModel .
+
+:hasSector a owl:ObjectProperty .
+
+:hasSkill a owl:ObjectProperty .
+
+:hasStartDate a owl:DatatypeProperty .
+
+:hasStrategicDimension a owl:ObjectProperty ;
+    rdfs:domain :GrantersProposal ;
+    rdfs:range :StrategicDimension .
+
+:hasStrategy a owl:ObjectProperty ;
+    rdfs:domain :InternationalExpansionStrategy ;
+    rdfs:range :MarketPositioning .
+
+:hasSuccessProspects a owl:ObjectProperty .
+
+:hasSupportType a owl:ObjectProperty .
+
+:hasSupportTypology a owl:ObjectProperty ;
+    rdfs:domain :FundingApplication ;
+    rdfs:range :FundingSupportTypology .
+
+:hasTeamMember a owl:ObjectProperty .
+
+:hasTechnicalLeadership a owl:ObjectProperty ;
+    rdfs:domain :ImplementationCapacity,
+        :ManagementTeam ;
+    rdfs:range :TechnicalLeadership .
+
+:hasTechnologicalInnovation a owl:ObjectProperty ;
+    rdfs:domain :BusinessProposition ;
+    rdfs:range :TechnologicalInnovation .
+
+:hasTechnologyFocus a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :HighTechSector .
+
+:hasTechnologyLeadership a owl:ObjectProperty .
+
+:hasTool a owl:ObjectProperty ;
+    rdfs:domain :Company ;
+    rdfs:range :Tool .
+
+:hasUserAcquisitionStrategy a owl:ObjectProperty .
+
+:hasValueProposition a owl:AnnotationProperty .
+
+:implementsBusinessModel a owl:ObjectProperty .
+
+:implementsDigitalTransformation a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :DigitalTransformation .
+
+:implementsInternationalExpansionStrategy a owl:ObjectProperty .
+
+:implementsStrategy a owl:ObjectProperty .
+
+:implementsTransformation a owl:ObjectProperty ;
+    rdfs:domain :DigitalTransformation ;
+    rdfs:range :BusinessModel .
+
+:includesComponent a owl:ObjectProperty .
+
+:includesDigitalProduct a owl:ObjectProperty .
+
+:includesInnovationComponent a owl:ObjectProperty ;
+    rdfs:domain :DigitalProduct ;
+    rdfs:range :InnovationComponent .
+
+:includesSoftware a owl:ObjectProperty ;
+    rdfs:domain :DigitalProduct ;
+    rdfs:range :ProprietarySoftware .
+
+:includesSolution a owl:ObjectProperty .
+
+:increasesResponsivenessToMarkets a owl:ObjectProperty .
+
+:individualBusinessModel a owl:NamedIndividual .
+
+:individualCompetitiveDifferentiation a owl:NamedIndividual .
+
+:individualDigitalTransformation a owl:NamedIndividual .
+
+:individualIntellectualProperty a owl:NamedIndividual .
+
+:individualInvestmentBudget a owl:NamedIndividual .
+
+:individualManagementTeam a owl:NamedIndividual .
+
+:individualMarketPositioning a owl:NamedIndividual .
+
+:individualOperationalManagement a owl:NamedIndividual .
+
+:individualTechnicalLeadership a owl:NamedIndividual .
+
+:isInSector a owl:ObjectProperty .
+
+:isPartOfSector a owl:ObjectProperty .
+
+:leads a owl:ObjectProperty ;
+    rdfs:domain :TechnicalLeadership ;
+    rdfs:range :ManagementTeam .
+
+:locatedIn a owl:ObjectProperty .
+
+:managementTeam1 a :ManagementTeam .
+
+:managesOperation a owl:ObjectProperty .
+
+:managesOperations a owl:ObjectProperty .
+
+:market a :ManagementTeam,
+        owl:NamedIndividual .
+
+:marketSegments a owl:DatatypeProperty .
+
+:modelsBusiness a owl:ObjectProperty .
+
+:modelsScalability a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :ScalabilityModel .
+
+ns1: a owl:Ontology .
+
+ns1:AIAgent a ns1:StartupActivity,
+        owl:NamedIndividual .
+
+ns1:AIContentGenerationMethodology1 a ns1:AIContentGenerationMethodology .
+
+ns1:AIContentGenerationMethodologyInstance a owl:NamedIndividual .
+
+ns1:AIContentGenerationMethodologyX a ns1:AIContentGenerationMethodology,
+        owl:NamedIndividual .
+
+ns1:ANI a ns1:Organization,
+        owl:NamedIndividual .
+
+ns1:AdvICL a ns1:AIContentGenerationMethodology .
+
+ns1:Agent a owl:Class .
+
+ns1:Alice a ns1:ManagementTeam,
+        owl:NamedIndividual .
+
+ns1:AlignedWith a owl:ObjectProperty .
+
+ns1:Application1 a ns1:FundingApplication,
+        owl:NamedIndividual .
+
+ns1:Applications a ns1:NumberOfApplications,
+        owl:NamedIndividual ;
+    ns1:hasNumberOfApplications 150 .
+
+ns1:BaseOfRegisteredCompanies a ns1:NumberOfCompanies,
+        owl:NamedIndividual ;
+    ns1:hasNumberOfCompanies 2500 .
+
+ns1:Bob a ns1:TechnicalLeadership,
+        owl:NamedIndividual .
+
+ns1:BusinessModel1 a ns1:BusinessModel,
+        owl:NamedIndividual .
+
+ns1:BusinessModelInnovative a ns1:BusinessModel,
+        owl:NamedIndividual .
+
+ns1:BusinessModelInstance a owl:NamedIndividual .
+
+ns1:Charlie a ns1:FundingApplication,
+        owl:NamedIndividual .
+
+ns1:Company1 a ns1:StartupActivity,
+        owl:NamedIndividual .
+
+ns1:CompanyDesire a ns1:ManagementTeam,
+        owl:NamedIndividual .
+
+ns1:CompetitiveDifferentiation1 a ns1:CompetitiveDifferentiation .
+
+ns1:CompetitiveDifferentiationInstance a owl:NamedIndividual .
+
+ns1:CompetitiveDifferentiationUnique a ns1:CompetitiveDifferentiation,
+        owl:NamedIndividual .
+
+ns1:Delta a ns1:DigitalProduct,
+        owl:NamedIndividual .
+
+ns1:DemonstratesRelation a owl:ObjectProperty ;
+    rdfs:domain ns1:RecognitionOfCompetence ;
+    rdfs:range ns1:RecognitionDemonstration .
+
+ns1:DevelopmentProcess a owl:NamedIndividual .
+
+ns1:Diana a ns1:DigitalProduct,
+        owl:NamedIndividual .
+
+ns1:Differentiation1 a ns1:CompetitiveDifferentiation,
+        owl:NamedIndividual .
+
+ns1:DigitalProduct1 a ns1:DigitalProduct,
+        owl:NamedIndividual .
+
+ns1:DigitalProductInstance a owl:NamedIndividual .
+
+ns1:DigitalProductX a ns1:DigitalProduct,
+        owl:NamedIndividual .
+
+ns1:DigitalTransformation1 a ns1:DigitalTransformation,
+        owl:NamedIndividual .
+
+ns1:DigitalTransformationInitiative a ns1:DigitalTransformation,
+        owl:NamedIndividual .
+
+ns1:DigitalTransformationInstance a owl:NamedIndividual .
+
+ns1:Eve a ns1:InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+ns1:ExpansionStrategy1 a ns1:InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+ns1:FundingApp1 a ns1:FundingApplication .
+
+ns1:FundingApp2 a ns1:FundingApplication .
+
+ns1:FundingApplication1 a ns1:FundingApplication,
+        owl:NamedIndividual ;
+    ns1:hasFundingSupportTypology ns1:FundingSupportTypology1 .
+
+ns1:FundingOpportunityApplication a owl:NamedIndividual .
+
+ns1:FundingRequest2024 a ns1:FundingApplication,
+        owl:NamedIndividual .
+
+ns1:FundingSupportTypologyGrant a ns1:FundingSupportTypology,
+        owl:NamedIndividual .
+
+ns1:FundingSupportTypologyInstance a owl:NamedIndividual .
+
+ns1:FundingVolume a ns1:FundingVolumeAmount,
+        owl:NamedIndividual ;
+    ns1:hasFundingAmount 20000000.0 .
+
+ns1:GANs a ns1:AIContentGenerationMethodology .
+
+ns1:Gamma a ns1:HighTechSector,
+        owl:NamedIndividual .
+
+ns1:GlobalExpansionPlan a ns1:InternationalExpansionStrategy,
+        owl:NamedIndividual .
+
+ns1:GranTerAI a ns1:StartupActivity,
+        owl:NamedIndividual ;
+    ns1:MainEconomicActivityOf ns1:TechnologySector ;
+    ns1:SpecializesIn ns1:ArtificialIntelligenceSolutions .
+
+ns1:GranTerAIAssociatedWith a owl:ObjectProperty .
+
+ns1:GranTerAi a ns1:StartupActivity,
+        owl:NamedIndividual ;
+    ns1:hasStartOperationDate "2024-12"^^xsd:gYearMonth .
+
+ns1:Granter a owl:NamedIndividual .
+
+ns1:GranterAI a ns1:StartupActivity,
+        owl:NamedIndividual ;
+    ns1:hasProduct ns1:NewProduct .
+
+ns1:GranterAi a ns1:StartupActivity,
+        owl:NamedIndividual .
+
+ns1:GrantersAI a owl:NamedIndividual .
+
+ns1:GrantersOrganization a ns1:StartupActivity,
+        owl:NamedIndividual ;
+    ns1:launchOfTool ns1:ToolLaunchEvent .
+
+ns1:HasGoal a owl:ObjectProperty ;
+    rdfs:domain ns1:RecognitionOfCompetence ;
+    rdfs:range ns1:RecognitionGoal .
+
+ns1:HasOutcome a owl:ObjectProperty ;
+    rdfs:domain ns1:RecognitionOfCompetence ;
+    rdfs:range ns1:RecognitionOutcome .
+
+ns1:HighTechSector1 a ns1:HighTechSector .
+
+ns1:HighTechSectorFocus a ns1:HighTechSector,
+        owl:NamedIndividual .
+
+ns1:HighTechSectorInstance a owl:NamedIndividual .
+
+ns1:IP1 a ns1:IntellectualProperty,
+        owl:NamedIndividual .
+
+ns1:ImpactOnSector a owl:NamedIndividual .
+
+ns1:Innovation a owl:NamedIndividual .
+
+ns1:InnovationComponent1 a ns1:InnovationComponent,
+        owl:NamedIndividual .
+
+ns1:InnovationComponentAI a ns1:InnovationComponent,
+        owl:NamedIndividual .
+
+ns1:InnovationComponentInstance a owl:NamedIndividual .
+
+ns1:IntellectualProperty1 a ns1:IntellectualProperty .
+
+ns1:IntellectualPropertyInstance a owl:NamedIndividual .
+
+ns1:IntellectualPropertyPatent a ns1:IntellectualProperty,
+        owl:NamedIndividual .
+
+ns1:InternalDevelopment a owl:NamedIndividual .
+
+ns1:InternationalExpansionStrategy1 a ns1:InternationalExpansionStrategy .
+
+ns1:InternationalExpansionStrategyInstance a owl:NamedIndividual .
+
+ns1:InvestmentBudget1 a ns1:InvestmentBudget,
+        owl:NamedIndividual .
+
+ns1:InvestmentBudget2024 a ns1:InvestmentBudget,
+        owl:NamedIndividual .
+
+ns1:InvestmentBudgetInstance a owl:NamedIndividual .
+
+ns1:Italy a ns1:InternationalExpansionStrategy .
+
+ns1:JaneSmith a ns1:ManagementTeam,
+        ns1:TechnicalLeadership,
+        owl:NamedIndividual ;
+    ns1:hasTeam ns1:ManagementTeam2 .
+
+ns1:JohnDoe a ns1:ManagementTeam,
+        owl:NamedIndividual ;
+    ns1:hasTeam ns1:ManagementTeam1 .
+
+ns1:KnowledgeApplication a owl:NamedIndividual .
+
+ns1:MainEconomicActivityOf a owl:ObjectProperty .
+
+ns1:ManagementTeamHasMember a owl:ObjectProperty ;
+    rdfs:domain ns1:ManagementTeam ;
+    rdfs:range ns1:ManagementTeamMember .
+
+ns1:ManagementTeamInstance a owl:NamedIndividual .
+
+ns1:MarketPositioningInstance a owl:NamedIndividual .
+
+ns1:MarketPositioningPremium a ns1:MarketPositioning,
+        owl:NamedIndividual .
+
+ns1:Methodology1 a ns1:AIContentGenerationMethodology,
+        owl:NamedIndividual .
+
+ns1:OperationalManagementInstance a owl:NamedIndividual .
+
+ns1:Potential a owl:NamedIndividual .
+
+ns1:PracticalApplication a owl:NamedIndividual .
+
+ns1:ProprietaryAIPlatform a ns1:ProprietarySoftware,
+        owl:NamedIndividual .
+
+ns1:ProprietarySoftware1 a ns1:ProprietarySoftware .
+
+ns1:ProprietarySoftwareInstance a owl:NamedIndividual .
+
+ns1:RDActivities a ns1:ResearchAndDevelopment,
+        owl:NamedIndividual .
+
+ns1:RecognitionAsCompetentEntity a ns1:ManagementTeam,
+        owl:NamedIndividual .
+
+ns1:RecognitionOfCompetenceProcess a ns1:StartupActivity,
+        owl:NamedIndividual .
+
+ns1:RecognitionProcessRelation a owl:ObjectProperty ;
+    rdfs:domain ns1:RecognitionOfCompetence ;
+    rdfs:range ns1:RecognitionProcess .
+
+ns1:Researcher1 a ns1:Researcher ;
+    ns1:involvesResearchProject ns1:ResearchProject1 .
+
+ns1:ScalabilityModel1 a ns1:ScalabilityModel,
+        owl:NamedIndividual .
+
+ns1:ScalabilityModelInstance a owl:NamedIndividual .
+
+ns1:ScalabilityModelX a ns1:ScalabilityModel,
+        owl:NamedIndividual .
+
+ns1:Sector1 a ns1:HighTechSector,
+        owl:NamedIndividual .
+
+ns1:SectorEfficiency a owl:NamedIndividual .
+
+ns1:Software1 a ns1:ProprietarySoftware,
+        owl:NamedIndividual .
+
+ns1:SolutionScaling a owl:NamedIndividual .
+
+ns1:SolutionsWithImpact a owl:NamedIndividual .
+
+ns1:Spain a ns1:InternationalExpansionStrategy .
+
+ns1:Specialist a owl:NamedIndividual .
+
+ns1:SpecializesIn a owl:ObjectProperty .
+
+ns1:StartupActivity1 a ns1:StartupActivity ;
+    ns1:hasManagementTeam ns1:ManagementTeam1 ;
+    ns1:hasMarketPositioning ns1:MarketPositioning1 ;
+    ns1:hasOperationalManagement ns1:OperationalManagement1 ;
+    ns1:hasTechnicalLeadership ns1:TechnicalLeadership1 .
+
+ns1:SupportTypology1 a ns1:FundingSupportTypology,
+        owl:NamedIndividual .
+
+ns1:TechnicalKnowledge a owl:NamedIndividual .
+
+ns1:TechnicalLeadershipHasMember a owl:ObjectProperty ;
+    rdfs:domain ns1:TechnicalLeadership ;
+    rdfs:range ns1:TechnicalLeader .
+
+ns1:TechnicalLeadershipInstance a owl:NamedIndividual .
+
+ns1:TechnologicalLeap a owl:NamedIndividual .
+
+ns1:Transformations a owl:NamedIndividual .
+
+ns1:TransformingModels a owl:NamedIndividual .
+
+ns1:USA a ns1:InternationalExpansionStrategy .
+
+ns1:activities a owl:NamedIndividual .
+
+ns1:adaptsToContextOf a owl:ObjectProperty .
+
+ns1:adoptsExpansionStrategy a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:InternationalExpansionStrategy .
+
+ns1:agent a owl:NamedIndividual .
+
+ns1:aimsAtMarketPositioning a owl:ObjectProperty .
+
+ns1:aimsTo a owl:ObjectProperty .
+
+ns1:aimsToConsolidate a owl:ObjectProperty .
+
+ns1:aimsToDevelop a owl:ObjectProperty .
+
+ns1:allocatesBudget a owl:ObjectProperty ;
+    rdfs:domain ns1:FundingApplication ;
+    rdfs:range ns1:InvestmentBudget .
+
+ns1:allocatesInvestmentBudget a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:InvestmentBudget .
+
+ns1:application a owl:NamedIndividual .
+
+ns1:assist a owl:ObjectProperty .
+
+ns1:basedOnBusinessModel a owl:ObjectProperty .
+
+ns1:byEndOf a owl:DatatypeProperty .
+
+ns1:connectsTo a owl:ObjectProperty .
+
+ns1:develops a owl:ObjectProperty .
+
+ns1:developsDigitalProduct a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:DigitalProduct .
+
+ns1:developsMethodology a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:AIContentGenerationMethodology .
+
+ns1:developsProprietarySoftware a owl:ObjectProperty .
+
+ns1:developsSoftware a owl:ObjectProperty ;
+    rdfs:domain ns1:ProprietarySoftware ;
+    rdfs:range ns1:DigitalProduct .
+
+ns1:differentiatesCompetitively a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:CompetitiveDifferentiation .
+
+ns1:differentiatesThrough a owl:ObjectProperty .
+
+ns1:drivesDigitalTransformation a owl:ObjectProperty .
+
+ns1:drivesTransformation a owl:ObjectProperty ;
+    rdfs:domain ns1:DigitalTransformation ;
+    rdfs:range ns1:DigitalProduct .
+
+ns1:enterMarkets a owl:ObjectProperty .
+
+ns1:followsInternationalExpansionStrategy a owl:ObjectProperty .
+
+ns1:handlesOperationalManagement a owl:ObjectProperty ;
+    rdfs:domain ns1:ManagementTeam ;
+    rdfs:range ns1:OperationalManagement .
+
+ns1:hasAlignmentWith a owl:ObjectProperty .
+
+ns1:hasBaseOfRegisteredCompanies a owl:DatatypeProperty .
+
+ns1:hasBudgetAmount a owl:DatatypeProperty ;
+    rdfs:domain ns1:InvestmentBudget ;
+    rdfs:range xsd:decimal .
+
+ns1:hasBusinessModel a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:BusinessModel .
+
+ns1:hasBusinessModelDescription a owl:DatatypeProperty ;
+    rdfs:domain ns1:BusinessModel ;
+    rdfs:range xsd:string .
+
+ns1:hasCompany a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:Organization .
+
+ns1:hasCompetitiveDifferentiation a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:CompetitiveDifferentiation .
+
+ns1:hasCompetitiveDifferentiationDescription a owl:DatatypeProperty ;
+    rdfs:domain ns1:CompetitiveDifferentiation ;
+    rdfs:range xsd:string .
+
+ns1:hasComponent a owl:ObjectProperty .
+
+ns1:hasDevelopment a owl:ObjectProperty .
+
+ns1:hasDevelopmentGoal a owl:ObjectProperty .
+
+ns1:hasDevelopmentProcess a owl:ObjectProperty .
+
+ns1:hasDifferentiation a owl:ObjectProperty .
+
+ns1:hasDigitalProduct a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:DigitalProduct .
+
+ns1:hasDigitalProductName a owl:DatatypeProperty ;
+    rdfs:domain ns1:DigitalProduct ;
+    rdfs:range xsd:string .
+
+ns1:hasDigitalTransformation a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:DigitalTransformation .
+
+ns1:hasDigitalTransformationDetails a owl:DatatypeProperty ;
+    rdfs:domain ns1:DigitalTransformation ;
+    rdfs:range xsd:string .
+
+ns1:hasFundingApplication a owl:ObjectProperty ;
+    rdfs:domain ns1:Organization,
+        ns1:StartupActivity ;
+    rdfs:range ns1:FundingApplication .
+
+ns1:hasFundingBudget a owl:ObjectProperty ;
+    rdfs:domain ns1:FundingApplication ;
+    rdfs:range ns1:InvestmentBudget .
+
+ns1:hasFundingSupportTypeName a owl:DatatypeProperty ;
+    rdfs:domain ns1:FundingSupportTypology ;
+    rdfs:range xsd:string .
+
+ns1:hasFundingSupportTypology a owl:ObjectProperty ;
+    rdfs:domain ns1:FundingApplication ;
+    rdfs:range ns1:FundingSupportTypology .
+
+ns1:hasFundingVolume a owl:DatatypeProperty .
+
+ns1:hasImpactOnSector a owl:ObjectProperty .
+
+ns1:hasInnovation a owl:ObjectProperty .
+
+ns1:hasInnovationComponent a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:InnovationComponent .
+
+ns1:hasInnovationComponentName a owl:DatatypeProperty ;
+    rdfs:domain ns1:InnovationComponent ;
+    rdfs:range xsd:string .
+
+ns1:hasIntellectualProperty a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:IntellectualProperty .
+
+ns1:hasIntellectualPropertyDetails a owl:DatatypeProperty ;
+    rdfs:domain ns1:IntellectualProperty ;
+    rdfs:range xsd:string .
+
+ns1:hasInternationalExpansionStrategy a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:InternationalExpansionStrategy .
+
+ns1:hasInternationalExpansionStrategyName a owl:DatatypeProperty ;
+    rdfs:domain ns1:InternationalExpansionStrategy ;
+    rdfs:range xsd:string .
+
+ns1:hasInternationalMarket a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:InternationalExpansionStrategy .
+
+ns1:hasInvestmentBudget a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:domain ns1:FundingApplication ;
+    rdfs:range ns1:InvestmentBudget .
+
+ns1:hasInvestmentBudgetAmount a owl:DatatypeProperty ;
+    rdfs:domain ns1:InvestmentBudget ;
+    rdfs:range xsd:decimal .
+
+ns1:hasKnowledgeApplication a owl:ObjectProperty .
+
+ns1:hasLeadership a owl:ObjectProperty ;
+    rdfs:domain ns1:ManagementTeam ;
+    rdfs:range ns1:TechnicalLeadership .
+
+ns1:hasManagementMember a owl:ObjectProperty ;
+    rdfs:domain ns1:ManagementTeam ;
+    rdfs:range ns1:Person .
+
+ns1:hasManagementTeam a owl:ObjectProperty ;
+    rdfs:domain ns1:Organization,
+        ns1:StartupActivity ;
+    rdfs:range ns1:ManagementTeam .
+
+ns1:hasMarketPositioning a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:MarketPositioning .
+
+ns1:hasMarketPositioningName a owl:DatatypeProperty ;
+    rdfs:domain ns1:MarketPositioning ;
+    rdfs:range xsd:string .
+
+ns1:hasMember a owl:ObjectProperty ;
+    rdfs:domain ns1:Organization ;
+    rdfs:range ns1:Person .
+
+ns1:hasMethod a owl:ObjectProperty .
+
+ns1:hasMethodology a owl:ObjectProperty .
+
+ns1:hasMission a owl:AnnotationProperty .
+
+ns1:hasName a owl:DatatypeProperty .
+
+ns1:hasNumberOfApplications a owl:DatatypeProperty .
+
+ns1:hasNumberOfCompanies a owl:DatatypeProperty .
+
+ns1:hasOperationalManagement a owl:ObjectProperty ;
+    rdfs:domain ns1:ManagementTeam ;
+    rdfs:range ns1:OperationalManagement .
+
+ns1:hasOperationalManager a owl:ObjectProperty ;
+    rdfs:domain ns1:OperationalManagement ;
+    rdfs:range ns1:Person .
+
+ns1:hasParticipant a owl:ObjectProperty .
+
+ns1:hasPotential a owl:ObjectProperty .
+
+ns1:hasProductType a owl:ObjectProperty .
+
+ns1:hasProject a owl:ObjectProperty ;
+    rdfs:domain ns1:Person ;
+    rdfs:range ns1:Project .
+
+ns1:hasProjectName a owl:DatatypeProperty ;
+    rdfs:domain ns1:Project ;
+    rdfs:range xsd:string .
+
+ns1:hasProprietarySoftware a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:ProprietarySoftware .
+
+ns1:hasProprietarySoftwareName a owl:DatatypeProperty ;
+    rdfs:domain ns1:ProprietarySoftware ;
+    rdfs:range xsd:string .
+
+ns1:hasResearchProcess a owl:ObjectProperty .
+
+ns1:hasResearchProject a owl:ObjectProperty .
+
+ns1:hasResearcher a owl:ObjectProperty .
+
+ns1:hasRole a owl:ObjectProperty ;
+    rdfs:domain ns1:Person ;
+    rdfs:range ns1:Role .
+
+ns1:hasRoleInTeam a owl:ObjectProperty ;
+    rdfs:domain ns1:ManagementMember ;
+    rdfs:range ns1:Role .
+
+ns1:hasRoleType a owl:DatatypeProperty ;
+    rdfs:domain ns1:Role ;
+    rdfs:range xsd:string .
+
+ns1:hasScalabilityModel a owl:ObjectProperty ;
+    rdfs:domain ns1:DigitalProduct,
+        ns1:StartupActivity ;
+    rdfs:range ns1:ScalabilityModel .
+
+ns1:hasScalabilityModelName a owl:DatatypeProperty ;
+    rdfs:domain ns1:ScalabilityModel ;
+    rdfs:range xsd:string .
+
+ns1:hasScale a owl:ObjectProperty .
+
+ns1:hasSectorEfficiency a owl:ObjectProperty .
+
+ns1:hasSkill a owl:ObjectProperty ;
+    rdfs:domain ns1:Person ;
+    rdfs:range ns1:Skill .
+
+ns1:hasSkillName a owl:DatatypeProperty ;
+    rdfs:domain ns1:Skill ;
+    rdfs:range xsd:string .
+
+ns1:hasSolutionsWithImpact a owl:ObjectProperty .
+
+ns1:hasStartOperationDate a owl:DatatypeProperty .
+
+ns1:hasStartupActivity a owl:ObjectProperty ;
+    rdfs:domain ns1:Organization ;
+    rdfs:range ns1:StartupActivity .
+
+ns1:hasStartupActivityName a owl:DatatypeProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range xsd:string .
+
+ns1:hasSupportTypology a owl:ObjectProperty .
+
+ns1:hasTeam a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:ManagementTeam .
+
+ns1:hasTechnicalLeader a owl:ObjectProperty ;
+    rdfs:domain ns1:ManagementTeam ;
+    rdfs:range ns1:TechnicalLeadership .
+
+ns1:hasTechnicalLeadership a owl:ObjectProperty ;
+    rdfs:domain ns1:ManagementTeam ;
+    rdfs:range ns1:TechnicalLeadership .
+
+ns1:hasTechnicalLeadershipMember a owl:ObjectProperty ;
+    rdfs:domain ns1:TechnicalLeadership ;
+    rdfs:range ns1:Person .
+
+ns1:hasTechnologicalFoundation a owl:ObjectProperty .
+
+ns1:hasTechnology a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:Technology .
+
+ns1:hasTechnologyName a owl:DatatypeProperty ;
+    rdfs:domain ns1:Technology ;
+    rdfs:range xsd:string .
+
+ns1:identifiesApplicationsFor a owl:ObjectProperty .
+
+ns1:implementsBusinessModel a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:BusinessModel .
+
+ns1:implementsStrategy a owl:ObjectProperty ;
+    rdfs:domain ns1:InternationalExpansionStrategy ;
+    rdfs:range ns1:MarketPositioning .
+
+ns1:includesComponent a owl:ObjectProperty ;
+    rdfs:domain ns1:DigitalProduct ;
+    rdfs:range ns1:InnovationComponent .
+
+ns1:includesInnovationComponent a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:InnovationComponent .
+
+ns1:integrateActivities a owl:ObjectProperty .
+
+ns1:involvesResearchProject a owl:ObjectProperty .
+
+ns1:isPartOfHighTechSector a owl:ObjectProperty .
+
+ns1:launchOfTool a owl:ObjectProperty .
+
+ns1:ledByTechnicalLeadership a owl:ObjectProperty .
+
+ns1:managedBy a owl:ObjectProperty ;
+    rdfs:domain ns1:ManagementTeam ;
+    rdfs:range ns1:OperationalManagement .
+
+ns1:managedByOperationalManagement a owl:ObjectProperty .
+
+ns1:modelsBusiness a owl:ObjectProperty ;
+    rdfs:domain ns1:BusinessModel ;
+    rdfs:range ns1:DigitalProduct .
+
+ns1:modelsScalability a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:ScalabilityModel .
+
+ns1:operatesInSector a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:HighTechSector .
+
+ns1:ownsIntellectualProperty a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:IntellectualProperty .
+
+ns1:ownsProperty a owl:ObjectProperty .
+
+ns1:positionsMarket a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:MarketPositioning .
+
+ns1:prepareApplicationFor a owl:ObjectProperty .
+
+ns1:preparesApplicationsFor a owl:ObjectProperty .
+
+ns1:producesDigitalProduct a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:DigitalProduct .
+
+ns1:producesProduct a owl:ObjectProperty .
+
+ns1:protectsIntellectualProperty a owl:ObjectProperty .
+
+ns1:protectsProperty a owl:ObjectProperty ;
+    rdfs:domain ns1:IntellectualProperty ;
+    rdfs:range ns1:DigitalProduct .
+
+ns1:receivesSupportTypology a owl:ObjectProperty ;
+    rdfs:domain ns1:FundingApplication ;
+    rdfs:range ns1:FundingSupportTypology .
+
+ns1:relatesTo a owl:ObjectProperty .
+
+ns1:submittedFundingApplication a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:FundingApplication .
+
+ns1:theGoal a owl:AnnotationProperty .
+
+ns1:undergoesDigitalTransformation a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:DigitalTransformation .
+
+ns1:undergoesTransformation a owl:ObjectProperty .
+
+ns1:usedBy a owl:ObjectProperty .
+
+ns1:usesAIContentGenerationMethodology a owl:ObjectProperty .
+
+ns1:usesMethodology a owl:ObjectProperty ;
+    rdfs:domain ns1:DigitalProduct ;
+    rdfs:range ns1:AIContentGenerationMethodology .
+
+ns1:usesProprietarySoftware a owl:ObjectProperty ;
+    rdfs:domain ns1:StartupActivity ;
+    rdfs:range ns1:ProprietarySoftware .
+
+ns1:usesSoftware a owl:ObjectProperty .
+
+:operatesInLegalFrameworks a owl:ObjectProperty .
+
+:operatesInSector a owl:ObjectProperty ;
+    rdfs:domain :DigitalProduct,
+        :StartupActivity ;
+    rdfs:range :HighTechSector .
+
+:owns a owl:ObjectProperty .
+
+:ownsIntellectualProperty a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :IntellectualProperty .
+
+:ownsProperty a owl:ObjectProperty ;
+    rdfs:domain :IntellectualProperty ;
+    rdfs:range :DigitalProduct .
+
+:ownsProprietarySoftware a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :ProprietarySoftware .
+
+:personalComputers a owl:NamedIndividual .
+
+:placesItselfAtFrontierOf a owl:ObjectProperty ;
+    rdfs:domain :Company ;
+    rdfs:range :DigitalTransformation .
+
+:plannedAcquisitions a owl:DatatypeProperty .
+
+:positioning a :ManagementTeam,
+        owl:NamedIndividual .
+
+:positionsInMarket a owl:ObjectProperty .
+
+:positionsMarket a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :MarketPositioning .
+
+:practicalExperience a :ManagementTeam,
+        owl:NamedIndividual .
+
+:preparesApplicationFor a owl:ObjectProperty ;
+    rdfs:domain :Agent ;
+    rdfs:range :FundingApplication .
+
+:produces a owl:ObjectProperty .
+
+:producesDigitalProduct a owl:ObjectProperty .
+
+:producesProduct a owl:ObjectProperty .
+
+:producesProprietarySoftware a owl:ObjectProperty .
+
+:product a :SupportForStartupOrGrowth,
+        owl:NamedIndividual .
+
+:projectFocus a owl:AnnotationProperty .
+
+:projectSuccess a owl:Class .
+
+:promotedBy a owl:ObjectProperty ;
+    rdfs:domain :StrategicDimension ;
+    rdfs:range :PRR .
+
+:proposesFunding a owl:ObjectProperty ;
+    rdfs:domain :FundingApplication ;
+    rdfs:range :FundingSupportTypology .
+
+:proposesStartupActivity a owl:ObjectProperty .
+
+:providesSupportFor a owl:ObjectProperty .
+
+:providesTechnicalLeadership a owl:ObjectProperty .
+
+:relatesTo a :StartupActivity,
+        owl:ObjectProperty ;
+    rdfs:domain :ManagementTeam ;
+    rdfs:range :OperationalManagement .
+
+:relatesToApplication a owl:ObjectProperty .
+
+:relatesToOpportunity a owl:ObjectProperty .
+
+:responsibleFor a owl:ObjectProperty .
+
+:scalabilityModel1 a :ScalabilityModel .
+
+:softwareSubscriptions a owl:NamedIndividual .
+
+:strategicPlanningFor a owl:ObjectProperty .
+
+:supportsProduct a owl:ObjectProperty .
+
+:targetsMarketPositioning a owl:ObjectProperty .
+
+:teamMember a owl:ObjectProperty .
+
+:technologicalValuePropositions a owl:DatatypeProperty .
+
+:theCommercialAndStrategicDirectionOfTheProject a :ManagementTeam,
+        owl:NamedIndividual .
+
+:theNatureOfTheProject a :StartupActivity ;
+    :projectFocus "focused on the development of a digital solution with the potential to transform the sector" .
+
+:theProject a :StartupActivity ;
+    :companyGrowthObjectives "aligns with the company's growth objectives" .
+
+:transformSectorPotential a owl:AnnotationProperty .
+
+:undergoesDigitalTransformation a owl:ObjectProperty .
+
+:undergoesTransformation a owl:ObjectProperty .
+
+:usesAIContentGenerationMethodology a owl:ObjectProperty .
+
+:usesMethodology a owl:ObjectProperty ;
+    rdfs:domain :DigitalProduct ;
+    rdfs:range :AIContentGenerationMethodology .
+
+:usesSoftware a owl:ObjectProperty ;
+    rdfs:domain :StartupActivity ;
+    rdfs:range :ProprietarySoftware .
+
+:wasPartOf a owl:ObjectProperty .
+
+:withinContextOf a owl:ObjectProperty ;
+    rdfs:domain :StrategicDimension ;
+    rdfs:range :DigitalTransition .
+
+:worksAt a owl:ObjectProperty .
+
+:AIApproachSelection a owl:NamedIndividual,
+        owl:ObjectProperty ;
+    :adoptsApproaches :AdvICL,
+        :GANs .
+
+:AddsRobustnessToTheProject a owl:AnnotationProperty .
+
+:AdvICL a owl:NamedIndividual .
+
+:ApplicationPreparationProcess a :FundingApplication .
+
+:ArtificialIntelligence a owl:NamedIndividual .
+
+:ArtificialIntelligenceAgent a :CompetitiveDifferentiation,
+        :DigitalProduct,
+        :DigitalTransformation,
+        :FundingSupportTypology,
+        :HighTechSector,
+        :InnovationComponent,
+        :IntellectualProperty,
+        :InternationalExpansionStrategy,
+        :InvestmentBudget,
+        :ManagementTeam,
+        :MarketPositioning,
+        :ProprietarySoftware,
+        :ScalabilityModel .
+
+:BusinessProposition1 a :BusinessProposition ;
+    rdfs:label "a new business proposition" .
+
+:DefiningStrategy a :Responsibility .
+
+:DevelopmentObjective a owl:AnnotationProperty .
+
+:DevelopmentOversight a owl:NamedIndividual .
+
+:DigitalMarketsKnowledge a :KnowledgeDomain .
+
+:DigitalSolution a :DigitalProduct .
+
+:Digitalization a owl:NamedIndividual .
+
+:Execution a owl:NamedIndividual .
+
+:FrontEndDeveloper a :ProjectRole,
+        owl:NamedIndividual .
+
+:GANs a owl:NamedIndividual .
+
+:GranterAi a :StartupActivity,
+        owl:NamedIndividual ;
+    rdfs:label "Granter.ai" ;
+    :hasFounder :JoelRodrigues ;
+    :hasTechnologyLeadership :JoelRodrigues .
+
+:GrantersAI a :StartupActivity,
+        owl:NamedIndividual ;
+    :hasImpactOn :Competitiveness .
+
+:HiringProcess a owl:ObjectProperty .
+
+:InnovationComponent1 a :InnovationComponent,
+        owl:NamedIndividual ;
+    rdfs:label "Innovation Component 1",
+        "the technological innovation" .
+
+:InnovationMethodology a owl:NamedIndividual .
+
+:IntellectualPropertyRights a :ProtectionOfIntellectualProperty,
+        owl:NamedIndividual .
+
+:Italy a :Country,
+        owl:NamedIndividual .
+
+:LeadingInternationalGrowth a :Responsibility .
+
+:LicensingPackages a owl:NamedIndividual .
+
+:ManagingOperations a :Responsibility .
+
+:MarketAnalysis a owl:NamedIndividual .
+
+:MarketPenetrationStrategy a owl:NamedIndividual .
+
+:MultinationalCompanies a :HighTechSector .
+
+:Otovo a owl:NamedIndividual .
+
+:Portugal a :Country,
+        :Location,
+        owl:NamedIndividual ;
+    rdfs:label "Portugal" .
+
+:ProjectLeader a :Role .
+
+:Role1 a :Role .
+
+:Role2 a :Role .
+
+:ScalabilityPotential a owl:NamedIndividual .
+
+:Skill1 a :Skill .
+
+:Skill2 a :Skill .
+
+:Spain a :Country,
+        owl:NamedIndividual .
+
+:TechStartups a owl:NamedIndividual .
+
+:TechnicalExecution a :LeadershipLevel,
+        :ManagementTeam,
+        owl:NamedIndividual .
+
+:TechnicalExpertise a :Skill .
+
+:TechnicalPlanning a owl:NamedIndividual .
+
+:TechnologicalComponent a owl:NamedIndividual .
+
+:TechnologicalDefinition a owl:NamedIndividual .
+
+:TechnologicalInnovation1 a :TechnologicalInnovation ;
+    rdfs:label "the technological innovation embedded in the tool" ;
+    :hasInnovationComponent :InnovationComponent1 .
+
+:TooGoodToGo a owl:NamedIndividual .
+
+:Tool1 a :Tool ;
+    rdfs:label "the tool" ;
+    :hasBusinessProposition :BusinessProposition1 ;
+    :hasTechnologicalInnovation :TechnologicalInnovation1 .
+
+:USA a :Country,
+        owl:NamedIndividual .
+
+:UberEatsTeam a :Organization .
+
+:UserAcquisitionStrategy a owl:NamedIndividual .
+
+:addsRobustnessToProject a :addsRobustnessToProject,
+        owl:ObjectProperty .
+
+:companyPositioningStrategy a :PositioningStrategy,
+        owl:NamedIndividual .
+
+ns1:2025 a ns1:TimePoint,
+        owl:NamedIndividual .
+
+ns1:ArtificialIntelligenceSolutions a ns1:DigitalProduct .
+
+ns1:FundingSupportTypology1 a ns1:FundingSupportTypology .
+
+ns1:ManagementTeam2 a ns1:ManagementTeam .
+
+ns1:MarketItaly a ns1:Market,
+        owl:NamedIndividual .
+
+ns1:MarketPositioning1 a ns1:MarketPositioning,
+        owl:NamedIndividual .
+
+ns1:MarketSpain a ns1:Market,
+        owl:NamedIndividual .
+
+ns1:MarketUSA a ns1:Market,
+        owl:NamedIndividual .
+
+ns1:NewProduct a ns1:DigitalProduct ;
+    ns1:hasDescription "This new product represents a qualitative leap in Granter.ai's value proposition and is critical to strengthening its competitive position in both the national and international markets, such as Spain, Italy, and the USA." .
+
+ns1:OperationalManagement1 a ns1:OperationalManagement,
+        owl:NamedIndividual .
+
+ns1:RecognitionDemonstration a ns1:AIContentGenerationMethodology,
+        owl:NamedIndividual .
+
+ns1:RecognitionGoal a ns1:MarketPositioning,
+        owl:NamedIndividual .
+
+ns1:RecognitionOutcome a ns1:InnovationComponent,
+        owl:NamedIndividual .
+
+ns1:RecognitionProcess a ns1:FundingApplication,
+        owl:NamedIndividual .
+
+ns1:ResearchProcess1 a ns1:ResearchProcess .
+
+ns1:ResearchProject1 a ns1:ResearchProject ;
+    ns1:hasResearchProcess ns1:ResearchProcess1 .
+
+ns1:TechnicalLeadership1 a ns1:TechnicalLeadership,
+        owl:NamedIndividual .
+
+ns1:TechnologySector a ns1:HighTechSector .
+
+ns1:ToolLaunchEvent ns1:byEndOf ns1:2025 ;
+    ns1:enterMarkets ns1:MarketItaly,
+        ns1:MarketSpain,
+        ns1:MarketUSA .
+
+:ApplicationDrafting a :StartupActivity,
+        owl:NamedIndividual .
+
+:EligibilityAnalysis a :StartupActivity,
+        owl:NamedIndividual .
+
+:Evaluation a :StartupActivity,
+        owl:NamedIndividual .
+
+:FundingSupportType a :FundingSupportTypology,
+        owl:NamedIndividual .
+
+:JoelRodrigues a :ManagementTeam,
+        :Person,
+        owl:NamedIndividual ;
+    :hasExperience "more than a decade" ;
+    :hasRole "CTO",
+        "Chief Technology Officer",
+        "Co-founder" ;
+    :leads :AIApproachSelection,
+        :DevelopmentOversight,
+        :TechnologicalDefinition ;
+    :responsibleFor :Execution,
+        :TechnicalPlanning ;
+    :worksAt :GranterAi .
+
+:ProjectManagement a :StartupActivity,
+        owl:NamedIndividual .
+
+:ProjectRole a owl:Class,
+        owl:NamedIndividual .
+
+:SubmissionAutomation a :StartupActivity,
+        owl:NamedIndividual .
+
+ns1:ManagementTeam1 a ns1:ManagementTeam,
+        owl:NamedIndividual .
+
+:OpportunityIdentification a :StartupActivity,
+        owl:NamedIndividual .
+
+ns1:RecognitionOfCompetence a ns1:ProprietarySoftware,
+        owl:NamedIndividual .
+
+:RodrigoMendes a :Person,
+        owl:NamedIndividual ;
+    :hasExperience "over seven years in sales and strategic marketing" ;
+    :hasRole "Head of Sales" .
 

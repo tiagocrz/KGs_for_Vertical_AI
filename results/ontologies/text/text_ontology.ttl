@@ -1255,7 +1255,6 @@ ns1:project a rdfs:Class .
         owl:NamedIndividual .
 
 :Person1 a :Person ;
-    :hasExperienceDuration "8 years"^^xsd:duration ;
     :hasExperienceType "B2B sales and team management" ;
     :hasName "Human Resources Team" ;
     :hasResponsibility :DefiningStrategy,

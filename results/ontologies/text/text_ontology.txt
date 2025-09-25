@@ -6098,7 +6098,6 @@ a :StartupActivity ;
 :Portugal a :Location .
 :Person1 a :Person ;
 :wasPartOf :UberEatsTeam ;
-:hasExperienceDuration "8 years"^^xsd:duration ;
 :hasExperienceType "B2B sales and team management" .
 :Person a rdfs:Class .
 :Role a rdfs:Class .

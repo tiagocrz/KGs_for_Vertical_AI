@@ -1,0 +1,489 @@
+node_id,node_attr,node_type
+1,"Granter.Ai","Company"
+2,"Ai Solutions","Aiability"
+3,"Public Funding Applications","Application"
+4,"Ai Agent","Agent"
+5,"Research Activities","Researchprocess"
+6,"Technological Development Activities","Researchprocess"
+7,"Generative Adversarial Networks","Aicontentgenerationmethodology"
+8,"Adversarial In-Context Learning","Aicontentgenerationmethodology"
+9,"Proprietary Software","Proprietarysoftware"
+10,"Sector Efficiency","Abilitylanguageadaptation"
+11,"Sector Innovation","Abilitylanguageadaptation"
+12,"High-Tech Sector","Sector"
+13,"Multiple Markets","Market"
+14,"Automating Complex Processes","Abilitylanguageadaptation"
+15,"Specialists","Person"
+16,"Businesses","Business"
+17,"Public Funding","Businessgoal"
+18,"Funding Opportunities","Businessgoal"
+19,"Methodologies","Aicontentgenerationmethodology"
+20,"Public Policies","Abilitylanguageadaptation"
+21,"Public Funds","Abilitylanguageadaptation"
+22,"Market","Market"
+23,"Climate Transition","Businessgoal"
+24,"Sustainability","Businessgoal"
+25,"Green Economy","Businessgoal"
+26,"Business Initiatives","Business"
+27,"Economic Ecosystem","Business"
+28,"International Markets","Market"
+29,"Spain","Location"
+30,"Italy","Location"
+31,"Usa","Location"
+32,"2025","Timeperiod"
+33,"Digital Infrastructure","Digitalinfrastructure"
+34,"Database","Database"
+35,"Sustainability Funding Programs","Fundingsupporttypology"
+36,"R&D Activities","Businessgoal"
+37,"Ani Recognition Process","Businessgoal"
+38,"Company Growth Support","Businessgoal"
+39,"Innovative Digital Product","Digitalproduct"
+40,"Technological Foundation","Technology"
+41,"Ai Agent For Public Funds","Digitalproduct"
+42,"Company'S Value Proposition","Businessproposition"
+43,"Competitive Position","Businessstrategy"
+44,"National Markets","Market"
+45,"Internal Company Resources","Resource"
+46,"Highly Qualified New Member","Person"
+47,"Advanced Technical Knowledge","Knowledgedomain"
+48,"Applied Research","Researchprocess"
+49,"Experimental Development","Researchprocess"
+50,"Scalable Licensing Model","Businessmodel"
+51,"Legal Frameworks Of Other Countries","Legalframeworks"
+52,"Operational Frameworks Of Other Countries","Legalframeworks"
+53,"Growth Objectives","Businessgoal"
+54,"Sector","Sector"
+55,"Digital Solution","Digitalproduct"
+56,"Technology Complexity","Abilitylanguageadaptation"
+57,"Robust, Intuitive, Effective Solution","Aicontentgenerationmethodology"
+58,"Company'S Medium- And Long-Term Vision","Businessgoal"
+59,"Company'S Mission","Businessgoal"
+60,"Democratize Access To Public Funding","Businessproposition"
+61,"Facilitate Access To Public Funding","Businessproposition"
+62,"New Revenue Streams","Businessgoal"
+63,"Scalability Potential","Abilitylanguageadaptation"
+64,"Internationalization Potential","Abilitylanguageadaptation"
+65,"Expansion","Businessgoal"
+66,"Partnerships","Business"
+67,"New Applications","Business"
+68,"New Competencies","Business"
+69,"Sustainable Growth","Businessgoal"
+70,"Innovative Growth Trajectory","Businessstrategy"
+71,"Project","Project"
+72,"Digital Product","Digitalproduct"
+73,"Technological Component","Innovationcomponent"
+74,"Innovation","Innovationcomponent"
+75,"Digital Transformation","Digitaltransformation"
+76,"Ai Functionalities","Aiability"
+77,"Generative Adversarial Networks (Gans)","Aiability"
+78,"Adversarial In-Context Learning (Adv-Icl)","Aiability"
+79,"R&D","Businessmodel"
+80,"Technological Knowledge Transfer","Businessmodel"
+81,"Application Process Stages","Businessgoal"
+82,"Opportunities","Businessgoal"
+83,"Eligibility Analysis","Businessgoal"
+84,"Application Drafting","Businessgoal"
+85,"Evaluation","Businessgoal"
+86,"Automated Submission","Businessgoal"
+87,"Project Management","Businessgoal"
+88,"Efficiency And Effectiveness","Businessgoal"
+89,"Public Funding Mechanisms","Businessgoal"
+90,"Automation And Simplification","Businessgoal"
+91,"Specialists And Businesses","Business"
+92,"Errors And Inefficiencies","Business"
+93,"Success Rate Of Applications","Business"
+94,"European Union Objectives","Businessgoal"
+95,"Project Objectives And Priorities","Businessgoal"
+96,"Markets","Market"
+97,"Languages","Abilitylanguageadaptation"
+98,"Business Model","Businessmodel"
+99,"Subscription Strategy","Businessmodel"
+100,"Saas (Software As A Service)","Businessmodel"
+101,"Models","Businessmodel"
+102,"Access Levels","Ability"
+103,"Individuals","Person"
+104,"Needs","Businessgoal"
+105,"Proposal","Business"
+106,"Strategicdimension","Businessgoal"
+107,"Digitaltransition","Digitaltransformation"
+108,"Prr","Fundingsupporttypology"
+109,"Artificialintelligence","Aiability"
+110,"Automation","Aiability"
+111,"Usability","Abilitylanguageadaptation"
+112,"Companies4.0","Businessgoal"
+113,"Businessmodelmodernization","Businessgoal"
+114,"Technologicalempowerment","Businessgoal"
+115,"Intelligentdigitalsolutions","Digitalproduct"
+116,"Ecoinnovation","Innovationcomponent"
+117,"Digitaltransformationimpact","Impacton"
+118,"Fundingprograms","Fundingsupporttypology"
+119,"Efficiency","Businessgoal"
+120,"Greeneconomy","Businessgoal"
+121,"Ecoefficiency","Businessgoal"
+122,"Newbusinessmodels","Businessmodel"
+123,"Growthaxis","Strategicdimension"
+124,"Portugal","Location"
+125,"Europeanunion","Location"
+126,"Company","Company"
+127,"Publicfundingconsultancy","Applicationpreparationagent"
+128,"Technologydrivencompany","Company"
+129,"Innovativecompany","Company"
+130,"Paradigmshift","Businessstrategy"
+131,"Product","Digitalproduct"
+132,"Technologicalfoundation","Businessmodelcomponent"
+133,"Scalabilitypotential","Abilitylanguageadaptation"
+134,"Digitalization","Digitaltransformation"
+135,"Artificialintelligenceapplication","Aicontentgenerationmethodology"
+136,"Addedvalue","Businessgoal"
+137,"Startupgrowth","Businessgoal"
+138,"Management Team","Team"
+139,"Duarte Gomes","Person"
+140,"Ceo","Position"
+141,"Founder","Position"
+142,"Artificial Intelligence","Ability"
+143,"Software Engineering","Ability"
+144,"Strategic Leadership","Ability"
+145,"Product Management","Ability"
+146,"Commercial Expansion","Ability"
+147,"Proposed Project","Project"
+148,"Initial Uber Eats Team In Portugal","Organization"
+149,"Startups","Organization"
+150,"B2B Sales","Skill"
+151,"Team Management","Skill"
+152,"Business Creation","Skill"
+153,"Scalability","Ability"
+154,"International Growth","Ability"
+155,"Joel Rodrigues","Person"
+156,"Grantrer.Ai","Organization"
+157,"Demium","Organization"
+158,"Goparity","Organization"
+159,"Luis Batista","Person"
+160,"Ricardo Moreira","Person"
+161,"Rodrigo Mendes","Person"
+162,"Otovo","Organization"
+163,"Too Good To Go","Organization"
+164,"Ai Approaches","Abilitylanguageadaptation"
+165,"Gans","Aiability"
+166,"Adv-Icl","Aiability"
+167,"Market Penetration","Businessgoal"
+168,"User Acquisition Strategies","Businessgoal"
+169,"Licensing Packages","Businessgoal"
+170,"Digital Markets","Market"
+171,"Digital Products","Digitalproduct"
+172,"System Architecture","Abilitylanguageadaptation"
+173,"Digital Product Development","Abilitylanguageadaptation"
+174,"Software Development","Abilitylanguageadaptation"
+175,"Cybersecurity","Abilitylanguageadaptation"
+176,"Market Segments","Market"
+177,"Short Periods","Timeperiod"
+178,"Ambitious Goals","Businessgoal"
+179,"Effective Collaboration","Abilitylanguageadaptation"
+180,"Specializing In Artificial Intelligence","Abilitylanguageadaptation"
+181,"Creating The Tool","Applicationpreparationagent"
+182,"Ensuring It Remains Intuitive","Abilitylanguageadaptation"
+183,"This Hire","Person"
+184,"Granter.Ai'S Team","Team"
+185,"Strategic Leadership Level","Leadershiplevel"
+186,"Technical And Commercial Execution","Business"
+187,"Team Members","Teammember"
+188,"Previous Experience","Hisexperience"
+189,"Demonstrated","Hisexperience"
+190,"Execution Capacity","Abilitylanguageadaptation"
+191,"Measure'S Objectives","Businessgoal"
+192,"Company'S Sustainable Growth","Businessgoal"
+193,"Competitiveness Of The Beneficiaries","Business"
+194,"Contribution To Differentiation In The Market","Businessproposition"
+195,"Impact","Impact"
+196,"Application Process","Process"
+197,"Digital Platform","Digitalproduct"
+198,"User Profile Understanding","Abilitylanguageadaptation"
+199,"Application Content Generation","Abilitylanguageadaptation"
+200,"European Union Goals","Goal"
+201,"Subscription Model","Businessmodel"
+202,"Market Expansion","Marketexpansion"
+203,"Company Network","Customerbase"
+204,"Digital Tools","Aicontentgenerationmethodology"
+205,"Intellectual Property","Intellectualproperty"
+206,"Proprietary Methodologies And Algorithms","Intellectualproperty"
+207,"Market Leadership","Businessgoal"
+208,"Competitive Advantage","Businessgoal"
+209,"International Market","Market"
+210,"European Funding","Market"
+211,"Scalable Business Model","Businessmodel"
+212,"Brand Awareness","Businessgoal"
+213,"Strategic Investment","Funding"
+214,"Technological Differentiation","Innovationcomponent"
+215,"User-Centered Approach","Innovationcomponent"
+216,"International Market Logic","Innovationcomponent"
+217,"Legal Frameworks","Legalframeworks"
+218,"Favorable Regulatory Contexts","Legalframeworks"
+219,"Innovation Ecosystem","Knowledgedomain"
+220,"Assets/Intellectual Property","Intellectualproperty"
+221,"European Funding Landscape","Knowledgedomain"
+222,"Operational Capacity","Business"
+223,"Market Position","Business"
+224,"European Funding Consultancy Landscape","Market"
+225,"Digital Economy","Sector"
+226,"Ai Methodologies","Aicontentgenerationmethodology"
+227,"Customer Segments","Business"
+228,"Product Growth","Businessgoal"
+229,"Funding Opportunity","Businessgoal"
+230,"Databases","Database"
+231,"Technology Foundation","Technology"
+232,"Sustainable Product Growth","Businessgoal"
+233,"Customer Base","Customerbase"
+234,"Public Funding Sector","Sector"
+235,"Expenses","Expenses"
+236,"Human Resources","Expenses"
+237,"Certifications","Expenses"
+238,"External Services","Expenses"
+239,"Equipment","Expenses"
+240,"Expenses_With_Personal_Computers_And_Software_Subscriptions","Expense"
+241,"Expenses_With_Protection_Of_Intellectual_Property","Expense"
+242,"Intellectual_Property_Rights","Intellectualproperty"
+243,"Software_Development_Tools_Subscriptions","Digitalproduct"
+244,"Cloud_Storage","Digitalproduct"
+245,"Specialized_Ai_Development_Tools_Subscriptions","Digitalproduct"
+246,"Patent_Related_Expenses","Expenses"
+247,"Legal_Fees_And_Advice","Expenses"
+248,"Software_Being_Developed","Digitalproduct"
+249,"New_Hires","Person"
+250,"Project_Development","Project"
+
+src,edge_attr,dst,is_chunk_relation
+1,"PROFESSOR",2,0
+1,"PROFESSOR",3,0
+2,"DEVELOPS",4,0
+4,"INTEGRATES",5,0
+4,"USES",7,0
+4,"USES",8,0
+9,"IS_PROPRIETARY_SOFTWARE",4,0
+10,"ENHANCES",11,0
+11,"CONTRIBUTS_TO",12,0
+13,"ADAPTS_TO",4,0
+14,"ENHANCES",4,0
+1,"SUPPORTS",17,0
+4,"USEDBY",15,0
+4,"USEDBY",16,0
+4,"PREPARES",18,0
+4,"INCORPORATES",19,0
+19,"INCLUDES",7,0
+19,"INCLUDES",8,0
+17,"RELATEDTO",20,0
+17,"RELATEDTO",21,0
+22,"EXPANDSTO",29,0
+22,"EXPANDSTO",30,0
+22,"EXPANDSTO",31,0
+32,"ENTRYIN",29,0
+32,"ENTRYIN",30,0
+32,"ENTRYIN",31,0
+1,"CONTRIBUTESTO",23,0
+23,"RELATEDTO",24,0
+23,"RELATEDTO",25,0
+26,"IMPACTON",23,0
+33,"CONNECTSTO",34,0
+1,"DEVELOPS",36,0
+1,"DEVELOPS",37,0
+1,"PROFESSOR",38,0
+1,"PROFESSOR",39,0
+39,"PROFESSOR",41,0
+41,"PROFESSOR",40,0
+41,"PROFESSOR",21,0
+41,"PROFESSOR",50,0
+41,"PROFESSOR",28,0
+28,"PROFESSOR",29,0
+28,"PROFESSOR",30,0
+28,"PROFESSOR",31,0
+38,"PROFESSOR",53,0
+42,"PROFESSOR",55,0
+55,"PROFESSOR",57,0
+55,"PROFESSOR",56,0
+55,"PROFESSOR",58,0
+55,"PROFESSOR",59,0
+55,"PROFESSOR",60,0
+55,"PROFESSOR",61,0
+55,"PROFESSOR",62,0
+55,"PROFESSOR",63,0
+55,"PROFESSOR",64,0
+55,"PROFESSOR",65,0
+55,"PROFESSOR",66,0
+55,"PROFESSOR",67,0
+55,"PROFESSOR",68,0
+55,"PROFESSOR",69,0
+55,"PROFESSOR",70,0
+1,"DEVELOPS",71,0
+71,"CREATES",72,0
+72,"HASCOMPONENT",73,0
+72,"HASSCALABILITYMODEL",63,0
+4,"SUPPORTS",3,0
+4,"SUPPORTS",81,0
+4,"IDENTIFIES",82,0
+4,"PERFORMS",83,0
+4,"PERFORMS",84,0
+4,"PERFORMS",85,0
+4,"AUTOMATES",86,0
+4,"MANAGES",87,0
+4,"ENHANCES",88,0
+89,"ALIGNSWITH",94,0
+89,"ALIGNSWITH",95,0
+72,"INNOVATESIN",54,0
+72,"TRANSFORMS",54,0
+72,"TARGETS",22,0
+72,"DESIGNEDFOR",96,0
+72,"ADAPTSTO",97,0
+72,"INTENDEDFOR",28,0
+28,"INCLUDES",29,0
+28,"INCLUDES",30,0
+28,"INCLUDES",31,0
+98,"BASEDON",99,0
+99,"SIMILARTO",100,0
+101,"HASGOAL",102,0
+102,"ADAPTSTOCONTEXTOF",103,0
+101,"BASEDONBUSINESSMODEL",16,0
+103,"HASGOAL",104,0
+16,"HASGOAL",104,0
+1,"PROPOSES",105,0
+105,"HASGOAL",106,0
+105,"WITHINCONTEXTOF",107,0
+105,"RELATEDTO",108,0
+105,"USESMETHODOLOGY",109,0
+105,"USESMETHODOLOGY",110,0
+105,"USESMETHODOLOGY",111,0
+105,"SUPPORTS",112,0
+105,"SUPPORTS",113,0
+105,"SUPPORTS",114,0
+105,"PROMOTES",115,0
+105,"ENCOURAGES",116,0
+105,"CONTRIBUTESTO",117,0
+118,"SUPPORTS",24,0
+118,"SUPPORTS",119,0
+118,"SUPPORTS",120,0
+118,"SUPPORTS",121,0
+105,"INCLUDES",4,0
+4,"REPRESENTS",123,0
+105,"TARGETS",22,0
+105,"LOCATEDIN",124,0
+105,"LOCATEDIN",125,0
+105,"ISPARTOF",126,0
+105,"PROVIDES",127,0
+105,"DEFINES",128,0
+105,"DEFINES",129,0
+105,"LEADS",130,0
+105,"DEVELOPS",131,0
+105,"HASCOMPONENT",132,0
+105,"HASABILITY",133,0
+105,"APPLIES",134,0
+105,"USESMETHODOLOGY",135,0
+105,"CREATES",136,0
+105,"SUPPORTS",137,0
+1,"HASTEAM",138,0
+139,"HASPOSITION",140,0
+139,"HASPOSITION",141,0
+139,"HASSKILL",152,0
+139,"HASABILITY",153,0
+139,"HASABILITY",154,0
+147,"DEVELOPS",4,0
+147,"REQUIRESFUNDING",21,0
+148,"PARTOFTEAM",139,0
+149,"FOUNDEDBY",139,0
+142,"RELATEDTO",143,0
+142,"RELATEDTO",145,0
+144,"SUPPORTS",138,0
+138,"LEDBY",139,0
+155,"PROFESSOR",156,0
+155,"WORKS_AT",157,0
+155,"WORKS_AT",158,0
+155,"DEVELOPS",172,0
+155,"SELECTS",164,0
+155,"USES",165,0
+155,"USES",166,0
+155,"OVERSEES",9,0
+159,"IMPROVES",4,0
+160,"DEVELOPS",4,0
+160,"HAS",174,0
+160,"SPECIALIZES_IN",175,0
+160,"APPLIES",174,0
+161,"DRIVES",167,0
+161,"DEVELOPS",168,0
+161,"DEFINES",169,0
+161,"TARGETS",170,0
+180,"DEVELOPS",181,0
+180,"ENABLES",182,0
+183,"RESPONSIBLEFOR",71,0
+184,"HASGOAL",185,0
+184,"HASGOAL",186,0
+187,"HASEXPERIENCE",188,0
+187,"HASEXPERIENCE",189,0
+190,"ENABLES",4,0
+4,"SUPPORTS",126,0
+126,"AIMSAT",191,0
+126,"AIMSAT",192,0
+71,"CONTRIBUTESTO",193,0
+71,"HASOUTCOME",194,0
+194,"AFFECTSMARKET",193,0
+1,"PRODUCES",71,0
+71,"HAS_OUTCOME",195,0
+195,"AFFECTS",22,0
+71,"DRIVES",75,0
+4,"DEVELOPS",196,0
+196,"USES",199,0
+19,"INCLUDES",165,0
+19,"INCLUDES",166,0
+197,"USES",198,0
+197,"USES",199,0
+71,"ALIGN_WITH",200,0
+71,"TARGETS",18,0
+201,"PROPOSES",126,0
+202,"EXPANDS_IN",124,0
+202,"EXPANDS_IN",29,0
+202,"EXPANDS_IN",30,0
+202,"EXPANDS_IN",31,0
+203,"SUPPORTS",1,0
+1,"DEVELOPS",4,0
+1,"USES",204,0
+174,"INCLUDES",205,0
+205,"PROTECTS",206,0
+1,"AIMSAT",207,0
+1,"AIMSAT",208,0
+1,"ACCESSES",209,0
+1,"ACCESSES",210,0
+72,"ENABLES",211,0
+1,"STRENGTHENS",212,0
+213,"SUPPORTS",69,0
+214,"CONTRIBUTESTO",219,0
+217,"PROVIDES",218,0
+218,"FACILITATES",221,0
+74,"PARTOF",219,0
+220,"STRENGTHENS",219,0
+221,"RELATESTO",210,0
+222,"TRANSFORMS",223,0
+223,"REVOLUTIONIZES",224,0
+4,"USES",226,0
+226,"INCLUDES",7,0
+226,"INCLUDES",8,0
+4,"OPERATESIN",28,0
+4,"BASEDON",98,0
+98,"USES",99,0
+4,"SERVES",227,0
+4,"AIMSAT",228,0
+4,"AIMSAT",229,0
+4,"INTEGRATES",217,0
+4,"CONNECTSTO",230,0
+4,"BUILTON",231,0
+4,"OPERATESIN",97,0
+4,"SUPPORTS",232,0
+235,"INCLUDES",236,0
+235,"INCLUDES",237,0
+235,"INCLUDES",238,0
+235,"INCLUDES",239,0
+240,"INCURS",249,0
+240,"INCLUDES",243,0
+241,"ALLOCATESBUDGET",242,0
+241,"INCLUDES",246,0
+241,"INCLUDES",247,0
+248,"HASINTELLECTUALPROPERTY",242,0
+243,"USEDIN",248,0
+244,"SUPPORTS",250,0
+245,"RELATEDTO",243,0
+246,"FUNDSFOR",242,0
+247,"FUNDSFOR",242,0

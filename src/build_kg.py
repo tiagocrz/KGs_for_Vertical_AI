@@ -641,12 +641,6 @@ async def abuild_kg(
     if not classes or not relations:
         print("No ontology constraints provided or loaded")
 
-    # allowed_relationships = [
-    #     (source_class, relation, target_class) 
-    #     for source_class in classes 
-    #     for target_class in classes 
-    #     for relation in relations
-    # ]
     additional_instructions = (
     "Extract all possible relationships from the text:\n"
     "1. Direct (explicit) relationships\n"

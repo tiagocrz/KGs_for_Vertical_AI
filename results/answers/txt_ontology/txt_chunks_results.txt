@@ -1,0 +1,120 @@
+Question 1:
+What is Granter.ai's main business activity?
+Answer:
+Granter.ai's main activity is developing artificial intelligence (AI) solutions applied to public funding applications, specifically creating an AI agent to assist businesses in preparing financing applications by automating and optimizing the process.
+
+--------------------------------------------------------------------------------
+Question 2:
+Which AI methodologies/technological features does Granter.ai use in its solution?
+Answer:
+Granter.ai's solution employs advanced AI methodologies such as Generative Adversarial Networks (GANs) and Adversarial In-Context Learning (Adv-ICL). These features enable the automatic and personalized generation of content aligned with funding requirements, ensuring a highly technological and innovative digital product.
+
+--------------------------------------------------------------------------------
+Question 3:
+What is the ultimate goal of Granter.ai's project?
+Answer:
+The ultimate goal of Granter.ai's project is to develop an innovative, scalable AI-powered digital tool—an AI Agent—that automates and optimizes the entire process of preparing applications for public funding, making access to public funds more efficient, personalized, and internationally adaptable.
+
+--------------------------------------------------------------------------------
+Question 4:
+What is Granter.ai's mission?
+Answer:
+Granter.ai's mission is to democratize and facilitate access to public funding.
+
+--------------------------------------------------------------------------------
+Question 5:
+What is the business model for Granter.ai's solution?
+Answer:
+The business model for Granter.ai's solution is based on an annual subscription strategy, which ensures its financial scalability. This model allows continuous expansion of the customer base and adapts the offering to different markets and needs, providing a high-value, high-growth potential digital product.
+
+--------------------------------------------------------------------------------
+Question 6:
+What is the main competitive advantage of Granter.ai?
+Answer:
+The main competitive advantage of Granter.ai is its development of an innovative, high-tech AI Agent that automates and optimizes the entire process of preparing public funding applications using advanced methodologies like GANs and Adv-ICL. This end-to-end, modular, and highly personalized platform offers a unique, scalable, and internationalized digital solution that differentiates it from generic market offerings, positioning Granter.ai as a leader in digital support for accessing European funding.
+
+--------------------------------------------------------------------------------
+Question 7:
+Which team member at Granter.ai is responsible for the strategic direction and international expansion of the AI Agent?
+Answer:
+Duarte Gomes, CEO and founder of Granter.ai, is responsible for defining the overall strategy and leading the international growth of the AI Agent.
+
+--------------------------------------------------------------------------------
+Question 8:
+What is the role of Joel Rodrigues at Granter.ai?
+Answer:
+Joel Rodrigues is the co-founder and CTO of Granter.ai, responsible for leading the technical planning and execution of the AI Agent project, including defining the technological approach, selecting AI methodologies such as GANs and Adv-ICL, and overseeing the development of proprietary software.
+
+--------------------------------------------------------------------------------
+Question 9:
+Which team member is responsible for the technical execution of the AI Agent at Granter.ai?
+Answer:
+The technical execution of the AI Agent at Granter.ai is led by Joel Rodrigues, the co-founder and CTO, who is responsible for the technical planning, strategic definition, AI approach selection (including GANs and Adv-ICL), and overseeing the development of the proprietary software.
+
+--------------------------------------------------------------------------------
+Question 10:
+Which countries are targeted for Granter.ai's initial expansion?
+Answer:
+The countries targeted for Granter.ai's initial expansion are Spain, Italy, and the USA.
+
+--------------------------------------------------------------------------------
+Question 11:
+What was the total volume of projects Granter.ai managed in terms of financing?
+Answer:
+Granter.ai managed a total volume of over 20 million euros in funded projects.
+
+--------------------------------------------------------------------------------
+Question 12:
+What is the focus of Granter.ai's research and development process?
+Answer:
+The focus of Granter.ai's research and development process is on creating an innovative AI Agent to assist businesses in preparing public funding applications, using advanced methodologies such as Generative Adversarial Networks (GANs) and Adversarial In-Context Learning (Adv-ICL). The development involves applied research, experimentation, fine-tuning, and validation of linguistic models tailored to public policies and funding processes. The process emphasizes proprietary software creation, technological complexity, and ensuring the solution's scalability and international adaptability.
+
+--------------------------------------------------------------------------------
+Question 13:
+How many companies were registered on Granter.ai's platform by the time the project was described?
+Answer:
+Over 2,500 companies had registered on Granter.ai's platform at the time the project was described.
+
+--------------------------------------------------------------------------------
+Question 14:
+How much funding did Granter.ai raise in investment rounds?
+Answer:
+Granter.ai raised 400,000 euros (€400,000) in investment rounds.
+
+--------------------------------------------------------------------------------
+Question 15:
+When did Granter.ai start its operations?
+Answer:
+Granter.ai started its operations in December 2024.
+
+--------------------------------------------------------------------------------
+Question 16:
+What is the primary target user group for Granter.ai’s AI Agent?
+Answer:
+The primary target user group for Granter.ai’s AI Agent includes businesses and specialists involved in preparing applications for public funding opportunities. The tool is designed to support users across all stages of the application process, automating and optimizing tasks to increase productivity and success rates. It aims to serve a broad market that requires efficient access to public funding, with initial expansion plans targeting countries like Spain, Italy, and the USA.
+
+--------------------------------------------------------------------------------
+Question 17:
+What new position does Granter.ai plan to fill to strengthen its team for the AI Agent project?
+Answer:
+Granter.ai plans to hire a front-end developer to strengthen its team for the AI Agent project.
+
+--------------------------------------------------------------------------------
+Question 18:
+What makes Granter.ai’s solution scalable in terms of adapting to different industries or sectors?
+Answer:
+Granter.ai’s solution is scalable because it features a modular and flexible architecture that allows rapid adaptation to different international markets, languages, and legal frameworks by connecting to various databases. Its design enables operation in multiple countries like Spain, Italy, and the USA, and can be customized to diverse industries or sectors through its adaptable AI methodologies and modular components. Additionally, its business model based on annual subscriptions supports ongoing expansion and customization for different customer needs and market contexts.
+
+--------------------------------------------------------------------------------
+Question 19:
+What is Granter.ai's projected timeline for launching its AI Agent in international markets?
+Answer:
+I don't know.
+
+--------------------------------------------------------------------------------
+Question 20:
+How does Granter.ai’s AI Agent improve the success rate of funding applications?
+Answer:
+Granter.ai’s AI Agent improves the success rate of funding applications by automating and personalizing the generation of content aligned with the specific requirements of each funding opportunity, which increases the quality and relevance of proposals. It also supports users in structuring proposals to better align with European Union objectives, thus enhancing strategic quality. This comprehensive, tailored approach reduces errors, streamlines the application process, and boosts the chances of approval and funding.
+
+--------------------------------------------------------------------------------

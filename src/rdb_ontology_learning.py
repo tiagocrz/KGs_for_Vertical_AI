@@ -262,6 +262,15 @@ def validate_turtle_string(turtle_str: str) -> tuple[bool, str]:
 
 
 def build_table_ontology(table_name: str, table_schema: dict, core_ontology: str):
+    """
+    Generate a Turtle fragment (delta ontology) for a single database table.
+
+    Aligns the generated elements with the provided `core_ontology` and
+    uses table schema and external/contextual sources to produce classes,
+    object properties and datatype properties for the table.
+
+    Returns a Turtle-formatted string containing the delta ontology.
+    """
 
     classes, relations, attributes = extract_names(core_ontology)
     core_context = f"""Class names: {', '.join(classes)}

@@ -46,19 +46,6 @@ STRICT NAMING RULES:
 - Do NOT include empty spaces in the names of ontology elements
 """
 
-
-#prompt_step_2 = """Extract individuals and relations in ttl format from the following sentence, based on the given classes.
-#Only return the ttl code, include the classes, individuals, and relations in this sentence. 
-#Make sure to label all classes as of rdfs:Class, all individuals as owl:NamedIndividual, and all properties as owl:ObjectProperty, owl:DatatypeProperty, or owl:AnnotationProperty. 
-#Always output ontology elements (classes, relations, individuals) in English, regardless of the input language. 
-#
-#Follow correct Turtle syntax:
-#- Use ';' to separate multiple predicates for the same subject.
-#- Use ',' to separate multiple objects of the same predicate.
-#- End each subject block with '.' before starting a new subject.
-#- Do not switch subjects inside the same ';' chain.\n\n
-#"""
-
 # ---------------------------------- TOOLS ----------------------------------
 
 nltk.download('punkt')
